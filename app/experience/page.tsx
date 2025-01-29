@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import { Briefcase, Calendar } from "lucide-react";
 
 const experiences = [

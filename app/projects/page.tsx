@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import { motion } from "framer-motion";
 import { ExternalLink, Github } from "lucide-react";
 
 const projects = [
@@ -48,7 +47,7 @@ export default function Projects() {
       <div className="max-w-7xl mx-auto">
         <h1 className="text-4xl font-bold mb-12">Projects</h1>
         <div className="grid grid-cols-1 gap-12">
-          {projects.map((project, index) => (
+          {projects.map((project) => (
             <div key={project.id} className="retro-card overflow-hidden">
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="relative h-64 md:h-full">
