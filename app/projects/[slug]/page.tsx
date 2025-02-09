@@ -1,8 +1,7 @@
 import { projects } from "@/lib/projects";
-import { ArrowLeft, Blocks, Calendar, ExternalLink, Tag } from "lucide-react";
+import { ArrowLeft, Blocks, ExternalLink, Tag } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { LuGithub } from "react-icons/lu";
 
 export default async function Page({
   params,
