@@ -35,8 +35,8 @@ export function Footer() {
           <div className="space-y-4">
             <h3 className="text-lg font-bold">Contact</h3>
             <ul className="space-y-2">
-              <li>hello@example.com</li>
-              <li>San Francisco, CA</li>
+              <li>teguhwin8@gmail.com</li>
+              <li>Central Java, Indonesia</li>
             </ul>
           </div>
 
@@ -44,7 +44,7 @@ export function Footer() {
             <h3 className="text-lg font-bold">Social</h3>
             <div className="flex space-x-4">
               <a
-                href="https://github.com"
+                href="https://github.com/teguhwin8"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-gray-600"
@@ -52,7 +52,7 @@ export function Footer() {
                 <LuGithub size={24} />
               </a>
               <a
-                href="https://twitter.com"
+                href="https://twitter.com/teguhcoding"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-gray-600"
@@ -60,7 +60,7 @@ export function Footer() {
                 <LuTwitter size={24} />
               </a>
               <a
-                href="https://linkedin.com"
+                href="https://linkedin.com/in/teguhwin8/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-gray-600"

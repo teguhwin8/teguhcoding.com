@@ -1,35 +1,9 @@
 "use client";
 
+import { projects } from "@/lib/projects";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-
-const projects = [
-  {
-    id: 1,
-    title: "Myrootsy Dashboard",
-    description:
-      "School management platform for integrated student data management",
-    image: "/myrootsy.png",
-    link: "/projects/myrootsy",
-  },
-  {
-    id: 2,
-    title: "Sementigaroda Web",
-    description:
-      "A modern corporate website built with Next.js and Tailwind CSS",
-    image: "/semen.png",
-    link: "/projects/sementigaroda",
-  },
-  {
-    id: 3,
-    title: "Kirimy.id",
-    description:
-      "Integrated marketing campaign and blast messaging management platform",
-    image: "/kirimy.png",
-    link: "/projects/kirimy",
-  },
-];
 
 export function FeaturedProjects() {
   return (

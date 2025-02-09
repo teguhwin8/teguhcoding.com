@@ -3,30 +3,39 @@ import { Briefcase, Calendar } from "lucide-react";
 const experiences = [
   {
     id: 1,
-    title: "Senior Frontend Engineer",
-    company: "Tech Corp",
-    period: "2022 - Present",
+    title: "Software Engineer",
+    company: "Pena Digital",
+    period: "March 2024 - Present",
     description:
-      "Led the development of multiple high-impact web applications using React and Next.js. Improved performance metrics by 40% through optimization techniques.",
-    technologies: ["React", "Next.js", "TypeScript", "Tailwind CSS"],
+      "As a Full Stack Developer, focused on developing robust and efficient web applications using Next.js, Nest.js, and Laravel. Contributed to the architecture, performance optimization, and implementation of new features while maintaining code quality.",
+    technologies: ["Next.js", "Nest.js", "Laravel"],
   },
   {
     id: 2,
-    title: "Frontend Developer",
-    company: "Digital Agency",
-    period: "2020 - 2022",
+    title: "Full Stack Developer",
+    company: "PT Hijau Digital International",
+    period: "March 2019 - Present",
     description:
-      "Developed responsive web applications for various clients. Implemented modern frontend practices and mentored junior developers.",
-    technologies: ["Vue.js", "Nuxt.js", "JavaScript", "SCSS"],
+      "Developed and maintained various web applications using Next.js and Laravel. Built dynamic and interactive user interfaces with Vue.js, ensuring seamless user experiences. Collaborated with cross-functional teams to design and implement scalable software solutions.",
+    technologies: ["Next.js", "Laravel", "Vue.js"],
   },
   {
     id: 3,
-    title: "Junior Web Developer",
-    company: "Startup Inc",
-    period: "2018 - 2020",
+    title: "Frontend Web Developer",
+    company: "Majoo Indonesia",
+    period: "January 2022 - July 2023",
     description:
-      "Built and maintained multiple client-facing web applications. Collaborated with designers to implement pixel-perfect interfaces.",
-    technologies: ["React", "JavaScript", "CSS", "HTML"],
+      "Built responsive and high-performance web applications using Next.js. Worked closely with designers and backend developers to ensure smooth project integration and optimal performance.",
+    technologies: ["Next.js", "Tailwind CSS", "TypeScript"],
+  },
+  {
+    id: 4,
+    title: "Full Stack Engineer",
+    company: "Politeknik Dharma Patria",
+    period: "January 2018 - March 2019",
+    description:
+      "Worked as a Full Stack Engineer covering both backend development using Laravel and frontend development using modern frameworks.",
+    technologies: ["Laravel", "Vue.js", "JavaScript"],
   },
 ];
 
