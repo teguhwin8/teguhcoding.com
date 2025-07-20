@@ -1,5 +1,6 @@
 import { createClient } from "@sanity/client";
 import imageUrlBuilder from "@sanity/image-url";
+import { SanityImageSource } from "@sanity/image-url/lib/types/types";
 
 export const client = createClient({
   projectId: "5mfl0kn7",
@@ -10,7 +11,7 @@ export const client = createClient({
 
 const builder = imageUrlBuilder(client);
 
-export function urlFor(source: any) {
+export function urlFor(source: SanityImageSource) {
   return builder.image(source);
 }
 
@@ -66,6 +67,14 @@ export async function getLatestPosts(limit: number = 3) {
     excerpt,
     mainImage,
     "categories": categories[]->{title, slug}
+  }`;
+  return client.fetch(query);
+}
+
+// Get all post slugs for static generation
+export async function getAllPostSlugs() {
+  const query = `*[_type == "post"]{
+    "slug": slug.current
   }`;
   return client.fetch(query);
 }

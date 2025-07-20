@@ -4,6 +4,7 @@ import { LatestBlog } from "@/components/latest-blog";
 import { getLatestPosts } from "@/lib/sanity";
 
 export const revalidate = 60;
+export const dynamic = "force-static";
 
 export default async function Home() {
   const latestPosts = await getLatestPosts(3);

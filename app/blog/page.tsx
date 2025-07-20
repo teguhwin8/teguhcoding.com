@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
-import { Calendar, Clock, ArrowRight } from "lucide-react";
+import { Calendar, ArrowRight } from "lucide-react";
 import { getAllPosts } from "@/lib/sanity";
 import { urlFor } from "@/lib/sanity";
 import { format } from "date-fns";
@@ -21,6 +21,9 @@ export const metadata: Metadata = {
 
 // Revalidate every 60 seconds
 export const revalidate = 60;
+
+// Force static generation
+export const dynamic = "force-static";
 
 export default async function Blog() {
   const posts = await getAllPosts();

@@ -183,8 +183,9 @@ export default function NotFound() {
             </h2>
             <p className="text-lg text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto">
               Oops! It looks like this page got lost in the digital void. The
-              page you're looking for doesn't exist or has been moved to another
-              dimension. But don't worry, let's get you back on track! 🛸
+              page you&apos;re looking for doesn&apos;t exist or has been moved
+              to another dimension. But don&apos;t worry, let&apos;s get you
+              back on track! 🛸
             </p>
           </motion.div>
 
