@@ -178,6 +178,26 @@ body {
   color: white !important;
 }
 
+/* Mobile navigation improvements */
+@media (max-width: 768px) {
+  .retro-card {
+    box-shadow: 2px 2px 0 black;
+  }
+
+  .dark .retro-card {
+    box-shadow: 2px 2px 0 white;
+  }
+
+  .retro-card:hover {
+    transform: translate(-1px, -1px);
+    box-shadow: 3px 3px 0 black;
+  }
+
+  .dark .retro-card:hover {
+    box-shadow: 3px 3px 0 white;
+  }
+}
+
 .glitch::before {
   content: attr(data-text);
   position: absolute;
