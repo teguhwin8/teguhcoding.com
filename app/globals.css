@@ -135,6 +135,136 @@ body {
   color: rgb(209, 213, 219);
 }
 
+/* 404 Page specific styles */
+.glitch {
+  position: relative;
+  color: white;
+  font-size: 4rem;
+  letter-spacing: 0.1em;
+  animation: glitch-skew 1s infinite linear alternate-reverse;
+}
+
+/* Custom button colors for 404 page */
+.retro-button.bg-blue-200 {
+  background: rgb(191, 219, 254);
+}
+
+.dark .retro-button.bg-blue-800 {
+  background: rgb(30, 64, 175);
+}
+
+.retro-button.bg-green-200 {
+  background: rgb(187, 247, 208);
+}
+
+.dark .retro-button.bg-green-800 {
+  background: rgb(22, 101, 52);
+}
+
+/* High contrast text colors for better visibility */
+.retro-button.bg-blue-200 {
+  color: rgb(30, 64, 175) !important;
+}
+
+.dark .retro-button.bg-blue-800 {
+  color: white !important;
+}
+
+.retro-button.bg-green-200 {
+  color: rgb(22, 101, 52) !important;
+}
+
+.dark .retro-button.bg-green-800 {
+  color: white !important;
+}
+
+.glitch::before {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: #ff0000;
+  z-index: -1;
+  animation: glitch-1 0.3s infinite linear alternate-reverse;
+}
+
+.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: #00ff00;
+  z-index: -2;
+  animation: glitch-2 0.3s infinite linear alternate-reverse;
+}
+
+@keyframes glitch-skew {
+  0% {
+    transform: skew(0deg);
+  }
+  20% {
+    transform: skew(-2deg);
+  }
+  40% {
+    transform: skew(1deg);
+  }
+  60% {
+    transform: skew(-1deg);
+  }
+  80% {
+    transform: skew(2deg);
+  }
+  100% {
+    transform: skew(0deg);
+  }
+}
+
+@keyframes glitch-1 {
+  0% {
+    transform: translate(-2px, 1px);
+  }
+  20% {
+    transform: translate(2px, -1px);
+  }
+  40% {
+    transform: translate(-1px, 2px);
+  }
+  60% {
+    transform: translate(1px, -2px);
+  }
+  80% {
+    transform: translate(-2px, -1px);
+  }
+  100% {
+    transform: translate(2px, 1px);
+  }
+}
+
+@keyframes glitch-2 {
+  0% {
+    transform: translate(1px, -1px);
+  }
+  20% {
+    transform: translate(-1px, 1px);
+  }
+  40% {
+    transform: translate(2px, -2px);
+  }
+  60% {
+    transform: translate(-2px, 2px);
+  }
+  80% {
+    transform: translate(1px, 1px);
+  }
+  100% {
+    transform: translate(-1px, -1px);
+  }
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
