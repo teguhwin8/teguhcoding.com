@@ -44,21 +44,23 @@ export default function Blog() {
             <Link key={post.id} href={post.link}>
               <article className="retro-card p-6">
                 <div className="flex items-center space-x-4 mb-2">
-                  <span className="px-3 py-1 bg-gray-100 rounded-full text-sm">
+                  <span className="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 rounded-full text-sm">
                     {post.category}
                   </span>
-                  <div className="flex items-center text-gray-600 text-sm">
+                  <div className="flex items-center text-gray-600 dark:text-gray-300 text-sm">
                     <Calendar size={14} className="mr-1" />
                     {post.date}
                   </div>
-                  <div className="flex items-center text-gray-600 text-sm">
+                  <div className="flex items-center text-gray-600 dark:text-gray-300 text-sm">
                     <Clock size={14} className="mr-1" />
                     {post.readTime}
                   </div>
                 </div>
                 <h2 className="text-2xl font-bold mb-2">{post.title}</h2>
-                <p className="text-gray-600 mb-4">{post.excerpt}</p>
-                <div className="flex items-center text-black font-bold">
+                <p className="text-gray-600 dark:text-gray-300 mb-4">
+                  {post.excerpt}
+                </p>
+                <div className="flex items-center text-black dark:text-white font-bold">
                   Read more <ArrowRight size={16} className="ml-2" />
                 </div>
               </article>

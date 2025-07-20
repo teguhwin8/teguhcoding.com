@@ -53,20 +53,24 @@ export default function Education() {
               <div className="flex items-start justify-between mb-4">
                 <div>
                   <h3 className="text-xl font-bold">{edu.title}</h3>
-                  <p className="text-gray-600">{edu.institution}</p>
+                  <p className="text-gray-600 dark:text-gray-300">
+                    {edu.institution}
+                  </p>
                 </div>
-                <div className="flex items-center space-x-2 text-gray-600">
+                <div className="flex items-center space-x-2 text-gray-600 dark:text-gray-300">
                   <Calendar size={16} />
                   <span>{edu.period}</span>
                 </div>
               </div>
-              <p className="text-gray-600 mb-4">{edu.description}</p>
+              <p className="text-gray-600 dark:text-gray-300 mb-4">
+                {edu.description}
+              </p>
               {edu.achievements.length > 0 && (
                 <div className="flex flex-wrap gap-2">
                   {edu.achievements.map((achievement) => (
                     <span
                       key={achievement}
-                      className="px-3 py-1 bg-gray-100 rounded-full text-sm"
+                      className="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 rounded-full text-sm"
                     >
                       {achievement}
                     </span>
@@ -86,8 +90,12 @@ export default function Education() {
             {certifications.map((cert) => (
               <div key={cert.id} className="retro-card p-6">
                 <h3 className="text-xl font-bold mb-2">{cert.title}</h3>
-                <p className="text-gray-600 mb-2">{cert.issuer}</p>
-                <p className="text-sm text-gray-500">{cert.date}</p>
+                <p className="text-gray-600 dark:text-gray-300 mb-2">
+                  {cert.issuer}
+                </p>
+                <p className="text-sm text-gray-500 dark:text-gray-400">
+                  {cert.date}
+                </p>
               </div>
             ))}
           </div>

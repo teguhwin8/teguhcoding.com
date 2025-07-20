@@ -53,7 +53,9 @@ export default async function Page({
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
           <div className="md:col-span-2">
             <h1 className="text-4xl font-bold mb-4">{project.title}</h1>
-            <p className="text-gray-600 mb-6">{project.description}</p>
+            <p className="text-gray-600 dark:text-gray-300 mb-6">
+              {project.description}
+            </p>
             <div className="space-y-6">
               {/* {project.date && (
                 <div className="flex items-center space-x-2 text-gray-600">
@@ -94,7 +96,7 @@ export default async function Page({
             <ul className="space-y-2">
               {project.technologies.map((tech) => (
                 <li key={tech} className="flex items-center">
-                  <span className="w-2 h-2 bg-black rounded-full mr-2"></span>
+                  <span className="w-2 h-2 bg-black dark:bg-white rounded-full mr-2"></span>
                   {tech}
                 </li>
               ))}
@@ -108,7 +110,7 @@ export default async function Page({
             <ul className="space-y-2">
               {project.features.map((feature) => (
                 <li key={feature} className="flex items-center">
-                  <span className="w-2 h-2 bg-black rounded-full mr-2"></span>
+                  <span className="w-2 h-2 bg-black dark:bg-white rounded-full mr-2"></span>
                   {feature}
                 </li>
               ))}
@@ -120,7 +122,7 @@ export default async function Page({
           <h2 className="text-2xl font-bold mb-4">Project Details</h2>
           <div className="prose max-w-none">
             {project.longDescription.split("\n").map((paragraph, index) => (
-              <p key={index} className="mb-4 text-gray-600">
+              <p key={index} className="mb-4 text-gray-600 dark:text-gray-300">
                 {paragraph}
               </p>
             ))}

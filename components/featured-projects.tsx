@@ -37,7 +37,9 @@ export function FeaturedProjects() {
                   </div>
                   <div className="p-6">
                     <h3 className="text-xl font-bold mb-2">{project.title}</h3>
-                    <p className="text-gray-600">{project.description}</p>
+                    <p className="text-gray-600 dark:text-gray-300">
+                      {project.description}
+                    </p>
                   </div>
                 </div>
               </Link>

@@ -27,7 +27,7 @@ export function ThemeToggle() {
       variant="ghost"
       size="icon"
       onClick={() => setTheme(theme === "light" ? "dark" : "light")}
-      className="retro-button hover:bg-yellow-200 dark:hover:bg-yellow-800"
+      className="retro-button hover:bg-yellow-200 dark:hover:bg-yellow-800 p-2"
     >
       {theme === "light" ? (
         <Moon className="h-[1.2rem] w-[1.2rem]" />

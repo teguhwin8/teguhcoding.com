@@ -3,7 +3,7 @@ import { LuGithub, LuHeart, LuLinkedin, LuTwitter } from "react-icons/lu";
 
 export function Footer() {
   return (
-    <footer className="border-t-2 border-black bg-white">
+    <footer className="border-t-2 border-black dark:border-white bg-white dark:bg-gray-900">
       <div className="max-w-7xl mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8">
           <div className="space-y-4">
@@ -47,7 +47,7 @@ export function Footer() {
                 href="https://github.com/teguhwin8"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-gray-600"
+                className="hover:text-gray-600 dark:hover:text-gray-300"
               >
                 <LuGithub size={24} />
               </a>
@@ -55,7 +55,7 @@ export function Footer() {
                 href="https://twitter.com/teguhcoding"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-gray-600"
+                className="hover:text-gray-600 dark:hover:text-gray-300"
               >
                 <LuTwitter size={24} />
               </a>
@@ -63,7 +63,7 @@ export function Footer() {
                 href="https://linkedin.com/in/teguhwin8/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-gray-600"
+                className="hover:text-gray-600 dark:hover:text-gray-300"
               >
                 <LuLinkedin size={24} />
               </a>
@@ -76,7 +76,7 @@ export function Footer() {
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="flex-1 p-2 border-2 border-black rounded"
+                className="flex-1 p-2 border-2 border-black dark:border-white rounded bg-white dark:bg-gray-800 text-black dark:text-white placeholder-gray-500 dark:placeholder-gray-400"
               />
               <button type="submit" className="retro-button px-4 py-2">
                 Subscribe
@@ -85,7 +85,7 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 pt-8 border-t border-gray-200 text-center">
+        <div className="mt-12 pt-8 border-t border-gray-200 dark:border-gray-700 text-center">
           <p className="flex items-center justify-center text-sm">
             Made with <LuHeart size={16} className="mx-1 text-red-500" /> using
             Next.js 15

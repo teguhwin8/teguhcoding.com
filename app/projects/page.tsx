@@ -22,12 +22,14 @@ export default function Projects() {
                 </div>
                 <div className="p-6">
                   <h2 className="text-2xl font-bold mb-4">{project.title}</h2>
-                  <p className="text-gray-600 mb-4">{project.description}</p>
+                  <p className="text-gray-600 dark:text-gray-300 mb-4">
+                    {project.description}
+                  </p>
                   <div className="flex flex-wrap gap-2 mb-6">
                     {project.technologies.map((tech) => (
                       <span
                         key={tech}
-                        className="px-3 py-1 bg-gray-100 rounded-full text-sm"
+                        className="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 rounded-full text-sm"
                       >
                         {tech}
                       </span>

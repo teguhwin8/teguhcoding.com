@@ -50,22 +50,24 @@ export default function Experience() {
               <div className="flex items-start justify-between mb-4">
                 <div>
                   <h2 className="text-2xl font-bold">{exp.title}</h2>
-                  <div className="flex items-center space-x-2 text-gray-600 mt-1">
+                  <div className="flex items-center space-x-2 text-gray-600 dark:text-gray-300 mt-1">
                     <Briefcase size={16} />
                     <span>{exp.company}</span>
                   </div>
                 </div>
-                <div className="flex items-center space-x-2 text-gray-600">
+                <div className="flex items-center space-x-2 text-gray-600 dark:text-gray-300">
                   <Calendar size={16} />
                   <span>{exp.period}</span>
                 </div>
               </div>
-              <p className="text-gray-600 mb-4">{exp.description}</p>
+              <p className="text-gray-600 dark:text-gray-300 mb-4">
+                {exp.description}
+              </p>
               <div className="flex flex-wrap gap-2">
                 {exp.technologies.map((tech) => (
                   <span
                     key={tech}
-                    className="px-3 py-1 bg-gray-100 rounded-full text-sm"
+                    className="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 rounded-full text-sm"
                   >
                     {tech}
                   </span>

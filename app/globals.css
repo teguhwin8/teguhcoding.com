@@ -26,6 +26,7 @@ body {
   color: rgb(var(--foreground-rgb));
   background: rgb(var(--background-start-rgb));
   font-family: "Space Mono", monospace;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .retro-grid {
@@ -91,6 +92,47 @@ body {
 
 .dark .retro-button:hover {
   box-shadow: 6px 6px 0 white;
+}
+
+/* Additional dark mode improvements */
+.dark h1,
+.dark h2,
+.dark h3,
+.dark h4,
+.dark h5,
+.dark h6 {
+  color: white;
+}
+
+.dark a:not(.retro-button) {
+  color: rgb(147, 197, 253); /* light blue for links */
+}
+
+.dark a:not(.retro-button):hover {
+  color: rgb(96, 165, 250); /* darker blue for hover */
+}
+
+/* Ensure form elements have proper contrast */
+.dark input,
+.dark textarea,
+.dark select {
+  background-color: rgb(55, 65, 81);
+  border-color: rgb(209, 213, 219);
+  color: white;
+}
+
+.dark input::placeholder,
+.dark textarea::placeholder {
+  color: rgb(156, 163, 175);
+}
+
+/* Project detail page improvements */
+.dark .prose p {
+  color: rgb(209, 213, 219);
+}
+
+.dark ul li {
+  color: rgb(209, 213, 219);
 }
 
 @layer base {

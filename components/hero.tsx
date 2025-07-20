@@ -19,7 +19,7 @@ export function Hero() {
               src="/teguh.jpg"
               alt="Teguh Widodo"
               fill
-              className="rounded-full object-cover border-4 border-black shadow-xl"
+              className="rounded-full object-cover border-4 border-black dark:border-white shadow-xl"
               priority
             />
           </div>
