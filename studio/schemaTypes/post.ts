@@ -45,6 +45,13 @@ export default defineType({
       type: 'datetime',
     }),
     defineField({
+      name: 'excerpt',
+      title: 'Excerpt',
+      type: 'text',
+      description: 'Short description of the post for previews',
+      validation: (Rule) => Rule.max(200),
+    }),
+    defineField({
       name: 'body',
       title: 'Body',
       type: 'blockContent',

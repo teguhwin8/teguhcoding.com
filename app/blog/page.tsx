@@ -1,59 +1,56 @@
+import { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { Calendar, Clock, ArrowRight } from "lucide-react";
+import { getAllPosts } from "@/lib/sanity";
+import { urlFor } from "@/lib/sanity";
+import { format } from "date-fns";
+import { BlogPost } from "@/lib/types";
 
-const posts = [
-  {
-    id: 1,
-    title: "The Future of Frontend Development",
-    excerpt:
-      "Exploring upcoming trends and technologies in frontend development. From WebAssembly to Edge Computing, discover what's next in the world of web development.",
-    date: "2024-02-28",
-    readTime: "5 min read",
-    category: "Technology",
-    link: "/blog/future-of-frontend",
+export const metadata: Metadata = {
+  title: "Blog - Teguh Widodo",
+  description:
+    "Read my latest articles about web development, programming, and technology insights.",
+  openGraph: {
+    title: "Blog - Teguh Widodo",
+    description:
+      "Read my latest articles about web development, programming, and technology insights.",
+    type: "website",
   },
-  {
-    id: 2,
-    title: "Mastering React Performance",
-    excerpt:
-      "Tips and tricks for optimizing React applications. Learn about memo, useMemo, useCallback, and other performance optimization techniques.",
-    date: "2024-02-25",
-    readTime: "8 min read",
-    category: "React",
-    link: "/blog/react-performance",
-  },
-  {
-    id: 3,
-    title: "Building with Next.js 14",
-    excerpt:
-      "A deep dive into the latest features of Next.js. Explore server components, streaming, and the new app router.",
-    date: "2024-02-20",
-    readTime: "10 min read",
-    category: "Next.js",
-    link: "/blog/nextjs-14",
-  },
-];
+};
 
-export default function Blog() {
+// Revalidate every 60 seconds
+export const revalidate = 60;
+
+export default async function Blog() {
+  const posts = await getAllPosts();
   return (
     <div className="min-h-screen py-24 px-4">
       <div className="max-w-4xl mx-auto">
         <h1 className="text-4xl font-bold mb-12">Blog</h1>
         <div className="grid space-y-8">
-          {posts.map((post) => (
-            <Link key={post.id} href={post.link}>
+          {posts.map((post: BlogPost) => (
+            <Link key={post._id} href={`/blog/${post.slug.current}`}>
               <article className="retro-card p-6">
+                {post.mainImage && (
+                  <div className="relative h-48 mb-4 rounded-lg overflow-hidden">
+                    <Image
+                      src={urlFor(post.mainImage).width(800).height(200).url()}
+                      alt={post.title}
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                )}
                 <div className="flex items-center space-x-4 mb-2">
-                  <span className="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 rounded-full text-sm">
-                    {post.category}
-                  </span>
+                  {post.categories && post.categories.length > 0 && (
+                    <span className="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 rounded-full text-sm">
+                      {post.categories[0].title}
+                    </span>
+                  )}
                   <div className="flex items-center text-gray-600 dark:text-gray-300 text-sm">
                     <Calendar size={14} className="mr-1" />
-                    {post.date}
-                  </div>
-                  <div className="flex items-center text-gray-600 dark:text-gray-300 text-sm">
-                    <Clock size={14} className="mr-1" />
-                    {post.readTime}
+                    {format(new Date(post.publishedAt), "MMM dd, yyyy")}
                   </div>
                 </div>
                 <h2 className="text-2xl font-bold mb-2">{post.title}</h2>

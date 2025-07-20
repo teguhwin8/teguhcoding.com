@@ -1,13 +1,18 @@
-import { Hero } from '@/components/hero';
-import { FeaturedProjects } from '@/components/featured-projects';
-import { LatestBlog } from '@/components/latest-blog';
+import { Hero } from "@/components/hero";
+import { FeaturedProjects } from "@/components/featured-projects";
+import { LatestBlog } from "@/components/latest-blog";
+import { getLatestPosts } from "@/lib/sanity";
 
-export default function Home() {
+export const revalidate = 60;
+
+export default async function Home() {
+  const latestPosts = await getLatestPosts(3);
+
   return (
     <div className="pt-16">
       <Hero />
       <FeaturedProjects />
-      <LatestBlog />
+      <LatestBlog posts={latestPosts} />
     </div>
   );
 }
