@@ -12,25 +12,39 @@
   --retro-green: 144, 238, 144;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 20, 20, 20;
-    --background-end-rgb: 0, 0, 0;
-  }
+.dark {
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 20, 20, 20;
+  --background-end-rgb: 0, 0, 0;
+  --retro-yellow: 200, 180, 80;
+  --retro-pink: 200, 140, 150;
+  --retro-blue: 100, 150, 180;
+  --retro-green: 100, 180, 100;
 }
 
 body {
   color: rgb(var(--foreground-rgb));
   background: rgb(var(--background-start-rgb));
-  font-family: 'Space Mono', monospace;
+  font-family: "Space Mono", monospace;
 }
 
 .retro-grid {
   background-size: 30px 30px;
-  background-image: 
-    linear-gradient(to right, rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+  background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.05) 1px,
+      transparent 1px
+    ),
     linear-gradient(to bottom, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+}
+
+.dark .retro-grid {
+  background-image: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0.1) 1px,
+      transparent 1px
+    ),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
 }
 
 .retro-card {
@@ -40,9 +54,19 @@ body {
   transition: all 0.2s ease;
 }
 
+.dark .retro-card {
+  background: rgb(30, 30, 30);
+  border: 2px solid white;
+  box-shadow: 4px 4px 0 white;
+}
+
 .retro-card:hover {
   transform: translate(-2px, -2px);
   box-shadow: 6px 6px 0 black;
+}
+
+.dark .retro-card:hover {
+  box-shadow: 6px 6px 0 white;
 }
 
 .retro-button {
@@ -53,9 +77,20 @@ body {
   font-weight: bold;
 }
 
+.dark .retro-button {
+  background: rgb(var(--retro-yellow));
+  border: 2px solid white;
+  box-shadow: 4px 4px 0 white;
+  color: black;
+}
+
 .retro-button:hover {
   transform: translate(-2px, -2px);
   box-shadow: 6px 6px 0 black;
+}
+
+.dark .retro-button:hover {
+  box-shadow: 6px 6px 0 white;
 }
 
 @layer base {

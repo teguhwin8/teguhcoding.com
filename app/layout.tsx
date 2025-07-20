@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { Space_Mono } from "next/font/google";
 import { Navigation } from "@/components/navigation";
 import { Footer } from "@/components/footer";
+import { ThemeProvider } from "@/components/theme-provider";
 
 const spaceMono = Space_Mono({
   weight: ["400", "700"],
@@ -20,11 +21,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body className={spaceMono.className}>
-        <Navigation />
-        <main className="retro-grid min-h-screen">{children}</main>
-        <Footer />
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <Navigation />
+          <main className="retro-grid min-h-screen">{children}</main>
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );
