@@ -36,7 +36,7 @@ export function Footer() {
             <h3 className="text-lg font-bold">Contact</h3>
             <ul className="space-y-2">
               <li>teguhwin8@gmail.com</li>
-              <li>Central Java, Indonesia</li>
+              <li>Yogyakarta, Indonesia</li>
             </ul>
           </div>
 
