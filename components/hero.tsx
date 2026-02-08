@@ -24,10 +24,11 @@ export function Hero() {
             />
           </div>
 
-          <h1 className="text-6xl font-bold mb-6">Teguh Coding</h1>
+          <h1 className="text-6xl font-bold mb-6">Teguh Widodo</h1>
           <p className="text-xl mb-8">
-            A Professional Web Developer Crafting Beautiful and Performant Web
-            Experiences with Modern Technologies
+            Senior Software Engineer with 6+ years of experience in building
+            scalable, high-quality web applications. Specialized in Front-End
+            development with strong full-stack capabilities.
           </p>
           <div className="flex justify-center space-x-4 mb-12">
             <motion.a

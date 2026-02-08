@@ -3,39 +3,39 @@ import { Briefcase, Calendar } from "lucide-react";
 const experiences = [
   {
     id: 1,
-    title: "Software Engineer",
-    company: "Pena Digital",
-    period: "March 2024 - Present",
+    title: "PHP Developer",
+    company: "Capio Teknologi Indonesia",
+    period: "May 2025 – July 2025",
     description:
-      "As a Full Stack Developer, focused on developing robust and efficient web applications using Next.js, Nest.js, and Laravel. Contributed to the architecture, performance optimization, and implementation of new features while maintaining code quality.",
-    technologies: ["Next.js", "Nest.js", "Laravel"],
+      "Developed backend services using PHP to support real-time trading and portfolio management. Integrated third-party financial APIs and optimized transaction data flow for better performance. Collaborated with frontend and mobile teams to deliver secure, seamless, and scalable system integration.",
+    technologies: ["PHP", "Backend Development", "API Integration"],
   },
   {
     id: 2,
-    title: "Full Stack Developer",
+    title: "Fullstack Developer",
     company: "PT Hijau Digital International",
-    period: "March 2019 - Present",
+    period: "March 2019 – Present",
     description:
-      "Developed and maintained various web applications using Next.js and Laravel. Built dynamic and interactive user interfaces with Vue.js, ensuring seamless user experiences. Collaborated with cross-functional teams to design and implement scalable software solutions.",
-    technologies: ["Next.js", "Laravel", "Vue.js"],
+      "Developed and maintained web applications using Laravel, Next.js, Vue.js and NestJS, improving client project delivery times by 20%. Rewrote existing HTML/CSS to align with SEO and accessibility standards, increasing organic traffic by 600%. integrated AI-powered numerology engine for automated personality calculation.",
+    technologies: ["Next.js", "Laravel", "Vue.js", "NestJS", "AI Integration"],
   },
   {
     id: 3,
-    title: "Frontend Web Developer",
-    company: "Majoo Indonesia",
-    period: "January 2022 - July 2023",
+    title: "Frontend Engineer",
+    company: "PT Majoo Teknologi Indonesia",
+    period: "January 2022 – June 2023",
     description:
-      "Built responsive and high-performance web applications using Next.js. Worked closely with designers and backend developers to ensure smooth project integration and optimal performance.",
-    technologies: ["Next.js", "Tailwind CSS", "TypeScript"],
+      "Participated in the rebuild of a 4-year-old SaaS platform from PHP CodeIgniter to a modern stack using Next.js, achieving a full redesign and feature migration within 6 months. Delivered 10,000s of lines of production code with a focus on performance and scalability, maintaining a near-zero production bug rate.",
+    technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
   },
   {
     id: 4,
-    title: "Full Stack Engineer",
+    title: "Junior Web Developer",
     company: "Politeknik Dharma Patria",
-    period: "January 2018 - March 2019",
+    period: "January 2018 – February 2019",
     description:
-      "Worked as a Full Stack Engineer covering both backend development using Laravel and frontend development using modern frameworks.",
-    technologies: ["Laravel", "Vue.js", "JavaScript"],
+      "Worked with a team to build and maintain responsive websites using HTML, CSS, JavaScript, and PHP. Created learning materials on web programming for undergraduate students at Politeknik Dharma Patria.",
+    technologies: ["PHP", "JavaScript", "HTML", "CSS"],
   },
 ];
 
