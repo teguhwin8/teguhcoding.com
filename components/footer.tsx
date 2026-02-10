@@ -6,7 +6,7 @@ export function Footer() {
     <footer className="border-t-2 border-black dark:border-white bg-white dark:bg-gray-900">
       <div className="max-w-7xl mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8">
-          <div className="space-y-4">
+          <nav aria-label="Footer navigation" className="space-y-4">
             <h3 className="text-lg font-bold">Navigation</h3>
             <ul className="space-y-2">
               <li>
@@ -30,7 +30,7 @@ export function Footer() {
                 </Link>
               </li>
             </ul>
-          </div>
+          </nav>
 
           <div className="space-y-4">
             <h3 className="text-lg font-bold">Contact</h3>
@@ -48,6 +48,7 @@ export function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-gray-600 dark:hover:text-gray-300"
+                aria-label="GitHub profile"
               >
                 <LuGithub size={24} />
               </a>
@@ -56,6 +57,7 @@ export function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-gray-600 dark:hover:text-gray-300"
+                aria-label="Twitter profile"
               >
                 <LuTwitter size={24} />
               </a>
@@ -64,6 +66,7 @@ export function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-gray-600 dark:hover:text-gray-300"
+                aria-label="LinkedIn profile"
               >
                 <LuLinkedin size={24} />
               </a>
@@ -73,9 +76,14 @@ export function Footer() {
           <div className="space-y-4">
             <h3 className="text-lg font-bold">Newsletter</h3>
             <form className="flex gap-2 flex-wrap">
+              <label htmlFor="newsletter-email" className="sr-only">
+                Email untuk newsletter
+              </label>
               <input
+                id="newsletter-email"
                 type="email"
                 placeholder="Enter your email"
+                aria-label="Email untuk berlangganan newsletter"
                 className="flex-1 p-2 border-2 border-black dark:border-white rounded bg-white dark:bg-gray-800 text-black dark:text-white placeholder-gray-500 dark:placeholder-gray-400"
               />
               <button type="submit" className="retro-button px-4 py-2">

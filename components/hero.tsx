@@ -17,7 +17,7 @@ export function Hero() {
           <div className="relative w-48 h-48 mx-auto mb-8">
             <Image
               src="/teguh.jpg"
-              alt="Teguh Widodo"
+              alt="Foto profil Teguh Widodo - Senior Software Engineer"
               fill
               className="rounded-full object-cover border-4 border-black dark:border-white shadow-xl"
               priority
@@ -36,6 +36,7 @@ export function Hero() {
               target="_blank"
               rel="noopener noreferrer"
               className="retro-button p-3 rounded-full"
+              aria-label="GitHub profile Teguh Widodo"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
             >
@@ -46,6 +47,7 @@ export function Hero() {
               target="_blank"
               rel="noopener noreferrer"
               className="retro-button p-3 rounded-full"
+              aria-label="LinkedIn profile Teguh Widodo"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
             >
@@ -56,6 +58,7 @@ export function Hero() {
               target="_blank"
               rel="noopener noreferrer"
               className="retro-button p-3 rounded-full"
+              aria-label="Twitter profile @teguhcoding"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
             >

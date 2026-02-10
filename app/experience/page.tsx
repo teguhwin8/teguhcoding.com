@@ -1,4 +1,17 @@
+import { Metadata } from "next";
 import { Briefcase, Calendar } from "lucide-react";
+
+export const metadata: Metadata = {
+  title: "Work Experience — Software Engineer Career",
+  description:
+    "Pengalaman kerja Teguh Widodo sebagai Software Engineer: PHP Developer, Fullstack Developer, Frontend Engineer dengan keahlian di Next.js, Laravel, NestJS.",
+  openGraph: {
+    title: "Work Experience — Teguh Widodo",
+    description:
+      "Pengalaman kerja Teguh Widodo sebagai Software Engineer di berbagai perusahaan teknologi.",
+    type: "website",
+  },
+};
 
 const experiences = [
   {
@@ -43,10 +56,11 @@ export default function Experience() {
   return (
     <div className="min-h-screen py-24 px-4">
       <div className="max-w-4xl mx-auto">
-        <h1 className="text-4xl font-bold mb-12">Work Experience</h1>
+        <h1 className="text-4xl font-bold mb-2">Work Experience</h1>
+        <p className="text-gray-600 dark:text-gray-300 mb-12">Perjalanan karir saya sebagai Software Engineer.</p>
         <div className="space-y-8">
           {experiences.map((exp) => (
-            <div key={exp.id} className="retro-card p-6">
+            <article key={exp.id} className="retro-card p-6">
               <div className="flex items-start justify-between mb-4">
                 <div>
                   <h2 className="text-2xl font-bold">{exp.title}</h2>
@@ -73,7 +87,7 @@ export default function Experience() {
                   </span>
                 ))}
               </div>
-            </div>
+            </article>
           ))}
         </div>
       </div>

@@ -1,4 +1,17 @@
+import { Metadata } from "next";
 import { BookOpen, Calendar, Award } from "lucide-react";
+
+export const metadata: Metadata = {
+  title: "Education & Certifications",
+  description:
+    "Latar belakang pendidikan dan sertifikasi profesional Teguh Widodo: RevoU Full Stack Engineering, Alibaba Cloud, IDCamp, Udemy, dan lainnya.",
+  openGraph: {
+    title: "Education & Certifications — Teguh Widodo",
+    description:
+      "Latar belakang pendidikan dan sertifikasi profesional Teguh Widodo di bidang Software Engineering.",
+    type: "website",
+  },
+};
 
 const education = [
   {
