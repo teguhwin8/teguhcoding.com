@@ -16,13 +16,18 @@ const getAuthHeader = () => {
 
 export async function fetchWordPress<T>(path: string, options: RequestInit = {}): Promise<T> {
     const url = `${WORDPRESS_API_URL}${path}`;
+
+    const headers = new Headers(options.headers);
+    headers.set("Content-Type", "application/json");
+
+    const auth = getAuthHeader();
+    if (auth.Authorization) {
+        headers.set("Authorization", auth.Authorization);
+    }
+
     const res = await fetch(url, {
         ...options,
-        headers: {
-            "Content-Type": "application/json",
-            ...getAuthHeader(),
-            ...options.headers,
-        },
+        headers,
         next: { revalidate: 60 },
     });
 
