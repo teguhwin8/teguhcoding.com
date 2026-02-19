@@ -126,10 +126,26 @@ body {
   color: rgb(156, 163, 175);
 }
 
-/* Project detail page improvements */
+/* Blog content improvements */
+.prose p {
+  margin-bottom: 2rem !important;
+  line-height: 1.8 !important;
+}
+
+.prose h1, .prose h2, .prose h3, .prose h4 {
+  margin-top: 2.5rem !important;
+  margin-bottom: 1.25rem !important;
+}
+
+.prose img {
+  margin-top: 2rem !important;
+  margin-bottom: 2rem !important;
+}
+
 .dark .prose p {
   color: rgb(209, 213, 219);
 }
+
 
 .dark ul li {
   color: rgb(209, 213, 219);

@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import { Hero } from "@/components/hero";
 import { FeaturedProjects } from "@/components/featured-projects";
 import { LatestBlog } from "@/components/latest-blog";
-import { getLatestPosts } from "@/lib/sanity";
+import { getLatestPosts } from "@/lib/wordpress";
 
 export const metadata: Metadata = {
   title: "Teguh Widodo — Senior Software Engineer & Web Developer",
@@ -30,3 +30,4 @@ export default async function Home() {
     </div>
   );
 }
+

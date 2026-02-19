@@ -1,5 +1,5 @@
 import { MetadataRoute } from "next";
-import { getAllPostSlugs } from "@/lib/sanity";
+import { getAllPostSlugs } from "@/lib/wordpress";
 import { projects } from "@/lib/projects";
 
 const BASE_URL = "https://teguhcoding.com";
@@ -47,14 +47,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
     // Dynamic blog post pages
     const postSlugs = await getAllPostSlugs();
-    const blogPages: MetadataRoute.Sitemap = postSlugs.map(
-        (post: { slug: string }) => ({
-            url: `${BASE_URL}/blog/${post.slug}`,
-            lastModified: new Date(),
-            changeFrequency: "weekly" as const,
-            priority: 0.8,
-        })
-    );
+    const blogPages: MetadataRoute.Sitemap = postSlugs.map((post) => ({
+        url: `${BASE_URL}/blog/${post.slug}`,
+        lastModified: new Date(),
+        changeFrequency: "weekly" as const,
+        priority: 0.8,
+    }));
 
     // Dynamic project pages
     const projectPages: MetadataRoute.Sitemap = projects.map((project) => ({
@@ -66,3 +64,4 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
     return [...staticPages, ...blogPages, ...projectPages];
 }
+
