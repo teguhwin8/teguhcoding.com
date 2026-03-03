@@ -1,6 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
 import { List } from "lucide-react";
 import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
@@ -67,8 +66,9 @@ export function TableOfContents({ headings }: TableOfContentsProps) {
                                     ? "font-bold text-black dark:text-white flex items-center before:content-['>'] before:mr-2 before:text-retro-yellow"
                                     : "text-gray-500 dark:text-gray-400"
                             )}
-                            dangerouslySetInnerHTML={{ __html: heading.text }}
-                        />
+                        >
+                            {heading.text}
+                        </a>
                     </li>
                 ))}
             </ul>

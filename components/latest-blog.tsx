@@ -11,6 +11,10 @@ interface LatestBlogProps {
   posts: WordPressPost[];
 }
 
+function stripHtml(html: string): string {
+  return html.replace(/<[^>]*>?/gm, "").trim();
+}
+
 export function LatestBlog({ posts }: LatestBlogProps) {
   return (
     <section className="py-20 px-4 bg-white dark:bg-gray-900">
@@ -27,6 +31,8 @@ export function LatestBlog({ posts }: LatestBlogProps) {
           {posts.map((post, index) => {
             const featuredImage = post._embedded?.["wp:featuredmedia"]?.[0]?.source_url;
             const categories = post._embedded?.["wp:term"]?.[0] || [];
+            const titleText = stripHtml(post.title.rendered);
+            const excerptText = stripHtml(post.excerpt.rendered);
 
             return (
               <motion.div
@@ -58,19 +64,16 @@ export function LatestBlog({ posts }: LatestBlogProps) {
                             <span
                               key={category.id}
                               className="px-2 py-1 bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 rounded text-xs"
-                              dangerouslySetInnerHTML={{ __html: category.name }}
-                            />
+                            >
+                              {stripHtml(category.name)}
+                            </span>
                           ))}
                         </div>
                       )}
-                      <h3
-                        className="text-xl font-bold mb-2"
-                        dangerouslySetInnerHTML={{ __html: post.title.rendered }}
-                      />
-                      <div
-                        className="text-gray-600 dark:text-gray-300 mb-4 line-clamp-3 text-sm"
-                        dangerouslySetInnerHTML={{ __html: post.excerpt.rendered }}
-                      />
+                      <h3 className="text-xl font-bold mb-2">{titleText}</h3>
+                      <p className="text-gray-600 dark:text-gray-300 mb-4 line-clamp-3 text-sm">
+                        {excerptText}
+                      </p>
                       <div className="mt-auto flex items-center text-black dark:text-white font-bold">
                         Read more <ArrowRight size={16} className="ml-2" />
                       </div>
@@ -105,4 +108,3 @@ export function LatestBlog({ posts }: LatestBlogProps) {
     </section>
   );
 }
-

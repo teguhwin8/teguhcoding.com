@@ -3,13 +3,12 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { Home, Search, FileText, Zap } from "lucide-react";
-import { useState, useEffect } from "react";
+import { useMemo, useState, useEffect } from "react";
 
 export default function NotFound() {
   const [glitchText, setGlitchText] = useState("404");
   const [isGlitching, setIsGlitching] = useState(false);
-  const [mounted, setMounted] = useState(false);
-  const [particles, setParticles] = useState<
+  const particles = useMemo<
     Array<{
       id: number;
       x: number;
@@ -19,29 +18,24 @@ export default function NotFound() {
       duration: number;
       delay: number;
     }>
-  >([]);
+  >(
+    () =>
+      Array.from({ length: 20 }, (_, i) => ({
+        id: i,
+        x: (i * 13) % 100,
+        y: (i * 29) % 100,
+        animateX: ((i * 53) % 400) - 200,
+        animateY: ((i * 97) % 400) - 200,
+        duration: 2 + ((i * 7) % 300) / 100,
+        delay: ((i * 11) % 200) / 100,
+      })),
+    []
+  );
 
   const glitchChars = "!@#$%^&*()_+-=[]{}|;:,.<>?";
   const originalText = "404";
 
-  // Initialize particles after component mounts
   useEffect(() => {
-    setMounted(true);
-    const initialParticles = Array.from({ length: 20 }, (_, i) => ({
-      id: i,
-      x: Math.random() * 100,
-      y: Math.random() * 100,
-      animateX: Math.random() * 400 - 200,
-      animateY: Math.random() * 400 - 200,
-      duration: Math.random() * 3 + 2,
-      delay: Math.random() * 2,
-    }));
-    setParticles(initialParticles);
-  }, []);
-
-  useEffect(() => {
-    if (!mounted) return;
-
     const interval = setInterval(() => {
       setIsGlitching(true);
       let iterations = 0;
@@ -72,7 +66,7 @@ export default function NotFound() {
     }, 3000);
 
     return () => clearInterval(interval);
-  }, [mounted]);
+  }, []);
 
   const suggestions = [
     "Check the URL for typos",
@@ -82,50 +76,30 @@ export default function NotFound() {
     "Contact us for help",
   ];
 
-  // Show simple loading state until mounted
-  if (!mounted) {
-    return (
-      <div className="min-h-screen flex items-center justify-center px-4 pt-16">
-        <div className="max-w-4xl mx-auto text-center">
-          <h1
-            className="text-8xl md:text-9xl font-bold mb-4"
-            style={{ fontFamily: '"Space Mono", monospace' }}
-          >
-            404
-          </h1>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            🚀 Page Not Found
-          </h2>
-        </div>
-      </div>
-    );
-  }
-
   return (
     <div className="min-h-screen flex items-center justify-center px-4 pt-16 pb-16 relative overflow-hidden">
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {mounted &&
-          particles.map((particle) => (
-            <motion.div
-              key={particle.id}
-              className="absolute w-2 h-2 bg-yellow-400 dark:bg-yellow-300 rounded-full opacity-30"
-              animate={{
-                x: [0, particle.animateX],
-                y: [0, particle.animateY],
-                scale: [0, 1, 0],
-              }}
-              transition={{
-                duration: particle.duration,
-                repeat: Infinity,
-                delay: particle.delay,
-              }}
-              style={{
-                left: `${particle.x}%`,
-                top: `${particle.y}%`,
-              }}
-            />
-          ))}
+        {particles.map((particle) => (
+          <motion.div
+            key={particle.id}
+            className="absolute w-2 h-2 bg-yellow-400 dark:bg-yellow-300 rounded-full opacity-30"
+            animate={{
+              x: [0, particle.animateX],
+              y: [0, particle.animateY],
+              scale: [0, 1, 0],
+            }}
+            transition={{
+              duration: particle.duration,
+              repeat: Infinity,
+              delay: particle.delay,
+            }}
+            style={{
+              left: `${particle.x}%`,
+              top: `${particle.y}%`,
+            }}
+          />
+        ))}
       </div>
 
       <div className="max-w-4xl mx-auto text-center relative z-10">

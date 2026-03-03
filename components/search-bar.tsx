@@ -174,6 +174,8 @@ export function SearchBar() {
                 {results.map((post, idx) => {
                   const category = post._embedded?.["wp:term"]?.[0]?.[0];
                   const excerpt = stripHtml(post.excerpt.rendered).slice(0, 100);
+                  const titleText = stripHtml(post.title.rendered);
+                  const categoryName = category ? stripHtml(category.name) : "";
                   return (
                     <li key={post.id}>
                       <Link
@@ -185,15 +187,13 @@ export function SearchBar() {
                       >
                         <div className="flex items-center gap-2 mb-0.5">
                           {category && (
-                            <span
-                              className="text-xs px-2 py-0.5 bg-black text-white dark:bg-white dark:text-black rounded-full font-medium"
-                              dangerouslySetInnerHTML={{ __html: category.name }}
-                            />
+                            <span className="text-xs px-2 py-0.5 bg-black text-white dark:bg-white dark:text-black rounded-full font-medium">
+                              {categoryName}
+                            </span>
                           )}
-                          <span
-                            className="font-semibold text-gray-900 dark:text-white text-sm line-clamp-1"
-                            dangerouslySetInnerHTML={{ __html: post.title.rendered }}
-                          />
+                          <span className="font-semibold text-gray-900 dark:text-white text-sm line-clamp-1">
+                            {titleText}
+                          </span>
                         </div>
                         {excerpt && (
                           <p className="text-xs text-gray-500 dark:text-gray-400 line-clamp-1">{excerpt}</p>

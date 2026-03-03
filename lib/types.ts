@@ -1,6 +1,7 @@
 export interface WordPressPost {
   id: number;
   date: string;
+  modified: string;
   slug: string;
   link: string;
   title: {
@@ -43,4 +44,3 @@ export interface WordPressPost {
     }>;
   };
 }
-

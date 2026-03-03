@@ -68,6 +68,17 @@ export async function getAllPostSlugs(): Promise<{ slug: string }[]> {
     }));
 }
 
+export async function getAllPostSlugsWithModified(): Promise<{ slug: string; modified: string }[]> {
+    const posts = await fetchWordPress<Array<Pick<WordPressPost, "slug" | "modified">>>(
+        "/posts?per_page=100&status=publish,private&_fields=slug,modified"
+    );
+
+    return posts.map((post) => ({
+        slug: post.slug,
+        modified: post.modified,
+    }));
+}
+
 export async function searchPosts(query: string): Promise<WordPressPost[]> {
     if (!query || query.trim().length < 2) return [];
     const encoded = encodeURIComponent(query.trim());

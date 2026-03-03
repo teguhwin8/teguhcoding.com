@@ -14,6 +14,10 @@ interface BlogPostPageProps {
   }>;
 }
 
+function stripHtml(html: string): string {
+  return html.replace(/<[^>]*>?/gm, "").trim();
+}
+
 export async function generateMetadata({
   params,
 }: BlogPostPageProps): Promise<Metadata> {
@@ -27,13 +31,14 @@ export async function generateMetadata({
   }
 
   const featuredImage = post._embedded?.["wp:featuredmedia"]?.[0]?.source_url;
-  const excerptText = post.excerpt.rendered.replace(/<[^>]*>?/gm, "").trim();
+  const excerptText = stripHtml(post.excerpt.rendered);
+  const titleText = stripHtml(post.title.rendered);
 
   return {
-    title: `${post.title.rendered} - Teguh Widodo`,
+    title: `${titleText} - Teguh Widodo`,
     description: excerptText,
     openGraph: {
-      title: post.title.rendered,
+      title: titleText,
       description: excerptText,
       type: "article",
       publishedTime: post.date,
@@ -41,7 +46,7 @@ export async function generateMetadata({
     },
     twitter: {
       card: "summary_large_image",
-      title: post.title.rendered,
+      title: titleText,
       description: excerptText,
       images: featuredImage ? [featuredImage] : [],
     },
@@ -75,6 +80,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   const featuredImage = post._embedded?.["wp:featuredmedia"]?.[0]?.source_url;
   const categories = post._embedded?.["wp:term"]?.[0] || [];
   const author = post._embedded?.author?.[0];
+  const titleText = stripHtml(post.title.rendered);
 
   // Process content for Table of Contents
   const { content: processedContent, headings } = extractHeadingsAndAddIds(post.content.rendered);
@@ -116,16 +122,16 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                       <span
                         key={category.id}
                         className="px-3 py-1 bg-black text-white dark:bg-white dark:text-black rounded-full text-sm font-bold"
-                        dangerouslySetInnerHTML={{ __html: category.name }}
-                      />
+                      >
+                        {stripHtml(category.name)}
+                      </span>
                     ))}
                   </div>
                 )}
 
-                <h1
-                  className="text-4xl md:text-5xl font-bold mb-4 text-gray-900 dark:text-white"
-                  dangerouslySetInnerHTML={{ __html: post.title.rendered }}
-                />
+                <h1 className="text-4xl md:text-5xl font-bold mb-4 text-gray-900 dark:text-white">
+                  {titleText}
+                </h1>
 
                 <div className="flex items-center space-x-6 text-gray-600 dark:text-gray-400">
                   <div className="flex items-center">
@@ -191,5 +197,4 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     </div>
   );
 }
-
 

@@ -14,15 +14,10 @@ import {
 } from "lucide-react";
 import { ThemeToggle } from "./theme-toggle";
 import { SearchBar } from "./search-bar";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 export function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -39,29 +34,6 @@ export function Navigation() {
     { href: "/blog", icon: FileText, label: "Blog" },
     { href: "/contact", icon: Mail, label: "Contact" },
   ];
-
-  if (!mounted) {
-    return (
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-white dark:bg-gray-900 border-b-2 border-black dark:border-gray-300">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between h-16">
-            <div className="flex items-center">
-              <Link
-                href="/"
-                className="flex items-center space-x-2 retro-button px-4 py-2"
-              >
-                <Home size={20} />
-                <span>Home</span>
-              </Link>
-            </div>
-            <div className="hidden md:flex items-center space-x-4">
-              <ThemeToggle />
-            </div>
-          </div>
-        </div>
-      </nav>
-    );
-  }
 
   return (
     <motion.nav
