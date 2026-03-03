@@ -15,6 +15,10 @@ export async function generateMetadata({ searchParams }: SearchPageProps): Promi
   return {
     title: q ? `Hasil pencarian "${q}" - Teguh Widodo` : "Cari Artikel - Teguh Widodo",
     description: "Cari artikel tentang web development, programming, dan teknologi.",
+    robots: {
+      index: false,
+      follow: true,
+    },
   };
 }
 

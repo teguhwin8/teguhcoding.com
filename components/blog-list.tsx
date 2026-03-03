@@ -8,6 +8,10 @@ interface BlogListProps {
   posts: WordPressPost[];
 }
 
+function stripHtml(html: string): string {
+  return html.replace(/<[^>]*>?/gm, "").trim();
+}
+
 export default function BlogList({ posts }: BlogListProps) {
   if (posts.length === 0) {
     return null;
@@ -19,6 +23,9 @@ export default function BlogList({ posts }: BlogListProps) {
         {posts.map((post: WordPressPost) => {
           const featuredImage = post._embedded?.["wp:featuredmedia"]?.[0]?.source_url;
           const category = post._embedded?.["wp:term"]?.[0]?.[0];
+          const categoryName = category ? stripHtml(category.name) : "";
+          const titleText = stripHtml(post.title.rendered);
+          const excerptText = stripHtml(post.excerpt.rendered);
 
           return (
             <Link key={post.id} href={`/blog/${post.slug}`}>
@@ -35,24 +42,17 @@ export default function BlogList({ posts }: BlogListProps) {
                 )}
                 <div className="flex items-center space-x-4 mb-2">
                   {category && (
-                    <span
-                      className="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 rounded-full text-sm"
-                      dangerouslySetInnerHTML={{ __html: category.name }}
-                    />
+                    <span className="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 rounded-full text-sm">
+                      {categoryName}
+                    </span>
                   )}
                   <div className="flex items-center text-gray-600 dark:text-gray-300 text-sm">
                     <Calendar size={14} className="mr-1" />
                     {format(new Date(post.date), "MMM dd, yyyy")}
                   </div>
                 </div>
-                <h2
-                  className="text-2xl font-bold mb-2"
-                  dangerouslySetInnerHTML={{ __html: post.title.rendered }}
-                />
-                <div
-                  className="text-gray-600 dark:text-gray-300 mb-4"
-                  dangerouslySetInnerHTML={{ __html: post.excerpt.rendered }}
-                />
+                <h2 className="text-2xl font-bold mb-2">{titleText}</h2>
+                <p className="text-gray-600 dark:text-gray-300 mb-4">{excerptText}</p>
                 <div className="flex items-center text-black dark:text-white font-bold">
                   Read more <ArrowRight size={16} className="ml-2" />
                 </div>

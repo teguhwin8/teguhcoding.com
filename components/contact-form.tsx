@@ -10,12 +10,53 @@ export default function ContactForm() {
         email: "",
         subject: "",
         message: "",
+        website: "",
     });
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [feedback, setFeedback] = useState<{ type: "success" | "error"; message: string } | null>(null);
+    const [formStartedAt] = useState<number>(Date.now());
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
-        // Handle form submission
-        console.log(formData);
+        setIsSubmitting(true);
+        setFeedback(null);
+
+        try {
+            const response = await fetch("/api/contact", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                    ...formData,
+                    formStartedAt,
+                }),
+            });
+
+            if (!response.ok) {
+                const data = await response.json().catch(() => ({ error: "Terjadi kesalahan saat mengirim pesan." }));
+                throw new Error(data.error || "Terjadi kesalahan saat mengirim pesan.");
+            }
+
+            setFormData({
+                name: "",
+                email: "",
+                subject: "",
+                message: "",
+                website: "",
+            });
+            setFeedback({
+                type: "success",
+                message: "Pesan berhasil dikirim. Saya akan membalas secepatnya.",
+            });
+        } catch (error) {
+            setFeedback({
+                type: "error",
+                message: error instanceof Error ? error.message : "Gagal mengirim pesan. Silakan coba lagi.",
+            });
+        } finally {
+            setIsSubmitting(false);
+        }
     };
 
     return (
@@ -47,6 +88,18 @@ export default function ContactForm() {
 
                     <div>
                         <form onSubmit={handleSubmit} className="space-y-4">
+                            <input
+                                type="text"
+                                name="website"
+                                tabIndex={-1}
+                                autoComplete="off"
+                                value={formData.website}
+                                onChange={(e) =>
+                                    setFormData({ ...formData, website: e.target.value })
+                                }
+                                className="hidden"
+                                aria-hidden="true"
+                            />
                             <div>
                                 <label htmlFor="contact-name" className="block text-sm font-medium mb-1">Name</label>
                                 <input
@@ -107,10 +160,21 @@ export default function ContactForm() {
                                 className="retro-button px-6 py-2 flex items-center"
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}
+                                disabled={isSubmitting}
                             >
                                 <Send size={20} className="mr-2" />
-                                Send Message
+                                {isSubmitting ? "Sending..." : "Send Message"}
                             </motion.button>
+                            {feedback && (
+                                <p
+                                    className={`text-sm ${feedback.type === "success"
+                                        ? "text-green-600 dark:text-green-400"
+                                        : "text-red-600 dark:text-red-400"
+                                        }`}
+                                >
+                                    {feedback.message}
+                                </p>
+                            )}
                         </form>
                     </div>
                 </div>
