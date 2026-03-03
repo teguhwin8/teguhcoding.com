@@ -13,6 +13,7 @@ import {
   X,
 } from "lucide-react";
 import { ThemeToggle } from "./theme-toggle";
+import { SearchBar } from "./search-bar";
 import { useState, useEffect } from "react";
 
 export function Navigation() {
@@ -98,11 +99,13 @@ export function Navigation() {
                 </Link>
               );
             })}
+            <SearchBar />
             <ThemeToggle />
           </div>
 
           {/* Mobile menu button */}
           <div className="md:hidden flex items-center space-x-2">
+            <SearchBar />
             <ThemeToggle />
             <button
               onClick={toggleMenu}

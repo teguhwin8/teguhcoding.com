@@ -57,3 +57,9 @@ export async function getAllPostSlugs(): Promise<{ slug: string }[]> {
         slug: post.slug,
     }));
 }
+
+export async function searchPosts(query: string): Promise<WordPressPost[]> {
+    if (!query || query.trim() === "") return [];
+    const encoded = encodeURIComponent(query.trim());
+    return fetchWordPress<WordPressPost[]>(`/posts?_embed&search=${encoded}&per_page=20&status=publish,private`);
+}
