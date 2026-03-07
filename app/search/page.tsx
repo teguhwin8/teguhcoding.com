@@ -5,13 +5,10 @@ import { Calendar, ArrowRight, Search } from "lucide-react";
 import { searchPosts } from "@/lib/wordpress";
 import { format } from "date-fns";
 import { WordPressPost } from "@/lib/types";
+import { htmlToPlainText } from "@/lib/html-text";
 
 interface SearchPageProps {
   searchParams: Promise<{ q?: string }>;
-}
-
-function stripHtml(html: string): string {
-  return html.replace(/<[^>]*>?/gm, "").trim();
 }
 
 export async function generateMetadata({ searchParams }: SearchPageProps): Promise<Metadata> {
@@ -84,12 +81,12 @@ export default async function SearchPage({ searchParams }: SearchPageProps) {
         {query && posts.length > 0 && (
           <section aria-label="Hasil pencarian">
             <div className="grid space-y-8">
-              {posts.map((post: WordPressPost) => {
+              {posts.map((post: WordPressPost, index) => {
                 const featuredImage = post._embedded?.["wp:featuredmedia"]?.[0]?.source_url;
                 const category = post._embedded?.["wp:term"]?.[0]?.[0];
-                const titleText = stripHtml(post.title.rendered);
-                const excerptText = stripHtml(post.excerpt.rendered);
-                const categoryName = category ? stripHtml(category.name) : "";
+                const titleText = htmlToPlainText(post.title.rendered);
+                const excerptText = htmlToPlainText(post.excerpt.rendered);
+                const categoryName = category ? htmlToPlainText(category.name) : "";
 
                 return (
                   <Link key={post.id} href={`/blog/${post.slug}`}>
@@ -98,8 +95,10 @@ export default async function SearchPage({ searchParams }: SearchPageProps) {
                         <div className="relative h-48 mb-4 rounded-lg overflow-hidden">
                           <Image
                             src={featuredImage}
-                            alt={post.title.rendered}
+                            alt={titleText}
                             fill
+                            loading={index === 0 ? "eager" : "lazy"}
+                            sizes="(min-width: 1024px) 896px, 100vw"
                             className="object-cover"
                           />
                         </div>

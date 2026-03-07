@@ -18,9 +18,10 @@ export function Hero() {
             <Image
               src="/teguh.jpg"
               alt="Foto profil Teguh Widodo - Senior Software Engineer"
-              fill
-              className="rounded-full object-cover border-4 border-black dark:border-white shadow-xl"
-              priority
+              width={192}
+              height={192}
+              preload
+              className="h-48 w-48 rounded-full object-cover border-4 border-black dark:border-white shadow-xl"
             />
           </div>
 

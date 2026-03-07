@@ -7,15 +7,12 @@ import { getPostBySlug, getAllPostSlugs } from "@/lib/wordpress";
 import { format } from "date-fns";
 import { extractHeadingsAndAddIds } from "@/lib/toc";
 import { TableOfContents } from "@/components/table-of-contents";
+import { htmlToPlainText } from "@/lib/html-text";
 
 interface BlogPostPageProps {
   params: Promise<{
     slug: string;
   }>;
-}
-
-function stripHtml(html: string): string {
-  return html.replace(/<[^>]*>?/gm, "").trim();
 }
 
 export async function generateMetadata({
@@ -31,8 +28,8 @@ export async function generateMetadata({
   }
 
   const featuredImage = post._embedded?.["wp:featuredmedia"]?.[0]?.source_url;
-  const excerptText = stripHtml(post.excerpt.rendered);
-  const titleText = stripHtml(post.title.rendered);
+  const excerptText = htmlToPlainText(post.excerpt.rendered);
+  const titleText = htmlToPlainText(post.title.rendered);
 
   return {
     title: `${titleText} - Teguh Widodo`,
@@ -80,7 +77,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   const featuredImage = post._embedded?.["wp:featuredmedia"]?.[0]?.source_url;
   const categories = post._embedded?.["wp:term"]?.[0] || [];
   const author = post._embedded?.author?.[0];
-  const titleText = stripHtml(post.title.rendered);
+  const titleText = htmlToPlainText(post.title.rendered);
 
   // Process content for Table of Contents
   const { content: processedContent, headings } = extractHeadingsAndAddIds(post.content.rendered);
@@ -106,10 +103,11 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                 <div className="relative h-[400px] mb-8 rounded-lg overflow-hidden shadow-lg border-4 border-black dark:border-white">
                   <Image
                     src={featuredImage}
-                    alt={post.title.rendered}
+                    alt={titleText}
                     fill
+                    sizes="(min-width: 1024px) 768px, 100vw"
                     className="object-cover"
-                    priority
+                    preload
                   />
                 </div>
               )}
@@ -123,7 +121,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                         key={category.id}
                         className="px-3 py-1 bg-black text-white dark:bg-white dark:text-black rounded-full text-sm font-bold"
                       >
-                        {stripHtml(category.name)}
+                        {htmlToPlainText(category.name)}
                       </span>
                     ))}
                   </div>
@@ -197,4 +195,3 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     </div>
   );
 }
-

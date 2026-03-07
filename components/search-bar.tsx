@@ -5,10 +5,7 @@ import { useRouter } from "next/navigation";
 import { Search, X, Loader2 } from "lucide-react";
 import Link from "next/link";
 import { WordPressPost } from "@/lib/types";
-
-function stripHtml(html: string): string {
-  return html.replace(/<[^>]*>?/gm, "").trim();
-}
+import { htmlToPlainText } from "@/lib/html-text";
 
 export function SearchBar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -173,9 +170,9 @@ export function SearchBar() {
               <ul className="max-h-80 overflow-y-auto divide-y divide-gray-100 dark:divide-gray-800">
                 {results.map((post, idx) => {
                   const category = post._embedded?.["wp:term"]?.[0]?.[0];
-                  const excerpt = stripHtml(post.excerpt.rendered).slice(0, 100);
-                  const titleText = stripHtml(post.title.rendered);
-                  const categoryName = category ? stripHtml(category.name) : "";
+                  const excerpt = htmlToPlainText(post.excerpt.rendered).slice(0, 100);
+                  const titleText = htmlToPlainText(post.title.rendered);
+                  const categoryName = category ? htmlToPlainText(category.name) : "";
                   return (
                     <li key={post.id}>
                       <Link

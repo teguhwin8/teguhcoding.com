@@ -5,14 +5,11 @@ import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight, Calendar } from "lucide-react";
 import { WordPressPost } from "@/lib/types";
+import { htmlToPlainText } from "@/lib/html-text";
 import { format } from "date-fns";
 
 interface LatestBlogProps {
   posts: WordPressPost[];
-}
-
-function stripHtml(html: string): string {
-  return html.replace(/<[^>]*>?/gm, "").trim();
 }
 
 export function LatestBlog({ posts }: LatestBlogProps) {
@@ -31,8 +28,8 @@ export function LatestBlog({ posts }: LatestBlogProps) {
           {posts.map((post, index) => {
             const featuredImage = post._embedded?.["wp:featuredmedia"]?.[0]?.source_url;
             const categories = post._embedded?.["wp:term"]?.[0] || [];
-            const titleText = stripHtml(post.title.rendered);
-            const excerptText = stripHtml(post.excerpt.rendered);
+            const titleText = htmlToPlainText(post.title.rendered);
+            const excerptText = htmlToPlainText(post.excerpt.rendered);
 
             return (
               <motion.div
@@ -47,8 +44,9 @@ export function LatestBlog({ posts }: LatestBlogProps) {
                       <div className="relative h-48">
                         <Image
                           src={featuredImage}
-                          alt={post.title.rendered}
+                          alt={titleText}
                           fill
+                          sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
                           className="object-cover"
                         />
                       </div>
@@ -65,7 +63,7 @@ export function LatestBlog({ posts }: LatestBlogProps) {
                               key={category.id}
                               className="px-2 py-1 bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 rounded text-xs"
                             >
-                              {stripHtml(category.name)}
+                              {htmlToPlainText(category.name)}
                             </span>
                           ))}
                         </div>

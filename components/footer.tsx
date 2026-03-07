@@ -96,7 +96,7 @@ export function Footer() {
         <div className="mt-12 pt-8 border-t border-gray-200 dark:border-gray-700 text-center">
           <p className="flex items-center justify-center text-sm">
             Made with <LuHeart size={16} className="mx-1 text-red-500" /> using
-            Next.js 15
+            {" "}Next.js 16
           </p>
         </div>
       </div>

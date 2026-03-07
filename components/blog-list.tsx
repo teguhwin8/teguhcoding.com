@@ -3,13 +3,10 @@ import Image from "next/image";
 import { Calendar, ArrowRight } from "lucide-react";
 import { format } from "date-fns";
 import { WordPressPost } from "@/lib/types";
+import { htmlToPlainText } from "@/lib/html-text";
 
 interface BlogListProps {
   posts: WordPressPost[];
-}
-
-function stripHtml(html: string): string {
-  return html.replace(/<[^>]*>?/gm, "").trim();
 }
 
 export default function BlogList({ posts }: BlogListProps) {
@@ -20,12 +17,12 @@ export default function BlogList({ posts }: BlogListProps) {
   return (
     <section aria-label="Daftar artikel blog">
       <div className="grid space-y-8">
-        {posts.map((post: WordPressPost) => {
+        {posts.map((post: WordPressPost, index) => {
           const featuredImage = post._embedded?.["wp:featuredmedia"]?.[0]?.source_url;
           const category = post._embedded?.["wp:term"]?.[0]?.[0];
-          const categoryName = category ? stripHtml(category.name) : "";
-          const titleText = stripHtml(post.title.rendered);
-          const excerptText = stripHtml(post.excerpt.rendered);
+          const categoryName = category ? htmlToPlainText(category.name) : "";
+          const titleText = htmlToPlainText(post.title.rendered);
+          const excerptText = htmlToPlainText(post.excerpt.rendered);
 
           return (
             <Link key={post.id} href={`/blog/${post.slug}`}>
@@ -34,8 +31,10 @@ export default function BlogList({ posts }: BlogListProps) {
                   <div className="relative h-48 mb-4 rounded-lg overflow-hidden">
                     <Image
                       src={featuredImage}
-                      alt={post.title.rendered}
+                      alt={titleText}
                       fill
+                      loading={index === 0 ? "eager" : "lazy"}
+                      sizes="(min-width: 1024px) 896px, 100vw"
                       className="object-cover"
                     />
                   </div>
