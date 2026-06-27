@@ -3,7 +3,8 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 import { Calendar, ArrowLeft, ExternalLink } from "lucide-react";
 import Link from "next/link";
-import { getPostBySlug, getAllPostSlugs } from "@/lib/markdown";
+import { getPostBySlug, getAllPostSlugs, getAllPosts } from "@/lib/markdown";
+import ArticleCard from "@/components/article-card";
 
 interface BlogPostPageProps {
   params: Promise<{
@@ -67,9 +68,29 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     year: 'numeric'
   });
 
+  // Get related posts based on tags
+  const allPosts = await getAllPosts();
+  const relatedPosts = allPosts
+    .filter((p) => p.slug !== post.slug)
+    .filter((p) => p.tags && post.tags && p.tags.some((tag) => post.tags!.includes(tag)))
+    .slice(0, 3);
+
+  // Add ref parameter to source URL
+  let finalSourceUrl = post.source_url;
+  try {
+    const urlObj = new URL(post.source_url);
+    urlObj.searchParams.set("ref", "teguhcoding.com");
+    finalSourceUrl = urlObj.toString();
+  } catch (e) {
+    // Fallback if URL is somehow invalid
+    finalSourceUrl = post.source_url.includes('?') 
+      ? `${post.source_url}&ref=teguhcoding.com`
+      : `${post.source_url}?ref=teguhcoding.com`;
+  }
+
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900 pt-24 pb-12">
-      <div className="max-w-3xl mx-auto px-4">
+      <div className="max-w-7xl mx-auto px-4">
         {/* Back button */}
         <Link
           href="/blog"
@@ -122,8 +143,8 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
             {/* Post Excerpt Content */}
             <div className="prose prose-lg dark:prose-invert max-w-none mb-10 text-gray-700 dark:text-gray-300">
-              {post.excerpt.split('\\n').map((paragraph, index) => (
-                <p key={index} className="mb-4 leading-relaxed">
+              {post.excerpt.split('\n').filter(p => p.trim() !== '').map((paragraph, index) => (
+                <p key={index} className="mb-6 leading-relaxed">
                   {paragraph}
                 </p>
               ))}
@@ -132,10 +153,10 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             {/* Action Area */}
             <div className="pt-8 border-t-2 border-dashed border-gray-200 dark:border-gray-700 text-center">
               <a
-                href={post.source_url}
+                href={finalSourceUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center px-8 py-4 text-lg font-bold bg-black text-white dark:bg-white dark:text-black rounded-full shadow-[4px_4px_0px_0px_rgba(0,0,0,0.2)] hover:shadow-none hover:translate-y-1 hover:translate-x-1 transition-all border-2 border-transparent dark:border-black"
+                className="retro-button inline-flex items-center justify-center px-8 py-4 text-lg"
               >
                 Baca Artikel Selengkapnya
                 <ExternalLink size={20} className="ml-2" />
@@ -147,6 +168,20 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           </div>
         </article>
       </div>
+
+      {/* Related Posts Section - Wider Container */}
+      {relatedPosts.length > 0 && (
+        <div className="max-w-7xl mx-auto px-4 mt-16">
+          <h2 className="text-2xl font-black mb-8 text-gray-900 dark:text-white text-center md:text-left">
+            Artikel Terkait
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {relatedPosts.map((relatedPost) => (
+              <ArticleCard key={relatedPost.slug} post={relatedPost} />
+            ))}
+          </div>
+        </div>
+      )}
     </div>
   );
 }

@@ -39,7 +39,7 @@ export default async function SearchPage({ searchParams }: SearchPageProps) {
 
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900 py-24 px-4">
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-7xl mx-auto">
         <div className="flex items-center gap-3 mb-2 justify-center">
           <Search size={32} />
           <h1 className="text-4xl md:text-5xl font-black tracking-tight">Cari Artikel</h1>

@@ -54,7 +54,7 @@ export default async function Page({
   if (!project) {
     return (
       <div className="min-h-screen pt-24 px-4">
-        <div className="max-w-4xl mx-auto text-center">
+        <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl font-bold mb-8">Project Not Found</h1>
           <Link
             href="/projects"
@@ -69,7 +69,7 @@ export default async function Page({
 
   return (
     <div className="min-h-screen pt-24 px-4">
-      <div className="max-w-4xl mx-auto">
+      <div className="max-w-7xl mx-auto">
         <Link
           href="/projects"
           className="retro-button px-4 py-2 inline-flex items-center mb-8"

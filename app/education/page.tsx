@@ -98,7 +98,7 @@ const certifications = [
 export default function Education() {
   return (
     <div className="min-h-screen pt-24 px-4">
-      <div className="max-w-4xl mx-auto">
+      <div className="max-w-7xl mx-auto">
         <h1 className="text-4xl font-bold mb-12">Education & Certifications</h1>
 
         <section className="mb-12">

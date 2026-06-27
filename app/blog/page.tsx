@@ -44,7 +44,7 @@ export default async function Blog({ searchParams }: BlogPageProps) {
 
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900 py-24 px-4">
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-7xl mx-auto">
         <header className="mb-12 text-center">
           <h1 className="text-4xl md:text-5xl font-black mb-4 tracking-tight">Developer Feed</h1>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
