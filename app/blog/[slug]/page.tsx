@@ -3,6 +3,7 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 import { Calendar, ArrowLeft, ExternalLink } from "lucide-react";
 import Link from "next/link";
+import ReactMarkdown from "react-markdown";
 import { getPostBySlug, getAllPostSlugs, getAllPosts } from "@/lib/markdown";
 import ArticleCard from "@/components/article-card";
 
@@ -143,11 +144,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
             {/* Post Excerpt Content */}
             <div className="prose prose-lg dark:prose-invert max-w-none mb-10 text-gray-700 dark:text-gray-300">
-              {post.excerpt.split('\n').filter(p => p.trim() !== '').map((paragraph, index) => (
-                <p key={index} className="mb-6 leading-relaxed">
-                  {paragraph}
-                </p>
-              ))}
+              <ReactMarkdown>{post.excerpt}</ReactMarkdown>
             </div>
 
             {/* Action Area */}
@@ -158,11 +155,15 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                 rel="noopener noreferrer"
                 className="retro-button inline-flex items-center justify-center px-8 py-4 text-lg"
               >
-                Baca Artikel Selengkapnya
+                {post.source_url.includes('youtube.com') || post.source_url.includes('youtu.be') 
+                  ? 'Tonton Video Sumber' 
+                  : 'Baca Artikel Selengkapnya'}
                 <ExternalLink size={20} className="ml-2" />
               </a>
               <p className="mt-4 text-sm text-gray-500 dark:text-gray-400">
-                Anda akan diarahkan ke sumber asli artikel ini.
+                {post.source_url.includes('youtube.com') || post.source_url.includes('youtu.be')
+                  ? 'Anda akan diarahkan ke video asli di YouTube.'
+                  : 'Anda akan diarahkan ke sumber asli artikel ini.'}
               </p>
             </div>
           </div>

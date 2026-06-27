@@ -57,7 +57,7 @@ export async function POST(req: Request) {
       messages: [
         {
           role: "system",
-          content: "You are a helpful assistant that generates metadata for a blog post based on the article text. Respond in JSON format with the following keys: 'title' (string), 'tags' (array of strings, max 3), 'excerpt' (string, exactly 2 paragraphs summarizing the article in Indonesian). The response MUST be valid JSON."
+          content: "You are a helpful assistant that generates a natural, engaging, and professional blog post based on the article text. Respond in JSON format with the following keys: 'title' (string), 'tags' (array of strings, max 3), 'excerpt' (string, a comprehensive blog post in Markdown format in Indonesian, using natural, conversational yet professional language like an experienced tech blogger. Avoid rigid AI-like language, cliches, or robotic transitions. Use paragraphs, lists, and headers naturally). The response MUST be valid JSON."
         },
         {
           role: "user",
