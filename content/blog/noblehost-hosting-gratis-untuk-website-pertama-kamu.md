@@ -2,7 +2,7 @@
 title: "NobleHost: Hosting Gratis untuk Website Pertama Kamu"
 source_url: "https://bansos.dev/list/noblehost-hosting-gratis/"
 tags: ["NobleHost","hosting gratis","developer"]
-date: "2026-06-27T09:00:00.000Z"
+date: "2026-06-24T09:00:00.000Z"
 cover_image: "https://bansos.dev/list/noblehost-hosting-gratis/og.png"
 ---
 

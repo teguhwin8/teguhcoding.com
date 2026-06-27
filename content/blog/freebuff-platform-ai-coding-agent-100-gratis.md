@@ -2,7 +2,7 @@
 title: "Freebuff — Platform AI Coding Agent 100% Gratis"
 source_url: "https://bansos.dev/list/freebuff-ai-builder/"
 tags: ["Freebuff","AI","bansos.dev"]
-date: "2026-06-27T08:10:50.392Z"
+date: "2026-06-26T08:10:50.392Z"
 cover_image: "https://bansos.dev/list/freebuff-ai-builder/og.png"
 ---
 

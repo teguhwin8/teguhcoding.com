@@ -2,7 +2,7 @@
 title: "Next.js 16.3: AI Improvements"
 source_url: "https://nextjs.org/blog/next-16-3-ai-improvements?ref=dailydev"
 tags: ["Next.js","AI","Agents"]
-date: "2026-06-27T11:00:00.000Z"
+date: "2026-06-26T11:00:00.000Z"
 cover_image: "https://h8dxkfmaphn8o0p3.public.blob.vercel-storage.com/static/blog/next-16-3-ai-improvements/twitter-card.png"
 ---
 

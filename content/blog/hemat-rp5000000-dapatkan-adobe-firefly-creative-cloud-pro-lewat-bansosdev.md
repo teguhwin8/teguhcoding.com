@@ -2,7 +2,7 @@
 title: "Hemat Rp5.000.000: Dapatkan Adobe Firefly & Creative Cloud Pro lewat bansos.dev"
 source_url: "https://bansos.dev/list/adobe-creative-cloud-pro-trial/"
 tags: ["Adobe Firefly","Promo Developer","bansos.dev"]
-date: "2026-06-27T08:55:19.545Z"
+date: "2026-06-26T08:55:19.545Z"
 cover_image: "https://bansos.dev/list/adobe-creative-cloud-pro-trial/og.png"
 ---
 
