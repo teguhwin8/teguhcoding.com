@@ -29,12 +29,13 @@ export async function POST(req: Request) {
   try {
     const authHeader = req.headers.get('authorization');
     const secretToken = process.env.API_SECRET_TOKEN;
+    const authCookie = req.headers.get('cookie')?.includes('auth_token=authenticated');
 
-    if (!secretToken || authHeader !== `Bearer ${secretToken}`) {
+    if (!authCookie && (!secretToken || authHeader !== `Bearer ${secretToken}`)) {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
     }
 
-    const { url } = await req.json();
+    const { url, transcript: manualTranscript } = await req.json();
 
     if (!url) {
       return NextResponse.json({ error: 'YouTube URL is required' }, { status: 400 });
@@ -47,12 +48,16 @@ export async function POST(req: Request) {
 
     // 1. Fetch Transcript
     let transcriptText = "";
-    try {
-      const transcript = await YoutubeTranscript.fetchTranscript(videoId);
-      transcriptText = transcript.map(t => t.text).join(' ');
-    } catch (e) {
-      console.error("Transcript fetch error:", e);
-      return NextResponse.json({ error: 'Failed to fetch transcript. Video might not have closed captions.' }, { status: 400 });
+    if (manualTranscript) {
+      transcriptText = manualTranscript;
+    } else {
+      try {
+        const transcript = await YoutubeTranscript.fetchTranscript(videoId);
+        transcriptText = transcript.map(t => t.text).join(' ');
+      } catch (e) {
+        console.error("Transcript fetch error:", e);
+        return NextResponse.json({ error: 'Gagal mengambil transkrip otomatis. YouTube mungkin memblokir server. Silakan masukkan transkrip secara manual di dashboard.' }, { status: 400 });
+      }
     }
 
     // Truncate to save tokens (limit to 15,000 characters)
