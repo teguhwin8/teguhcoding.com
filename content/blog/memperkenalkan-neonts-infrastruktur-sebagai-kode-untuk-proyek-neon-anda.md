@@ -2,7 +2,7 @@
 title: "Memperkenalkan neon.ts: Infrastruktur sebagai Kode untuk Proyek Neon Anda"
 source_url: "https://neon.com/blog/introducing-neon-ts?ref=dailydev"
 tags: ["Neon","Teknologi","Infrastruktur"]
-date: "2026-06-27"
+date: "2026-06-27T10:00:00.000Z"
 cover_image: "https://cdn.neonapi.io/public/images/pages/blog/introducing-neon-ts/cover.png"
 ---
 

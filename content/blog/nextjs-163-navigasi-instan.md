@@ -2,7 +2,7 @@
 title: "Next.js 16.3: Navigasi Instan"
 source_url: "https://nextjs.org/blog/next-16-3-instant-navigations"
 tags: ["Next.js","Web Development","SPAs"]
-date: "2026-06-27"
+date: "2026-06-27T12:00:00.000Z"
 cover_image: "https://h8dxkfmaphn8o0p3.public.blob.vercel-storage.com/static/blog/next-16-3-instant-navigations/twitter-card.png"
 ---
 

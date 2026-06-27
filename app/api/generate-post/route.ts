@@ -74,7 +74,7 @@ export async function POST(req: Request) {
 
     const result = JSON.parse(resultString);
     const slug = slugify(result.title);
-    const date = new Date().toISOString().split('T')[0];
+    const date = new Date().toISOString();
 
     // Prepare markdown content
     const markdownContent = `---

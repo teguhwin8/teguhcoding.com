@@ -21,7 +21,7 @@ export const dynamic = "force-static";
 
 export default async function Home() {
   const allPosts = await getAllPosts();
-  const latestPosts = allPosts.slice(0, 3);
+  const latestPosts = allPosts.slice(0, 9);
 
   return (
     <div className="pt-16">
