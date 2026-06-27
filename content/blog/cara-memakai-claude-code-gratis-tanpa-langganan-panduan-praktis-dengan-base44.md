@@ -6,7 +6,6 @@ date: "2026-06-27T10:03:38.571Z"
 cover_image: "https://img.youtube.com/vi/Bd8Kqv8Twnw/maxresdefault.jpg"
 ---
 
-```markdown
 # Cara Menggunakan Claude Code Gratis Tanpa Subscription
 
 Banyak orang mengira Claude Code cuma bisa dipakai kalau sudah berlangganan. Padahal, ada cara yang sah dan jauh lebih praktis untuk mengakses kemampuan coding Claude tanpa harus keluar biaya bulanan. Kuncinya bukan sekadar mencari “trik gratis”, melainkan memakai Claude di lingkungan yang lebih lengkap, sehingga kamu tidak hanya dapat AI-nya, tetapi juga seluruh komponen yang biasanya harus dirakit sendiri.
@@ -119,4 +118,3 @@ Kalau selama ini kamu merasa Claude Code hanya bisa dipakai lewat subscription, 
 Buat banyak orang, ini adalah kombinasi yang ideal: tetap gratis, tetap cerdas, dan jauh lebih siap dipakai untuk proyek nyata. Jadi, kalau targetmu adalah membangun SaaS, website, atau tool otomatis tanpa ribet setup teknis, pendekatan ini layak dicoba.
 
 Yang paling penting, kamu jadi bisa fokus ke hal yang benar-benar menentukan: ide, produk, dan manfaatnya untuk pengguna.
-```

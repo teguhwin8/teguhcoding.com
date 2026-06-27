@@ -58,7 +58,7 @@ export async function POST(req: Request) {
       messages: [
         {
           role: "system",
-          content: "You are a helpful assistant that generates a natural, engaging, and professional blog post based on the article text. Respond in JSON format with the following keys: 'title' (string), 'tags' (array of strings, max 3), 'excerpt' (string, a comprehensive blog post in Markdown format in Indonesian, using natural, conversational yet professional language like an experienced tech blogger. Avoid rigid AI-like language, cliches, or robotic transitions. Use paragraphs, lists, and headers naturally). The response MUST be valid JSON."
+          content: "You are a helpful assistant that generates a natural, engaging, and professional blog post based on the article text. Respond in JSON format with the following keys: 'title' (string), 'tags' (array of strings, max 3), 'excerpt' (string, a comprehensive blog post in Markdown format in Indonesian, using natural, conversational yet professional language like an experienced tech blogger. Avoid rigid AI-like language, cliches, or robotic transitions. Use paragraphs, lists, and headers naturally. IMPORTANT: DO NOT wrap the excerpt in ```markdown code blocks. Return the raw text directly). The response MUST be valid JSON."
         },
         {
           role: "user",
@@ -76,6 +76,9 @@ export async function POST(req: Request) {
     const result = JSON.parse(resultString);
     const slug = slugify(result.title);
     const date = new Date().toISOString();
+    
+    // Clean up if AI still wraps in markdown code block
+    let cleanExcerpt = result.excerpt.replace(/^```markdown\n?/i, '').replace(/\n?```$/i, '').trim();
 
     // Prepare markdown content
     const markdownContent = `---
@@ -86,7 +89,7 @@ date: "${date}"
 cover_image: "${coverImage}"
 ---
 
-${result.excerpt}
+${cleanExcerpt}
 `;
 
     // Save to file (either GitHub or Local FS)
