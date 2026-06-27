@@ -87,7 +87,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={spaceMono.className}>
+      <body className={spaceMono.className} suppressHydrationWarning>
         <a
           href="#main-content"
           className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-white focus:text-black focus:border-2 focus:border-black focus:rounded dark:focus:bg-gray-900 dark:focus:text-white dark:focus:border-white"

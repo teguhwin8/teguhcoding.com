@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import { Hero } from "@/components/hero";
 import { FeaturedProjects } from "@/components/featured-projects";
 import { LatestBlog } from "@/components/latest-blog";
-import { getLatestPosts } from "@/lib/wordpress";
+import { getAllPosts } from "@/lib/markdown";
 
 export const metadata: Metadata = {
   title: "Teguh Widodo — Senior Software Engineer & Web Developer",
@@ -20,7 +20,8 @@ export const revalidate = 60;
 export const dynamic = "force-static";
 
 export default async function Home() {
-  const latestPosts = await getLatestPosts(3);
+  const allPosts = await getAllPosts();
+  const latestPosts = allPosts.slice(0, 3);
 
   return (
     <div className="pt-16">

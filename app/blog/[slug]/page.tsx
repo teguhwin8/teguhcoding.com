@@ -1,13 +1,9 @@
 import { Metadata } from "next";
 import Image from "next/image";
 import { notFound } from "next/navigation";
-import { Calendar, User, ArrowLeft } from "lucide-react";
+import { Calendar, ArrowLeft, ExternalLink } from "lucide-react";
 import Link from "next/link";
-import { getPostBySlug, getAllPostSlugs } from "@/lib/wordpress";
-import { format } from "date-fns";
-import { extractHeadingsAndAddIds } from "@/lib/toc";
-import { TableOfContents } from "@/components/table-of-contents";
-import { htmlToPlainText } from "@/lib/html-text";
+import { getPostBySlug, getAllPostSlugs } from "@/lib/markdown";
 
 interface BlogPostPageProps {
   params: Promise<{
@@ -27,25 +23,21 @@ export async function generateMetadata({
     };
   }
 
-  const featuredImage = post._embedded?.["wp:featuredmedia"]?.[0]?.source_url;
-  const excerptText = htmlToPlainText(post.excerpt.rendered);
-  const titleText = htmlToPlainText(post.title.rendered);
-
   return {
-    title: `${titleText} - Teguh Widodo`,
-    description: excerptText,
+    title: `${post.title} - Teguh Widodo`,
+    description: post.excerpt,
     openGraph: {
-      title: titleText,
-      description: excerptText,
+      title: post.title,
+      description: post.excerpt,
       type: "article",
       publishedTime: post.date,
-      images: featuredImage ? [featuredImage] : [],
+      images: post.cover_image ? [post.cover_image] : [],
     },
     twitter: {
       card: "summary_large_image",
-      title: titleText,
-      description: excerptText,
-      images: featuredImage ? [featuredImage] : [],
+      title: post.title,
+      description: post.excerpt,
+      images: post.cover_image ? [post.cover_image] : [],
     },
   };
 }
@@ -59,12 +51,7 @@ export async function generateStaticParams() {
   }));
 }
 
-// Revalidate every 60 seconds
-export const revalidate = 60;
-
-// Force static generation
 export const dynamic = "force-static";
-
 
 export default async function BlogPostPage({ params }: BlogPostPageProps) {
   const { slug } = await params;
@@ -74,123 +61,91 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     notFound();
   }
 
-  const featuredImage = post._embedded?.["wp:featuredmedia"]?.[0]?.source_url;
-  const categories = post._embedded?.["wp:term"]?.[0] || [];
-  const author = post._embedded?.author?.[0];
-  const titleText = htmlToPlainText(post.title.rendered);
-
-  // Process content for Table of Contents
-  const { content: processedContent, headings } = extractHeadingsAndAddIds(post.content.rendered);
+  const dateStr = new Date(post.date).toLocaleDateString('id-ID', {
+    day: 'numeric',
+    month: 'long',
+    year: 'numeric'
+  });
 
   return (
-    <div className="min-h-screen bg-white dark:bg-gray-900">
-      <div className="pt-24 pb-12">
-        <div className="max-w-6xl mx-auto px-4">
-          {/* Back button */}
-          <Link
-            href="/blog"
-            className="inline-flex items-center text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white mb-8"
-          >
-            <ArrowLeft size={20} className="mr-2" />
-            Back to Blog
-          </Link>
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-900 pt-24 pb-12">
+      <div className="max-w-3xl mx-auto px-4">
+        {/* Back button */}
+        <Link
+          href="/blog"
+          className="inline-flex items-center text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white font-medium mb-8 transition-colors"
+        >
+          <ArrowLeft size={20} className="mr-2" />
+          Kembali ke Feed
+        </Link>
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
-            {/* Main Content (Left) */}
-            <div className="lg:col-span-8">
-              {/* Hero image */}
-              {featuredImage && (
-                <div className="relative h-[400px] mb-8 rounded-lg overflow-hidden shadow-lg border-4 border-black dark:border-white">
-                  <Image
-                    src={featuredImage}
-                    alt={titleText}
-                    fill
-                    sizes="(min-width: 1024px) 768px, 100vw"
-                    className="object-cover"
-                    preload
-                  />
-                </div>
-              )}
-
-              {/* Post header */}
-              <header className="mb-10">
-                {categories.length > 0 && (
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {categories.map((category) => (
-                      <span
-                        key={category.id}
-                        className="px-3 py-1 bg-black text-white dark:bg-white dark:text-black rounded-full text-sm font-bold"
-                      >
-                        {htmlToPlainText(category.name)}
-                      </span>
-                    ))}
-                  </div>
-                )}
-
-                <h1 className="text-4xl md:text-5xl font-bold mb-4 text-gray-900 dark:text-white">
-                  {titleText}
-                </h1>
-
-                <div className="flex items-center space-x-6 text-gray-600 dark:text-gray-400">
-                  <div className="flex items-center">
-                    <Calendar size={16} className="mr-2" />
-                    {format(new Date(post.date), "MMMM dd, yyyy")}
-                  </div>
-                  {author && (
-                    <div className="flex items-center">
-                      <User size={16} className="mr-2" />
-                      {author.name}
-                    </div>
-                  )}
-                </div>
-              </header>
-
-              {/* Mobile Table of Contents - visible only on small screens */}
-              <div className="lg:hidden mb-12">
-                <TableOfContents headings={headings} />
-              </div>
-
-              {/* Post content */}
-              <article
-                className="prose prose-lg dark:prose-invert max-w-none prose-headings:font-bold prose-a:text-blue-600 prose-img:rounded-xl"
-                dangerouslySetInnerHTML={{ __html: processedContent }}
+        <article className="bg-white dark:bg-gray-800 rounded-2xl border-2 border-black dark:border-gray-700 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] dark:shadow-[8px_8px_0px_0px_rgba(255,255,255,0.1)] overflow-hidden">
+          {/* Hero image */}
+          {post.cover_image && (
+            <div className="relative h-[300px] sm:h-[400px] w-full border-b-2 border-black dark:border-gray-700">
+              <Image
+                src={post.cover_image}
+                alt={post.title}
+                fill
+                sizes="(min-width: 768px) 768px, 100vw"
+                className="object-cover"
+                priority
               />
+            </div>
+          )}
 
-              {/* Author bio */}
-              {author && author.description && (
-                <div className="mt-12 p-8 bg-gray-50 dark:bg-gray-800 rounded-xl border-2 border-black dark:border-gray-700 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] dark:shadow-[4px_4px_0px_0px_rgba(255,255,255,0.1)]">
-                  <h3 className="text-xl font-bold mb-4 text-gray-900 dark:text-white">
-                    About the Author
-                  </h3>
-                  <div className="flex items-start space-x-6">
-                    {author.avatar_urls && (
-                      <Image
-                        src={author.avatar_urls["96"]}
-                        alt={author.name}
-                        width={80}
-                        height={80}
-                        className="rounded-full border-2 border-black dark:border-white"
-                      />
-                    )}
-                    <div>
-                      <p className="font-bold text-lg text-gray-900 dark:text-white mb-2">
-                        {author.name}
-                      </p>
-                      <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-                        {author.description}
-                      </p>
-                    </div>
-                  </div>
+          <div className="p-8 md:p-12">
+            <header className="mb-8">
+              {/* Tags */}
+              {post.tags && post.tags.length > 0 && (
+                <div className="flex flex-wrap gap-2 mb-6">
+                  {post.tags.map((tag, i) => (
+                    <span
+                      key={i}
+                      className="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 rounded-full text-sm font-bold border border-gray-200 dark:border-gray-600"
+                    >
+                      {tag}
+                    </span>
+                  ))}
                 </div>
               )}
+
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-black mb-6 text-gray-900 dark:text-white leading-tight">
+                {post.title}
+              </h1>
+
+              <div className="flex items-center text-gray-500 dark:text-gray-400 font-medium">
+                <Calendar size={18} className="mr-2" />
+                {dateStr}
+              </div>
+            </header>
+
+            {/* Post Excerpt Content */}
+            <div className="prose prose-lg dark:prose-invert max-w-none mb-10 text-gray-700 dark:text-gray-300">
+              {post.excerpt.split('\\n').map((paragraph, index) => (
+                <p key={index} className="mb-4 leading-relaxed">
+                  {paragraph}
+                </p>
+              ))}
             </div>
 
-            {/* Sidebar (Right) - Desktop only */}
-            <aside className="hidden lg:block lg:col-span-4">
-              <TableOfContents headings={headings} />
-            </aside>
+            {/* Action Area */}
+            <div className="pt-8 border-t-2 border-dashed border-gray-200 dark:border-gray-700 text-center">
+              <a
+                href={post.source_url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center px-8 py-4 text-lg font-bold bg-black text-white dark:bg-white dark:text-black rounded-full shadow-[4px_4px_0px_0px_rgba(0,0,0,0.2)] hover:shadow-none hover:translate-y-1 hover:translate-x-1 transition-all border-2 border-transparent dark:border-black"
+              >
+                Baca Artikel Selengkapnya
+                <ExternalLink size={20} className="ml-2" />
+              </a>
+              <p className="mt-4 text-sm text-gray-500 dark:text-gray-400">
+                Anda akan diarahkan ke sumber asli artikel ini.
+              </p>
+            </div>
           </div>
-        </div>
+        </article>
       </div>
     </div>
   );

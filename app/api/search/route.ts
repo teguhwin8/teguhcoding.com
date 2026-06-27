@@ -1,11 +1,11 @@
 import { NextRequest, NextResponse } from "next/server";
-import { searchPosts } from "@/lib/wordpress";
+import { getAllPosts } from "@/lib/markdown";
 
 export async function GET(request: NextRequest) {
   const requestId = crypto.randomUUID();
   const startedAt = Date.now();
   const { searchParams } = new URL(request.url);
-  const query = searchParams.get("q") ?? "";
+  const query = searchParams.get("q")?.toLowerCase() ?? "";
 
   if (!query.trim()) {
     const response = NextResponse.json([]);
@@ -15,7 +15,14 @@ export async function GET(request: NextRequest) {
   }
 
   try {
-    const posts = await searchPosts(query);
+    const allPosts = await getAllPosts();
+    
+    const posts = allPosts.filter(post => 
+      post.title.toLowerCase().includes(query) || 
+      post.excerpt.toLowerCase().includes(query) ||
+      (post.tags && post.tags.some(tag => tag.toLowerCase().includes(query)))
+    );
+    
     const response = NextResponse.json(posts);
     response.headers.set("x-request-id", requestId);
     console.info(

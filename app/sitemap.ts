@@ -1,5 +1,5 @@
 import { MetadataRoute } from "next";
-import { getAllPostSlugsWithModified } from "@/lib/wordpress";
+import { getAllPostSlugs } from "@/lib/markdown";
 import { projects } from "@/lib/projects";
 
 const BASE_URL = "https://teguhcoding.com";
@@ -48,10 +48,10 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     ];
 
     // Dynamic blog post pages
-    const postSlugs = await getAllPostSlugsWithModified();
+    const postSlugs = await getAllPostSlugs();
     const blogPages: MetadataRoute.Sitemap = postSlugs.map((post) => ({
         url: `${BASE_URL}/blog/${post.slug}`,
-        lastModified: post.modified ? new Date(post.modified) : now,
+        lastModified: now,
         changeFrequency: "weekly" as const,
         priority: 0.8,
     }));

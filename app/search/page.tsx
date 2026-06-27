@@ -1,11 +1,7 @@
 import { Metadata } from "next";
-import Link from "next/link";
-import Image from "next/image";
-import { Calendar, ArrowRight, Search } from "lucide-react";
-import { searchPosts } from "@/lib/wordpress";
-import { format } from "date-fns";
-import { WordPressPost } from "@/lib/types";
-import { htmlToPlainText } from "@/lib/html-text";
+import { Search } from "lucide-react";
+import { getAllPosts, BlogPost } from "@/lib/markdown";
+import ArticleCard from "@/components/article-card";
 
 interface SearchPageProps {
   searchParams: Promise<{ q?: string }>;
@@ -25,39 +21,44 @@ export async function generateMetadata({ searchParams }: SearchPageProps): Promi
 
 export default async function SearchPage({ searchParams }: SearchPageProps) {
   const { q } = await searchParams;
-  const query = q?.trim() ?? "";
+  const query = q?.trim().toLowerCase() ?? "";
 
-  let posts: WordPressPost[] = [];
+  let posts: BlogPost[] = [];
   if (query) {
     try {
-      posts = await searchPosts(query);
+      const allPosts = await getAllPosts();
+      posts = allPosts.filter(post => 
+        post.title.toLowerCase().includes(query) || 
+        post.excerpt.toLowerCase().includes(query) ||
+        (post.tags && post.tags.some(tag => tag.toLowerCase().includes(query)))
+      );
     } catch {
       posts = [];
     }
   }
 
   return (
-    <div className="min-h-screen py-24 px-4">
-      <div className="max-w-4xl mx-auto">
-        <div className="flex items-center gap-3 mb-2">
-          <Search size={28} />
-          <h1 className="text-4xl font-bold">Cari Artikel</h1>
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-900 py-24 px-4">
+      <div className="max-w-6xl mx-auto">
+        <div className="flex items-center gap-3 mb-2 justify-center">
+          <Search size={32} />
+          <h1 className="text-4xl md:text-5xl font-black tracking-tight">Cari Artikel</h1>
         </div>
 
         {query ? (
-          <p className="text-gray-600 dark:text-gray-300 mb-8">
+          <p className="text-center text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto">
             {posts.length > 0
               ? `Ditemukan ${posts.length} artikel untuk "${query}"`
               : `Tidak ada artikel yang ditemukan untuk "${query}"`}
           </p>
         ) : (
-          <p className="text-gray-600 dark:text-gray-300 mb-8">
-            Masukkan kata kunci untuk mencari artikel.
+          <p className="text-center text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto">
+            Masukkan kata kunci untuk mencari artikel dari repositori Markdown.
           </p>
         )}
 
         {/* Search form */}
-        <form method="GET" action="/search" className="mb-12">
+        <form method="GET" action="/search" className="mb-12 max-w-2xl mx-auto">
           <div className="flex gap-2">
             <input
               type="text"
@@ -65,11 +66,11 @@ export default async function SearchPage({ searchParams }: SearchPageProps) {
               defaultValue={query}
               placeholder="Cari artikel..."
               autoFocus
-              className="flex-1 px-4 py-3 border-2 border-black dark:border-gray-300 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-black dark:focus:ring-white"
+              className="flex-1 px-4 py-3 border-2 border-black dark:border-gray-700 rounded-xl bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-400 focus:outline-none focus:ring-4 focus:ring-black/10 dark:focus:ring-white/10"
             />
             <button
               type="submit"
-              className="retro-button px-6 py-3 flex items-center gap-2 font-bold"
+              className="px-6 py-3 bg-black text-white dark:bg-white dark:text-black font-bold rounded-xl flex items-center gap-2 border-2 border-transparent transition-transform hover:-translate-y-1 hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] dark:hover:shadow-[4px_4px_0px_0px_rgba(255,255,255,0.2)]"
             >
               <Search size={18} />
               Cari
@@ -80,57 +81,18 @@ export default async function SearchPage({ searchParams }: SearchPageProps) {
         {/* Results */}
         {query && posts.length > 0 && (
           <section aria-label="Hasil pencarian">
-            <div className="grid space-y-8">
-              {posts.map((post: WordPressPost, index) => {
-                const featuredImage = post._embedded?.["wp:featuredmedia"]?.[0]?.source_url;
-                const category = post._embedded?.["wp:term"]?.[0]?.[0];
-                const titleText = htmlToPlainText(post.title.rendered);
-                const excerptText = htmlToPlainText(post.excerpt.rendered);
-                const categoryName = category ? htmlToPlainText(category.name) : "";
-
-                return (
-                  <Link key={post.id} href={`/blog/${post.slug}`}>
-                    <article className="retro-card p-6">
-                      {featuredImage && (
-                        <div className="relative h-48 mb-4 rounded-lg overflow-hidden">
-                          <Image
-                            src={featuredImage}
-                            alt={titleText}
-                            fill
-                            loading={index === 0 ? "eager" : "lazy"}
-                            sizes="(min-width: 1024px) 896px, 100vw"
-                            className="object-cover"
-                          />
-                        </div>
-                      )}
-                      <div className="flex items-center space-x-4 mb-2">
-                        {category && (
-                          <span className="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 rounded-full text-sm">
-                            {categoryName}
-                          </span>
-                        )}
-                        <div className="flex items-center text-gray-600 dark:text-gray-300 text-sm">
-                          <Calendar size={14} className="mr-1" />
-                          {format(new Date(post.date), "MMM dd, yyyy")}
-                        </div>
-                      </div>
-                      <h2 className="text-2xl font-bold mb-2">{titleText}</h2>
-                      <p className="text-gray-600 dark:text-gray-300 mb-4">{excerptText}</p>
-                      <div className="flex items-center text-black dark:text-white font-bold">
-                        Read more <ArrowRight size={16} className="ml-2" />
-                      </div>
-                    </article>
-                  </Link>
-                );
-              })}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {posts.map((post, index) => (
+                <ArticleCard key={post.slug} post={post} priority={index < 2} />
+              ))}
             </div>
           </section>
         )}
 
         {query && posts.length === 0 && (
-          <div className="text-center py-16">
+          <div className="text-center py-20 bg-white dark:bg-gray-800 rounded-xl border-2 border-dashed border-gray-300 dark:border-gray-600 max-w-2xl mx-auto">
             <Search size={48} className="mx-auto mb-4 text-gray-400" />
-            <p className="text-xl text-gray-500 dark:text-gray-400">
+            <p className="text-xl text-gray-500 dark:text-gray-400 font-medium">
               Tidak ada artikel yang cocok dengan pencarian Anda.
             </p>
             <p className="text-gray-400 dark:text-gray-500 mt-2">
