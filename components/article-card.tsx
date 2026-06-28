@@ -3,12 +3,19 @@ import Link from 'next/link';
 import { BlogPost } from '@/lib/markdown';
 
 export default function ArticleCard({ post, priority = false }: { post: BlogPost, priority?: boolean }) {
-  // Format date nicely
   const dateStr = new Date(post.date).toLocaleDateString('id-ID', {
     day: 'numeric',
     month: 'long',
     year: 'numeric'
   });
+
+  // Ambil paragraf pertama yang tidak kosong dan bersihkan dari format markdown
+  const cleanExcerpt = post.excerpt
+    .split('\n')
+    .filter(line => line.trim().length > 0)[0]
+    ?.replace(/^#+\s+/, '')      // Hapus header (#, ##, dll)
+    .replace(/[*_`~\[\]]/g, '')  // Hapus bold, italic, link brackets, dll
+    .trim() || '';
 
   return (
     <Link 
@@ -49,7 +56,7 @@ export default function ArticleCard({ post, priority = false }: { post: BlogPost
 
         {/* Excerpt */}
         <p className="text-gray-600 dark:text-gray-300 mb-4 line-clamp-3 text-sm flex-grow">
-          {post.excerpt.split('\n')[0]} {/* Just show first paragraph in card */}
+          {cleanExcerpt}
         </p>
 
         {/* Footer (Date and Read more) */}
