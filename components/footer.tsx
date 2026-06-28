@@ -1,7 +1,14 @@
+"use client";
+
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { LuGithub, LuHeart, LuLinkedin, LuTwitter } from "react-icons/lu";
 
 export function Footer() {
+  const pathname = usePathname();
+  if (pathname.startsWith("/bahlil")) {
+    return null;
+  }
   return (
     <footer className="border-t-2 border-black dark:border-white bg-white dark:bg-gray-900">
       <div className="max-w-7xl mx-auto px-4 py-12">
