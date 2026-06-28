@@ -48,7 +48,7 @@ export default async function Blog({ searchParams }: BlogPageProps) {
         <header className="mb-12 text-center">
           <h1 className="text-4xl md:text-5xl font-black mb-4 tracking-tight">Developer Feed</h1>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-            Kumpulan artikel dan wawasan terbaru seputar *web development*, desain, dan teknologi.
+            Kumpulan artikel dan wawasan terbaru seputar web development, AI, dan teknologi.
           </p>
         </header>
 
