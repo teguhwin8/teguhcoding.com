@@ -29,7 +29,8 @@ export async function POST(req: Request) {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
     }
 
-    const { url, manualText } = await req.json();
+    const { url, manualText, model } = await req.json();
+    const selectedModel = model || "gpt-5.4-mini";
 
     if (!url) {
       return NextResponse.json({ error: 'URL is required' }, { status: 400 });
@@ -69,7 +70,7 @@ export async function POST(req: Request) {
 
     // Ask OpenAI to generate meta data and excerpt
     const completion = await openai.chat.completions.create({
-      model: "gpt-5.4-mini",
+      model: selectedModel,
       messages: [
         {
           role: "system",
@@ -107,49 +108,7 @@ cover_image: "${coverImage}"
 ${cleanExcerpt}
 `;
 
-    // Save to file (either GitHub or Local FS)
-    const githubToken = process.env.GITHUB_TOKEN;
-    const githubOwner = process.env.GITHUB_OWNER;
-    const githubRepo = process.env.GITHUB_REPO;
-    const githubPath = `content/blog/${slug}.md`;
-
-    if (githubToken && githubOwner && githubRepo) {
-      // Use GitHub API
-      const base64Content = Buffer.from(markdownContent).toString('base64');
-      const githubApiUrl = `https://api.github.com/repos/${githubOwner}/${githubRepo}/contents/${githubPath}`;
-
-      const githubResponse = await fetch(githubApiUrl, {
-        method: 'PUT',
-        headers: {
-          'Authorization': `token ${githubToken}`,
-          'Accept': 'application/vnd.github.v3+json',
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          message: `Add new blog post: ${slug}`,
-          content: base64Content,
-        })
-      });
-
-      if (!githubResponse.ok) {
-        const errorData = await githubResponse.json();
-        console.error('GitHub API Error:', errorData);
-        return NextResponse.json({ error: 'Failed to save post to GitHub', details: errorData }, { status: 500 });
-      }
-
-      return NextResponse.json({ success: true, slug, method: 'github', path: githubPath });
-    } else {
-      // Fallback to local file system
-      const contentDirectory = path.join(process.cwd(), 'content', 'blog');
-      if (!fs.existsSync(contentDirectory)) {
-        fs.mkdirSync(contentDirectory, { recursive: true });
-      }
-
-      const filePath = path.join(contentDirectory, `${slug}.md`);
-      fs.writeFileSync(filePath, markdownContent, 'utf8');
-
-      return NextResponse.json({ success: true, slug, method: 'local_fs', filePath });
-    }
+    return NextResponse.json({ success: true, markdownContent, slug });
 
   } catch (error: any) {
     console.error('Error generating post:', error);
