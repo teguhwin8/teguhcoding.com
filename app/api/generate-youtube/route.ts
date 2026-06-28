@@ -1,5 +1,4 @@
 import { NextResponse } from 'next/server';
-import { YoutubeTranscript } from 'youtube-transcript';
 import OpenAI from 'openai';
 import fs from 'fs';
 import path from 'path';
@@ -53,11 +52,36 @@ export async function POST(req: Request) {
       transcriptText = manualTranscript;
     } else {
       try {
-        const transcript = await YoutubeTranscript.fetchTranscript(videoId);
-        transcriptText = transcript.map(t => t.text).join(' ');
+        const apiKey = process.env.YOUTUBE_API_KEY;
+        const apiEndpoint = process.env.YOUTUBE_API_ENDPOINT;
+
+        if (!apiKey || !apiEndpoint) {
+          throw new Error("YOUTUBE_API_ENDPOINT or YOUTUBE_API_KEY is not configured in environment variables");
+        }
+
+        const res = await fetch(`${apiEndpoint}/api/v1/transcripts/extract`, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'x-api-key': apiKey,
+          },
+          body: JSON.stringify({ videoId }),
+        });
+
+        if (!res.ok) {
+          throw new Error(`Third party API returned ${res.status} ${res.statusText}`);
+        }
+
+        const data = await res.json();
+        
+        if (!data.success || !data.fullText) {
+          throw new Error("Third party API returned failure or missing fullText");
+        }
+
+        transcriptText = data.fullText;
       } catch (e) {
         console.error("Transcript fetch error:", e);
-        return NextResponse.json({ error: 'Gagal mengambil transkrip otomatis. YouTube mungkin memblokir server. Silakan masukkan transkrip secara manual di dashboard.' }, { status: 400 });
+        return NextResponse.json({ error: 'Gagal mengambil transkrip otomatis melalui API third-party. Silakan masukkan transkrip secara manual di dashboard.' }, { status: 400 });
       }
     }
 
