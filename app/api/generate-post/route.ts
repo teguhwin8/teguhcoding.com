@@ -29,25 +29,38 @@ export async function POST(req: Request) {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
     }
 
-    const { url } = await req.json();
+    const { url, manualText } = await req.json();
 
     if (!url) {
       return NextResponse.json({ error: 'URL is required' }, { status: 400 });
     }
 
-    // Fetch the URL content
-    const response = await fetch(url);
-    if (!response.ok) {
-      return NextResponse.json({ error: 'Failed to fetch the URL' }, { status: 400 });
-    }
+    // 1. Get Text Content
+    let textContent = "";
+    if (manualText) {
+      textContent = manualText.slice(0, 8000);
+    } else {
+      // Fetch the URL content
+      const response = await fetch(url, {
+        headers: {
+          'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+          'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8',
+          'Accept-Language': 'en-US,en;q=0.5'
+        }
+      });
+      
+      if (!response.ok) {
+        return NextResponse.json({ error: 'Gagal mengambil konten website. Website mungkin memblokir server. Silakan masukkan teks secara manual di dashboard.' }, { status: 400 });
+      }
 
-    const html = await response.text();
-    const $ = cheerio.load(html);
-    
-    // Extract main text content (rudimentary extraction)
-    // Remove scripts, styles, nav, footer
-    $('script, style, nav, footer, header, aside, iframe, noscript').remove();
-    const textContent = $('body').text().replace(/\s+/g, ' ').trim().slice(0, 8000); // limit to 8k chars to save tokens
+      const html = await response.text();
+      const $ = cheerio.load(html);
+      
+      // Extract main text content (rudimentary extraction)
+      // Remove scripts, styles, nav, footer
+      $('script, style, nav, footer, header, aside, iframe, noscript').remove();
+      textContent = $('body').text().replace(/\s+/g, ' ').trim().slice(0, 8000); // limit to 8k chars to save tokens
+    }
 
     // Try to get a cover image from meta tags
     const coverImage = $('meta[property="og:image"]').attr('content') || $('meta[name="twitter:image"]').attr('content') || '';

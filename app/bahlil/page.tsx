@@ -8,6 +8,7 @@ export default function Dashboard() {
   const [activeTab, setActiveTab] = useState<'web' | 'youtube'>('web');
   const [url, setUrl] = useState('');
   const [transcript, setTranscript] = useState('');
+  const [manualText, setManualText] = useState('');
   const [showManual, setShowManual] = useState(false);
   const [loading, setLoading] = useState(false);
   const [result, setResult] = useState<{ type: 'success' | 'error', message: string, link?: string } | null>(null);
@@ -30,6 +31,9 @@ export default function Dashboard() {
       if (activeTab === 'youtube' && transcript.trim()) {
         body.transcript = transcript;
       }
+      if (activeTab === 'web' && manualText.trim()) {
+        body.manualText = manualText;
+      }
 
       const res = await fetch(endpoint, {
         method: 'POST',
@@ -47,6 +51,7 @@ export default function Dashboard() {
         });
         setUrl('');
         setTranscript('');
+        setManualText('');
         setShowManual(false);
       } else {
         setResult({
@@ -54,6 +59,9 @@ export default function Dashboard() {
           message: data.error || 'Terjadi kesalahan saat memproses URL.'
         });
         if (activeTab === 'youtube' && data.error.includes('transkrip')) {
+          setShowManual(true);
+        }
+        if (activeTab === 'web' && data.error.includes('secara manual')) {
           setShowManual(true);
         }
       }
@@ -140,6 +148,32 @@ export default function Dashboard() {
                   required
                 />
               </div>
+
+              {activeTab === 'web' && (
+                <div className="border-2 border-dashed border-gray-300 dark:border-gray-700 rounded-lg overflow-hidden">
+                  <button
+                    type="button"
+                    onClick={() => setShowManual(!showManual)}
+                    className="w-full px-4 py-3 bg-gray-50 dark:bg-gray-800 flex justify-between items-center text-sm font-bold text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
+                  >
+                    <span>Input Teks Manual (Opsional / Fallback)</span>
+                    {showManual ? <ChevronUp size={18} /> : <ChevronDown size={18} />}
+                  </button>
+                  {showManual && (
+                    <div className="p-4 bg-white dark:bg-gray-900">
+                      <p className="text-xs text-gray-500 mb-3">
+                        Gunakan ini jika Vercel diblokir oleh website (misal Medium/OpenAI). Copy-paste isi artikel secara manual ke sini.
+                      </p>
+                      <textarea
+                        value={manualText}
+                        onChange={(e) => setManualText(e.target.value)}
+                        className="w-full h-32 px-4 py-3 border-2 border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-black dark:text-white focus:outline-none focus:ring-2 focus:ring-black dark:focus:ring-white transition-shadow resize-y text-sm"
+                        placeholder="Paste isi artikel di sini..."
+                      />
+                    </div>
+                  )}
+                </div>
+              )}
 
               {activeTab === 'youtube' && (
                 <div className="border-2 border-dashed border-gray-300 dark:border-gray-700 rounded-lg overflow-hidden">
