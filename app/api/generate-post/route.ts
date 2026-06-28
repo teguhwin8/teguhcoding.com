@@ -37,6 +37,8 @@ export async function POST(req: Request) {
 
     // 1. Get Text Content
     let textContent = "";
+    let coverImage = "";
+
     if (manualText) {
       textContent = manualText.slice(0, 8000);
     } else {
@@ -60,10 +62,10 @@ export async function POST(req: Request) {
       // Remove scripts, styles, nav, footer
       $('script, style, nav, footer, header, aside, iframe, noscript').remove();
       textContent = $('body').text().replace(/\s+/g, ' ').trim().slice(0, 8000); // limit to 8k chars to save tokens
+      
+      // Try to get a cover image from meta tags
+      coverImage = $('meta[property="og:image"]').attr('content') || $('meta[name="twitter:image"]').attr('content') || '';
     }
-
-    // Try to get a cover image from meta tags
-    const coverImage = $('meta[property="og:image"]').attr('content') || $('meta[name="twitter:image"]').attr('content') || '';
 
     // Ask OpenAI to generate meta data and excerpt
     const completion = await openai.chat.completions.create({
