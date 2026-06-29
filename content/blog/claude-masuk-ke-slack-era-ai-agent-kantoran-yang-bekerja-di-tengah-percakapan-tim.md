@@ -3,7 +3,7 @@ title: "Claude Masuk ke Slack: Era AI Agent Kantoran yang Bekerja di Tengah Perc
 source_url: "https://www.artificialintelligence-news.com/news/anthropic-slack-workplace-ai-agents/"
 tags: ["AI Enterprise","Slack","Anthropic"]
 date: "2026-06-29T08:47:44.923Z"
-cover_image: ""
+cover_image: "https://www.artificialintelligence-news.com/wp-content/uploads/2026/06/301d5ee481a352435c048a9df7ce172b9617b05f-2400x1260-1-2048x1075.jpg"
 ---
 
 Anthropic sedang mendorong Claude keluar dari kotak chat pribadi dan masuk langsung ke ruang kerja tim. Lewat fitur beta bernama **Claude Tag**, pengguna Slack di paket Enterprise dan Team kini bisa memanggil Claude di channel bersama hanya dengan mengetik `@Claude`.
