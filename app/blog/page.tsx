@@ -1,7 +1,7 @@
 import { Metadata } from "next";
-import Link from "next/link";
 import { getAllPosts } from "@/lib/markdown";
 import ArticleCard from "@/components/article-card";
+import TagFilter from "@/components/tag-filter";
 
 interface BlogPageProps {
   searchParams: Promise<{ tag?: string }>;
@@ -54,31 +54,7 @@ export default async function Blog({ searchParams }: BlogPageProps) {
 
         {/* Tag Filters */}
         {allTags.length > 0 && (
-          <div className="flex flex-wrap gap-2 justify-center mb-12">
-            <Link 
-              href="/blog"
-              className={`px-4 py-2 rounded-full font-bold text-sm transition-all border-2 border-black dark:border-white ${
-                !currentTag 
-                  ? "bg-black text-white dark:bg-white dark:text-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] dark:shadow-[4px_4px_0px_0px_rgba(255,255,255,1)] translate-y-[-2px]" 
-                  : "bg-white text-black dark:bg-gray-800 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
-              }`}
-            >
-              Semua
-            </Link>
-            {allTags.map((t) => (
-              <Link
-                key={t}
-                href={`/blog?tag=${encodeURIComponent(t)}`}
-                className={`px-4 py-2 rounded-full font-bold text-sm transition-all border-2 border-black dark:border-white ${
-                  currentTag === t 
-                    ? "bg-black text-white dark:bg-white dark:text-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] dark:shadow-[4px_4px_0px_0px_rgba(255,255,255,1)] translate-y-[-2px]" 
-                    : "bg-white text-black dark:bg-gray-800 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
-                }`}
-              >
-                {t}
-              </Link>
-            ))}
-          </div>
+          <TagFilter allTags={allTags} currentTag={currentTag} />
         )}
 
         {/* Masonry/Grid Layout */}
