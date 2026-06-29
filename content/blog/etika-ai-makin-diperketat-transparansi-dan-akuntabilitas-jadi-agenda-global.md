@@ -3,7 +3,7 @@ title: "Etika AI Makin Diperketat: Transparansi dan Akuntabilitas Jadi Agenda Gl
 source_url: "https://monitorday.com/negara-negara-perketat-etika-ai-transparansi-dan-akuntabilitas-jadi-sorotan-global/"
 tags: ["Etika AI","Regulasi AI","Keamanan Siber"]
 date: "2026-06-29T08:46:07.727Z"
-cover_image: ""
+cover_image: "https://monitorday.com/wp-content/uploads/2026/01/Ilustrasi.png"
 ---
 
 ## Etika AI Masuk Babak Baru
