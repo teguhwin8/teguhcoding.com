@@ -122,12 +122,13 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
               {post.tags && post.tags.length > 0 && (
                 <div className="flex flex-wrap gap-2 mb-6">
                   {post.tags.map((tag, i) => (
-                    <span
+                    <Link
                       key={i}
-                      className="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 rounded-full text-sm font-bold border border-gray-200 dark:border-gray-600"
+                      href={`/blog?tag=${encodeURIComponent(tag)}`}
+                      className="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 rounded-full text-sm font-bold border border-gray-200 dark:border-gray-600 hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-colors"
                     >
                       {tag}
-                    </span>
+                    </Link>
                   ))}
                 </div>
               )}
@@ -136,9 +137,12 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                 {post.title}
               </h1>
 
-              <div className="flex items-center text-gray-500 dark:text-gray-400 font-medium">
-                <Calendar size={18} className="mr-2" />
-                {dateStr}
+              <div className="flex items-center gap-4 text-gray-500 dark:text-gray-400 font-medium">
+                <span className="flex items-center">
+                  <Calendar size={18} className="mr-2" />
+                  {dateStr}
+                </span>
+                <span>{post.readingTime} menit baca</span>
               </div>
             </header>
 

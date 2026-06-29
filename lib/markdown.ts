@@ -12,6 +12,13 @@ export interface BlogPost {
   date: string;
   cover_image?: string;
   excerpt: string;
+  readingTime: number; // in minutes
+}
+
+function calculateReadingTime(text: string): number {
+  const wordsPerMinute = 200;
+  const wordCount = text.trim().split(/\s+/).length;
+  return Math.max(1, Math.ceil(wordCount / wordsPerMinute));
 }
 
 // Ensure the directory exists
@@ -50,6 +57,7 @@ export async function getAllPosts(): Promise<BlogPost[]> {
         date: date || new Date().toISOString(),
         cover_image: cover_image || null,
         excerpt,
+        readingTime: calculateReadingTime(excerpt),
       };
     });
 
@@ -81,6 +89,7 @@ export async function getPostBySlug(slug: string): Promise<BlogPost | null> {
     date: date || new Date().toISOString(),
     cover_image: cover_image || null,
     excerpt,
+    readingTime: calculateReadingTime(excerpt),
   };
 }
 

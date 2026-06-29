@@ -42,9 +42,14 @@ export default function ArticleCard({ post, priority = false }: { post: BlogPost
         {post.tags && post.tags.length > 0 && (
           <div className="flex flex-wrap gap-2 mb-3">
             {post.tags.slice(0, 3).map((tag, i) => (
-              <span key={i} className="text-xs font-bold px-2 py-1 bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 rounded-md border border-gray-200 dark:border-gray-600">
+              <Link
+                key={i}
+                href={`/blog?tag=${encodeURIComponent(tag)}`}
+                onClick={(e) => e.stopPropagation()}
+                className="text-xs font-bold px-2 py-1 bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 rounded-md border border-gray-200 dark:border-gray-600 hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-colors"
+              >
                 {tag}
-              </span>
+              </Link>
             ))}
           </div>
         )}
@@ -62,6 +67,7 @@ export default function ArticleCard({ post, priority = false }: { post: BlogPost
         {/* Footer (Date and Read more) */}
         <div className="mt-auto flex items-center justify-between pt-4 border-t border-gray-100 dark:border-gray-700">
           <span className="text-xs text-gray-500 dark:text-gray-400 font-medium">{dateStr}</span>
+          <span className="text-xs text-gray-500 dark:text-gray-400 font-medium">{post.readingTime} menit baca</span>
           <span className="text-sm font-bold text-black dark:text-white flex items-center gap-1 group-hover:underline">
             Read <span className="sr-only">about {post.title}</span> &rarr;
           </span>

@@ -2,7 +2,9 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 import { LuGithub, LuLinkedin, LuTwitter } from "react-icons/lu";
+import { Briefcase, FileDown } from "lucide-react";
 
 export function Hero() {
   return (
@@ -31,7 +33,7 @@ export function Hero() {
             scalable, high-quality web applications. Specialized in Front-End
             development with strong full-stack capabilities.
           </p>
-          <div className="flex justify-center space-x-4 mb-12">
+          <div className="flex justify-center space-x-4 mb-8">
             <motion.a
               href="https://github.com/teguhwin8"
               target="_blank"
@@ -65,6 +67,27 @@ export function Hero() {
             >
               <LuTwitter size={24} />
             </motion.a>
+          </div>
+
+          {/* CTA Buttons */}
+          <div className="flex flex-wrap justify-center gap-4">
+            <Link
+              href="/projects"
+              className="retro-button flex items-center gap-2 px-6 py-3 font-bold"
+            >
+              <Briefcase size={20} />
+              Lihat Projects
+            </Link>
+            <a
+              href="/cv.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="retro-button flex items-center gap-2 px-6 py-3 font-bold"
+              aria-label="Download CV Teguh Widodo"
+            >
+              <FileDown size={20} />
+              Lihat CV
+            </a>
           </div>
         </motion.div>
       </div>
