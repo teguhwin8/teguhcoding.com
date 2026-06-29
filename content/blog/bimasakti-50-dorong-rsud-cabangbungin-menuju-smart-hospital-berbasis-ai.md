@@ -3,7 +3,7 @@ title: "BIMASAKTI 5.0 Dorong RSUD Cabangbungin Menuju Smart Hospital Berbasis AI
 source_url: "https://jabarprov.go.id/en/berita/bimasakti-5-0-antar-rsud-cabangbungin-menuju-smart-hospital-berbasis-ai-24521"
 tags: ["Smart Hospital","Artificial Intelligence","Layanan Kesehatan"]
 date: "2026-06-29T07:15:38.808Z"
-cover_image: ""
+cover_image: "https://dvgddkosknh6r.cloudfront.net/live/media/img/1782698737-blob"
 ---
 
 ## BIMASAKTI 5.0: Transformasi RSUD Cabangbungin dari Budaya Kerja hingga Teknologi AI
