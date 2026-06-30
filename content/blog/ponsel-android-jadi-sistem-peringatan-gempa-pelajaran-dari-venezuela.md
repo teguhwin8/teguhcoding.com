@@ -3,7 +3,7 @@ title: "Ponsel Android Jadi Sistem Peringatan Gempa: Pelajaran dari Venezuela"
 source_url: "https://thenextweb.com/news/google-earthquake-alerts-venezuela-android?ref=dailydev"
 tags: ["Google","Android","Teknologi Kebencanaan"]
 date: "2026-06-30T03:22:23.549Z"
-cover_image: "https://media.thenextweb.com/2026/06/android-early-earthquake-warnings.avif"
+cover_image: "/posts/android-early-earthquake-warnings.webp"
 ---
 
 ## Saat ponsel memberi tahu sebelum tanah berguncang
