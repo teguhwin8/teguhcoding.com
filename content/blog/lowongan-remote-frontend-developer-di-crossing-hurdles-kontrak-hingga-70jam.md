@@ -3,7 +3,7 @@ title: "Lowongan Remote Frontend Developer di Crossing Hurdles: Kontrak hingga $
 source_url: "https://www.linkedin.com/jobs/collections/recommended/?currentJobId=4418828826"
 tags: ["Frontend Developer","Remote Job","JavaScript"]
 date: "2026-07-02T05:11:16.307Z"
-cover_image: ""
+cover_image: "https://media.licdn.com/dms/image/v2/D563DAQEENnW_RsOhXw/image-scale_191_1128/B56Z7vCL1qH4AU-/0/1782126788202/crossinghurdles_cover?e=1783576800&v=beta&t=a3Pmm6IfqOJnMocnZHlen7Rnsgo-KR4lFT3_U5ekyCU"
 ---
 
 ## Peluang Remote untuk Frontend Developer Indonesia
