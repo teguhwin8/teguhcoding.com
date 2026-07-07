@@ -90,21 +90,21 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-gray-900 pt-24 pb-12">
-      <div className="max-w-7xl mx-auto px-4">
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-900 pt-20 md:pt-24 pb-12">
+      <div className="max-w-7xl mx-auto px-3 md:px-4 lg:px-6">
         {/* Back button */}
         <Link
           href="/blog"
-          className="inline-flex items-center text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white font-medium mb-8 transition-colors"
+          className="inline-flex items-center text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white font-medium mb-6 md:mb-8 transition-colors"
         >
           <ArrowLeft size={20} className="mr-2" />
           Kembali ke Feed
         </Link>
 
-        <article className="bg-white dark:bg-gray-800 rounded-2xl border-2 border-black dark:border-gray-700 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] dark:shadow-[8px_8px_0px_0px_rgba(255,255,255,0.1)] overflow-hidden">
+        <article className="bg-white dark:bg-gray-800 rounded-2xl overflow-hidden">
           {/* Hero image */}
           {post.cover_image && (
-            <div className="relative h-[300px] sm:h-[400px] w-full border-b-2 border-black dark:border-gray-700">
+            <div className="relative aspect-[16/9] w-full">
               <Image
                 src={post.cover_image}
                 alt={post.title}
@@ -116,7 +116,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             </div>
           )}
 
-          <div className="p-8 md:p-12">
+          <div className="p-6 md:p-12">
             <header className="mb-8">
               {/* Tags */}
               {post.tags && post.tags.length > 0 && (
@@ -176,7 +176,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
       {/* Related Posts Section - Wider Container */}
       {relatedPosts.length > 0 && (
-        <div className="max-w-7xl mx-auto px-4 mt-16">
+        <div className="max-w-7xl mx-auto px-3 md:px-4 lg:px-6 mt-16">
           <h2 className="text-2xl font-black mb-8 text-gray-900 dark:text-white text-center md:text-left">
             Artikel Terkait
           </h2>

@@ -4,6 +4,7 @@ import { Space_Mono } from "next/font/google";
 import { Navigation } from "@/components/navigation";
 import { Footer } from "@/components/footer";
 import { ThemeProvider } from "@/components/theme-provider";
+import { Agentation } from "agentation";
 
 const spaceMono = Space_Mono({
   weight: ["400", "700"],
@@ -103,6 +104,7 @@ export default function RootLayout({
           <Navigation />
           <main id="main-content" className="retro-grid min-h-screen">{children}</main>
           <Footer />
+          {process.env.NODE_ENV === "development" && <Agentation />}
         </ThemeProvider>
       </body>
     </html>

@@ -23,7 +23,7 @@ export default function ArticleCard({ post, priority = false }: { post: BlogPost
       {/* Cover Image — clickable */}
       {post.cover_image && (
         <Link href={`/blog/${post.slug}`} tabIndex={-1} aria-hidden="true">
-          <div className="relative h-48 w-full border-b-2 border-black dark:border-gray-700 block overflow-hidden">
+          <div className="relative aspect-[16/9] w-full border-b-2 border-black dark:border-gray-700 block overflow-hidden">
             <Image
               src={post.cover_image}
               alt={post.title}
