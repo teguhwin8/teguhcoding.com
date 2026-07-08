@@ -3,7 +3,7 @@ title: "Laravel to NestJS: Konsep yang Gue Pelajari Sepanjang Jalan"
 source_url: "https://medium.com/@devajayantha/laravel-to-nestjs-concepts-i-learned-along-the-way-498f39dbc70c"
 tags: ["laravel", "nestjs", "backend", "typescript"]
 date: "2026-07-08T08:32:00.000Z"
-cover_image: ""
+cover_image: "/blog-covers/laravel-to-nestjs.png"
 ---
 
 Ini artikel pertama gue di 2026. Gue udah cukup lama hiatus dari nulis, dan sekarang gue siap balik lagi. Artikel ini nggak terlalu teknis. Gue mau mulai dengan sesuatu yang lebih general sambil gue ease my way back in. Semua yang gue tulis di sini datang dari pengalaman gue sendiri sebagai software engineer.
