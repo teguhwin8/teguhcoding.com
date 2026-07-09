@@ -52,7 +52,6 @@ export default function V2Page() {
       y: 0,
       transition: {
         duration: 0.8,
-        type: 'tween',
       },
     },
   };
