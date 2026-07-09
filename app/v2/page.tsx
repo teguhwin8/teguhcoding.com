@@ -52,7 +52,7 @@ export default function V2Page() {
       y: 0,
       transition: {
         duration: 0.8,
-        ease: 'easeOut',
+        type: 'tween',
       },
     },
   };
@@ -60,7 +60,6 @@ export default function V2Page() {
   const imageVariants = {
     initial: { scale: 1, y: 0 },
     whileHover: { scale: 1.05, y: -5 },
-    transition: { duration: 0.5, ease: 'easeOut' },
   };
 
   return (
