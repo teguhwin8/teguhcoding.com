@@ -4,92 +4,138 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { LuGithub, LuLinkedin, LuTwitter } from "react-icons/lu";
-import { Briefcase, FileDown } from "lucide-react";
+import { ArrowRight, FileDown } from "lucide-react";
 
 export function Hero() {
   return (
-    <section className="min-h-[80vh] flex items-center justify-center px-4">
-      <div className="max-w-4xl mx-auto text-center">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="space-y-8"
-        >
-          <div className="relative w-48 h-48 mx-auto mb-8">
-            <Image
-              src="/teguh.jpg"
-              alt="Foto profil Teguh Widodo - Senior Software Engineer"
-              width={192}
-              height={192}
-              preload
-              className="h-48 w-48 rounded-full object-cover border-4 border-black dark:border-white shadow-xl"
-            />
-          </div>
+    <section className="pt-28 pb-20 px-6">
+      <div className="max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-[1fr_auto] gap-16 items-start">
+          {/* Left — text */}
+          <motion.div
+            initial={{ opacity: 0, y: 24 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+          >
+            {/* Status badge */}
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[var(--surface)] border border-[var(--border)] text-xs text-[var(--text-muted)] mb-8">
+              <span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" />
+              Available for new projects
+            </div>
 
-          <h1 className="text-6xl font-bold mb-6">Teguh Widodo</h1>
-          <p className="text-xl mb-8">
-            Senior Software Engineer with 6+ years of experience in building
-            scalable, high-quality web applications. Specialized in Front-End
-            development with strong full-stack capabilities.
-          </p>
-          <div className="flex justify-center space-x-4 mb-8">
-            <motion.a
-              href="https://github.com/teguhwin8"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="retro-button p-3 rounded-full"
-              aria-label="GitHub profile Teguh Widodo"
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-            >
-              <LuGithub size={24} />
-            </motion.a>
-            <motion.a
-              href="https://www.linkedin.com/in/teguhwin8/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="retro-button p-3 rounded-full"
-              aria-label="LinkedIn profile Teguh Widodo"
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-            >
-              <LuLinkedin size={24} />
-            </motion.a>
-            <motion.a
-              href="https://twitter.com/teguhcoding"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="retro-button p-3 rounded-full"
-              aria-label="Twitter profile @teguhcoding"
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-            >
-              <LuTwitter size={24} />
-            </motion.a>
-          </div>
+            {/* Headline */}
+            <h1 className="text-5xl md:text-6xl font-semibold tracking-tight text-[var(--text)] leading-[1.1] mb-6">
+              Building the web,{" "}
+              <span
+                className="italic font-normal"
+                style={{ fontFamily: "var(--font-instrument)" }}
+              >
+                one layer at a time.
+              </span>
+            </h1>
 
-          {/* CTA Buttons */}
-          <div className="flex flex-wrap justify-center gap-4">
-            <Link
-              href="/projects"
-              className="retro-button flex items-center gap-2 px-6 py-3 font-bold"
-            >
-              <Briefcase size={20} />
-              Lihat Projects
-            </Link>
-            <a
-              href="/cv.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="retro-button flex items-center gap-2 px-6 py-3 font-bold"
-              aria-label="Download CV Teguh Widodo"
-            >
-              <FileDown size={20} />
-              Lihat CV
-            </a>
-          </div>
-        </motion.div>
+            <p className="text-lg text-[var(--text-muted)] leading-relaxed max-w-xl mb-10">
+              Senior Software Engineer dengan 6+ tahun pengalaman membangun
+              aplikasi web scalable. Spesialisasi di React, Next.js, dan
+              Laravel — dari desain UI sampai arsitektur backend.
+            </p>
+
+            {/* CTAs */}
+            <div className="flex flex-wrap gap-3 mb-12">
+              <Link href="/projects" className="btn-primary">
+                Lihat Projects
+                <ArrowRight size={15} />
+              </Link>
+              <a
+                href="/cv.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-secondary"
+              >
+                <FileDown size={15} />
+                Unduh CV
+              </a>
+            </div>
+
+            {/* Stats */}
+            <div className="flex gap-8">
+              {[
+                { value: "6+", label: "Tahun pengalaman" },
+                { value: "20+", label: "Proyek selesai" },
+                { value: "3", label: "Perusahaan teknologi" },
+              ].map((stat) => (
+                <div key={stat.label}>
+                  <div className="text-2xl font-semibold text-[var(--text)]">
+                    {stat.value}
+                  </div>
+                  <div className="text-xs text-[var(--text-muted)] mt-0.5">
+                    {stat.label}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </motion.div>
+
+          {/* Right — photo + socials */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.96 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
+            className="flex flex-col items-center gap-6"
+          >
+            <div className="relative w-52 h-52 md:w-64 md:h-64 rounded-2xl overflow-hidden border border-[var(--border)]">
+              <Image
+                src="/teguh.jpg"
+                alt="Teguh Widodo — Senior Software Engineer"
+                fill
+                className="object-cover"
+                priority
+              />
+            </div>
+
+            {/* Social links */}
+            <div className="flex gap-3">
+              {[
+                {
+                  href: "https://github.com/teguhwin8",
+                  icon: LuGithub,
+                  label: "GitHub",
+                },
+                {
+                  href: "https://www.linkedin.com/in/teguhwin8/",
+                  icon: LuLinkedin,
+                  label: "LinkedIn",
+                },
+                {
+                  href: "https://twitter.com/teguhcoding",
+                  icon: LuTwitter,
+                  label: "Twitter",
+                },
+              ].map(({ href, icon: Icon, label }) => (
+                <a
+                  key={label}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={label}
+                  className="w-9 h-9 flex items-center justify-center rounded-lg border border-[var(--border)] text-[var(--text-muted)] hover:text-[var(--text)] hover:border-[var(--border-strong)] transition-colors"
+                >
+                  <Icon size={16} />
+                </a>
+              ))}
+            </div>
+
+            {/* Name card */}
+            <div className="text-center">
+              <p className="font-semibold text-sm text-[var(--text)]">
+                Teguh Widodo
+              </p>
+              <p className="text-xs text-[var(--text-muted)]">
+                Yogyakarta, Indonesia
+              </p>
+            </div>
+          </motion.div>
+        </div>
       </div>
     </section>
   );

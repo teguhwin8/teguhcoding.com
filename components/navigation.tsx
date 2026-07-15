@@ -3,17 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
-import {
-  Code2,
-  BookOpen,
-  Briefcase,
-  Home,
-  Mail,
-  FileText,
-  Menu,
-  X,
-} from "lucide-react";
-import { ThemeToggle } from "./theme-toggle";
+import { Menu, X } from "lucide-react";
 import { SearchBar } from "./search-bar";
 import { useState } from "react";
 
@@ -21,106 +11,114 @@ export function Navigation() {
   const pathname = usePathname();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  if (pathname.startsWith("/bahlil")) {
+  if (pathname.startsWith("/bahlil") || pathname.startsWith("/v2")) {
     return null;
   }
 
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
-
-  const closeMenu = () => {
-    setIsMenuOpen(false);
-  };
-
   const navItems = [
-    { href: "/experience", icon: Briefcase, label: "Experience" },
-    { href: "/projects", icon: Code2, label: "Projects" },
-    { href: "/education", icon: BookOpen, label: "Education" },
-    { href: "/blog", icon: FileText, label: "Blog" },
-    { href: "/contact", icon: Mail, label: "Contact" },
+    { href: "/experience", label: "Experience" },
+    { href: "/projects", label: "Projects" },
+    { href: "/education", label: "Education" },
+    { href: "/blog", label: "Blog" },
+    { href: "/contact", label: "Contact" },
   ];
+
+  const isActive = (href: string) => pathname === href;
 
   return (
     <motion.nav
-      className="fixed top-0 left-0 right-0 z-50 bg-white dark:bg-gray-900 border-b-2 border-black dark:border-gray-300"
-      initial={{ y: -100 }}
-      animate={{ y: 0 }}
-      transition={{ duration: 0.5 }}
+      className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-[var(--border)]"
+      initial={{ y: -60, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.4, ease: "easeOut" }}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-16">
-          {/* Logo/Home button */}
-          <div className="flex items-center">
+      <div className="max-w-6xl mx-auto px-6">
+        <div className="flex items-center justify-between h-14">
+          {/* Wordmark */}
+          <Link
+            href="/"
+            className="text-sm font-bold tracking-tight text-[var(--text)]"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            teguh<span className="text-[var(--text-muted)]">.</span>
+          </Link>
+
+          {/* Desktop nav */}
+          <div className="hidden md:flex items-center gap-6">
+            {navItems.map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className={`text-sm transition-colors duration-150 ${
+                  isActive(item.href)
+                    ? "text-[var(--text)] font-medium"
+                    : "text-[var(--text-muted)] hover:text-[var(--text)]"
+                }`}
+              >
+                {item.label}
+              </Link>
+            ))}
+          </div>
+
+          {/* Right */}
+          <div className="hidden md:flex items-center gap-3">
+            <SearchBar />
             <Link
-              href="/"
-              className="flex items-center space-x-2 retro-button px-4 py-2"
-              onClick={closeMenu}
+              href="/contact"
+              className="bg-[var(--text)] text-white text-xs font-semibold px-4 py-2 rounded-full hover:bg-[var(--accent-hover)] transition-colors"
             >
-              <Home size={20} />
-              <span>Home</span>
+              Hire me
             </Link>
           </div>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-4">
-            {navItems.map((item) => {
-              const IconComponent = item.icon;
-              return (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  className="flex items-center space-x-2 hover:text-gray-600 dark:hover:text-gray-300 transition-colors duration-200"
-                >
-                  <IconComponent size={20} />
-                  <span>{item.label}</span>
-                </Link>
-              );
-            })}
+          {/* Mobile */}
+          <div className="md:hidden flex items-center gap-2">
             <SearchBar />
-            <ThemeToggle />
-          </div>
-
-          {/* Mobile menu button */}
-          <div className="md:hidden flex items-center space-x-2">
-            <SearchBar />
-            <ThemeToggle />
             <button
-              onClick={toggleMenu}
-              className="retro-button p-2"
-              aria-label="Toggle mobile menu"
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className="p-1.5 text-[var(--text-muted)] hover:text-[var(--text)] transition-colors"
+              aria-label="Toggle menu"
             >
-              {isMenuOpen ? <X size={20} /> : <Menu size={20} />}
+              {isMenuOpen ? <X size={18} /> : <Menu size={18} />}
             </button>
           </div>
         </div>
       </div>
 
-      {/* Mobile Navigation Menu */}
+      {/* Mobile menu */}
       <AnimatePresence>
         {isMenuOpen && (
           <motion.div
-            className="md:hidden bg-white dark:bg-gray-900 border-t-2 border-black dark:border-gray-300"
+            className="md:hidden bg-white border-t border-[var(--border)]"
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.3 }}
+            transition={{ duration: 0.2 }}
           >
-            <div className="px-4 py-4 space-y-3">
-              {navItems.map((item) => {
-                const IconComponent = item.icon;
-                return (
-                  <Link
-                    key={item.href}
-                    href={item.href}
-                    className="flex items-center space-x-3 p-3 retro-card hover:translate-x-1 transition-transform duration-200"
-                    onClick={closeMenu}
-                  >
-                    <IconComponent size={20} />
-                    <span className="font-medium">{item.label}</span>
-                  </Link>
-                );
-              })}
+            <div className="max-w-6xl mx-auto px-6 py-3 space-y-1">
+              {navItems.map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className={`block px-3 py-2.5 rounded-lg text-sm transition-colors ${
+                    isActive(item.href)
+                      ? "bg-[var(--surface)] text-[var(--text)] font-medium"
+                      : "text-[var(--text-muted)] hover:bg-[var(--surface)] hover:text-[var(--text)]"
+                  }`}
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {item.label}
+                </Link>
+              ))}
+              <div className="pt-2 pb-1">
+                <Link
+                  href="/contact"
+                  className="block w-full text-center bg-[var(--text)] text-white text-xs font-semibold px-4 py-2.5 rounded-full hover:bg-[var(--accent-hover)] transition-colors"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Hire me
+                </Link>
+              </div>
             </div>
           </motion.div>
         )}

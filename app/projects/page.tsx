@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { ExternalLink } from "lucide-react";
+import { ExternalLink, ArrowRight } from "lucide-react";
 import { projects } from "@/lib/projects";
 
 export const metadata: Metadata = {
@@ -18,55 +18,74 @@ export const metadata: Metadata = {
 
 export default function Projects() {
   return (
-    <div className="min-h-screen py-24 px-4">
-      <div className="max-w-7xl mx-auto">
-        <h1 className="text-4xl font-bold mb-2">Projects</h1>
-        <p className="text-gray-600 dark:text-gray-300 mb-12">Koleksi proyek web development yang sudah saya kerjakan.</p>
+    <div className="min-h-screen pt-24 pb-20 px-6">
+      <div className="max-w-6xl mx-auto">
+        {/* Header */}
+        <div className="mb-12">
+          <p className="text-xs font-medium text-[var(--text-muted)] uppercase tracking-widest mb-2">
+            Work
+          </p>
+          <h1 className="text-4xl font-semibold text-[var(--text)] tracking-tight mb-4">
+            Projects
+          </h1>
+          <p className="text-[var(--text-muted)] max-w-lg">
+            Koleksi proyek web development yang sudah saya kerjakan.
+          </p>
+        </div>
+
+        {/* Projects list */}
         <section aria-label="Daftar proyek">
-          <div className="grid grid-cols-1 gap-12">
+          <div className="space-y-6">
             {projects.map((project) => (
-              <div key={project.id} className="retro-card overflow-hidden">
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div className="relative h-64 md:h-full">
+              <div key={project.id} className="clean-card overflow-hidden group">
+                <div className="grid md:grid-cols-[2fr_3fr] gap-0">
+                  {/* Image */}
+                  <div className="relative h-56 md:h-full min-h-[220px] overflow-hidden">
                     <Image
                       src={project.image}
                       alt={project.title}
                       fill
-                      className="object-cover"
+                      className="object-cover transition-transform duration-500 group-hover:scale-105"
+                      sizes="(min-width: 768px) 40vw, 100vw"
                     />
                   </div>
-                  <div className="p-6">
-                    <h2 className="text-2xl font-bold mb-4">{project.title}</h2>
-                    <p className="text-gray-600 dark:text-gray-300 mb-4">
-                      {project.description}
-                    </p>
-                    <div className="flex flex-wrap gap-2 mb-6">
-                      {project.technologies.map((tech) => (
-                        <span
-                          key={tech}
-                          className="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 rounded-full text-sm"
-                        >
-                          {tech}
-                        </span>
-                      ))}
+
+                  {/* Content */}
+                  <div className="p-8 flex flex-col justify-between">
+                    <div>
+                      <h2 className="text-xl font-semibold text-[var(--text)] mb-3">
+                        {project.title}
+                      </h2>
+                      <p className="text-sm text-[var(--text-muted)] leading-relaxed mb-5">
+                        {project.description}
+                      </p>
+                      <div className="flex flex-wrap gap-2 mb-6">
+                        {project.technologies.map((tech) => (
+                          <span key={tech} className="tag-pill">
+                            {tech}
+                          </span>
+                        ))}
+                      </div>
                     </div>
-                    <div className="flex space-x-4">
+
+                    <div className="flex gap-3">
                       <Link
                         href={project.link}
-                        className="retro-button px-4 py-2 flex items-center"
+                        className="btn-secondary text-xs py-2 px-4"
                       >
-                        View Details
+                        Detail
+                        <ArrowRight size={13} />
                       </Link>
-                      {project?.demo && (
-                        <Link
-                          href={project?.demo}
+                      {project.demo && (
+                        <a
+                          href={project.demo}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="retro-button px-4 py-2 flex items-center"
+                          className="btn-primary text-xs py-2 px-4"
                         >
-                          <ExternalLink size={20} className="mr-2" />
-                          Demo
-                        </Link>
+                          <ExternalLink size={13} />
+                          Live Demo
+                        </a>
                       )}
                     </div>
                   </div>

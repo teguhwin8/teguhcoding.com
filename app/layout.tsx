@@ -1,14 +1,22 @@
 import "./globals.css";
 import type { Metadata } from "next";
-import { Space_Mono } from "next/font/google";
+import { Inter, Instrument_Serif } from "next/font/google";
 import { Navigation } from "@/components/navigation";
 import { Footer } from "@/components/footer";
-import { ThemeProvider } from "@/components/theme-provider";
 import { Agentation } from "agentation";
 
-const spaceMono = Space_Mono({
-  weight: ["400", "700"],
+const inter = Inter({
   subsets: ["latin"],
+  variable: "--font-inter",
+  display: "swap",
+});
+
+const instrumentSerif = Instrument_Serif({
+  weight: "400",
+  style: ["normal", "italic"],
+  subsets: ["latin"],
+  variable: "--font-instrument",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -68,18 +76,10 @@ export const metadata: Metadata = {
     ],
     apple: [
       { url: "/favicon/apple-icon-57x57.png", sizes: "57x57", type: "image/png" },
-      { url: "/favicon/apple-icon-60x60.png", sizes: "60x60", type: "image/png" },
-      { url: "/favicon/apple-icon-72x72.png", sizes: "72x72", type: "image/png" },
-      { url: "/favicon/apple-icon-76x76.png", sizes: "76x76", type: "image/png" },
-      { url: "/favicon/apple-icon-114x114.png", sizes: "114x114", type: "image/png" },
-      { url: "/favicon/apple-icon-120x120.png", sizes: "120x120", type: "image/png" },
-      { url: "/favicon/apple-icon-144x144.png", sizes: "144x144", type: "image/png" },
-      { url: "/favicon/apple-icon-152x152.png", sizes: "152x152", type: "image/png" },
       { url: "/favicon/apple-icon-180x180.png", sizes: "180x180", type: "image/png" },
     ],
   },
 };
-
 
 export default function RootLayout({
   children,
@@ -87,25 +87,20 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body className={spaceMono.className} suppressHydrationWarning>
+    <html lang="en" className={`${inter.variable} ${instrumentSerif.variable}`}>
+      <body className={inter.className} suppressHydrationWarning>
         <a
           href="#main-content"
-          className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-white focus:text-black focus:border-2 focus:border-black focus:rounded dark:focus:bg-gray-900 dark:focus:text-white dark:focus:border-white"
+          className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-white focus:text-black focus:border focus:border-black focus:rounded-lg"
         >
           Skip to content
         </a>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          <Navigation />
-          <main id="main-content" className="retro-grid min-h-screen">{children}</main>
-          <Footer />
-          {process.env.NODE_ENV === "development" && <Agentation />}
-        </ThemeProvider>
+        <Navigation />
+        <main id="main-content" className="min-h-screen">
+          {children}
+        </main>
+        <Footer />
+        {process.env.NODE_ENV === "development" && <Agentation />}
       </body>
     </html>
   );

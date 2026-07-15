@@ -1,5 +1,4 @@
 import { Metadata } from "next";
-import { Briefcase, Calendar } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Work Experience — Software Engineer Career",
@@ -29,7 +28,7 @@ const experiences = [
     company: "PT Hijau Digital International",
     period: "March 2019 – Present",
     description:
-      "Developed and maintained web applications using Laravel, Next.js, Vue.js and NestJS, improving client project delivery times by 20%. Rewrote existing HTML/CSS to align with SEO and accessibility standards, increasing organic traffic by 600%. integrated AI-powered numerology engine for automated personality calculation.",
+      "Developed and maintained web applications using Laravel, Next.js, Vue.js and NestJS, improving client project delivery times by 20%. Rewrote existing HTML/CSS to align with SEO and accessibility standards, increasing organic traffic by 600%. Integrated AI-powered numerology engine for automated personality calculation.",
     technologies: ["Next.js", "Laravel", "Vue.js", "NestJS", "AI Integration"],
   },
   {
@@ -47,48 +46,69 @@ const experiences = [
     company: "Politeknik Dharma Patria",
     period: "January 2018 – February 2019",
     description:
-      "Worked with a team to build and maintain responsive websites using HTML, CSS, JavaScript, and PHP. Created learning materials on web programming for undergraduate students at Politeknik Dharma Patria.",
+      "Worked with a team to build and maintain responsive websites using HTML, CSS, JavaScript, and PHP. Created learning materials on web programming for undergraduate students.",
     technologies: ["PHP", "JavaScript", "HTML", "CSS"],
   },
 ];
 
 export default function Experience() {
   return (
-    <div className="min-h-screen py-24 px-4">
-      <div className="max-w-7xl mx-auto">
-        <h1 className="text-4xl font-bold mb-2">Work Experience</h1>
-        <p className="text-gray-600 dark:text-gray-300 mb-12">Perjalanan karir saya sebagai Software Engineer.</p>
-        <div className="space-y-8">
-          {experiences.map((exp) => (
-            <article key={exp.id} className="retro-card p-6">
-              <div className="flex items-start justify-between mb-4">
-                <div>
-                  <h2 className="text-2xl font-bold">{exp.title}</h2>
-                  <div className="flex items-center space-x-2 text-gray-600 dark:text-gray-300 mt-1">
-                    <Briefcase size={16} />
-                    <span>{exp.company}</span>
+    <div className="min-h-screen pt-24 pb-20 px-6">
+      <div className="max-w-6xl mx-auto">
+        {/* Header */}
+        <div className="mb-12">
+          <p className="text-xs font-medium text-[var(--text-muted)] uppercase tracking-widest mb-2">
+            Career
+          </p>
+          <h1 className="text-4xl font-semibold text-[var(--text)] tracking-tight mb-4">
+            Work Experience
+          </h1>
+          <p className="text-[var(--text-muted)] max-w-lg">
+            Perjalanan karir saya sebagai Software Engineer selama 6+ tahun.
+          </p>
+        </div>
+
+        {/* Timeline */}
+        <div className="relative">
+          {/* Vertical line */}
+          <div className="absolute left-0 top-2 bottom-2 w-px bg-[var(--border)] hidden md:block" />
+
+          <div className="space-y-8">
+            {experiences.map((exp) => (
+              <article key={exp.id} className="md:pl-8 relative">
+                {/* Dot */}
+                <div className="absolute left-[-4px] top-2 w-2 h-2 rounded-full bg-[var(--text)] hidden md:block" />
+
+                <div className="clean-card p-6">
+                  <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-4">
+                    <div>
+                      <h2 className="text-lg font-semibold text-[var(--text)]">
+                        {exp.title}
+                      </h2>
+                      <p className="text-sm text-[var(--text-muted)] mt-0.5">
+                        {exp.company}
+                      </p>
+                    </div>
+                    <span className="text-xs text-[var(--text-subtle)] whitespace-nowrap mt-1 sm:mt-0">
+                      {exp.period}
+                    </span>
+                  </div>
+
+                  <p className="text-sm text-[var(--text-muted)] leading-relaxed mb-5">
+                    {exp.description}
+                  </p>
+
+                  <div className="flex flex-wrap gap-2">
+                    {exp.technologies.map((tech) => (
+                      <span key={tech} className="tag-pill">
+                        {tech}
+                      </span>
+                    ))}
                   </div>
                 </div>
-                <div className="flex items-center space-x-2 text-gray-600 dark:text-gray-300">
-                  <Calendar size={16} />
-                  <span>{exp.period}</span>
-                </div>
-              </div>
-              <p className="text-gray-600 dark:text-gray-300 mb-4">
-                {exp.description}
-              </p>
-              <div className="flex flex-wrap gap-2">
-                {exp.technologies.map((tech) => (
-                  <span
-                    key={tech}
-                    className="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 rounded-full text-sm"
-                  >
-                    {tech}
-                  </span>
-                ))}
-              </div>
-            </article>
-          ))}
+              </article>
+            ))}
+          </div>
         </div>
       </div>
     </div>

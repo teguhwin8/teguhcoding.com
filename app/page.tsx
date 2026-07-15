@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import { Hero } from "@/components/hero";
 import { FeaturedProjects } from "@/components/featured-projects";
 import { LatestBlog } from "@/components/latest-blog";
+import { MarqueeBar } from "@/components/marquee-bar";
 import { getAllPosts } from "@/lib/markdown";
 
 export const metadata: Metadata = {
@@ -24,11 +25,11 @@ export default async function Home() {
   const latestPosts = allPosts.slice(0, 9);
 
   return (
-    <div className="pt-16">
+    <div>
       <Hero />
+      <MarqueeBar />
       <FeaturedProjects />
       <LatestBlog posts={latestPosts} />
     </div>
   );
 }
-

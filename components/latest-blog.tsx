@@ -12,47 +12,54 @@ interface LatestBlogProps {
 
 export function LatestBlog({ posts }: LatestBlogProps) {
   return (
-    <section className="py-20 px-4 bg-white dark:bg-gray-900">
-      <div className="max-w-7xl mx-auto">
-        <motion.h2
-          className="text-4xl font-bold mb-12 text-center"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-        >
-          Latest Blog Posts
-        </motion.h2>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {posts.map((post, index) => (
-            <motion.div
-              key={post.slug}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-            >
-              <ArticleCard post={post} priority={index === 0} />
-            </motion.div>
-          ))}
-        </div>
-
-        {posts.length === 0 && (
-          <div className="text-center py-12">
-            <p className="text-gray-600 dark:text-gray-300">
-              No blog posts available yet.
+    <section className="py-20 px-6 border-t border-[var(--border)] bg-[var(--surface)]">
+      <div className="max-w-6xl mx-auto">
+        <div className="flex items-end justify-between mb-12">
+          <div>
+            <p className="text-xs font-medium text-[var(--text-muted)] uppercase tracking-widest mb-2">
+              Writing
             </p>
+            <h2 className="text-3xl font-semibold text-[var(--text)] tracking-tight">
+              Latest Articles
+            </h2>
           </div>
-        )}
-
-        {posts.length > 0 && (
-          <div className="text-center mt-12">
+          {posts.length > 0 && (
             <Link
               href="/blog"
-              className="retro-button px-6 py-3 inline-flex items-center space-x-2"
+              className="hidden md:inline-flex items-center gap-1.5 text-sm text-[var(--text-muted)] hover:text-[var(--text)] transition-colors"
             >
-              <span>View All Posts</span>
-              <ArrowRight size={20} />
+              All articles
+              <ArrowRight size={14} />
             </Link>
+          )}
+        </div>
+
+        {posts.length > 0 ? (
+          <>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+              {posts.slice(0, 6).map((post, index) => (
+                <motion.div
+                  key={post.slug}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.4, delay: index * 0.07 }}
+                >
+                  <ArticleCard post={post} priority={index === 0} />
+                </motion.div>
+              ))}
+            </div>
+
+            <div className="mt-10 text-center md:hidden">
+              <Link href="/blog" className="btn-secondary text-sm">
+                Semua artikel
+                <ArrowRight size={14} />
+              </Link>
+            </div>
+          </>
+        ) : (
+          <div className="text-center py-16 text-[var(--text-muted)] text-sm">
+            Belum ada artikel.
           </div>
         )}
       </div>

@@ -3,348 +3,216 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 255, 255, 248;
-  --background-end-rgb: 255, 255, 255;
-  --retro-yellow: 255, 232, 128;
-  --retro-pink: 255, 182, 193;
-  --retro-blue: 173, 216, 230;
-  --retro-green: 144, 238, 144;
+  --bg: #ffffff;
+  --surface: #f5f5f5;
+  --bg-card: #ffffff;
+  --border: #e5e5e5;
+  --border-strong: #d0d0d0;
+  --text: #111111;
+  --text-muted: #6b7280;
+  --text-subtle: #9ca3af;
+  --accent: #111111;
+  --accent-hover: #333333;
+  --radius: 10px;
 }
 
-.dark {
-  --foreground-rgb: 255, 255, 255;
-  --background-start-rgb: 20, 20, 20;
-  --background-end-rgb: 0, 0, 0;
-  --retro-yellow: 200, 180, 80;
-  --retro-pink: 200, 140, 150;
-  --retro-blue: 100, 150, 180;
-  --retro-green: 100, 180, 100;
+/* ─── Marquee animation ─── */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee 28s linear infinite;
+}
+
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: rgb(var(--background-start-rgb));
-  font-family: "Space Mono", monospace;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  color: var(--text);
+  background: var(--bg);
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.6;
 }
 
-.retro-grid {
-  background-size: 30px 30px;
-  background-image: linear-gradient(
-      to right,
-      rgba(0, 0, 0, 0.05) 1px,
-      transparent 1px
-    ),
-    linear-gradient(to bottom, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+/* ─── Clean card ─── */
+.clean-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  transition: box-shadow 0.2s ease, border-color 0.2s ease;
 }
 
-.dark .retro-grid {
-  background-image: linear-gradient(
-      to right,
-      rgba(255, 255, 255, 0.1) 1px,
-      transparent 1px
-    ),
-    linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+.clean-card:hover {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border-color: var(--border-strong);
 }
 
-.retro-card {
-  background: white;
-  border: 2px solid black;
-  box-shadow: 4px 4px 0 black;
-  transition: all 0.2s ease;
+/* ─── Primary button ─── */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--text);
+  color: #ffffff;
+  border: 1px solid var(--text);
+  border-radius: var(--radius);
+  padding: 0.625rem 1.25rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: background 0.15s ease, transform 0.15s ease;
+  text-decoration: none;
+  cursor: pointer;
 }
 
-.dark .retro-card {
-  background: rgb(30, 30, 30);
-  border: 2px solid white;
-  box-shadow: 4px 4px 0 white;
+.btn-primary:hover {
+  background: var(--accent-hover);
+  border-color: var(--accent-hover);
 }
 
-.retro-card:hover {
-  transform: translate(-2px, -2px);
-  box-shadow: 6px 6px 0 black;
+/* ─── Secondary button ─── */
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--bg-card);
+  color: var(--text);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius);
+  padding: 0.625rem 1.25rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: border-color 0.15s ease, background 0.15s ease;
+  text-decoration: none;
+  cursor: pointer;
 }
 
-.dark .retro-card:hover {
-  box-shadow: 6px 6px 0 white;
+.btn-secondary:hover {
+  border-color: var(--text);
+  background: var(--bg-card);
 }
 
-.retro-button {
-  background: rgb(var(--retro-yellow));
-  border: 2px solid black;
-  box-shadow: 4px 4px 0 black;
-  transition: all 0.2s ease;
-  font-weight: bold;
+/* ─── Tag pill ─── */
+.tag-pill {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  background: var(--surface);
+  color: var(--text-muted);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  transition: background 0.15s ease, color 0.15s ease;
+  text-decoration: none;
 }
 
-.dark .retro-button {
-  background: rgb(var(--retro-yellow));
-  border: 2px solid white;
-  box-shadow: 4px 4px 0 white;
-  color: black;
+.tag-pill:hover,
+.tag-pill.active {
+  background: var(--text);
+  color: #ffffff;
+  border-color: var(--text);
 }
 
-.retro-button:hover {
-  transform: translate(-2px, -2px);
-  box-shadow: 6px 6px 0 black;
+/* ─── Section divider ─── */
+.section-divider {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 0;
 }
 
-.dark .retro-button:hover {
-  box-shadow: 6px 6px 0 white;
-}
-
-/* Additional dark mode improvements */
-.dark h1,
-.dark h2,
-.dark h3,
-.dark h4,
-.dark h5,
-.dark h6 {
-  color: white;
-}
-
-.dark a:not(.retro-button) {
-  color: rgb(147, 197, 253); /* light blue for links */
-}
-
-.dark a:not(.retro-button):hover {
-  color: rgb(96, 165, 250); /* darker blue for hover */
-}
-
-/* Ensure form elements have proper contrast */
-.dark input,
-.dark textarea,
-.dark select {
-  background-color: rgb(55, 65, 81);
-  border-color: rgb(209, 213, 219);
-  color: white;
-}
-
-.dark input::placeholder,
-.dark textarea::placeholder {
-  color: rgb(156, 163, 175);
-}
-
-/* Blog content improvements */
+/* ─── Prose (blog content) ─── */
 .prose p {
-  margin-bottom: 2rem !important;
+  margin-bottom: 1.5rem !important;
   line-height: 1.8 !important;
+  color: var(--text-muted);
 }
 
-.prose h1, .prose h2, .prose h3, .prose h4 {
-  margin-top: 2.5rem !important;
-  margin-bottom: 1.25rem !important;
+.prose h1,
+.prose h2,
+.prose h3,
+.prose h4 {
+  margin-top: 2rem !important;
+  margin-bottom: 1rem !important;
+  color: var(--text);
+  font-weight: 600;
 }
 
 .prose img {
-  margin-top: 2rem !important;
-  margin-bottom: 2rem !important;
+  margin-top: 1.5rem !important;
+  margin-bottom: 1.5rem !important;
+  border-radius: var(--radius);
 }
 
-.dark .prose p {
-  color: rgb(209, 213, 219);
+.prose ul,
+.prose ol {
+  color: var(--text-muted);
 }
 
-
-.dark ul li {
-  color: rgb(209, 213, 219);
+.prose a {
+  color: var(--text);
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
-/* 404 Page specific styles */
-.glitch {
-  position: relative;
-  color: white;
-  font-size: 4rem;
-  letter-spacing: 0.1em;
-  animation: glitch-skew 1s infinite linear alternate-reverse;
-}
-
-/* Custom button colors for 404 page */
-.retro-button.bg-blue-200 {
-  background: rgb(191, 219, 254);
-}
-
-.dark .retro-button.bg-blue-800 {
-  background: rgb(30, 64, 175);
-}
-
-.retro-button.bg-green-200 {
-  background: rgb(187, 247, 208);
-}
-
-.dark .retro-button.bg-green-800 {
-  background: rgb(22, 101, 52);
-}
-
-/* High contrast text colors for better visibility */
-.retro-button.bg-blue-200 {
-  color: rgb(30, 64, 175) !important;
-}
-
-.dark .retro-button.bg-blue-800 {
-  color: white !important;
-}
-
-.retro-button.bg-green-200 {
-  color: rgb(22, 101, 52) !important;
-}
-
-.dark .retro-button.bg-green-800 {
-  color: white !important;
-}
-
-/* Mobile navigation improvements */
-@media (max-width: 768px) {
-  .retro-card {
-    box-shadow: 2px 2px 0 black;
-  }
-
-  .dark .retro-card {
-    box-shadow: 2px 2px 0 white;
-  }
-
-  .retro-card:hover {
-    transform: translate(-1px, -1px);
-    box-shadow: 3px 3px 0 black;
-  }
-
-  .dark .retro-card:hover {
-    box-shadow: 3px 3px 0 white;
-  }
-}
-
-.glitch::before {
-  content: attr(data-text);
-  position: absolute;
-  top: 0;
-  left: 0;
+/* ─── Form inputs ─── */
+.form-input {
   width: 100%;
-  height: 100%;
-  color: #ff0000;
-  z-index: -1;
-  animation: glitch-1 0.3s infinite linear alternate-reverse;
+  padding: 0.625rem 0.875rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius);
+  color: var(--text);
+  font-size: 0.875rem;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+  outline: none;
 }
 
-.glitch::after {
-  content: attr(data-text);
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  color: #00ff00;
-  z-index: -2;
-  animation: glitch-2 0.3s infinite linear alternate-reverse;
+.form-input:focus {
+  border-color: var(--text);
+  box-shadow: 0 0 0 3px rgba(17, 17, 17, 0.08);
 }
 
-@keyframes glitch-skew {
-  0% {
-    transform: skew(0deg);
-  }
-  20% {
-    transform: skew(-2deg);
-  }
-  40% {
-    transform: skew(1deg);
-  }
-  60% {
-    transform: skew(-1deg);
-  }
-  80% {
-    transform: skew(2deg);
-  }
-  100% {
-    transform: skew(0deg);
-  }
+.form-input::placeholder {
+  color: var(--text-subtle);
 }
 
-@keyframes glitch-1 {
-  0% {
-    transform: translate(-2px, 1px);
-  }
-  20% {
-    transform: translate(2px, -1px);
-  }
-  40% {
-    transform: translate(-1px, 2px);
-  }
-  60% {
-    transform: translate(1px, -2px);
-  }
-  80% {
-    transform: translate(-2px, -1px);
-  }
-  100% {
-    transform: translate(2px, 1px);
-  }
-}
-
-@keyframes glitch-2 {
-  0% {
-    transform: translate(1px, -1px);
-  }
-  20% {
-    transform: translate(-1px, 1px);
-  }
-  40% {
-    transform: translate(2px, -2px);
-  }
-  60% {
-    transform: translate(-2px, 2px);
-  }
-  80% {
-    transform: translate(1px, 1px);
-  }
-  100% {
-    transform: translate(-1px, -1px);
-  }
-}
-
+/* ─── shadcn compatibility ─── */
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --foreground: 0 0% 3.9%;
+    --foreground: 0 0% 6.7%;
     --card: 0 0% 100%;
-    --card-foreground: 0 0% 3.9%;
+    --card-foreground: 0 0% 6.7%;
     --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 3.9%;
-    --primary: 0 0% 9%;
+    --popover-foreground: 0 0% 6.7%;
+    --primary: 0 0% 6.7%;
     --primary-foreground: 0 0% 98%;
     --secondary: 0 0% 96.1%;
     --secondary-foreground: 0 0% 9%;
-    --muted: 0 0% 96.1%;
+    --muted: 0 0% 96.9%;
     --muted-foreground: 0 0% 45.1%;
-    --accent: 0 0% 96.1%;
+    --accent: 0 0% 96.9%;
     --accent-foreground: 0 0% 9%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
     --border: 0 0% 89.8%;
     --input: 0 0% 89.8%;
     --ring: 0 0% 3.9%;
-    --radius: 0.5rem;
-  }
-
-  .dark {
-    --background: 0 0% 3.9%;
-    --foreground: 0 0% 98%;
-    --card: 0 0% 3.9%;
-    --card-foreground: 0 0% 98%;
-    --popover: 0 0% 3.9%;
-    --popover-foreground: 0 0% 98%;
-    --primary: 0 0% 98%;
-    --primary-foreground: 0 0% 9%;
-    --secondary: 0 0% 14.9%;
-    --secondary-foreground: 0 0% 98%;
-    --muted: 0 0% 14.9%;
-    --muted-foreground: 0 0% 63.9%;
-    --accent: 0 0% 14.9%;
-    --accent-foreground: 0 0% 98%;
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 0 0% 14.9%;
-    --input: 0 0% 14.9%;
-    --ring: 0 0% 83.1%;
+    --radius: 0.625rem;
   }
 }
 

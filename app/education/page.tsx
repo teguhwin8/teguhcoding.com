@@ -1,5 +1,4 @@
 import { Metadata } from "next";
-import { BookOpen, Calendar, Award } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Education & Certifications",
@@ -26,7 +25,7 @@ const education = [
   },
   {
     id: 2,
-    type: "Associate’s Degree",
+    type: "Associate's Degree",
     title: "Associate in Information Management",
     institution: "Politeknik Dharma Patria",
     period: "July 2011 – December 2014",
@@ -42,116 +41,125 @@ const certifications = [
     title: "Alibaba Cloud Certification – Apsara",
     issuer: "Alibaba Cloud Academy",
     date: "Sep 2024",
-    link: "#",
   },
   {
     id: 2,
     title: "Building Performance Web Apps",
     issuer: "IDCamp x Dicoding",
     date: "Jul 2024",
-    link: "#",
   },
   {
     id: 3,
     title: "JavaScript & Node.js for Engineers",
     issuer: "Kemenperin",
     date: "Jun 2023",
-    link: "#",
   },
   {
     id: 4,
     title: "Next.js & React – The Complete Guide",
     issuer: "Udemy",
     date: "Apr 2023",
-    link: "#",
   },
   {
     id: 5,
     title: "PHP Laravel Web Development",
     issuer: "BuildWithAngga",
     date: "Dec 2022",
-    link: "#",
   },
   {
     id: 6,
     title: "Advancing Career Program Batch 12",
     issuer: "Alterra Academy",
     date: "Oct 2021",
-    link: "#",
   },
   {
     id: 7,
     title: "Full Stack Software Engineering",
     issuer: "RevoU",
     date: "Aug 2025",
-    link: "#",
   },
   {
     id: 8,
     title: "React + Redux, PHP, JavaScript",
     issuer: "SoloLearn",
     date: "2020–2022",
-    link: "#",
   },
 ];
 
 export default function Education() {
   return (
-    <div className="min-h-screen pt-24 px-4">
-      <div className="max-w-7xl mx-auto">
-        <h1 className="text-4xl font-bold mb-12">Education & Certifications</h1>
+    <div className="min-h-screen pt-24 pb-20 px-6">
+      <div className="max-w-6xl mx-auto">
+        {/* Header */}
+        <div className="mb-12">
+          <p className="text-xs font-medium text-[var(--text-muted)] uppercase tracking-widest mb-2">
+            Background
+          </p>
+          <h1 className="text-4xl font-semibold text-[var(--text)] tracking-tight mb-4">
+            Education & Certifications
+          </h1>
+          <p className="text-[var(--text-muted)] max-w-lg">
+            Latar belakang pendidikan dan sertifikasi profesional yang mendukung
+            karir saya sebagai software engineer.
+          </p>
+        </div>
 
-        <section className="mb-12">
-          <h2 className="text-2xl font-bold mb-6 flex items-center">
-            <BookOpen className="mr-2" />
+        {/* Education */}
+        <section className="mb-16">
+          <h2 className="text-xs font-semibold text-[var(--text)] uppercase tracking-widest mb-6">
             Education
           </h2>
-          {education.map((edu) => (
-            <div key={edu.id} className="retro-card p-6 mb-6">
-              <div className="flex items-start justify-between mb-4">
-                <div>
-                  <h3 className="text-xl font-bold">{edu.title}</h3>
-                  <p className="text-gray-600 dark:text-gray-300">
-                    {edu.institution}
-                  </p>
-                </div>
-                <div className="flex items-center space-x-2 text-gray-600 dark:text-gray-300">
-                  <Calendar size={16} />
-                  <span>{edu.period}</span>
-                </div>
-              </div>
-              <p className="text-gray-600 dark:text-gray-300 mb-4">
-                {edu.description}
-              </p>
-              {edu.achievements.length > 0 && (
-                <div className="flex flex-wrap gap-2">
-                  {edu.achievements.map((achievement) => (
-                    <span
-                      key={achievement}
-                      className="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 rounded-full text-sm"
-                    >
-                      {achievement}
+          <div className="space-y-5">
+            {education.map((edu) => (
+              <div key={edu.id} className="clean-card p-6">
+                <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-3">
+                  <div>
+                    <span className="text-[10px] font-semibold text-[var(--text-muted)] uppercase tracking-widest">
+                      {edu.type}
                     </span>
-                  ))}
+                    <h3 className="text-base font-semibold text-[var(--text)] mt-0.5">
+                      {edu.title}
+                    </h3>
+                    <p className="text-sm text-[var(--text-muted)]">
+                      {edu.institution}
+                    </p>
+                  </div>
+                  <span className="text-xs text-[var(--text-subtle)] whitespace-nowrap">
+                    {edu.period}
+                  </span>
                 </div>
-              )}
-            </div>
-          ))}
+
+                <p className="text-sm text-[var(--text-muted)] leading-relaxed mb-4">
+                  {edu.description}
+                </p>
+
+                {edu.achievements.length > 0 && (
+                  <div className="flex flex-wrap gap-2">
+                    {edu.achievements.map((a) => (
+                      <span key={a} className="tag-pill">
+                        {a}
+                      </span>
+                    ))}
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
         </section>
 
+        {/* Certifications */}
         <section>
-          <h2 className="text-2xl font-bold mb-6 flex items-center">
-            <Award className="mr-2" />
+          <h2 className="text-xs font-semibold text-[var(--text)] uppercase tracking-widest mb-6">
             Certifications
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pb-5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pb-5">
             {certifications.map((cert) => (
-              <div key={cert.id} className="retro-card p-6">
-                <h3 className="text-xl font-bold mb-2">{cert.title}</h3>
-                <p className="text-gray-600 dark:text-gray-300 mb-2">
-                  {cert.issuer}
-                </p>
-                <p className="text-sm text-gray-500 dark:text-gray-400">
+              <div key={cert.id} className="clean-card p-5">
+                <h3 className="text-sm font-semibold text-[var(--text)] mb-1.5">
+                  {cert.title}
+                </h3>
+                <p className="text-xs text-[var(--text-muted)]">{cert.issuer}</p>
+                <p className="text-xs text-[var(--text-subtle)] mt-1">
                   {cert.date}
                 </p>
               </div>

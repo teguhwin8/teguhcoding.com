@@ -2,242 +2,50 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { Home, Search, FileText, Zap } from "lucide-react";
-import { useMemo, useState, useEffect } from "react";
+import { Home, ArrowRight } from "lucide-react";
 
 export default function NotFound() {
-  const [glitchText, setGlitchText] = useState("404");
-  const [isGlitching, setIsGlitching] = useState(false);
-  const particles = useMemo<
-    Array<{
-      id: number;
-      x: number;
-      y: number;
-      animateX: number;
-      animateY: number;
-      duration: number;
-      delay: number;
-    }>
-  >(
-    () =>
-      Array.from({ length: 20 }, (_, i) => ({
-        id: i,
-        x: (i * 13) % 100,
-        y: (i * 29) % 100,
-        animateX: ((i * 53) % 400) - 200,
-        animateY: ((i * 97) % 400) - 200,
-        duration: 2 + ((i * 7) % 300) / 100,
-        delay: ((i * 11) % 200) / 100,
-      })),
-    []
-  );
-
-  const glitchChars = "!@#$%^&*()_+-=[]{}|;:,.<>?";
-  const originalText = "404";
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setIsGlitching(true);
-      let iterations = 0;
-
-      const glitchInterval = setInterval(() => {
-        setGlitchText(
-          originalText
-            .split("")
-            .map((char, index) => {
-              if (index < iterations) {
-                return originalText[index];
-              }
-              return glitchChars[
-                Math.floor(Math.random() * glitchChars.length)
-              ];
-            })
-            .join("")
-        );
-
-        if (iterations >= originalText.length) {
-          clearInterval(glitchInterval);
-          setIsGlitching(false);
-          setGlitchText(originalText);
-        }
-
-        iterations += 1 / 3;
-      }, 100);
-    }, 3000);
-
-    return () => clearInterval(interval);
-  }, []);
-
-  const suggestions = [
-    "Check the URL for typos",
-    "Go back to the homepage",
-    "Explore our projects",
-    "Read our latest blog posts",
-    "Contact us for help",
-  ];
-
   return (
-    <div className="min-h-screen flex items-center justify-center px-4 pt-16 pb-16 relative overflow-hidden">
-      {/* Animated background elements */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {particles.map((particle) => (
-          <motion.div
-            key={particle.id}
-            className="absolute w-2 h-2 bg-yellow-400 dark:bg-yellow-300 rounded-full opacity-30"
-            animate={{
-              x: [0, particle.animateX],
-              y: [0, particle.animateY],
-              scale: [0, 1, 0],
-            }}
-            transition={{
-              duration: particle.duration,
-              repeat: Infinity,
-              delay: particle.delay,
-            }}
-            style={{
-              left: `${particle.x}%`,
-              top: `${particle.y}%`,
-            }}
-          />
-        ))}
-      </div>
-
-      <div className="max-w-7xl mx-auto text-center relative z-10">
+    <div className="min-h-screen flex items-center justify-center px-6 pt-16 pb-16">
+      <div className="max-w-lg mx-auto text-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           className="space-y-8"
         >
-          {/* Glitch 404 Text */}
-          <motion.div
-            className="relative"
-            animate={isGlitching ? { x: [0, -2, 2, 0] } : {}}
-            transition={{ duration: 0.1, repeat: isGlitching ? 3 : 0 }}
-          >
-            <h1
-              className={`text-8xl md:text-9xl font-bold mb-4 relative ${
-                isGlitching ? "text-red-500" : "text-black dark:text-white"
-              }`}
-              style={{
-                fontFamily: '"Space Mono", monospace',
-                textShadow: isGlitching
-                  ? "2px 2px 0px #ff0000, -2px -2px 0px #00ff00"
-                  : "none",
-              }}
-            >
-              {glitchText}
-            </h1>
-            {isGlitching && (
-              <>
-                <span
-                  className="absolute top-0 left-0 text-8xl md:text-9xl font-bold text-red-500 opacity-70"
-                  style={{ transform: "translate(-2px, 0)" }}
-                >
-                  {glitchText}
-                </span>
-                <span
-                  className="absolute top-0 left-0 text-8xl md:text-9xl font-bold text-blue-500 opacity-70"
-                  style={{ transform: "translate(2px, 0)" }}
-                >
-                  {glitchText}
-                </span>
-              </>
-            )}
-          </motion.div>
-
-          {/* Error message with typewriter effect */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.5, duration: 0.5 }}
-          >
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              🚀 Page Not Found
-            </h2>
-            <p className="text-lg text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto">
-              Oops! It looks like this page got lost in the digital void. The
-              page you&apos;re looking for doesn&apos;t exist or has been moved
-              to another dimension. But don&apos;t worry, let&apos;s get you
-              back on track! 🛸
+          {/* 404 */}
+          <div>
+            <p className="text-xs font-medium text-[var(--text-muted)] uppercase tracking-widest mb-4">
+              Error 404
             </p>
-          </motion.div>
+            <h1 className="text-8xl font-semibold text-[var(--text)] tracking-tight mb-0">
+              404
+            </h1>
+          </div>
 
-          {/* Action buttons */}
-          <motion.div
-            className="flex flex-col sm:flex-row gap-4 justify-center items-center"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 1, duration: 0.5 }}
-          >
-            <Link
-              href="/"
-              className="retro-button px-6 py-3 flex items-center space-x-2 text-lg"
-            >
-              <Home size={20} />
-              <span>Back to Home</span>
+          {/* Message */}
+          <div>
+            <h2 className="text-2xl font-semibold text-[var(--text)] mb-3">
+              Halaman tidak ditemukan
+            </h2>
+            <p className="text-[var(--text-muted)] leading-relaxed">
+              Halaman yang kamu cari tidak ada atau sudah dipindahkan.
+              Periksa kembali URL, atau kembali ke halaman utama.
+            </p>
+          </div>
+
+          {/* Actions */}
+          <div className="flex flex-col sm:flex-row gap-3 justify-center">
+            <Link href="/" className="btn-primary">
+              <Home size={15} />
+              Kembali ke Home
             </Link>
-
-            <Link
-              href="/projects"
-              className="retro-button px-6 py-3 flex items-center space-x-2 text-lg bg-blue-200 dark:bg-blue-800 !text-blue-800 dark:!text-white"
-            >
-              <Search size={20} />
-              <span>Explore Projects</span>
+            <Link href="/blog" className="btn-secondary">
+              Baca Blog
+              <ArrowRight size={15} />
             </Link>
-
-            <Link
-              href="/blog"
-              className="retro-button px-6 py-3 flex items-center space-x-2 text-lg bg-green-200 dark:bg-green-800 !text-green-800 dark:!text-white"
-            >
-              <FileText size={20} />
-              <span>Read Blog</span>
-            </Link>
-          </motion.div>
-
-          {/* Helpful suggestions */}
-          <motion.div
-            className="retro-card p-6 mt-12 max-w-2xl mx-auto"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 1.5, duration: 0.5 }}
-          >
-            <h3 className="text-xl font-bold mb-4 flex items-center justify-center">
-              <Zap className="mr-2" />
-              What can you do instead?
-            </h3>
-            <ul className="space-y-2 text-left">
-              {suggestions.map((suggestion, index) => (
-                <motion.li
-                  key={index}
-                  className="flex items-center text-gray-600 dark:text-gray-300"
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: 2 + index * 0.1, duration: 0.3 }}
-                >
-                  <span className="w-2 h-2 bg-yellow-400 dark:bg-yellow-300 rounded-full mr-3"></span>
-                  {suggestion}
-                </motion.li>
-              ))}
-            </ul>
-          </motion.div>
-
-          {/* ASCII Art */}
-          <motion.div
-            className="mt-12 mb-16 text-xs font-mono text-gray-500 dark:text-gray-400"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 2.5, duration: 0.5 }}
-          >
-            <pre className="text-center overflow-hidden text-[10px] sm:text-xs">
-              {`    ┌─────────────────────────────────┐
-    │  ERROR: Page Not Found          │
-    │  Status: 404                    │
-    │  Location: Unknown              │
-    │  Suggestion: Go back to safety  │
-    └─────────────────────────────────┘`}
-            </pre>
-          </motion.div>
+          </div>
         </motion.div>
       </div>
     </div>
