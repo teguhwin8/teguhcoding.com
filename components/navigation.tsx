@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { SearchBar } from "./search-bar";
+import { Logo } from "./logo";
 import { useState } from "react";
 
 export function Navigation() {
@@ -35,13 +36,7 @@ export function Navigation() {
       <div className="max-w-6xl mx-auto px-6">
         <div className="flex items-center justify-between h-14">
           {/* Wordmark */}
-          <Link
-            href="/"
-            className="text-sm font-bold tracking-tight text-[var(--text)]"
-            onClick={() => setIsMenuOpen(false)}
-          >
-            teguh<span className="text-[var(--text-muted)]">.</span>
-          </Link>
+          <Logo onClick={() => setIsMenuOpen(false)} />
 
           {/* Desktop nav */}
           <div className="hidden md:flex items-center gap-6">

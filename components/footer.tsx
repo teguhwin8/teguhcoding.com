@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { LuGithub, LuLinkedin, LuTwitter } from "react-icons/lu";
+import { Logo } from "./logo";
 
 export function Footer() {
   const pathname = usePathname();
@@ -16,12 +17,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-[1fr_auto] gap-10 mb-10">
           {/* Brand */}
           <div className="max-w-xs">
-            <Link
-              href="/"
-              className="text-sm font-semibold text-[var(--text)] mb-2 block"
-            >
-              teguh<span className="text-[var(--text-muted)]">.dev</span>
-            </Link>
+            <Logo className="mb-3" />
             <p className="text-sm text-[var(--text-muted)] leading-relaxed">
               Senior Software Engineer berbasis di Yogyakarta, Indonesia.
               Membangun web yang cepat, bersih, dan scalable.
@@ -90,7 +86,7 @@ export function Footer() {
 
         <div className="pt-8 border-t border-[var(--border)] flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-xs text-[var(--text-subtle)]">
-            © {new Date().getFullYear()} Teguh Widodo
+            © {new Date().getFullYear()} teguhcoding.com
           </p>
           <p className="text-xs text-[var(--text-subtle)]">
             Built with Next.js &amp; Tailwind CSS

@@ -63,7 +63,7 @@ export const projects = [
       "Fast loading performance",
       "Secure contact forms",
     ],
-    image: "/semen.jpg",
+    image: "/sementigaroda.com.jpg",
     link: "/projects/sementigaroda",
     slug: "sementigaroda",
     technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
