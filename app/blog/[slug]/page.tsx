@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { Calendar, ArrowLeft, ExternalLink } from "lucide-react";
 import Link from "next/link";
 import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 import { getPostBySlug, getAllPostSlugs, getAllPosts } from "@/lib/markdown";
 import ArticleCard from "@/components/article-card";
 
@@ -143,7 +144,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
           {/* Content */}
           <div className="prose prose-gray max-w-none mb-10">
-            <ReactMarkdown>{post.excerpt}</ReactMarkdown>
+            <ReactMarkdown remarkPlugins={[remarkGfm]}>{post.excerpt}</ReactMarkdown>
           </div>
 
           {/* CTA */}

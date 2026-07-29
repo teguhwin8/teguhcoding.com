@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { LogOut, Globe, Youtube, PenTool, CheckCircle2, XCircle, ChevronDown, ChevronUp, FileText, Trash2, Edit } from 'lucide-react';
 import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
 
 const MODELS = [
   { id: 'gpt-5.5', name: 'gpt-5.5 (<272K context length)', price: '$5 input / $30 output per 1M tokens' },
@@ -482,7 +483,7 @@ export default function Dashboard() {
                     </div>
                     <div className="flex-1 overflow-y-auto p-8">
                       <article className="prose prose-lg dark:prose-invert max-w-none">
-                        <ReactMarkdown>
+                        <ReactMarkdown remarkPlugins={[remarkGfm]}>
                           {editorContent.replace(/^---[\s\S]*?---\n/, '')}
                         </ReactMarkdown>
                       </article>
