@@ -220,55 +220,70 @@ Setelah semua update berlaku (Oktober 2026), ini struktur biaya lengkap untuk be
 
 Setelah gue cek pricing page resmi semua payment gateway Indonesia (per Juli 2026), ini perbandingan apples-to-apples yang akurat:
 
-### Virtual Account (BCA, BNI, BRI, Mandiri)
+### 📊 Tabel Perbandingan Payment Method Populer
 
-**Midtrans:** IDR 4,000 per transaksi  
-**Doku:** IDR 4,000 per transaksi  
-**Faspay:** IDR 4,000 per transaksi  
-**Xendit (Oct 2026):** IDR 9,000 + IDR 4,000 = **IDR 13,000 per transaksi**
+| Payment Method | Midtrans | Doku | Faspay | Xendit (Oct 2026) | Selisih |
+|---|---|---|---|---|---|
+| **Virtual Account** | IDR 4,000 | IDR 4,000 | IDR 4,000 | **IDR 13,000** | 🔴 +225% |
+| **QRIS** (Rp 100K) | IDR 700 | IDR 700 | IDR 700 | **IDR 4,700** | 🔴 +571% |
+| **Credit Card** (Rp 1jt) | IDR 31,000 | IDR 30,000 | IDR 29,000 | **IDR 35,000** | 🔴 +14-21% |
+| **E-Wallet** (GoPay/DANA) | 2% | 1.5% | 1.5% | **3% + IDR 4,000** | 🔴 +100-150% |
+| **Indomaret/Alfamart** | IDR 5,000 | IDR 5,000 | IDR 5,000 | **IDR 13,000** | 🔴 +160% |
+| **Setup Fee** | Free | Free | Free | Free | ✅ |
+| **Monthly Fee** | None | None | None | **USD 50-250*** | 🔴 |
+
+*USD 50 untuk dormant account, USD 250 untuk legacy API users
+
+### 💰 Breakdown Detail per Payment Method
+
+#### Virtual Account (BCA, BNI, BRI, Mandiri)
+
+| Provider | Method Fee | Processing Fee | **Total** |
+|---|---|---|---|
+| Midtrans | IDR 4,000 | - | **IDR 4,000** |
+| Doku | IDR 4,000 | - | **IDR 4,000** |
+| Faspay | IDR 4,000 | - | **IDR 4,000** |
+| Xendit (Oct 2026) | IDR 9,000 | IDR 4,000 | **IDR 13,000** 🔴 |
 
 **Xendit 225% lebih mahal** dari kompetitor untuk Virtual Account.
 
-### QRIS
+#### QRIS
 
-**Semua provider:** 0.7% (regulated by Bank Indonesia)  
-**Xendit (Oct 2026):** 0.7% + IDR 4,000 processing fee
+| Provider | % Fee | Flat Fee | **Total (Rp 100K)** | **Total (Rp 1jt)** |
+|---|---|---|---|---|
+| Midtrans | 0.7% | - | **IDR 700** | **IDR 7,000** |
+| Doku | 0.7% | - | **IDR 700** | **IDR 7,000** |
+| Faspay | 0.7% | - | **IDR 700** | **IDR 7,000** |
+| Xendit (Oct 2026) | 0.7% | IDR 4,000 | **IDR 4,700** 🔴 | **IDR 11,000** 🔴 |
 
-Semua gateway charge 0.7% karena ini regulated. Tapi Xendit **satu-satunya yang charge processing fee tambahan IDR 4,000**.
+Semua gateway charge 0.7% (regulated by Bank Indonesia). Xendit **satu-satunya yang charge processing fee tambahan IDR 4,000**.
 
-Untuk transaksi QRIS Rp 100,000:
-- Midtrans/Doku/Faspay: IDR 700
-- Xendit: IDR 4,700 **(6.7x lebih mahal)**
+**Impact untuk transaksi kecil:**
+- Transaksi Rp 50,000: Xendit **8.7x lebih mahal** (IDR 4,350 vs IDR 350)
+- Transaksi Rp 100,000: Xendit **6.7x lebih mahal** (IDR 4,700 vs IDR 700)
+- Transaksi Rp 500,000: Xendit **2x lebih mahal** (IDR 7,500 vs IDR 3,500)
 
-### Credit/Debit Card (Domestic Visa/Mastercard)
+#### Credit/Debit Card (Domestic Visa/Mastercard)
 
-**Midtrans:** 2.9% + IDR 2,000  
-**Doku:** 2.80% + IDR 2,000  
-**Faspay (Aggregator):** 2.7% + IDR 2,000  
-**Xendit (Oct 2026):** 2.90% + IDR 2,000 + IDR 4,000 = **2.90% + IDR 6,000**
+| Provider | % Fee | Flat Fee | **Total (Rp 1jt)** |
+|---|---|---|---|
+| Faspay | 2.7% | IDR 2,000 | **IDR 29,000** |
+| Doku | 2.8% | IDR 2,000 | **IDR 30,000** |
+| Midtrans | 2.9% | IDR 2,000 | **IDR 31,000** |
+| Xendit (Oct 2026) | 2.9% | IDR 6,000 | **IDR 35,000** 🔴 |
 
 Xendit charge **flat fee 3x lebih tinggi** dari kompetitor.
 
-### E-Wallet
+#### E-Wallet (GoPay, DANA, OVO, ShopeePay)
 
-**Doku (E-wallet):** 1.5%  
-**Faspay (OVO/DANA/LinkAja):** 1.5%  
-**Midtrans (GoPay):** 2%  
-**Xendit (Oct 2026):**
-- GoPay/DANA/ShopeePay: 3.00% + IDR 4,000
-- OVO (Non-Digital): 3.00% + IDR 4,000
+| Provider | GoPay | DANA | OVO | ShopeePay |
+|---|---|---|---|---|
+| Faspay | - | 1.5% | 1.5% | 2% |
+| Doku | - | 1.5% | 1.5% | - |
+| Midtrans | 2% | - | - | - |
+| Xendit (Oct 2026) | **3% + 4K** 🔴 | **3% + 4K** 🔴 | **3% + 4K** 🔴 | **3% + 4K** 🔴 |
 
-Xendit charge **2x persentase** plus flat fee tambahan.
-
-### Setup Fee & Monthly Fee
-
-**Midtrans:** Free setup, no monthly fee  
-**Doku:** Free setup, no monthly fee  
-**Faspay:** Free setup, no monthly fee  
-**Xendit (Oct 2026):**
-- Free setup
-- USD 50/month untuk dormant account atau low volume
-- USD 250/month untuk legacy API users
+Xendit charge **2x persentase** plus flat fee tambahan IDR 4,000.
 
 ### Kesimpulan Perbandingan
 
