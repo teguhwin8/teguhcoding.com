@@ -224,13 +224,13 @@ Setelah gue cek pricing page resmi semua payment gateway Indonesia (per Juli 202
 
 | Payment Method | Midtrans | Doku | Faspay | Xendit (Oct 2026) | Selisih |
 |---|---|---|---|---|---|
-| **Virtual Account** | IDR 4,000 | IDR 4,000 | IDR 4,000 | **IDR 13,000** | 🔴 +225% |
-| **QRIS** (Rp 100K) | IDR 700 | IDR 700 | IDR 700 | **IDR 4,700** | 🔴 +571% |
-| **Credit Card** (Rp 1jt) | IDR 31,000 | IDR 30,000 | IDR 29,000 | **IDR 35,000** | 🔴 +14-21% |
-| **E-Wallet** (GoPay/DANA) | 2% | 1.5% | 1.5% | **3% + IDR 4,000** | 🔴 +100-150% |
-| **Indomaret/Alfamart** | IDR 5,000 | IDR 5,000 | IDR 5,000 | **IDR 13,000** | 🔴 +160% |
-| **Setup Fee** | Free | Free | Free | Free | ✅ |
-| **Monthly Fee** | None | None | None | **USD 50-250*** | 🔴 |
+| Virtual Account | IDR 4,000 | IDR 4,000 | IDR 4,000 | IDR 13,000 | +225% ⬆️ |
+| QRIS (Rp 100K) | IDR 700 | IDR 700 | IDR 700 | IDR 4,700 | +571% ⬆️ |
+| Credit Card (Rp 1jt) | IDR 31,000 | IDR 30,000 | IDR 29,000 | IDR 35,000 | +14-21% ⬆️ |
+| E-Wallet (GoPay/DANA) | 2% | 1.5% | 1.5% | 3% + IDR 4,000 | +100-150% ⬆️ |
+| Indomaret/Alfamart | IDR 5,000 | IDR 5,000 | IDR 5,000 | IDR 13,000 | +160% ⬆️ |
+| Setup Fee | Free | Free | Free | Free | Same |
+| Monthly Fee | None | None | None | USD 50-250* | Extra fee ⬆️ |
 
 *USD 50 untuk dormant account, USD 250 untuk legacy API users
 
@@ -238,23 +238,23 @@ Setelah gue cek pricing page resmi semua payment gateway Indonesia (per Juli 202
 
 #### Virtual Account (BCA, BNI, BRI, Mandiri)
 
-| Provider | Method Fee | Processing Fee | **Total** |
+| Provider | Method Fee | Processing Fee | Total |
 |---|---|---|---|
-| Midtrans | IDR 4,000 | - | **IDR 4,000** |
-| Doku | IDR 4,000 | - | **IDR 4,000** |
-| Faspay | IDR 4,000 | - | **IDR 4,000** |
-| Xendit (Oct 2026) | IDR 9,000 | IDR 4,000 | **IDR 13,000** 🔴 |
+| Midtrans | IDR 4,000 | - | IDR 4,000 |
+| Doku | IDR 4,000 | - | IDR 4,000 |
+| Faspay | IDR 4,000 | - | IDR 4,000 |
+| Xendit (Oct 2026) | IDR 9,000 | IDR 4,000 | IDR 13,000 (+225%) |
 
 **Xendit 225% lebih mahal** dari kompetitor untuk Virtual Account.
 
 #### QRIS
 
-| Provider | % Fee | Flat Fee | **Total (Rp 100K)** | **Total (Rp 1jt)** |
+| Provider | % Fee | Flat Fee | Total (Rp 100K) | Total (Rp 1jt) |
 |---|---|---|---|---|
-| Midtrans | 0.7% | - | **IDR 700** | **IDR 7,000** |
-| Doku | 0.7% | - | **IDR 700** | **IDR 7,000** |
-| Faspay | 0.7% | - | **IDR 700** | **IDR 7,000** |
-| Xendit (Oct 2026) | 0.7% | IDR 4,000 | **IDR 4,700** 🔴 | **IDR 11,000** 🔴 |
+| Midtrans | 0.7% | - | IDR 700 | IDR 7,000 |
+| Doku | 0.7% | - | IDR 700 | IDR 7,000 |
+| Faspay | 0.7% | - | IDR 700 | IDR 7,000 |
+| Xendit (Oct 2026) | 0.7% | IDR 4,000 | IDR 4,700 (+571%) | IDR 11,000 (+57%) |
 
 Semua gateway charge 0.7% (regulated by Bank Indonesia). Xendit **satu-satunya yang charge processing fee tambahan IDR 4,000**.
 
@@ -265,12 +265,12 @@ Semua gateway charge 0.7% (regulated by Bank Indonesia). Xendit **satu-satunya y
 
 #### Credit/Debit Card (Domestic Visa/Mastercard)
 
-| Provider | % Fee | Flat Fee | **Total (Rp 1jt)** |
+| Provider | % Fee | Flat Fee | Total (Rp 1jt) |
 |---|---|---|---|
-| Faspay | 2.7% | IDR 2,000 | **IDR 29,000** |
-| Doku | 2.8% | IDR 2,000 | **IDR 30,000** |
-| Midtrans | 2.9% | IDR 2,000 | **IDR 31,000** |
-| Xendit (Oct 2026) | 2.9% | IDR 6,000 | **IDR 35,000** 🔴 |
+| Faspay | 2.7% | IDR 2,000 | IDR 29,000 |
+| Doku | 2.8% | IDR 2,000 | IDR 30,000 |
+| Midtrans | 2.9% | IDR 2,000 | IDR 31,000 |
+| Xendit (Oct 2026) | 2.9% | IDR 6,000 | IDR 35,000 (+21%) |
 
 Xendit charge **flat fee 3x lebih tinggi** dari kompetitor.
 
@@ -281,7 +281,7 @@ Xendit charge **flat fee 3x lebih tinggi** dari kompetitor.
 | Faspay | - | 1.5% | 1.5% | 2% |
 | Doku | - | 1.5% | 1.5% | - |
 | Midtrans | 2% | - | - | - |
-| Xendit (Oct 2026) | **3% + 4K** 🔴 | **3% + 4K** 🔴 | **3% + 4K** 🔴 | **3% + 4K** 🔴 |
+| Xendit (Oct 2026) | 3% + 4K | 3% + 4K | 3% + 4K | 3% + 4K |
 
 Xendit charge **2x persentase** plus flat fee tambahan IDR 4,000.
 
