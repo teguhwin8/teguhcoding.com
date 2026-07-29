@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { cn } from "@/lib/utils";
+import { List } from "lucide-react";
 
 interface Heading {
   id: string;
@@ -10,13 +10,44 @@ interface Heading {
 }
 
 interface TableOfContentsProps {
-  headings: Heading[];
+  content: string;
 }
 
-export function TableOfContents({ headings }: TableOfContentsProps) {
+// Function to extract headings from markdown
+function extractHeadings(markdown: string): Heading[] {
+  const headings: Heading[] = [];
+  const lines = markdown.split('\n');
+  
+  for (const line of lines) {
+    const match = line.match(/^(#{2,3})\s+(.+)$/);
+    if (match) {
+      const level = match[1].length;
+      const text = match[2].trim();
+      const id = text
+        .toLowerCase()
+        .replace(/[^\w\s-]/g, '')
+        .replace(/\s+/g, '-');
+      
+      headings.push({ id, text, level });
+    }
+  }
+  
+  return headings;
+}
+
+export default function TableOfContents({ content }: TableOfContentsProps) {
+  const [headings, setHeadings] = useState<Heading[]>([]);
   const [activeId, setActiveId] = useState<string>("");
+  const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
+    const extracted = extractHeadings(content);
+    setHeadings(extracted);
+  }, [content]);
+
+  useEffect(() => {
+    if (headings.length === 0) return;
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -28,9 +59,11 @@ export function TableOfContents({ headings }: TableOfContentsProps) {
       { rootMargin: "0% 0% -80% 0%" }
     );
 
-    headings.forEach((heading) => {
-      const element = document.getElementById(heading.id);
-      if (element) observer.observe(element);
+    headings.forEach(({ id }) => {
+      const element = document.getElementById(id);
+      if (element) {
+        observer.observe(element);
+      }
     });
 
     return () => observer.disconnect();
@@ -38,37 +71,70 @@ export function TableOfContents({ headings }: TableOfContentsProps) {
 
   if (headings.length === 0) return null;
 
+  const handleClick = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth", block: "start" });
+      setIsOpen(false);
+    }
+  };
+
   return (
-    <nav className="clean-card p-5 sticky top-20 max-h-[calc(100vh-100px)] overflow-y-auto">
-      <p className="text-xs font-semibold text-[var(--text)] uppercase tracking-widest mb-4">
-        Daftar Isi
-      </p>
-      <ul className="space-y-2">
-        {headings.map((heading) => (
-          <li
-            key={heading.id}
-            style={{ paddingLeft: `${(heading.level - 2) * 1.25}rem` }}
-          >
-            <a
-              href={`#${heading.id}`}
-              onClick={(e) => {
-                e.preventDefault();
-                document.getElementById(heading.id)?.scrollIntoView({
-                  behavior: "smooth",
-                });
-              }}
-              className={cn(
-                "block text-sm py-0.5 transition-colors duration-150",
-                activeId === heading.id
-                  ? "text-[var(--text)] font-medium"
-                  : "text-[var(--text-muted)] hover:text-[var(--text)]"
-              )}
-            >
-              {heading.text}
-            </a>
-          </li>
-        ))}
-      </ul>
-    </nav>
+    <>
+      {/* Mobile Toggle Button */}
+      <button
+        onClick={() => setIsOpen(!isOpen)}
+        className="lg:hidden fixed bottom-6 right-6 z-50 bg-[var(--accent)] text-white p-3 rounded-full shadow-lg hover:scale-110 transition-transform"
+        aria-label="Toggle table of contents"
+      >
+        <List size={24} />
+      </button>
+
+      {/* Mobile Overlay */}
+      {isOpen && (
+        <div
+          className="lg:hidden fixed inset-0 bg-black/50 z-40"
+          onClick={() => setIsOpen(false)}
+        />
+      )}
+
+      {/* TOC Container */}
+      <aside
+        className={`
+          fixed top-24 right-6 w-64 max-h-[calc(100vh-8rem)] overflow-y-auto
+          bg-[var(--card)] border border-[var(--border)] rounded-xl p-4
+          transition-transform duration-300 z-50
+          ${isOpen ? 'translate-x-0' : 'translate-x-[calc(100%+2rem)]'}
+          lg:translate-x-0
+        `}
+      >
+        <h3 className="text-sm font-semibold text-[var(--text)] mb-3 flex items-center gap-2">
+          <List size={16} />
+          Daftar Isi
+        </h3>
+        <nav>
+          <ul className="space-y-2">
+            {headings.map(({ id, text, level }) => (
+              <li key={id}>
+                <button
+                  onClick={() => handleClick(id)}
+                  className={`
+                    text-left text-sm w-full transition-colors
+                    ${level === 3 ? 'pl-4' : ''}
+                    ${
+                      activeId === id
+                        ? 'text-[var(--accent)] font-medium'
+                        : 'text-[var(--text-muted)] hover:text-[var(--text)]'
+                    }
+                  `}
+                >
+                  {text}
+                </button>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      </aside>
+    </>
   );
 }

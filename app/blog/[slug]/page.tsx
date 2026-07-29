@@ -5,8 +5,11 @@ import { Calendar, ArrowLeft, ExternalLink } from "lucide-react";
 import Link from "next/link";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
+import rehypeSlug from "rehype-slug";
+import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import { getPostBySlug, getAllPostSlugs, getAllPosts } from "@/lib/markdown";
 import ArticleCard from "@/components/article-card";
+import TableOfContents from "@/components/table-of-contents";
 
 interface BlogPostPageProps {
   params: Promise<{ slug: string }>;
@@ -88,6 +91,9 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
   return (
     <div className="min-h-screen pt-24 pb-20 px-6">
+      {/* Table of Contents */}
+      <TableOfContents content={post.excerpt} />
+      
       <div className="max-w-3xl mx-auto">
         {/* Back */}
         <Link
@@ -144,7 +150,12 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
           {/* Content */}
           <div className="prose prose-gray max-w-none mb-10">
-            <ReactMarkdown remarkPlugins={[remarkGfm]}>{post.excerpt}</ReactMarkdown>
+            <ReactMarkdown 
+              remarkPlugins={[remarkGfm]}
+              rehypePlugins={[rehypeSlug, rehypeAutolinkHeadings]}
+            >
+              {post.excerpt}
+            </ReactMarkdown>
           </div>
 
           {/* CTA */}
