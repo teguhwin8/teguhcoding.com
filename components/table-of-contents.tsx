@@ -103,7 +103,8 @@ export default function TableOfContents({ content }: TableOfContentsProps) {
         className={`
           fixed z-50 transition-transform duration-300
           bg-[var(--card)] border border-[var(--border)] rounded-xl
-          overflow-y-auto
+          overflow-y-auto backdrop-blur-sm
+          shadow-2xl
           
           // Mobile: bottom sheet style
           lg:top-24 lg:right-6 lg:w-64 lg:max-h-[calc(100vh-8rem)]
@@ -118,8 +119,9 @@ export default function TableOfContents({ content }: TableOfContentsProps) {
           lg:translate-x-0 lg:translate-y-0
           ${!isOpen && 'lg:translate-x-[calc(100%+2rem)]'}
         `}
+        style={{ backgroundColor: 'var(--card)', opacity: 1 }}
       >
-        <h3 className="text-base lg:text-sm font-semibold text-[var(--text)] mb-4 lg:mb-3 flex items-center gap-2">
+        <h3 className="text-base lg:text-sm font-semibold mb-4 lg:mb-3 flex items-center gap-2" style={{ color: 'var(--text)', opacity: 1 }}>
           <List size={18} className="lg:w-4 lg:h-4" />
           Daftar Isi
         </h3>
@@ -136,10 +138,14 @@ export default function TableOfContents({ content }: TableOfContentsProps) {
                     ${level === 3 ? 'pl-4' : ''}
                     ${
                       activeId === id
-                        ? 'text-[var(--accent)] font-medium'
-                        : 'text-[var(--text-muted)] hover:text-[var(--text)]'
+                        ? 'font-medium'
+                        : ''
                     }
                   `}
+                  style={{
+                    color: activeId === id ? 'var(--accent)' : 'var(--text)',
+                    opacity: activeId === id ? 1 : 0.7
+                  }}
                 >
                   {text}
                 </button>
