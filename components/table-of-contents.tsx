@@ -101,25 +101,38 @@ export default function TableOfContents({ content }: TableOfContentsProps) {
       {/* TOC Container */}
       <aside
         className={`
-          fixed top-24 right-6 w-64 max-h-[calc(100vh-8rem)] overflow-y-auto
-          bg-[var(--card)] border border-[var(--border)] rounded-xl p-4
-          transition-transform duration-300 z-50
-          ${isOpen ? 'translate-x-0' : 'translate-x-[calc(100%+2rem)]'}
-          lg:translate-x-0
+          fixed z-50 transition-transform duration-300
+          bg-[var(--card)] border border-[var(--border)] rounded-xl
+          overflow-y-auto
+          
+          // Mobile: bottom sheet style
+          lg:top-24 lg:right-6 lg:w-64 lg:max-h-[calc(100vh-8rem)]
+          
+          // Mobile positioning and sizing
+          bottom-0 left-0 right-0 
+          max-h-[70vh] w-full
+          rounded-b-none rounded-t-2xl
+          p-5 pb-6
+          
+          ${isOpen ? 'translate-y-0' : 'translate-y-full'}
+          lg:translate-x-0 lg:translate-y-0
+          ${!isOpen && 'lg:translate-x-[calc(100%+2rem)]'}
         `}
       >
-        <h3 className="text-sm font-semibold text-[var(--text)] mb-3 flex items-center gap-2">
-          <List size={16} />
+        <h3 className="text-base lg:text-sm font-semibold text-[var(--text)] mb-4 lg:mb-3 flex items-center gap-2">
+          <List size={18} className="lg:w-4 lg:h-4" />
           Daftar Isi
         </h3>
         <nav>
-          <ul className="space-y-2">
+          <ul className="space-y-3 lg:space-y-2">
             {headings.map(({ id, text, level }) => (
               <li key={id}>
                 <button
                   onClick={() => handleClick(id)}
                   className={`
-                    text-left text-sm w-full transition-colors
+                    text-left w-full transition-colors
+                    text-sm lg:text-sm
+                    py-1
                     ${level === 3 ? 'pl-4' : ''}
                     ${
                       activeId === id
