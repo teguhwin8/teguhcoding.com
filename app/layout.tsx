@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     template: "%s | Teguh Widodo",
   },
   description:
-    "Portfolio Teguh Widodo — Senior Software Engineer dengan 6+ tahun pengalaman membangun aplikasi web scalable menggunakan Next.js, React, Laravel, dan TypeScript.",
+    "Portfolio Teguh Widodo — Senior Software Engineer dengan 6+ tahun pengalaman membangun aplikasi web scalable menggunakan Next.js, React, NestJS, dan TypeScript.",
   keywords: [
     "Teguh Widodo",
     "Software Engineer",

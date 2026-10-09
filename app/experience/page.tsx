@@ -3,7 +3,7 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Work Experience — Software Engineer Career",
   description:
-    "Pengalaman kerja Teguh Widodo sebagai Software Engineer: PHP Developer, Fullstack Developer, Frontend Engineer dengan keahlian di Next.js, Laravel, NestJS.",
+    "Pengalaman kerja Teguh Widodo sebagai Software Engineer: PHP Developer, Fullstack Developer, Frontend Engineer dengan keahlian di Next.js, React, NestJS.",
   openGraph: {
     title: "Work Experience — Teguh Widodo",
     description:

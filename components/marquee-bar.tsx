@@ -3,7 +3,6 @@ export function MarqueeBar() {
     "Next.js",
     "React",
     "TypeScript",
-    "Laravel",
     "NestJS",
     "Tailwind CSS",
     "PostgreSQL",

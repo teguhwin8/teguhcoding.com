@@ -8,7 +8,7 @@ import { getAllPosts } from "@/lib/markdown";
 export const metadata: Metadata = {
   title: "Teguh Widodo — Senior Software Engineer & Web Developer",
   description:
-    "Portfolio Teguh Widodo — Senior Software Engineer dengan 6+ tahun pengalaman di Next.js, React, Laravel. Lihat project, pengalaman kerja, dan blog.",
+    "Portfolio Teguh Widodo — Senior Software Engineer dengan 6+ tahun pengalaman di Next.js, React, NestJS. Lihat project, pengalaman kerja, dan blog.",
   openGraph: {
     title: "Teguh Widodo — Senior Software Engineer & Web Developer",
     description:

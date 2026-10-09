@@ -37,7 +37,7 @@ export function Hero() {
             <p className="text-lg text-[var(--text-muted)] leading-relaxed max-w-xl mb-10">
               Senior Software Engineer dengan 6+ tahun pengalaman membangun
               aplikasi web scalable. Spesialisasi di React, Next.js, dan
-              Laravel — dari desain UI sampai arsitektur backend.
+              NestJS — dari desain UI sampai arsitektur backend.
             </p>
 
             {/* CTAs */}
