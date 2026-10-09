@@ -220,6 +220,22 @@ Send contact form email via Resend.
 }
 ```
 
+### POST `/api/chat`
+Chatbot "Asisten Teguh" (OpenAI Responses API, streaming teks biasa).
+
+**Public endpoint** (no auth required). Rate limit per IP (in-memory), maks 20 pesan user per sesi, maks 500 karakter per pesan.
+
+**Request Body**:
+```json
+{ "messages": [{ "role": "user", "content": "Berapa biaya website sekolah?" }] }
+```
+
+**Catatan**:
+- Pengetahuan bot (profil, layanan, harga, aturan) ada di `lib/chatbot/knowledge.ts`. Harga hanya boleh berasal dari daftar `services` di file itu.
+- Fungsi `kirim_ke_teguh` meneruskan calon klien ke Telegram (`lib/telegram.ts`) setelah pengunjung setuju.
+- UI: `components/chat-widget.tsx`, dipasang di `app/layout.tsx` (disembunyikan di `/bahlil`).
+- Env: `OPENAI_CHAT_API_KEY` (key khusus chatbot dengan budget limit), `OPENAI_CHAT_MODEL` (default `gpt-6-luna`), `TELEGRAM_LEADS_BOT_TOKEN`, `TELEGRAM_LEADS_CHAT_ID`.
+
 ### GET `/api/articles`
 Fetch articles dari WordPress API (optional integration).
 

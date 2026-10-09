@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { z } from "zod";
+import { createRateLimiter, getClientIp } from "@/lib/rate-limit";
 
 const CONTACT_SCHEMA = z.object({
   name: z.string().trim().min(2).max(100),
@@ -13,36 +14,7 @@ const CONTACT_SCHEMA = z.object({
 const RATE_WINDOW_MS = 15 * 60 * 1000;
 const RATE_LIMIT = 5;
 const MIN_FILL_MS = 3000;
-const rateStore = new Map<string, number[]>();
-
-function getClientIp(request: NextRequest): string {
-  const forwardedFor = request.headers.get("x-forwarded-for");
-  if (forwardedFor) {
-    return forwardedFor.split(",")[0].trim();
-  }
-
-  const realIp = request.headers.get("x-real-ip");
-  if (realIp) {
-    return realIp.trim();
-  }
-
-  return "unknown";
-}
-
-function isRateLimited(ip: string): boolean {
-  const now = Date.now();
-  const attempts = rateStore.get(ip) ?? [];
-  const recentAttempts = attempts.filter((time) => now - time < RATE_WINDOW_MS);
-
-  if (recentAttempts.length >= RATE_LIMIT) {
-    rateStore.set(ip, recentAttempts);
-    return true;
-  }
-
-  recentAttempts.push(now);
-  rateStore.set(ip, recentAttempts);
-  return false;
-}
+const isRateLimited = createRateLimiter(RATE_WINDOW_MS, RATE_LIMIT);
 
 function escapeHtml(text: string): string {
   return text

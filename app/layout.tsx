@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { Inter, Instrument_Serif } from "next/font/google";
 import { Navigation } from "@/components/navigation";
 import { Footer } from "@/components/footer";
+import ChatWidget from "@/components/chat-widget";
 import { Agentation } from "agentation";
 import { Analytics } from "@vercel/analytics/react";
 
@@ -101,6 +102,7 @@ export default function RootLayout({
           {children}
         </main>
         <Footer />
+        <ChatWidget />
         {process.env.NODE_ENV === "development" && <Agentation />}
         <Analytics />
       </body>
