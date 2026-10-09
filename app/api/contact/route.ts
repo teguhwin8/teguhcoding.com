@@ -62,7 +62,7 @@ export async function POST(request: NextRequest) {
     body = await request.json();
   } catch {
     console.warn(`[api/contact] requestId=${requestId} status=400 durationMs=${Date.now() - startedAt} reason=invalid-json`);
-    const response = NextResponse.json({ error: "Invalid JSON payload" }, { status: 400 });
+    const response = NextResponse.json({ error: "Data form tidak terbaca. Muat ulang halaman lalu coba lagi." }, { status: 400 });
     response.headers.set("x-request-id", requestId);
     return response;
   }
@@ -70,7 +70,7 @@ export async function POST(request: NextRequest) {
   const parsed = CONTACT_SCHEMA.safeParse(body);
   if (!parsed.success) {
     console.warn(`[api/contact] requestId=${requestId} status=400 durationMs=${Date.now() - startedAt} reason=invalid-input`);
-    const response = NextResponse.json({ error: "Invalid form input" }, { status: 400 });
+    const response = NextResponse.json({ error: "Cek lagi isian form: nama minimal 2 huruf, perihal minimal 3 huruf, pesan minimal 10 huruf, dan email harus valid." }, { status: 400 });
     response.headers.set("x-request-id", requestId);
     return response;
   }
@@ -78,7 +78,7 @@ export async function POST(request: NextRequest) {
   const ip = getClientIp(request);
   if (isRateLimited(ip)) {
     console.warn(`[api/contact] requestId=${requestId} status=429 durationMs=${Date.now() - startedAt} reason=rate-limited`);
-    const response = NextResponse.json({ error: "Too many requests, please try again later" }, { status: 429 });
+    const response = NextResponse.json({ error: "Terlalu banyak pesan dalam waktu singkat. Coba lagi 15 menit lagi." }, { status: 429 });
     response.headers.set("x-request-id", requestId);
     return response;
   }
@@ -94,7 +94,7 @@ export async function POST(request: NextRequest) {
 
   if (Date.now() - formStartedAt < MIN_FILL_MS) {
     console.warn(`[api/contact] requestId=${requestId} status=400 durationMs=${Date.now() - startedAt} reason=too-fast`);
-    const response = NextResponse.json({ error: "Form submitted too quickly" }, { status: 400 });
+    const response = NextResponse.json({ error: "Form terkirim terlalu cepat. Tunggu beberapa detik lalu kirim lagi." }, { status: 400 });
     response.headers.set("x-request-id", requestId);
     return response;
   }
@@ -106,7 +106,7 @@ export async function POST(request: NextRequest) {
   if (!resendApiKey || !fromEmail || !toEmail) {
     console.error(`[api/contact] requestId=${requestId} status=500 durationMs=${Date.now() - startedAt} reason=missing-config`);
     const response = NextResponse.json(
-      { error: "Contact email service is not configured" },
+      { error: "Form sedang bermasalah. Untuk sementara, hubungi saya lewat WhatsApp atau email." },
       { status: 500 }
     );
     response.headers.set("x-request-id", requestId);
@@ -145,7 +145,7 @@ export async function POST(request: NextRequest) {
       `[api/contact] requestId=${requestId} status=502 durationMs=${Date.now() - startedAt} resendStatus=${response.status} resendBody=${providerBody.slice(0, 500)}`
     );
     const errorResponse = NextResponse.json(
-      { error: "Failed to send message, please try again later" },
+      { error: "Pesan gagal terkirim. Coba lagi nanti, atau hubungi saya lewat WhatsApp." },
       { status: 502 }
     );
     errorResponse.headers.set("x-request-id", requestId);

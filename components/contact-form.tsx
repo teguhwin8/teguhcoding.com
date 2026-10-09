@@ -41,7 +41,7 @@ export default function ContactForm() {
       setFormData({ name: "", email: "", subject: "", message: "", website: "" });
       setFeedback({
         type: "success",
-        message: "Pesan berhasil dikirim. Saya akan membalas secepatnya.",
+        message: "Pesan terkirim. Saya balas lewat email secepatnya.",
       });
     } catch (error) {
       setFeedback({
@@ -61,14 +61,14 @@ export default function ContactForm() {
       <div className="max-w-6xl mx-auto">
         <div className="mb-12">
           <p className="text-xs font-medium text-[var(--text-muted)] uppercase tracking-widest mb-2">
-            Contact
+            Kontak
           </p>
           <h1 className="text-4xl font-semibold text-[var(--text)] tracking-tight mb-4">
-            Mari berbicara
+            Hubungi saya
           </h1>
           <p className="text-[var(--text-muted)] max-w-lg">
-            Ada proyek menarik? Butuh konsultasi teknis? Atau sekadar ingin
-            berkenalan — saya selalu terbuka.
+            Butuh website, aplikasi, atau bantuan soal server dan keamanan
+            website? Isi form ini atau langsung chat WhatsApp, nanti saya balas.
           </p>
         </div>
 
@@ -76,32 +76,49 @@ export default function ContactForm() {
           {/* Info */}
           <div>
             <h2 className="text-base font-semibold text-[var(--text)] mb-6">
-              Hubungi saya
+              Kontak langsung
             </h2>
             <address className="not-italic space-y-4">
               {[
-                { icon: Mail, text: "teguhwin8@gmail.com" },
-                { icon: Phone, text: "+6285868474405" },
+                { icon: Mail, text: "teguhwin8@gmail.com", href: "mailto:teguhwin8@gmail.com" },
+                { icon: Phone, text: "+62 858-6847-4405 (WhatsApp)", href: "https://wa.me/6285868474405" },
                 { icon: MapPin, text: "Yogyakarta, Indonesia" },
-              ].map(({ icon: Icon, text }) => (
-                <div
-                  key={text}
-                  className="flex items-center gap-3 text-sm text-[var(--text-muted)]"
-                >
-                  <div className="w-8 h-8 flex items-center justify-center rounded-lg bg-[var(--surface)] border border-[var(--border)]">
-                    <Icon size={14} className="text-[var(--text)]" />
+              ].map(({ icon: Icon, text, href }) => {
+                const content = (
+                  <>
+                    <div className="w-8 h-8 flex items-center justify-center rounded-lg bg-[var(--surface)] border border-[var(--border)]">
+                      <Icon size={14} className="text-[var(--text)]" />
+                    </div>
+                    {text}
+                  </>
+                );
+                const className =
+                  "flex items-center gap-3 text-sm text-[var(--text-muted)]";
+                return href ? (
+                  <a
+                    key={text}
+                    href={href}
+                    target={href.startsWith("http") ? "_blank" : undefined}
+                    rel={href.startsWith("http") ? "noopener noreferrer" : undefined}
+                    className={`${className} hover:text-[var(--text)] transition-colors`}
+                  >
+                    {content}
+                  </a>
+                ) : (
+                  <div key={text} className={className}>
+                    {content}
                   </div>
-                  {text}
-                </div>
-              ))}
+                );
+              })}
             </address>
 
             <div className="mt-10 p-5 clean-card">
               <p className="text-xs font-semibold text-[var(--text)] uppercase tracking-widest mb-3">
-                Respons time
+                Waktu balas
               </p>
               <p className="text-sm text-[var(--text-muted)]">
-                Biasanya saya membalas dalam 24 jam di hari kerja.
+                Biasanya di hari yang sama, paling lambat 1×24 jam di hari kerja.
+                Kalau mendesak, lebih cepat lewat WhatsApp.
               </p>
             </div>
           </div>
@@ -154,7 +171,7 @@ export default function ContactForm() {
                     id="contact-email"
                     type="email"
                     className="form-input"
-                    placeholder="email@domain.com"
+                    placeholder="nama@email.com"
                     value={formData.email}
                     onChange={(e) =>
                       setFormData({ ...formData, email: e.target.value })
@@ -169,13 +186,13 @@ export default function ContactForm() {
                   htmlFor="contact-subject"
                   className="block text-xs font-medium text-[var(--text)] mb-1.5"
                 >
-                  Subject
+                  Perihal
                 </label>
                 <input
                   id="contact-subject"
                   type="text"
                   className="form-input"
-                  placeholder="Perihal pesan Anda"
+                  placeholder="Misal: Pembuatan website sekolah"
                   value={formData.subject}
                   onChange={(e) =>
                     setFormData({ ...formData, subject: e.target.value })
@@ -195,7 +212,7 @@ export default function ContactForm() {
                   id="contact-message"
                   className="form-input resize-none"
                   rows={5}
-                  placeholder="Ceritakan tentang proyek atau kebutuhan Anda..."
+                  placeholder="Apa yang mau dibuat atau diperbaiki, kira-kira kapan, dan budget kalau sudah ada."
                   value={formData.message}
                   onChange={(e) =>
                     setFormData({ ...formData, message: e.target.value })
