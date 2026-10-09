@@ -89,93 +89,103 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     post.source_url.includes("youtube.com") ||
     post.source_url.includes("youtu.be");
 
+  const hasToc = /^#{2,3}\s+.+$/m.test(post.excerpt);
+
   return (
     <div className="min-h-screen pt-24 pb-20 px-6">
-      {/* Table of Contents */}
-      <TableOfContents content={post.excerpt} />
-      
-      <div className="max-w-3xl mx-auto">
-        {/* Back */}
-        <Link
-          href="/blog"
-          className="inline-flex items-center gap-2 text-sm text-[var(--text-muted)] hover:text-[var(--text)] transition-colors mb-8"
-        >
-          <ArrowLeft size={15} />
-          Kembali ke Feed
-        </Link>
+      <div
+        className={
+          hasToc
+            ? "max-w-3xl mx-auto xl:max-w-none xl:grid xl:grid-cols-[minmax(0,48rem)_15rem] xl:justify-center xl:gap-12"
+            : "max-w-3xl mx-auto"
+        }
+      >
+        <div className="min-w-0">
+          {/* Back */}
+          <Link
+            href="/blog"
+            className="inline-flex items-center gap-2 text-sm text-[var(--text-muted)] hover:text-[var(--text)] transition-colors mb-8"
+          >
+            <ArrowLeft size={15} />
+            Kembali ke Feed
+          </Link>
 
-        <article>
-          {/* Cover image */}
-          {post.cover_image && (
-            <div className="relative aspect-[16/9] w-full rounded-xl overflow-hidden border border-[var(--border)] mb-8">
-              <Image
-                src={post.cover_image}
-                alt={post.title}
-                fill
-                sizes="(min-width: 768px) 768px, 100vw"
-                className="object-cover"
-                priority
-              />
-            </div>
-          )}
-
-          {/* Header */}
-          <header className="mb-8">
-            {post.tags && post.tags.length > 0 && (
-              <div className="flex flex-wrap gap-2 mb-5">
-                {post.tags.map((tag, i) => (
-                  <Link
-                    key={i}
-                    href={`/blog?tag=${encodeURIComponent(tag)}`}
-                    className="tag-pill"
-                  >
-                    {tag}
-                  </Link>
-                ))}
+          <article>
+            {/* Cover image */}
+            {post.cover_image && (
+              <div className="relative aspect-[16/9] w-full rounded-xl overflow-hidden border border-[var(--border)] mb-8">
+                <Image
+                  src={post.cover_image}
+                  alt={post.title}
+                  fill
+                  sizes="(min-width: 768px) 768px, 100vw"
+                  className="object-cover"
+                  priority
+                />
               </div>
             )}
 
-            <h1 className="text-3xl md:text-4xl font-semibold text-[var(--text)] tracking-tight leading-tight mb-5">
-              {post.title}
-            </h1>
+            {/* Header */}
+            <header className="mb-8">
+              {post.tags && post.tags.length > 0 && (
+                <div className="flex flex-wrap gap-2 mb-5">
+                  {post.tags.map((tag, i) => (
+                    <Link
+                      key={i}
+                      href={`/blog?tag=${encodeURIComponent(tag)}`}
+                      className="tag-pill"
+                    >
+                      {tag}
+                    </Link>
+                  ))}
+                </div>
+              )}
 
-            <div className="flex items-center gap-4 text-sm text-[var(--text-muted)]">
-              <span className="flex items-center gap-1.5">
-                <Calendar size={14} />
-                {dateStr}
-              </span>
-              <span>{post.readingTime} menit baca</span>
+              <h1 className="text-3xl md:text-4xl font-semibold text-[var(--text)] tracking-tight leading-tight mb-5">
+                {post.title}
+              </h1>
+
+              <div className="flex items-center gap-4 text-sm text-[var(--text-muted)]">
+                <span className="flex items-center gap-1.5">
+                  <Calendar size={14} />
+                  {dateStr}
+                </span>
+                <span>{post.readingTime} menit baca</span>
+              </div>
+            </header>
+
+            {/* Content */}
+            <div className="prose prose-gray max-w-none mb-10">
+              <ReactMarkdown 
+                remarkPlugins={[remarkGfm]}
+                rehypePlugins={[rehypeSlug, rehypeAutolinkHeadings]}
+              >
+                {post.excerpt}
+              </ReactMarkdown>
             </div>
-          </header>
 
-          {/* Content */}
-          <div className="prose prose-gray max-w-none mb-10">
-            <ReactMarkdown 
-              remarkPlugins={[remarkGfm]}
-              rehypePlugins={[rehypeSlug, rehypeAutolinkHeadings]}
-            >
-              {post.excerpt}
-            </ReactMarkdown>
-          </div>
+            {/* CTA */}
+            <div className="pt-8 border-t border-[var(--border)] text-center">
+              <a
+                href={finalSourceUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-primary inline-flex"
+              >
+                {isVideo ? "Tonton Video Sumber" : "Baca Artikel Selengkapnya"}
+                <ExternalLink size={15} />
+              </a>
+              <p className="mt-3 text-xs text-[var(--text-subtle)]">
+                {isVideo
+                  ? "Anda akan diarahkan ke video asli di YouTube."
+                  : "Anda akan diarahkan ke sumber asli artikel ini."}
+              </p>
+            </div>
+          </article>
+        </div>
 
-          {/* CTA */}
-          <div className="pt-8 border-t border-[var(--border)] text-center">
-            <a
-              href={finalSourceUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-primary inline-flex"
-            >
-              {isVideo ? "Tonton Video Sumber" : "Baca Artikel Selengkapnya"}
-              <ExternalLink size={15} />
-            </a>
-            <p className="mt-3 text-xs text-[var(--text-subtle)]">
-              {isVideo
-                ? "Anda akan diarahkan ke video asli di YouTube."
-                : "Anda akan diarahkan ke sumber asli artikel ini."}
-            </p>
-          </div>
-        </article>
+        {/* Table of Contents */}
+        <TableOfContents content={post.excerpt} />
       </div>
 
       {/* Related posts */}
