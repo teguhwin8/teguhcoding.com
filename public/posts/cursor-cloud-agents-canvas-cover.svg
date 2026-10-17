@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="77" y1="30" x2="1127" y2="642" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#101B32"/>
+      <stop offset="1" stop-color="#172344"/>
+    </linearGradient>
+    <linearGradient id="glow" x1="827" y1="128" x2="1089" y2="532" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#8D7CFF" stop-opacity=".35"/>
+      <stop offset="1" stop-color="#56D8C2" stop-opacity=".08"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="747" y1="157" x2="1081" y2="479" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#202E50"/>
+      <stop offset="1" stop-color="#182442"/>
+    </linearGradient>
+    <filter id="shadow" x="686" y="112" width="468" height="412" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="18"/>
+      <feGaussianBlur stdDeviation="17"/>
+      <feComposite in2="hardAlpha" operator="out"/>
+      <feColorMatrix values="0 0 0 0 0.02 0 0 0 0 0.04 0 0 0 0 0.12 0 0 0 0.45 0"/>
+      <feBlend in2="BackgroundImageFix" result="effect1_dropShadow"/>
+      <feBlend in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="630" rx="28" fill="url(#bg)"/>
+  <circle cx="1000" cy="305" r="226" fill="url(#glow)"/>
+  <path d="M0 500C191 451 352 586 575 537C740 501 815 427 967 421C1069 416 1134 454 1200 444V630H0V500Z" fill="#121E39" fill-opacity=".82"/>
+  <path d="M68 67H1132V563H68V67Z" stroke="#A6B9E8" stroke-opacity=".13" stroke-width="2"/>
+  <text x="104" y="145" fill="#91EBDD" font-family="Inter,Arial,sans-serif" font-size="20" font-weight="700" letter-spacing="3.5">AI DEVELOPER TOOLS</text>
+  <text x="100" y="249" fill="#F5F7FF" font-family="Inter,Arial,sans-serif" font-size="54" font-weight="750">CLOUD AGENTS</text>
+  <text x="100" y="313" fill="#F5F7FF" font-family="Inter,Arial,sans-serif" font-size="54" font-weight="750">GET A CANVAS</text>
+  <text x="102" y="373" fill="#B7C3E2" font-family="Inter,Arial,sans-serif" font-size="23" font-weight="500">Interactive outputs · Environments API beta</text>
+  <rect x="101" y="424" width="171" height="43" rx="21.5" fill="#253556"/>
+  <circle cx="124" cy="445" r="6" fill="#73E1CF"/>
+  <text x="142" y="452" fill="#E4EBFF" font-family="Inter,Arial,sans-serif" font-size="15" font-weight="600" letter-spacing="1.4">CURSOR UPDATE</text>
+  <g filter="url(#shadow)">
+    <rect x="735" y="146" width="364" height="335" rx="21" fill="url(#panel)" stroke="#9EACD0" stroke-opacity=".27" stroke-width="2"/>
+    <rect x="735" y="146" width="364" height="51" rx="21" fill="#253353"/>
+    <path d="M735 177V197H1099V177" fill="#253353"/>
+    <circle cx="762" cy="172" r="5" fill="#FF7E89"/>
+    <circle cx="779" cy="172" r="5" fill="#F3C969"/>
+    <circle cx="796" cy="172" r="5" fill="#71D5C5"/>
+    <text x="829" y="177" fill="#CAD5F1" font-family="Inter,Arial,sans-serif" font-size="14" font-weight="600">AGENT CANVAS</text>
+    <text x="765" y="237" fill="#EFF3FF" font-family="Inter,Arial,sans-serif" font-size="22" font-weight="700">Build health overview</text>
+    <text x="765" y="259" fill="#AAB8D9" font-family="Inter,Arial,sans-serif" font-size="12">Generated from the team's repositories</text>
+    <rect x="765" y="279" width="145" height="72" rx="12" fill="#1A2745" stroke="#7384AD" stroke-opacity=".26"/>
+    <text x="781" y="302" fill="#9EACCA" font-family="Inter,Arial,sans-serif" font-size="11" font-weight="600">CHECKS PASSED</text>
+    <text x="781" y="335" fill="#83E0D1" font-family="Inter,Arial,sans-serif" font-size="25" font-weight="700">18 / 21</text>
+    <rect x="923" y="279" width="145" height="72" rx="12" fill="#1A2745" stroke="#7384AD" stroke-opacity=".26"/>
+    <text x="939" y="302" fill="#9EACCA" font-family="Inter,Arial,sans-serif" font-size="11" font-weight="600">NEEDS REVIEW</text>
+    <text x="939" y="335" fill="#F4C96A" font-family="Inter,Arial,sans-serif" font-size="25" font-weight="700">3 items</text>
+    <rect x="765" y="369" width="303" height="83" rx="12" fill="#1A2745" stroke="#7384AD" stroke-opacity=".26"/>
+    <path d="M785 426L817 407L847 415L879 390L910 402L943 383L974 394L1004 377L1047 384" stroke="#8B7AFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M785 426L817 407L847 415L879 390L910 402L943 383L974 394L1004 377L1047 384V436H785V426Z" fill="#8B7AFF" fill-opacity=".12"/>
+    <path d="M1024 461H1068" stroke="#A7B6D8" stroke-opacity=".55" stroke-width="2" stroke-linecap="round"/>
+    <circle cx="1081" cy="461" r="11" fill="#61D7C3"/>
+    <path d="M1077 461L1080 464L1086 457" stroke="#10203A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <path d="M668 301H704" stroke="#70DCCB" stroke-width="3" stroke-linecap="round"/>
+  <path d="M695 289L707 301L695 313" stroke="#70DCCB" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="104" y="535" fill="#8091B7" font-family="Inter,Arial,sans-serif" font-size="14" letter-spacing="1.2">TEGUHCODING.COM</text>
+</svg>
