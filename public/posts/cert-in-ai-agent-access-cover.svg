@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="68" y1="35" x2="1156" y2="634" gradientUnits="userSpaceOnUse"><stop stop-color="#10192C"/><stop offset="1" stop-color="#1C2941"/></linearGradient>
+    <linearGradient id="glow" x1="747" y1="90" x2="1114" y2="520" gradientUnits="userSpaceOnUse"><stop stop-color="#FFB75E" stop-opacity=".30"/><stop offset="1" stop-color="#8173EA" stop-opacity=".08"/></linearGradient>
+    <linearGradient id="panel" x1="798" y1="157" x2="1086" y2="478" gradientUnits="userSpaceOnUse"><stop stop-color="#273651"/><stop offset="1" stop-color="#1B263C"/></linearGradient>
+  </defs>
+  <rect width="1200" height="630" rx="28" fill="url(#bg)"/>
+  <circle cx="938" cy="315" r="248" fill="url(#glow)"/>
+  <path d="M0 508C178 467 343 568 520 539C697 510 865 450 1028 463C1102 469 1156 493 1200 489V630H0V508Z" fill="#111D32" fill-opacity=".88"/>
+  <rect x="67" y="63" width="1066" height="504" rx="18" stroke="#AAB8D1" stroke-opacity=".17" stroke-width="2"/>
+  <text x="101" y="130" fill="#F0B969" font-family="Inter,Arial,sans-serif" font-size="17" font-weight="750" letter-spacing="2.2">ADVISORY CRITICAL · INDIA · 15 OKTOBER 2026</text>
+  <text x="98" y="226" fill="#F7F8FC" font-family="Inter,Arial,sans-serif" font-size="43" font-weight="760">AGEN AI MEMBACA</text>
+  <text x="98" y="282" fill="#F7F8FC" font-family="Inter,Arial,sans-serif" font-size="43" font-weight="760">DATA PERUSAHAAN</text>
+  <text x="101" y="337" fill="#B8C5D9" font-family="Inter,Arial,sans-serif" font-size="23">Kredensial terekspos membuka akses</text>
+  <text x="101" y="370" fill="#B8C5D9" font-family="Inter,Arial,sans-serif" font-size="23">ke sistem aktif saat evaluasi.</text>
+  <rect x="101" y="426" width="222" height="42" rx="21" fill="#283750"/><circle cx="124" cy="447" r="6" fill="#F2B568"/>
+  <text x="142" y="453" fill="#ECF0F8" font-family="Inter,Arial,sans-serif" font-size="14" font-weight="700" letter-spacing="1">CERT-IN · CIAD-2026-0049</text>
+  <rect x="750" y="163" width="326" height="316" rx="24" fill="url(#panel)" stroke="#B1BED4" stroke-opacity=".22" stroke-width="2"/>
+  <text x="780" y="202" fill="#99A8C1" font-family="Inter,Arial,sans-serif" font-size="12" font-weight="750" letter-spacing="1.7">JALUR AKSES · SKEMA</text>
+  <circle cx="820" cy="273" r="29" fill="#36415B"/>
+  <path d="M808 273H832M820 261V285M811 265L829 281M829 265L811 281" stroke="#9B8CF5" stroke-width="3" stroke-linecap="round"/>
+  <text x="779" y="322" fill="#DCE3EF" font-family="Inter,Arial,sans-serif" font-size="13" font-weight="650">AGEN UJI</text>
+  <path d="M853 273H907" stroke="#F1B568" stroke-width="3" stroke-dasharray="5 7" stroke-linecap="round"/>
+  <rect x="912" y="244" width="49" height="59" rx="8" fill="#4A3A34" stroke="#E7A65C" stroke-width="2"/>
+  <path d="M925 261H947M925 270H947M925 279H941" stroke="#F2BC77" stroke-width="2.3" stroke-linecap="round"/>
+  <text x="888" y="322" fill="#EAD3B3" font-family="Inter,Arial,sans-serif" font-size="12" font-weight="650">KREDENSIAL</text>
+  <path d="M966 273H1005" stroke="#F1B568" stroke-width="3" stroke-dasharray="5 7" stroke-linecap="round"/>
+  <rect x="1007" y="230" width="48" height="89" rx="9" fill="#26384A" stroke="#79D4C2" stroke-opacity=".8" stroke-width="2"/>
+  <path d="M1017 245H1045M1017 258H1045M1017 271H1045M1017 284H1045" stroke="#8EDBCB" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="1031" cy="303" r="3" fill="#F2B568"/><text x="991" y="340" fill="#E3EAF3" font-family="Inter,Arial,sans-serif" font-size="11" font-weight="650">SISTEM AKTIF</text>
+  <rect x="781" y="372" width="265" height="73" rx="14" fill="#172237" stroke="#8999B4" stroke-opacity=".24"/>
+  <path d="M804 402L818 393L832 402V419C832 428 818 435 818 435C818 435 804 428 804 419V402Z" fill="#3B493F" stroke="#83D4BD" stroke-width="2"/>
+  <path d="M812 413L817 418L825 408" stroke="#A1E5D2" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="845" y="405" fill="#D9E2EF" font-family="Inter,Arial,sans-serif" font-size="13" font-weight="700">BATAS AKSES</text>
+  <text x="845" y="425" fill="#93A2BA" font-family="Inter,Arial,sans-serif" font-size="11">perlu ditegakkan di jaringan</text>
+  <text x="101" y="535" fill="#8C9AB2" font-family="Inter,Arial,sans-serif" font-size="13" letter-spacing="1.2">TEGUHCODING.COM · ILUSTRASI KONSEPTUAL</text>
+</svg>
