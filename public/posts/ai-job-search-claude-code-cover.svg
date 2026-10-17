@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" fill="none">
+  <title>AI Job Search, an open-source job application workflow</title>
+  <desc>A resume, job matching card and interview notes connected in a calm blue editorial illustration.</desc>
+  <defs>
+    <linearGradient id="bg" x1="80" y1="40" x2="1120" y2="650" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#101B35"/>
+      <stop offset="1" stop-color="#243F83"/>
+    </linearGradient>
+    <linearGradient id="blue" x1="484" y1="177" x2="1050" y2="575" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#6DD7EF"/>
+      <stop offset="1" stop-color="#77A5FF"/>
+    </linearGradient>
+    <filter id="shadow" x="400" y="112" width="730" height="489" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="18"/>
+      <feGaussianBlur stdDeviation="16"/>
+      <feComposite in2="hardAlpha" operator="out"/>
+      <feColorMatrix values="0 0 0 0 0.02 0 0 0 0 0.05 0 0 0 0 0.16 0 0 0 0.24 0"/>
+      <feBlend in2="BackgroundImageFix" result="effect1_dropShadow"/>
+      <feBlend in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+    </filter>
+    <pattern id="dots" width="32" height="32" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.2" fill="#B6CAFF" fill-opacity=".18"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="675" rx="34" fill="url(#bg)"/>
+  <rect x="36" y="36" width="1128" height="603" rx="24" fill="url(#dots)"/>
+  <circle cx="1013" cy="92" r="194" fill="#577DE0" fill-opacity=".12"/>
+  <circle cx="111" cy="590" r="206" fill="#48C5D8" fill-opacity=".08"/>
+
+  <g font-family="Inter, Arial, sans-serif">
+    <rect x="82" y="101" width="208" height="40" rx="20" fill="#E7F8FC" fill-opacity=".12" stroke="#A5E8F2" stroke-opacity=".4"/>
+    <circle cx="105" cy="121" r="6" fill="#6DD7EF"/>
+    <text x="122" y="127" fill="#D9F4FA" font-size="15" font-weight="700" letter-spacing="2">OPEN-SOURCE TOOLKIT</text>
+    <text x="80" y="222" fill="#FFFFFF" font-size="55" font-weight="750" letter-spacing="-2">AI JOB</text>
+    <text x="80" y="282" fill="#FFFFFF" font-size="55" font-weight="750" letter-spacing="-2">SEARCH</text>
+    <text x="84" y="332" fill="#BFD1F3" font-size="22" font-weight="500">A clearer workflow for</text>
+    <text x="84" y="363" fill="#BFD1F3" font-size="22" font-weight="500">the next career move.</text>
+    <path d="M84 414H317" stroke="#8AB3FF" stroke-opacity=".45" stroke-width="2"/>
+    <text x="84" y="454" fill="#D9E5FF" font-size="17" font-weight="600" letter-spacing="1">PROFILE</text>
+    <text x="178" y="454" fill="#D9E5FF" font-size="17" font-weight="600" letter-spacing="1">MATCH</text>
+    <text x="265" y="454" fill="#D9E5FF" font-size="17" font-weight="600" letter-spacing="1">PREP</text>
+    <circle cx="95" cy="492" r="5" fill="#6DD7EF"/>
+    <circle cx="190" cy="492" r="5" fill="#6DD7EF"/>
+    <circle cx="277" cy="492" r="5" fill="#6DD7EF"/>
+    <path d="M102 492H181M197 492H268" stroke="#6DD7EF" stroke-width="2" stroke-linecap="round"/>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="453" y="170" width="274" height="348" rx="20" fill="#FFFFFF"/>
+    <rect x="477" y="194" width="46" height="46" rx="14" fill="#E7F2FF"/>
+    <path d="M490 207H510M490 216H510M490 225H503" stroke="#4275C8" stroke-width="3" stroke-linecap="round"/>
+    <text x="536" y="212" fill="#17243E" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="700">Candidate profile</text>
+    <text x="536" y="235" fill="#7A879B" font-family="Inter, Arial, sans-serif" font-size="13">Skills · experience · goals</text>
+    <rect x="478" y="267" width="224" height="1" fill="#E6EAF1"/>
+    <circle cx="492" cy="298" r="10" fill="#DCF6F1"/>
+    <path d="M487.5 298L491 301.5L497 295" stroke="#168B75" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="514" y="291" width="143" height="8" rx="4" fill="#DCE3ED"/>
+    <rect x="514" y="307" width="111" height="6" rx="3" fill="#EEF1F6"/>
+    <circle cx="492" cy="344" r="10" fill="#DCF6F1"/>
+    <path d="M487.5 344L491 347.5L497 341" stroke="#168B75" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="514" y="337" width="162" height="8" rx="4" fill="#DCE3ED"/>
+    <rect x="514" y="353" width="121" height="6" rx="3" fill="#EEF1F6"/>
+    <circle cx="492" cy="390" r="10" fill="#DCF6F1"/>
+    <path d="M487.5 390L491 393.5L497 387" stroke="#168B75" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="514" y="383" width="129" height="8" rx="4" fill="#DCE3ED"/>
+    <rect x="514" y="399" width="147" height="6" rx="3" fill="#EEF1F6"/>
+    <rect x="478" y="432" width="224" height="58" rx="13" fill="#F4F7FB"/>
+    <text x="494" y="456" fill="#7A879B" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700" letter-spacing="1">READY FOR A ROLE</text>
+    <text x="494" y="477" fill="#263D64" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700">Profile shaped around you</text>
+  </g>
+
+  <path d="M733 340H778" stroke="url(#blue)" stroke-width="3" stroke-linecap="round"/>
+  <path d="M770 331L779 340L770 349" stroke="#79D4EF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <g filter="url(#shadow)">
+    <rect x="789" y="214" width="294" height="220" rx="22" fill="#FFFFFF"/>
+    <rect x="813" y="239" width="44" height="44" rx="14" fill="#E4F8FA"/>
+    <path d="M835 248L838 257L847 260L838 263L835 272L832 263L823 260L832 257L835 248Z" fill="#168F9F"/>
+    <text x="871" y="253" fill="#718098" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="700" letter-spacing="1">ROLE MATCH</text>
+    <text x="871" y="276" fill="#1A2945" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="700">Senior Developer</text>
+    <rect x="813" y="306" width="246" height="1" fill="#E6EAF1"/>
+    <text x="813" y="337" fill="#43536D" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="600">CV + cover letter tailored</text>
+    <text x="813" y="360" fill="#43536D" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="600">Reviewed before you apply</text>
+    <rect x="813" y="385" width="103" height="28" rx="14" fill="#E8F5FF"/>
+    <text x="831" y="404" fill="#326BA7" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700">HUMAN REVIEW</text>
+    <circle cx="1033" cy="399" r="13" fill="#DBF5ED"/>
+    <path d="M1027 399L1031 403L1039 394" stroke="#168B75" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <g>
+    <circle cx="775" cy="505" r="30" fill="#DFF8FB" fill-opacity=".14" stroke="#88E3F0" stroke-opacity=".65"/>
+    <path d="M775 489V521M759 505H791" stroke="#A8F0F6" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="1042" cy="509" r="23" fill="#B3C8FF" fill-opacity=".14" stroke="#B3C8FF" stroke-opacity=".7"/>
+    <path d="M1032 509L1039 516L1052 501" stroke="#D8E4FF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>

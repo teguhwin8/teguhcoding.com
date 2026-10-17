@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1160" fill="none">
+  <title>Alur kerja AI Job Search</title>
+  <desc>Empat tahap: siapkan profil, temukan lowongan, sesuaikan lamaran, lalu siapkan wawancara.</desc>
+  <defs>
+    <linearGradient id="head" x1="0" y1="0" x2="800" y2="154" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#15233E"/>
+      <stop offset="1" stop-color="#2D4F8C"/>
+    </linearGradient>
+    <filter id="cardShadow" x="51" y="170" width="698" height="940" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="7"/>
+      <feGaussianBlur stdDeviation="7"/>
+      <feComposite in2="hardAlpha" operator="out"/>
+      <feColorMatrix values="0 0 0 0 0.08 0 0 0 0 0.13 0 0 0 0 0.23 0 0 0 0.08 0"/>
+      <feBlend in2="BackgroundImageFix" result="effect1_dropShadow"/>
+      <feBlend in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+    </filter>
+  </defs>
+  <rect width="800" height="1160" rx="28" fill="#F1F5FA"/>
+  <path d="M0 28C0 12.536 12.536 0 28 0H772C787.464 0 800 12.536 800 28V164H0V28Z" fill="url(#head)"/>
+  <text x="54" y="64" fill="#AFC7F5" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" letter-spacing="2">AI JOB SEARCH</text>
+  <text x="54" y="108" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="750">Dari profil ke wawancara</text>
+  <text x="54" y="138" fill="#D4E0F5" font-family="Inter, Arial, sans-serif" font-size="17">Workflow yang tetap memberi kandidat kendali.</text>
+
+  <g filter="url(#cardShadow)" font-family="Inter, Arial, sans-serif">
+    <rect x="56" y="193" width="688" height="176" rx="20" fill="#FFFFFF"/>
+    <circle cx="119" cy="280" r="37" fill="#E9F5FF"/>
+    <circle cx="119" cy="267" r="11" stroke="#3775C7" stroke-width="3"/>
+    <path d="M98 302C101 286 137 286 140 302" stroke="#3775C7" stroke-width="3" stroke-linecap="round"/>
+    <text x="178" y="246" fill="#718098" font-size="15" font-weight="700" letter-spacing="1.5">01 · PROFIL</text>
+    <text x="178" y="283" fill="#192A46" font-size="27" font-weight="750">/setup</text>
+    <text x="178" y="316" fill="#52627A" font-size="19">Susun pengalaman, kemampuan, dan tujuan.</text>
+
+    <rect x="56" y="397" width="688" height="176" rx="20" fill="#FFFFFF"/>
+    <circle cx="119" cy="484" r="37" fill="#EAF7F3"/>
+    <circle cx="115" cy="477" r="15" stroke="#20866F" stroke-width="3"/>
+    <path d="M126 488L140 502" stroke="#20866F" stroke-width="4" stroke-linecap="round"/>
+    <text x="178" y="450" fill="#718098" font-size="15" font-weight="700" letter-spacing="1.5">02 · PENCARIAN</text>
+    <text x="178" y="487" fill="#192A46" font-size="27" font-weight="750">/scrape · /rank</text>
+    <text x="178" y="520" fill="#52627A" font-size="19">Cari lowongan, deduplikasi, urutkan kecocokan.</text>
+
+    <rect x="56" y="601" width="688" height="176" rx="20" fill="#FFFFFF"/>
+    <circle cx="119" cy="688" r="37" fill="#FFF3E6"/>
+    <path d="M105 666H127L136 675V710H105V666Z" stroke="#BD7B34" stroke-width="3" stroke-linejoin="round"/>
+    <path d="M127 666V677H136M112 687H129M112 696H129" stroke="#BD7B34" stroke-width="2.5" stroke-linecap="round"/>
+    <text x="178" y="654" fill="#718098" font-size="15" font-weight="700" letter-spacing="1.5">03 · LAMARAN</text>
+    <text x="178" y="691" fill="#192A46" font-size="27" font-weight="750">/apply</text>
+    <text x="178" y="724" fill="#52627A" font-size="19">Nilai kecocokan, draf, lalu review dokumen.</text>
+
+    <rect x="56" y="805" width="688" height="176" rx="20" fill="#FFFFFF"/>
+    <circle cx="119" cy="892" r="37" fill="#F0ECFF"/>
+    <path d="M99 878C99 870 106 864 115 864H124C133 864 140 870 140 878V893C140 901 133 907 124 907H118L108 914V906C103 903 99 898 99 891V878Z" stroke="#7354B7" stroke-width="3" stroke-linejoin="round"/>
+    <circle cx="111" cy="884" r="2.5" fill="#7354B7"/>
+    <circle cx="120" cy="884" r="2.5" fill="#7354B7"/>
+    <circle cx="129" cy="884" r="2.5" fill="#7354B7"/>
+    <text x="178" y="858" fill="#718098" font-size="15" font-weight="700" letter-spacing="1.5">04 · WAWANCARA</text>
+    <text x="178" y="895" fill="#192A46" font-size="27" font-weight="750">/interview</text>
+    <text x="178" y="928" fill="#52627A" font-size="19">Petakan contoh pengalaman dan latihan menjawab.</text>
+  </g>
+
+  <path d="M119 369V390" stroke="#91A4BF" stroke-width="3" stroke-linecap="round"/>
+  <path d="M112 383L119 391L126 383" stroke="#91A4BF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M119 573V594" stroke="#91A4BF" stroke-width="3" stroke-linecap="round"/>
+  <path d="M112 587L119 595L126 587" stroke="#91A4BF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M119 777V798" stroke="#91A4BF" stroke-width="3" stroke-linecap="round"/>
+  <path d="M112 791L119 799L126 791" stroke="#91A4BF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <rect x="56" y="1024" width="688" height="80" rx="17" fill="#E3EFFD"/>
+  <circle cx="91" cy="1064" r="16" fill="#4A78C7"/>
+  <path d="M91 1056V1072M83 1064H99" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round"/>
+  <text x="121" y="1058" fill="#294A7B" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="700">Kandidat tetap memeriksa dan mengirim lamaran.</text>
+  <text x="121" y="1084" fill="#526C90" font-family="Inter, Arial, sans-serif" font-size="15">AI membantu alur kerja; keputusan akhir tetap di tangan pengguna.</text>
+</svg>
