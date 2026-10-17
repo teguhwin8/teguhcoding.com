@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="60" y1="42" x2="1133" y2="640" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F6F5F2"/>
+      <stop offset="1" stop-color="#EAEFF5"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="707" y1="170" x2="1092" y2="468" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#202B43"/>
+      <stop offset="1" stop-color="#172138"/>
+    </linearGradient>
+    <filter id="shadow" x="691" y="144" width="473" height="363" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="14"/>
+      <feGaussianBlur stdDeviation="14"/>
+      <feComposite in2="hardAlpha" operator="out"/>
+      <feColorMatrix values="0 0 0 0 0.05 0 0 0 0 0.09 0 0 0 0 0.17 0 0 0 0.25 0"/>
+      <feBlend in2="BackgroundImageFix" result="effect1_dropShadow"/>
+      <feBlend in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="675" rx="26" fill="url(#bg)"/>
+  <text x="74" y="80" fill="#303C55" font-family="Inter,Arial,sans-serif" font-size="19" font-weight="750" letter-spacing="2">MEMAHAMI ANGKA PARAMETER BEAM 1.0</text>
+  <text x="75" y="114" fill="#758098" font-family="Inter,Arial,sans-serif" font-size="15">Kapasitas total dan komputasi per token menunjukkan dua hal berbeda</text>
+  <rect x="76" y="171" width="518" height="327" rx="20" fill="#FFFFFF" stroke="#D4D9E3" stroke-width="2"/>
+  <text x="107" y="217" fill="#6B7590" font-family="Inter,Arial,sans-serif" font-size="13" font-weight="700" letter-spacing="1.5">CHECKPOINT MOE · BOBOT PENUH</text>
+  <text x="106" y="274" fill="#283550" font-family="Inter,Arial,sans-serif" font-size="38" font-weight="760">501,3B</text>
+  <text x="273" y="272" fill="#7D879E" font-family="Inter,Arial,sans-serif" font-size="17" font-weight="550">parameter total</text>
+  <g>
+    <rect x="108" y="304" width="62" height="42" rx="9" fill="#7869E5"/><rect x="182" y="304" width="62" height="42" rx="9" fill="#DDE2ED"/><rect x="256" y="304" width="62" height="42" rx="9" fill="#DDE2ED"/><rect x="330" y="304" width="62" height="42" rx="9" fill="#7869E5"/><rect x="404" y="304" width="62" height="42" rx="9" fill="#DDE2ED"/><rect x="478" y="304" width="62" height="42" rx="9" fill="#DDE2ED"/>
+    <rect x="108" y="359" width="62" height="42" rx="9" fill="#DDE2ED"/><rect x="182" y="359" width="62" height="42" rx="9" fill="#7869E5"/><rect x="256" y="359" width="62" height="42" rx="9" fill="#DDE2ED"/><rect x="330" y="359" width="62" height="42" rx="9" fill="#DDE2ED"/><rect x="404" y="359" width="62" height="42" rx="9" fill="#7869E5"/><rect x="478" y="359" width="62" height="42" rx="9" fill="#DDE2ED"/>
+    <rect x="108" y="414" width="62" height="42" rx="9" fill="#DDE2ED"/><rect x="182" y="414" width="62" height="42" rx="9" fill="#DDE2ED"/><rect x="256" y="414" width="62" height="42" rx="9" fill="#7869E5"/><rect x="330" y="414" width="62" height="42" rx="9" fill="#DDE2ED"/><rect x="404" y="414" width="62" height="42" rx="9" fill="#DDE2ED"/><rect x="478" y="414" width="62" height="42" rx="9" fill="#DDE2ED"/>
+  </g>
+  <circle cx="125" cy="474" r="5" fill="#7869E5"/>
+  <text x="139" y="479" fill="#66728D" font-family="Inter,Arial,sans-serif" font-size="12">Parameter aktif pada token tertentu</text>
+  <path d="M615 333H659" stroke="#6859D5" stroke-width="4" stroke-linecap="round"/>
+  <path d="M646 320L660 333L646 346" stroke="#6859D5" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="619" y="303" fill="#7569C8" font-family="Inter,Arial,sans-serif" font-size="12" font-weight="700" letter-spacing="1">ROUTER</text>
+  <g filter="url(#shadow)">
+    <rect x="713" y="170" width="420" height="326" rx="20" fill="url(#panel)" stroke="#5E6A87" stroke-opacity=".38" stroke-width="2"/>
+    <text x="747" y="219" fill="#AAB7D0" font-family="Inter,Arial,sans-serif" font-size="13" font-weight="700" letter-spacing="1.6">JALUR KOMPUTASI · PER TOKEN</text>
+    <text x="746" y="282" fill="#F6F6FB" font-family="Inter,Arial,sans-serif" font-size="43" font-weight="760">23,4B</text>
+    <text x="748" y="310" fill="#9BA9C2" font-family="Inter,Arial,sans-serif" font-size="16">parameter aktif</text>
+    <rect x="748" y="343" width="346" height="1" fill="#62708D" fill-opacity=".55"/>
+    <text x="748" y="380" fill="#81E0CC" font-family="Inter,Arial,sans-serif" font-size="13" font-weight="700" letter-spacing="1.2">KUANTISASI TERSEDIA</text>
+    <rect x="748" y="401" width="83" height="35" rx="17.5" fill="#303C59"/>
+    <text x="771" y="424" fill="#E7ECF7" font-family="Inter,Arial,sans-serif" font-size="14" font-weight="650">BF16</text>
+    <rect x="842" y="401" width="75" height="35" rx="17.5" fill="#303C59"/>
+    <text x="864" y="424" fill="#E7ECF7" font-family="Inter,Arial,sans-serif" font-size="14" font-weight="650">FP8</text>
+    <rect x="928" y="401" width="92" height="35" rx="17.5" fill="#303C59"/>
+    <text x="948" y="424" fill="#E7ECF7" font-family="Inter,Arial,sans-serif" font-size="14" font-weight="650">NVFP4</text>
+    <text x="748" y="467" fill="#A8B5CC" font-family="Inter,Arial,sans-serif" font-size="13">Format rendah presisi mengurangi ukuran bobot</text>
+  </g>
+  <rect x="76" y="534" width="1057" height="71" rx="15" fill="#E3E7EF"/>
+  <circle cx="106" cy="569" r="12" fill="#E6AB5E"/>
+  <path d="M106 562V571M106 576V577" stroke="#332C21" stroke-width="2.2" stroke-linecap="round"/>
+  <text x="133" y="564" fill="#3F4B64" font-family="Inter,Arial,sans-serif" font-size="15" font-weight="700">23B aktif ≠ checkpoint 23B.</text>
+  <text x="133" y="586" fill="#69758F" font-family="Inter,Arial,sans-serif" font-size="14">Hitung total bobot, konteks, dan overhead backend saat merencanakan inference.</text>
+  <text x="77" y="642" fill="#929BAD" font-family="Inter,Arial,sans-serif" font-size="12" letter-spacing="1.2">TEGUHCODING.COM · ILUSTRASI KONSEPTUAL</text>
+</svg>
