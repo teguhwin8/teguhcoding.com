@@ -155,7 +155,7 @@ export default function TableOfContents({ content }: TableOfContentsProps) {
       {/* Mobile & tablet: floating button + bottom sheet */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="xl:hidden fixed bottom-6 right-6 z-50 bg-[var(--accent)] text-white p-4 rounded-full shadow-xl hover:scale-105 active:scale-95 transition-all duration-200"
+        className="xl:hidden fixed bottom-24 right-6 z-50 bg-[var(--accent)] text-white p-4 rounded-full shadow-xl hover:scale-105 active:scale-95 transition-all duration-200"
         aria-label="Toggle table of contents"
       >
         <List size={22} strokeWidth={2.5} />
