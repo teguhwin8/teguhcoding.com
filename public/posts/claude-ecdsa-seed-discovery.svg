@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 1110" fill="none">
+  <title>Alur rekonstruksi seed kurva ECDSA P-256</title>
+  <desc>Timestamp Unix menginisialisasi generator rand48, rangkaian keluarannya membentuk kandidat seed, dan kandidat ke-1842 cocok dengan seed P-256 yang dipublikasikan.</desc>
+  <defs>
+    <linearGradient id="head" x1="0" y1="0" x2="840" y2="160" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#15233E"/>
+      <stop offset="1" stop-color="#2D4F8C"/>
+    </linearGradient>
+    <filter id="shadow" x="38" y="160" width="764" height="800" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse">
+      <feFlood flood-opacity="0" result="bg"/>
+      <feColorMatrix in="SourceAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="alpha"/>
+      <feOffset dy="7"/>
+      <feGaussianBlur stdDeviation="7"/>
+      <feComposite in2="alpha" operator="out"/>
+      <feColorMatrix values="0 0 0 0 0.08 0 0 0 0 0.13 0 0 0 0 0.23 0 0 0 0.08 0"/>
+      <feBlend in2="bg" result="shadow"/>
+      <feBlend in="SourceGraphic" in2="shadow" result="shape"/>
+    </filter>
+  </defs>
+  <rect width="840" height="1110" rx="28" fill="#F1F5FA"/>
+  <path d="M0 28C0 12.536 12.536 0 28 0H812C827.464 0 840 12.536 840 28V160H0V28Z" fill="url(#head)"/>
+  <text x="54" y="58" fill="#AFC7F5" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" letter-spacing="2">REKONSTRUKSI SEED NIST</text>
+  <text x="54" y="104" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="750">Dari timestamp ke P-256</text>
+  <text x="54" y="134" fill="#D4E0F5" font-family="Inter, Arial, sans-serif" font-size="16">Contoh jalur yang dilaporkan Anthropic.</text>
+
+  <g filter="url(#shadow)" font-family="Inter, Arial, sans-serif">
+    <rect x="54" y="190" width="732" height="138" rx="20" fill="#FFFFFF"/>
+    <circle cx="111" cy="259" r="34" fill="#E7F2FF"/>
+    <circle cx="111" cy="259" r="18" stroke="#4275C8" stroke-width="2.5"/>
+    <path d="M111 247V259L120 265" stroke="#4275C8" stroke-width="2.5" stroke-linecap="round"/>
+    <text x="166" y="237" fill="#718098" font-size="13" font-weight="700" letter-spacing="1.5">01 · WAKTU</text>
+    <text x="166" y="270" fill="#192A46" font-size="22" font-weight="750">Timestamp Unix</text>
+    <text x="166" y="297" fill="#52627A" font-size="16">Contoh P-256: 16 Agustus 1997, 01:52:34 UTC</text>
+
+    <rect x="54" y="377" width="732" height="138" rx="20" fill="#FFFFFF"/>
+    <circle cx="111" cy="446" r="34" fill="#EAF7F3"/>
+    <rect x="100" y="435" width="22" height="22" rx="5" stroke="#20866F" stroke-width="2.5"/>
+    <path d="M105 429V435M111 429V435M117 429V435M105 457V463M111 457V463M117 457V463M94 440H100M94 446H100M122 440H128M122 446H128" stroke="#20866F" stroke-width="2.5" stroke-linecap="round"/>
+    <circle cx="111" cy="446" r="3" fill="#20866F"/>
+    <text x="166" y="424" fill="#718098" font-size="13" font-weight="700" letter-spacing="1.5">02 · INISIALISASI</text>
+    <text x="166" y="457" fill="#192A46" font-size="22" font-weight="750">srand48(timestamp)</text>
+    <text x="166" y="484" fill="#52627A" font-size="16">Keadaan awal generator pseudorandom dibuat dari waktu.</text>
+
+    <rect x="54" y="564" width="732" height="138" rx="20" fill="#FFFFFF"/>
+    <circle cx="111" cy="633" r="34" fill="#FFF3E6"/>
+    <path d="M96 621H126M96 632H126M96 643H126M96 654H126" stroke="#BD7B34" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="101" cy="621" r="3" fill="#FFFFFF"/><circle cx="115" cy="632" r="3" fill="#FFFFFF"/><circle cx="107" cy="643" r="3" fill="#FFFFFF"/><circle cx="122" cy="654" r="3" fill="#FFFFFF"/>
+    <text x="166" y="611" fill="#718098" font-size="13" font-weight="700" letter-spacing="1.5">03 · KANDIDAT</text>
+    <text x="166" y="644" fill="#192A46" font-size="22" font-weight="750">lrand48() mengeluarkan urutan angka</text>
+    <text x="166" y="671" fill="#52627A" font-size="16">Potongan output diuji sebagai kandidat seed kurva.</text>
+
+    <rect x="54" y="751" width="732" height="138" rx="20" fill="#FFFFFF"/>
+    <circle cx="111" cy="820" r="34" fill="#E7F6F2"/>
+    <path d="M95 820L106 831L128 807" stroke="#168B75" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="166" y="798" fill="#718098" font-size="13" font-weight="700" letter-spacing="1.5">04 · KECOCOKAN</text>
+    <text x="166" y="831" fill="#192A46" font-size="22" font-weight="750">Kandidat ke-1.842 cocok dengan P-256</text>
+    <text x="166" y="858" fill="#52627A" font-size="16">Hasilnya sama dengan seed yang telah lama dipublikasikan.</text>
+  </g>
+
+  <path d="M111 329V369M102 360L111 370L120 360" stroke="#91A4BF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M111 516V556M102 547L111 557L120 547" stroke="#91A4BF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M111 703V743M102 734L111 744L120 734" stroke="#91A4BF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <rect x="54" y="933" width="732" height="122" rx="18" fill="#E3EFFD"/>
+  <circle cx="92" cy="976" r="17" fill="#4A78C7"/>
+  <path d="M92 966V986M82 976H102" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round"/>
+  <text x="124" y="972" fill="#294A7B" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700">Seed adalah parameter publik, bukan kunci privat.</text>
+  <text x="124" y="1000" fill="#526C90" font-family="Inter, Arial, sans-serif" font-size="15">Penjelasan ini tidak membuktikan setiap kriteria pemilihan kurva.</text>
+  <text x="124" y="1025" fill="#526C90" font-family="Inter, Arial, sans-serif" font-size="15">Ilustrasi konseptual berdasarkan laporan Anthropic.</text>
+</svg>

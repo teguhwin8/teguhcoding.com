@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" fill="none">
+  <title>Jejak seed kurva ECDSA NIST</title>
+  <desc>Ilustrasi kurva eliptik, deretan bit, dan timestamp yang menggambarkan penelusuran asal parameter publik.</desc>
+  <defs>
+    <linearGradient id="bg" x1="72" y1="34" x2="1124" y2="648" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#101B35"/>
+      <stop offset="1" stop-color="#243F83"/>
+    </linearGradient>
+    <linearGradient id="curve" x1="565" y1="172" x2="1098" y2="533" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#6DD7EF"/>
+      <stop offset="1" stop-color="#9AB8FF"/>
+    </linearGradient>
+    <pattern id="dots" width="32" height="32" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.2" fill="#B6CAFF" fill-opacity=".18"/>
+    </pattern>
+    <filter id="glow" x="516" y="76" width="645" height="523" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse">
+      <feGaussianBlur stdDeviation="22"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="675" rx="34" fill="url(#bg)"/>
+  <rect x="36" y="36" width="1128" height="603" rx="24" fill="url(#dots)"/>
+  <circle cx="1050" cy="91" r="194" fill="#577DE0" fill-opacity=".12"/>
+  <circle cx="104" cy="604" r="205" fill="#48C5D8" fill-opacity=".08"/>
+
+  <g font-family="Inter, Arial, sans-serif">
+    <rect x="82" y="94" width="232" height="40" rx="20" fill="#E7F8FC" fill-opacity=".12" stroke="#A5E8F2" stroke-opacity=".4"/>
+    <circle cx="105" cy="114" r="6" fill="#6DD7EF"/>
+    <text x="122" y="120" fill="#D9F4FA" font-size="15" font-weight="700" letter-spacing="2">AI × KRIPTOGRAFI</text>
+    <text x="80" y="231" fill="#FFFFFF" font-size="50" font-weight="750" letter-spacing="-2">JEJAK SEED</text>
+    <text x="80" y="289" fill="#FFFFFF" font-size="50" font-weight="750" letter-spacing="-2">KURVA ECDSA</text>
+    <text x="84" y="351" fill="#BFD1F3" font-size="20" font-weight="500">Model riset internal Anthropic menelusuri</text>
+    <text x="84" y="382" fill="#BFD1F3" font-size="20" font-weight="500">angka publik ke generator C lawas dan waktu.</text>
+    <path d="M84 426H390" stroke="#8AB3FF" stroke-opacity=".45" stroke-width="2"/>
+    <text x="84" y="470" fill="#D9E5FF" font-size="16" font-weight="600" letter-spacing="1">P-256</text>
+    <circle cx="150" cy="464" r="4" fill="#6DD7EF"/>
+    <text x="170" y="470" fill="#D9E5FF" font-size="16" font-weight="600" letter-spacing="1">lrand48</text>
+    <circle cx="260" cy="464" r="4" fill="#6DD7EF"/>
+    <text x="280" y="470" fill="#D9E5FF" font-size="16" font-weight="600" letter-spacing="1">1997–98</text>
+  </g>
+
+  <path d="M586 348C586 250 668 170 766 170C864 170 946 250 946 348C946 446 864 526 766 526C668 526 586 446 586 348Z" stroke="#6DD7EF" stroke-opacity=".18" stroke-width="22" filter="url(#glow)"/>
+  <path d="M586 348C586 250 668 170 766 170C864 170 946 250 946 348C946 446 864 526 766 526C668 526 586 446 586 348Z" stroke="url(#curve)" stroke-width="4"/>
+  <path d="M531 348H1002M766 120V576" stroke="#B6CAFF" stroke-opacity=".22" stroke-width="1.5" stroke-dasharray="7 10"/>
+
+  <circle cx="766" cy="348" r="8" fill="#F6FBFF"/>
+  <circle cx="766" cy="348" r="20" stroke="#6DD7EF" stroke-opacity=".4" stroke-width="2"/>
+  <circle cx="921" cy="277" r="7" fill="#FFE29A"/>
+  <circle cx="921" cy="277" r="18" stroke="#FFE29A" stroke-opacity=".35" stroke-width="2"/>
+  <path d="M784 339L904 284" stroke="#FFE29A" stroke-width="2" stroke-dasharray="5 7"/>
+
+  <g>
+    <rect x="889" y="83" width="222" height="100" rx="18" fill="#FFFFFF" fill-opacity=".96"/>
+    <circle cx="926" cy="133" r="22" fill="#E7F2FF"/>
+    <circle cx="926" cy="133" r="13" stroke="#4275C8" stroke-width="2.5"/>
+    <path d="M926 124V133L933 138" stroke="#4275C8" stroke-width="2.5" stroke-linecap="round"/>
+    <text x="963" y="124" fill="#718098" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700" letter-spacing="1">JEJAK WAKTU</text>
+    <text x="963" y="148" fill="#192A46" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="700">Unix · 1997–98</text>
+  </g>
+
+  <g>
+    <rect x="839" y="421" width="274" height="94" rx="18" fill="#FFFFFF" fill-opacity=".96"/>
+    <text x="864" y="453" fill="#718098" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700" letter-spacing="1">RANGKAIAN PSEUDORANDOM</text>
+    <text x="864" y="483" fill="#192A46" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="700">... 1840 · 1841 · 1842 ...</text>
+    <circle cx="1064" cy="478" r="5" fill="#168B75"/>
+  </g>
+
+  <g font-family="Inter, Arial, sans-serif" fill="#D4E0F5" font-size="13" font-weight="600" letter-spacing="1">
+    <text x="647" y="576">ILUSTRASI KONSEPTUAL</text>
+    <text x="1004" y="576">17 OKT 2026</text>
+  </g>
+</svg>
