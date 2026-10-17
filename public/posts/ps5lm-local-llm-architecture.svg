@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="640" viewBox="0 0 1200 640" role="img" aria-labelledby="title desc">
+  <title id="title">Arsitektur server AI lokal PS5LM</title>
+  <desc id="desc">PS5 menjalankan llama.cpp di GPU lalu menyediakan API untuk laptop, browser, dan coding tools melalui jaringan lokal.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#10172b"/><stop offset="1" stop-color="#1d2850"/></linearGradient>
+    <linearGradient id="line" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#52d7ed"/><stop offset="1" stop-color="#a08cff"/></linearGradient>
+    <filter id="soft"><feGaussianBlur stdDeviation="14"/></filter>
+  </defs>
+  <rect width="1200" height="640" rx="28" fill="url(#bg)"/>
+  <circle cx="588" cy="213" r="130" fill="#6d67ff" opacity=".14" filter="url(#soft)"/>
+  <text x="58" y="64" fill="#7ce2f1" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" letter-spacing="3">CARA KERJA • ILUSTRASI KONSEPTUAL</text>
+  <text x="58" y="108" fill="#fff" font-family="Arial, Helvetica, sans-serif" font-size="32" font-weight="700">Satu konsol, model lokal untuk perangkat di rumah</text>
+  <!-- PS5 server -->
+  <rect x="62" y="160" width="315" height="238" rx="22" fill="#202b50" stroke="#52648f" stroke-width="2"/>
+  <rect x="88" y="186" width="72" height="168" rx="17" fill="#eaf0fa"/>
+  <path d="M119 199 Q137 188 143 212 L151 323 Q152 337 140 343 L126 349 Q116 353 114 337 L105 222 Q102 205 119 199Z" fill="#c9d5e9"/>
+  <path d="M141 215 L150 323" stroke="#8fa3c8" stroke-width="3"/>
+  <rect x="172" y="192" width="177" height="35" rx="9" fill="#111a34"/>
+  <text x="187" y="216" fill="#7be1f2" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700">PS5LM SERVER</text>
+  <text x="173" y="259" fill="#e9efff" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="700">llama.cpp + Vulkan</text>
+  <text x="173" y="288" fill="#b4c3e6" font-family="Arial, Helvetica, sans-serif" font-size="16">GPU RDNA 2 • GGUF</text>
+  <text x="173" y="317" fill="#b4c3e6" font-family="Arial, Helvetica, sans-serif" font-size="16">11,4 GB memori bersama</text>
+  <text x="173" y="346" fill="#b4c3e6" font-family="Arial, Helvetica, sans-serif" font-size="16">Inference di jaringan lokal</text>
+  <!-- connectors -->
+  <path d="M394 276 H807" stroke="url(#line)" stroke-width="4" stroke-dasharray="10 9"/>
+  <circle cx="398" cy="276" r="7" fill="#59dcf0"/><circle cx="804" cy="276" r="7" fill="#a08cff"/>
+  <rect x="506" y="246" width="188" height="60" rx="28" fill="#182443" stroke="#6577a6"/>
+  <text x="531" y="271" fill="#eaf0ff" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="700">HTTP API lokal</text>
+  <text x="536" y="292" fill="#9fb0d9" font-family="Arial, Helvetica, sans-serif" font-size="13">OpenAI • Anthropic</text>
+  <!-- clients -->
+  <rect x="832" y="160" width="305" height="238" rx="22" fill="#202b50" stroke="#52648f" stroke-width="2"/>
+  <text x="859" y="198" fill="#fff" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700">Perangkat klien</text>
+  <g font-family="Arial, Helvetica, sans-serif" font-size="16" fill="#d8e3ff">
+    <rect x="858" y="221" width="254" height="43" rx="10" fill="#141e3a"/><text x="877" y="248">Laptop dan browser</text>
+    <rect x="858" y="273" width="254" height="43" rx="10" fill="#141e3a"/><text x="877" y="300">Claude Code / coding tools</text>
+    <rect x="858" y="325" width="254" height="43" rx="10" fill="#141e3a"/><text x="877" y="352">Ponsel di jaringan rumah</text>
+  </g>
+  <!-- stats -->
+  <rect x="62" y="430" width="339" height="119" rx="18" fill="#182443" stroke="#41557f"/>
+  <text x="86" y="463" fill="#8fe7f5" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="700">CONTOH PENGUKURAN PENGEMBANG</text>
+  <text x="86" y="500" fill="#fff" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700">Qwen 3.8 27B</text>
+  <text x="86" y="528" fill="#c2cde7" font-family="Arial, Helvetica, sans-serif" font-size="17">≈20 token/detik • varian IQ2_XXS</text>
+  <rect x="423" y="430" width="339" height="119" rx="18" fill="#182443" stroke="#41557f"/>
+  <text x="447" y="463" fill="#b8a8ff" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="700">KONTEKS UJI YANG DILAPORKAN</text>
+  <text x="447" y="500" fill="#fff" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700">64K konteks</text>
+  <text x="447" y="528" fill="#c2cde7" font-family="Arial, Helvetica, sans-serif" font-size="17">File model sekitar 6,8 GiB</text>
+  <rect x="784" y="430" width="353" height="119" rx="18" fill="#182443" stroke="#41557f"/>
+  <text x="808" y="463" fill="#f6c77c" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="700">CATATAN</text>
+  <text x="808" y="497" fill="#e9efff" font-family="Arial, Helvetica, sans-serif" font-size="17">Kuantisasi sangat rendah; angka</text>
+  <text x="808" y="523" fill="#e9efff" font-family="Arial, Helvetica, sans-serif" font-size="17">berasal dari pengembang, bukan uji lab.</text>
+  <text x="62" y="595" fill="#98a8cf" font-family="Arial, Helvetica, sans-serif" font-size="15">Perlu PS5 jailbreak pada firmware yang didukung. Diagram dan angka merupakan ringkasan berbasis sumber proyek/kontributor.</text>
+</svg>
