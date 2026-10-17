@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="620" viewBox="0 0 1000 620" role="img" aria-labelledby="title desc">
+  <title id="title">Kenaikan benchmark DeepSeek V4.1-Flash-1017</title>
+  <desc id="desc">Diagram membandingkan skor lama dan baru DeepSeek pada Terminal-Bench 4.0 dan ProgramBench.</desc>
+  <rect width="1000" height="620" rx="24" fill="#f5f7f8"/>
+  <text x="64" y="76" fill="#152633" font-family="Arial, sans-serif" font-size="28" font-weight="700">Skor coding agent yang dilaporkan</text>
+  <text x="64" y="112" fill="#60727d" font-family="Arial, sans-serif" font-size="17">V4.1-Flash dibanding checkpoint 1017 · skala tiap baris 0–100</text>
+  <g font-family="Arial, sans-serif">
+    <text x="64" y="191" fill="#243946" font-size="20" font-weight="700">Terminal-Bench 4.0</text>
+    <rect x="64" y="210" width="680" height="26" rx="13" fill="#e0e7eb"/>
+    <rect x="64" y="210" width="212" height="26" rx="13" fill="#9baab2"/>
+    <text x="770" y="231" fill="#6d7e87" font-size="17">31,2</text>
+    <rect x="64" y="248" width="680" height="26" rx="13" fill="#e0e7eb"/>
+    <rect x="64" y="248" width="288" height="26" rx="13" fill="#139b8d"/>
+    <text x="770" y="269" fill="#087a70" font-size="18" font-weight="700">42,3</text>
+    <text x="64" y="338" fill="#243946" font-size="20" font-weight="700">ProgramBench</text>
+    <rect x="64" y="357" width="680" height="26" rx="13" fill="#e0e7eb"/>
+    <rect x="64" y="357" width="138" height="26" rx="13" fill="#9baab2"/>
+    <text x="770" y="378" fill="#6d7e87" font-size="17">20,3</text>
+    <rect x="64" y="395" width="680" height="26" rx="13" fill="#e0e7eb"/>
+    <rect x="64" y="395" width="198" height="26" rx="13" fill="#139b8d"/>
+    <text x="770" y="416" fill="#087a70" font-size="18" font-weight="700">29,1</text>
+  </g>
+  <g font-family="Arial, sans-serif" font-size="15">
+    <rect x="64" y="465" width="16" height="16" rx="4" fill="#9baab2"/><text x="90" y="479" fill="#52636c">V4.1-Flash</text>
+    <rect x="220" y="465" width="16" height="16" rx="4" fill="#139b8d"/><text x="246" y="479" fill="#52636c">V4.1-Flash-1017</text>
+  </g>
+  <path d="M64 514H936" stroke="#d6dfe3" stroke-width="2"/>
+  <text x="64" y="550" fill="#586b75" font-family="Arial, sans-serif" font-size="16">Sumber: kartu model DeepSeek di Hugging Face. Evaluasi dan angka diterbitkan oleh DeepSeek.</text>
+  <text x="64" y="578" fill="#75858d" font-family="Arial, sans-serif" font-size="15">Bukan hasil benchmark independen.</text>
+</svg>
