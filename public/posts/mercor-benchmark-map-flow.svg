@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" fill="none">
+  <defs>
+    <linearGradient id="background" x1="140" y1="35" x2="1041" y2="696" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#111B32"/><stop offset="1" stop-color="#090F1E"/>
+    </linearGradient>
+    <linearGradient id="mint" x1="820" y1="0" x2="820" y2="720" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#58D9C4"/><stop offset="1" stop-color="#35B9A9"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="720" rx="28" fill="url(#background)"/>
+  <text x="62" y="70" fill="#70DEC9" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700" letter-spacing="2.2">CARA MEMBACA PETA MERCOR</text>
+  <text x="62" y="119" fill="#F6F8FD" font-family="Inter, Arial, sans-serif" font-size="32" font-weight="720">Benchmark dipetakan ke tugas kerja, lalu cakupannya dihitung</text>
+
+  <rect x="62" y="165" width="280" height="174" rx="18" fill="#151F36" stroke="#34435E"/>
+  <text x="88" y="207" fill="#AEBAD0" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" letter-spacing="1">INDEKS AWAL</text>
+  <text x="88" y="262" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="40" font-weight="750">29</text>
+  <text x="149" y="255" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="650">benchmark agentik</text>
+  <text x="149" y="282" fill="#91A0B8" font-family="Inter, Arial, sans-serif" font-size="14">yang dipilih Mercor</text>
+  <rect x="88" y="306" width="11" height="11" rx="3" fill="#51D5C1"/>
+  <text x="108" y="316" fill="#A5B2C8" font-family="Inter, Arial, sans-serif" font-size="13">benchmark berisi prompt pengujian</text>
+
+  <path d="M359 252H416" stroke="#60718F" stroke-width="3" stroke-linecap="round"/>
+  <path d="m407 243 10 9-10 9" stroke="#60718F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <rect x="432" y="165" width="332" height="174" rx="18" fill="#151F36" stroke="#34435E"/>
+  <text x="458" y="207" fill="#AEBAD0" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" letter-spacing="1">PEMETAAN MODEL</text>
+  <text x="458" y="250" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="650">Prompt benchmark</text>
+  <path d="M463 274H596" stroke="#51D5C1" stroke-width="3" stroke-linecap="round"/>
+  <path d="m587 265 10 9-10 9" stroke="#51D5C1" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="610" y="262" width="118" height="28" rx="8" fill="#1E3E4B"/>
+  <text x="625" y="281" fill="#8AE7D8" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="650">tugas O*NET</text>
+  <text x="458" y="320" fill="#8F9DB5" font-family="Inter, Arial, sans-serif" font-size="13">Tugas dihitung tercakup jika ada ≥5 prompt cocok</text>
+
+  <path d="M781 252H838" stroke="#60718F" stroke-width="3" stroke-linecap="round"/>
+  <path d="m829 243 10 9-10 9" stroke="#60718F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <rect x="854" y="165" width="284" height="174" rx="18" fill="#151F36" stroke="#34435E"/>
+  <text x="880" y="207" fill="#AEBAD0" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" letter-spacing="1">KATALOG KERJA</text>
+  <text x="880" y="255" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="750">18.797</text>
+  <text x="880" y="281" fill="#AEBAD0" font-family="Inter, Arial, sans-serif" font-size="14">tugas · 923 pekerjaan</text>
+  <text x="880" y="320" fill="#8F9DB5" font-family="Inter, Arial, sans-serif" font-size="13">dari basis data O*NET AS</text>
+
+  <rect x="62" y="377" width="1076" height="245" rx="20" fill="#101A2F" stroke="#293A57"/>
+  <text x="91" y="425" fill="#AEBAD0" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" letter-spacing="1">HASIL DENGAN AMBANG TERSEBUT</text>
+  <text x="91" y="490" fill="url(#mint)" font-family="Inter, Arial, sans-serif" font-size="48" font-weight="760">924 / 18.797</text>
+  <text x="94" y="524" fill="#E7ECF5" font-family="Inter, Arial, sans-serif" font-size="17">tugas tercakup</text>
+  <text x="430" y="490" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="48" font-weight="760">208 / 923</text>
+  <text x="433" y="524" fill="#E7ECF5" font-family="Inter, Arial, sans-serif" font-size="17">pekerjaan punya ≥1 tugas tercakup</text>
+  <text x="840" y="490" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="48" font-weight="760">90%</text>
+  <text x="843" y="524" fill="#E7ECF5" font-family="Inter, Arial, sans-serif" font-size="17">jam kerja AS diperkirakan</text>
+  <text x="843" y="548" fill="#AEBAD0" font-family="Inter, Arial, sans-serif" font-size="15">berada pada tugas dengan</text>
+  <text x="843" y="570" fill="#AEBAD0" font-family="Inter, Arial, sans-serif" font-size="15">cakupan tipis atau nihil</text>
+  <path d="M398 450V574M807 450V574" stroke="#293A57" stroke-width="1.5"/>
+  <text x="92" y="592" fill="#7787A1" font-family="Inter, Arial, sans-serif" font-size="13">Estimasi awal Mercor; bukan ukuran langsung tentang kemampuan AI atau hilangnya pekerjaan.</text>
+  <text x="62" y="674" fill="#71809A" font-family="Inter, Arial, sans-serif" font-size="13">Sumber angka: Mercor Benchmark Map dan metodologinya · Visual konseptual Teguh Coding</text>
+</svg>
