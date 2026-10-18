@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">XERJ membantu coding agent mencari bagian kode yang relevan</title>
+  <desc id="desc">Ilustrasi konseptual folder kode yang diindeks secara lokal dan mengirim satu fungsi yang relevan ke coding agent.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#101d32"/><stop offset="1" stop-color="#1b3e4b"/></linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#31c6ae"/><stop offset="1" stop-color="#67a8ff"/></linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%"><feDropShadow dx="0" dy="12" stdDeviation="14" flood-color="#06111f" flood-opacity=".28"/></filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0 10 5 0 10Z" fill="#8aa8bd"/></marker>
+  </defs>
+  <rect width="1200" height="630" rx="28" fill="url(#bg)"/>
+  <g opacity=".12" stroke="#9bb8c8" stroke-width="1"><path d="M45 90h1110M45 145h1110M45 200h1110M45 255h1110M45 310h1110M45 365h1110M45 420h1110M45 475h1110M45 530h1110"/><path d="M80 40v550M150 40v550M220 40v550M290 40v550M360 40v550M430 40v550M500 40v550M570 40v550M640 40v550M710 40v550M780 40v550M850 40v550M920 40v550M990 40v550M1060 40v550M1130 40v550"/></g>
+  <text x="64" y="75" fill="#8fdcca" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="700" letter-spacing="2">PENCARIAN LOKAL UNTUK CODING AGENT</text>
+  <text x="64" y="126" fill="#f4f8fb" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="750">Cari fungsinya.</text>
+  <text x="64" y="168" fill="#f4f8fb" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="750">Tak perlu baca seluruh repo.</text>
+  <text x="64" y="205" fill="#afc4d0" font-family="Inter, Arial, sans-serif" font-size="16">Indeks lokal mengembalikan kode yang relevan beserta lokasinya.</text>
+
+  <g filter="url(#shadow)">
+    <rect x="65" y="264" width="250" height="231" rx="20" fill="#172b41" stroke="#476176" stroke-width="2"/>
+    <text x="92" y="301" fill="#c5d6e0" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" letter-spacing="1">FOLDER PROYEK</text>
+    <g font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15">
+      <rect x="91" y="325" width="198" height="38" rx="9" fill="#213a50"/><text x="108" y="350" fill="#8bd6c5">src/</text>
+      <rect x="91" y="374" width="198" height="38" rx="9" fill="#213a50"/><text x="108" y="399" fill="#a9c5ff">docs/</text>
+      <rect x="91" y="423" width="198" height="38" rx="9" fill="#213a50"/><text x="108" y="448" fill="#e5c98b">tests/</text>
+    </g>
+    <circle cx="277" cy="338" r="5" fill="#39c9ae"/><circle cx="277" cy="387" r="5" fill="#719dff"/><circle cx="277" cy="436" r="5" fill="#e8bd6d"/>
+  </g>
+
+  <path d="M337 381h95" fill="none" stroke="#8aa8bd" stroke-width="4" marker-end="url(#arrow)"/>
+  <g filter="url(#shadow)">
+    <rect x="451" y="282" width="254" height="198" rx="24" fill="#173a48" stroke="#37c2aa" stroke-width="2"/>
+    <circle cx="578" cy="362" r="48" fill="#1e5360" stroke="#43d1b6" stroke-width="2"/>
+    <circle cx="578" cy="362" r="28" fill="url(#accent)"/>
+    <path d="M565 362h26M578 349v26M568 352l20 20M588 352l-20 20" stroke="#effdfa" stroke-width="3" stroke-linecap="round"/>
+    <text x="578" y="435" text-anchor="middle" fill="#ecf7f7" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="700">Indeks XERJ</text>
+    <text x="578" y="459" text-anchor="middle" fill="#a7c9ce" font-family="Inter, Arial, sans-serif" font-size="13">cari · saring · ambil konteks</text>
+  </g>
+  <path d="M725 381h80" fill="none" stroke="#8aa8bd" stroke-width="4" marker-end="url(#arrow)"/>
+  <g filter="url(#shadow)">
+    <rect x="826" y="258" width="307" height="241" rx="20" fill="#f4f7fa"/>
+    <rect x="826" y="258" width="307" height="44" rx="20" fill="#dfe8ef"/>
+    <path d="M826 282h307v20H826Z" fill="#dfe8ef"/>
+    <circle cx="854" cy="280" r="6" fill="#e47971"/><circle cx="875" cy="280" r="6" fill="#e7bb61"/><circle cx="896" cy="280" r="6" fill="#59b991"/>
+    <text x="852" y="335" fill="#607689" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13">src/search.rs:84</text>
+    <rect x="848" y="351" width="263" height="99" rx="12" fill="#e9f7f3" stroke="#6ac7b2" stroke-width="2"/>
+    <text x="867" y="382" fill="#288b78" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="14">fn find_definition(...)</text>
+    <text x="867" y="411" fill="#43665f" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13">// fungsi dan konteksnya</text>
+    <text x="867" y="435" fill="#43665f" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13">// siap dibaca agent</text>
+    <text x="852" y="475" fill="#566f81" font-family="Inter, Arial, sans-serif" font-size="14">Potongan kode, bukan dump seluruh repo</text>
+  </g>
+  <text x="64" y="570" fill="#8da7b8" font-family="Inter, Arial, sans-serif" font-size="13" letter-spacing="1">ILUSTRASI KONSEPTUAL · BUKAN TAMPILAN PRODUK</text>
+</svg>
