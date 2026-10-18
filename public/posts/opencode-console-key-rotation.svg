@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="540" viewBox="0 0 1000 540" fill="none">
+  <rect width="1000" height="540" rx="24" fill="#F4F7FB"/>
+  <text x="54" y="66" fill="#152743" font-family="Arial, sans-serif" font-size="26" font-weight="700">Di mana kunci disimpan menentukan langkah respons</text>
+  <text x="54" y="101" fill="#52647D" font-family="Arial, sans-serif" font-size="16">Ringkasan konseptual dari cakupan yang diumumkan OpenCode</text>
+  <rect x="54" y="145" width="388" height="248" rx="20" fill="#E8F5F4" stroke="#73C9C1" stroke-width="2"/>
+  <rect x="83" y="174" width="330" height="53" rx="12" fill="#FFFFFF" stroke="#B8DFDB"/>
+  <path d="M104 193v-5a8 8 0 0 1 16 0v5m-18 0h20v17h-20z" stroke="#167C78" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="141" y="206" fill="#143A44" font-family="Arial, sans-serif" font-size="17" font-weight="700">OpenCode Console</text>
+  <text x="83" y="263" fill="#1B5260" font-family="Arial, sans-serif" font-size="15" font-weight="700">Provider eksternal tertaut</text>
+  <rect x="83" y="281" width="330" height="43" rx="10" fill="#D5ECEA"/>
+  <circle cx="109" cy="302" r="8" fill="#2975B8"/><text x="129" y="308" fill="#26465D" font-family="Arial, sans-serif" font-size="15">Kredensial tersimpan di workspace</text>
+  <rect x="83" y="337" width="330" height="37" rx="10" fill="#167C78"/>
+  <text x="125" y="361" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="15" font-weight="700">Periksa email, cabut kunci di provider</text>
+  <path d="M465 270h70" stroke="#899AB0" stroke-width="3" stroke-linecap="round"/>
+  <path d="m524 259 11 11-11 11" stroke="#899AB0" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="558" y="145" width="388" height="248" rx="20" fill="#F0F2F7" stroke="#BAC6D5" stroke-width="2"/>
+  <rect x="587" y="174" width="330" height="53" rx="12" fill="#FFFFFF" stroke="#D4DCE6"/>
+  <path d="M608 193v-5a8 8 0 0 1 16 0v5m-18 0h20v17h-20z" stroke="#596D86" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="645" y="206" fill="#293C56" font-family="Arial, sans-serif" font-size="17" font-weight="700">Koneksi langsung / lokal</text>
+  <text x="587" y="263" fill="#485A71" font-family="Arial, sans-serif" font-size="15" font-weight="700">Dikelola dari lingkungan sendiri</text>
+  <rect x="587" y="281" width="330" height="43" rx="10" fill="#E2E7EF"/>
+  <circle cx="613" cy="302" r="8" fill="#7B8CA1"/><text x="633" y="308" fill="#42556D" font-family="Arial, sans-serif" font-size="15">Tidak disebut sebagai cakupan insiden</text>
+  <rect x="587" y="337" width="330" height="37" rx="10" fill="#51657E"/>
+  <text x="632" y="361" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="15" font-weight="700">Cek jalur kredensial yang benar</text>
+  <rect x="54" y="426" width="892" height="67" rx="14" fill="#FFF4DF" stroke="#E8C476"/>
+  <circle cx="84" cy="459" r="12" fill="#E8AB40"/>
+  <text x="110" y="455" fill="#5E481E" font-family="Arial, sans-serif" font-size="15" font-weight="700">Gambaran ini mengikuti pengumuman publik, bukan hasil audit akun.</text>
+  <text x="110" y="477" fill="#725C31" font-family="Arial, sans-serif" font-size="14">Jika kunci pernah ditautkan ke Console, cabut dari dashboard provider asal dan tinjau pemakaian.</text>
+</svg>

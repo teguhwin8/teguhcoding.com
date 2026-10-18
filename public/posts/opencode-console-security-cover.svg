@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="88" y1="40" x2="1110" y2="622" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#101C35"/>
+      <stop offset="1" stop-color="#182E54"/>
+    </linearGradient>
+    <linearGradient id="glow" x1="720" y1="105" x2="1060" y2="480" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#29D3C2" stop-opacity=".24"/>
+      <stop offset="1" stop-color="#29D3C2" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" rx="34" fill="url(#bg)"/>
+  <circle cx="923" cy="292" r="254" fill="url(#glow)"/>
+  <g opacity=".12" stroke="#A9C6EA">
+    <path d="M0 104h1200M0 190h1200M0 276h1200M0 362h1200M0 448h1200M0 534h1200"/>
+    <path d="M100 0v630M220 0v630M340 0v630M460 0v630M580 0v630M700 0v630M820 0v630M940 0v630M1060 0v630"/>
+  </g>
+  <rect x="78" y="76" width="216" height="42" rx="21" fill="#29D3C2" fill-opacity=".14" stroke="#29D3C2" stroke-opacity=".5"/>
+  <circle cx="101" cy="97" r="6" fill="#63E3D5"/>
+  <text x="120" y="103" fill="#9CF0E6" font-family="Arial, sans-serif" font-size="17" font-weight="700" letter-spacing="2">KEAMANAN AI</text>
+  <text x="78" y="213" fill="#F4F7FC" font-family="Arial, sans-serif" font-size="58" font-weight="700">Insiden keamanan</text>
+  <text x="78" y="280" fill="#F4F7FC" font-family="Arial, sans-serif" font-size="58" font-weight="700">OpenCode Console</text>
+  <text x="80" y="337" fill="#BDCCE1" font-family="Arial, sans-serif" font-size="25">1,4% pengguna Console terdampak, menurut OpenCode</text>
+  <g transform="translate(820 147)">
+    <rect x="0" y="0" width="280" height="350" rx="28" fill="#132443" stroke="#49698F" stroke-width="2"/>
+    <rect x="25" y="27" width="230" height="52" rx="13" fill="#20375C"/>
+    <circle cx="49" cy="53" r="7" fill="#EFBE61"/>
+    <rect x="66" y="47" width="118" height="11" rx="5.5" fill="#B8CBE4" fill-opacity=".72"/>
+    <text x="26" y="117" fill="#AFC2DB" font-family="Arial, sans-serif" font-size="15" font-weight="700" letter-spacing="1.4">EXTERNAL PROVIDERS</text>
+    <g>
+      <rect x="25" y="135" width="230" height="58" rx="13" fill="#1A3052" stroke="#36567F"/>
+      <circle cx="51" cy="164" r="11" fill="#E6F0FF"/>
+      <text x="73" y="169" fill="#EAF1FB" font-family="Arial, sans-serif" font-size="17">Provider key</text>
+      <rect x="25" y="206" width="230" height="58" rx="13" fill="#1A3052" stroke="#36567F"/>
+      <circle cx="51" cy="235" r="11" fill="#E6F0FF"/>
+      <text x="73" y="240" fill="#EAF1FB" font-family="Arial, sans-serif" font-size="17">Workspace</text>
+    </g>
+    <rect x="25" y="286" width="230" height="40" rx="12" fill="#E5A947"/>
+    <path d="M54 306h24m-7-7 7 7-7 7" stroke="#26334B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="91" y="312" fill="#26334B" font-family="Arial, sans-serif" font-size="16" font-weight="700">REVOKE &amp; REPLACE</text>
+  </g>
+  <text x="80" y="572" fill="#93A9C6" font-family="Arial, sans-serif" font-size="16" letter-spacing="1">TEGUHCODING.COM  /  18 OKTOBER 2026</text>
+</svg>
