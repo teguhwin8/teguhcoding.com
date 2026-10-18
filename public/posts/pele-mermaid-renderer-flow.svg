@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700" role="img" aria-labelledby="title desc">
+  <title id="title">Alur Pele: sintaks Mermaid menjadi SVG bertema dan responsif</title>
+  <desc id="desc">Diagram konseptual tiga langkah: developer menulis sintaks Mermaid, Pele merendernya dengan mesin layout sendiri, lalu aplikasi menampilkan SVG yang dapat mengikuti CSS variables dan lebar kontainer.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f3f7fb"/><stop offset="1" stop-color="#e8f5f2"/></linearGradient>
+    <linearGradient id="teal" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#20a899"/><stop offset="1" stop-color="#4d8bd2"/></linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%"><feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#213a60" flood-opacity=".12"/></filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0 10 5 0 10Z" fill="#7890a8"/></marker>
+  </defs>
+  <rect width="1200" height="700" rx="28" fill="url(#bg)"/>
+  <g stroke="#d0deea" stroke-width="1" opacity=".55"><path d="M40 72h1120M40 118h1120M40 164h1120M40 210h1120M40 256h1120M40 302h1120M40 348h1120M40 394h1120M40 440h1120M40 486h1120M40 532h1120M40 578h1120M40 624h1120"/></g>
+  <text x="64" y="77" fill="#213a59" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="30" font-weight="740">Dari teks diagram ke SVG yang mengikuti tema</text>
+  <text x="64" y="110" fill="#61758c" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="16">Pele mempertahankan sintaks Mermaid, tetapi memakai layout dan gaya visual sendiri.</text>
+  <g filter="url(#shadow)">
+    <rect x="64" y="177" width="300" height="271" rx="24" fill="#fff" stroke="#d7e2eb"/>
+    <rect x="64" y="177" width="300" height="70" rx="24" fill="#233958"/>
+    <path d="M64 224h300v23H64Z" fill="#233958"/>
+    <circle cx="104" cy="212" r="18" fill="#88a6c6"/>
+    <path d="M95 207h18M95 213h18M95 219h12" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+    <text x="139" y="209" fill="#fff" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="18" font-weight="700">1. Tulis diagram</text>
+    <text x="139" y="230" fill="#cedbea" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="12">sintaks Mermaid</text>
+    <rect x="87" y="277" width="254" height="135" rx="16" fill="#f0f4f8"/>
+    <text x="108" y="310" fill="#497a72" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="14">flowchart LR</text>
+    <text x="108" y="340" fill="#405772" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13">A[Input] --&gt; B[Output]</text>
+    <text x="108" y="379" fill="#8798aa" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12">teks biasa, mudah disunting</text>
+  </g>
+  <path d="M381 312h42" fill="none" stroke="#7890a8" stroke-width="3" marker-end="url(#arrow)"/>
+  <g filter="url(#shadow)">
+    <rect x="450" y="177" width="300" height="271" rx="24" fill="#fff" stroke="#c8dfdd"/>
+    <rect x="450" y="177" width="300" height="70" rx="24" fill="url(#teal)"/>
+    <path d="M450 224h300v23H450Z" fill="url(#teal)"/>
+    <circle cx="490" cy="212" r="18" fill="#ddf5ef"/>
+    <path d="M481 212h18M490 203v18M484 206l12 12M496 206l-12 12" stroke="#31998d" stroke-width="2.2" stroke-linecap="round"/>
+    <text x="525" y="209" fill="#fff" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="18" font-weight="700">2. Render dengan Pele</text>
+    <text x="525" y="230" fill="#e0f4ef" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="12">mesin layout mandiri</text>
+    <circle cx="600" cy="315" r="51" fill="#e5f5f1"/>
+    <circle cx="600" cy="315" r="29" fill="url(#teal)"/>
+    <text x="600" y="321" text-anchor="middle" fill="#fff" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="15" font-weight="750">P</text>
+    <path d="M536 380h128" stroke="#d7e5ed" stroke-width="2"/>
+    <text x="600" y="405" text-anchor="middle" fill="#536c85" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="13">render() atau mount()</text>
+  </g>
+  <path d="M768 312h42" fill="none" stroke="#7890a8" stroke-width="3" marker-end="url(#arrow)"/>
+  <g filter="url(#shadow)">
+    <rect x="836" y="177" width="300" height="271" rx="24" fill="#fff" stroke="#d7e2eb"/>
+    <rect x="836" y="177" width="300" height="70" rx="24" fill="#344c68"/>
+    <path d="M836 224h300v23H836Z" fill="#344c68"/>
+    <rect x="870" y="196" width="38" height="32" rx="7" fill="#a3b9d1"/>
+    <path d="M878 204h22M878 211h22M878 218h13" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+    <text x="925" y="209" fill="#fff" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="18" font-weight="700">3. Tampilkan SVG</text>
+    <text x="925" y="230" fill="#d6e2ed" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="12">di dalam aplikasi</text>
+    <rect x="861" y="278" width="250" height="130" rx="16" fill="#f1f6f6" stroke="#dce7e9"/>
+    <rect x="882" y="300" width="73" height="43" rx="11" fill="#d3ebe7" stroke="#99c9c1"/>
+    <text x="918" y="326" text-anchor="middle" fill="#347672" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="12" font-weight="650">Input</text>
+    <path d="M956 321h37" stroke="#8199ad" stroke-width="2.4" marker-end="url(#arrow)"/>
+    <rect x="1003" y="300" width="82" height="43" rx="11" fill="#e3e7fa" stroke="#bdc5eb"/>
+    <text x="1044" y="326" text-anchor="middle" fill="#59659a" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="12" font-weight="650">Output</text>
+    <text x="986" y="375" text-anchor="middle" fill="#697e93" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="12">tema via CSS variables</text>
+    <text x="986" y="394" text-anchor="middle" fill="#697e93" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="12">layout menyesuaikan kontainer</text>
+  </g>
+  <rect x="64" y="498" width="1072" height="104" rx="22" fill="#1e3553"/>
+  <text x="600" y="537" text-anchor="middle" fill="#e6f1fa" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="18" font-weight="700">Periksa ulang sebelum mengganti renderer di aplikasi yang sudah berjalan</text>
+  <text x="600" y="570" text-anchor="middle" fill="#b8c9da" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="14">Layout Pele berbeda; plugin eksternal Mermaid dan HTML bebas di label tidak didukung.</text>
+  <text x="64" y="647" fill="#778ba0" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="12">ILUSTRASI KONSEPTUAL TEGUHCODING  ·  BUKAN TANGKAPAN LAYAR PROYEK</text>
+</svg>
