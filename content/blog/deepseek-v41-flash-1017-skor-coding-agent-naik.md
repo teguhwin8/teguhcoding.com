@@ -6,30 +6,30 @@ date: "2026-10-17T17:10:39.000Z"
 cover_image: "/posts/deepseek-v41-flash-1017-cover.svg"
 ---
 
-DeepSeek merilis pembaruan **V4.1-Flash-1017** pada 17 Oktober 2026. Perusahaan mengklaim checkpoint ini lebih baik pada sejumlah tugas coding dan agent; skor Terminal-Bench 4.0, misalnya, naik dari 31,2 menjadi 42,3 dibanding versi V4.1-Flash sebelumnya. Angka itu berasal dari evaluasi DeepSeek sendiri, jadi menarik sebagai sinyal kemajuan, tetapi belum menjadi validasi independen.
+DeepSeek memperbarui model **V4.1-Flash** pada 17 Oktober. Pada evaluasi internal perusahaan, skor Terminal-Bench 4.0 naik dari 31,2 menjadi 42,3 dibanding checkpoint sebelumnya. DeepSeek juga melaporkan kenaikan di beberapa tes coding dan agent lainnya. Hasil ini belum direplikasi secara independen.
 
 ## Pembaruan checkpoint, bukan model API baru
 
-DeepSeek menyebutnya sebagai pembaruan minor untuk V4.1-Flash. Model di web dan aplikasi resminya sudah diperbarui, sedangkan pengguna API tetap memanggil `deepseek-flash` dengan metode dan harga yang sama. Artinya, integrasi yang sudah menggunakan nama model tersebut tidak perlu mengubah endpoint hanya untuk mendapat versi terbaru.
+DeepSeek menyebut rilis ini pembaruan minor. Model di situs dan aplikasi resminya sudah memakai checkpoint baru, sementara nama API tetap `deepseek-flash` dengan metode pemanggilan dan harga yang sama. Integrasi yang ada tidak perlu mengganti nama model atau endpoint.
 
-Nama `1017` merujuk pada tanggal pembaruan, 17 Oktober. Bagi developer, perubahan paling relevan ada pada klaim peningkatan untuk coding berbasis terminal, perbaikan repo, dan alur agent yang menjalankan beberapa langkah.
+Angka `1017` pada nama model merujuk ke tanggal rilis, 17 Oktober. DeepSeek menyoroti peningkatan untuk tugas terminal, perbaikan repo, dan alur agent bertahap.
 
 ## Kenaikan terbesar ada di tugas terminal
 
-Dalam tabel [changelog dan kartu model DeepSeek](https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017), skor Terminal-Bench 4.0 meningkat dari 31,2 ke 42,3. DeepSeek juga melaporkan kenaikan ProgramBench dari 20,3 ke 29,1 dan DeepSWE v1.1 dari 74,2 ke 77,0. Pada Agents’ Last Exam, skornya berubah dari 31,8 ke 35,4.
+Di [changelog dan model card DeepSeek](https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017), skor Terminal-Bench 4.0 berubah dari 31,2 menjadi 42,3. Skor ProgramBench naik dari 20,3 ke 29,1, DeepSWE v1.1 dari 74,2 ke 77,0, dan Agents’ Last Exam dari 31,8 ke 35,4.
 
 ![Perbandingan skor benchmark coding dan agent DeepSeek V4.1-Flash dengan checkpoint 1017](/posts/deepseek-v41-flash-benchmark.svg)
 
 *Perbandingan berdasarkan tabel yang diterbitkan DeepSeek. Hasil ini merupakan klaim pembuat model, bukan pengukuran independen.*
 
-DeepSeek mencatat Terminal-Bench dijalankan menggunakan framework Claude Code, sementara DeepSWE memakai Mini-SWE-V2. Detail harness tersebut penting karena skor agent bisa berubah tergantung alat dan konfigurasi yang membungkus model. Angka benchmark memberi petunjuk untuk memilih model yang layak dicoba, tetapi belum menjamin hasil yang sama pada proyek atau lingkungan kerja setiap developer.
+DeepSeek menjalankan Terminal-Bench dengan framework Claude Code dan DeepSWE dengan Mini-SWE-V2. Pilihan alat dan konfigurasinya dapat memengaruhi hasil benchmark agent. Karena itu, angka ini bisa menjadi alasan untuk mencoba modelnya, tetapi hasil pada proyek sendiri mungkin berbeda.
 
 ## API praktis, bobot terbuka untuk yang punya infrastruktur
 
-Untuk mencoba versi baru, jalur paling sederhana adalah API DeepSeek dengan nama model `deepseek-flash`; changelog menyatakan pemanggilan dan harga tetap sama. Checkpoint-nya juga tersedia di [Hugging Face dengan lisensi MIT](https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017), sehingga tim dapat mengunduh bobot dan mengatur deployment sendiri. Kartu model mencantumkan ukuran 763 miliar parameter dan menyatakan model itu belum tersedia lewat hosted Inference Provider Hugging Face saat diperiksa. Bobot terbuka memberi kendali, tetapi bukan berarti menjalankannya di laptop menjadi ringan.
+Untuk mencoba versi API, gunakan nama model `deepseek-flash`; cara pemanggilan dan harganya tetap sama menurut changelog. Checkpoint juga tersedia di [Hugging Face dengan lisensi MIT](https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017). Model card mencantumkan 763 miliar parameter dan, saat diperiksa, belum menawarkan hosted Inference Provider di Hugging Face. Tim bisa mengunduh bobotnya sendiri, tetapi perlu memperhitungkan kebutuhan perangkat untuk model sebesar itu.
 
 ## Ramai dibahas, tetapi benchmark tetap perlu diuji
 
-Pembaruan ini cepat menarik perhatian komunitas: diskusi [DeepSeek V4.1 Flash 1017 di Hacker News](https://news.ycombinator.com/item?id=50129121) telah mengumpulkan lebih dari 500 poin saat diperiksa. Itu menunjukkan banyak developer mengikuti kabar ini, bukan bukti bahwa hasil benchmark sudah direplikasi pihak lain.
+Pembaruan ini ramai dibicarakan di [Hacker News](https://news.ycombinator.com/item?id=50129121), dengan lebih dari 500 poin saat diperiksa. Antusiasme komunitas belum menggantikan pengujian independen atas angka benchmark.
 
-Untuk tim yang sedang memilih model coding, V4.1-Flash-1017 layak masuk daftar uji, terutama jika pekerjaan banyak melibatkan terminal dan perubahan lintas file. Sebelum memindahkan workflow, jalankan beberapa tugas representatif milik sendiri dan bandingkan tingkat keberhasilan, waktu, serta biaya. Klaim DeepSeek memberi alasan untuk mencoba checkpoint ini; keputusan produksi sebaiknya tetap bertumpu pada evaluasi di repo dan toolchain tim sendiri.
+Jika pekerjaan tim banyak melibatkan terminal atau perubahan lintas file, V4.1-Flash-1017 layak dicoba pada beberapa tugas nyata. Bandingkan tingkat keberhasilan, waktu, dan biaya dengan model yang sedang dipakai sebelum mengubah alur kerja.

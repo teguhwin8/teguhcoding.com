@@ -6,36 +6,36 @@ date: "2026-10-17T00:00:00.000Z"
 cover_image: "/posts/ai-job-search-claude-code-cover.svg"
 ---
 
-Repositori **AI Job Search** merangkai pencarian lowongan, penilaian kecocokan, penyesuaian CV, surat lamaran, hingga persiapan wawancara dalam alur berbasis Claude Code. Saat diperiksa pada 17 Oktober 2026, halaman [GitHub proyek ini](https://github.com/MadsLorentzen/ai-job-search) menampilkan sekitar 49,3 ribu stars dan 16,8 ribu fork. Angka itu menunjukkan besarnya perhatian komunitas, tetapi bukan jaminan bahwa AI akan meningkatkan peluang seseorang mendapat pekerjaan.
+**AI Job Search** adalah rangkaian perintah Claude Code untuk mencari lowongan, menilai kecocokan, menyiapkan CV dan surat lamaran, lalu berlatih wawancara. Saat diperiksa pada 17 Oktober 2026, repositorinya memiliki sekitar 49,3 ribu stars dan 16,8 ribu fork. Proyek ini jelas menarik perhatian komunitas, meski jumlah tersebut tak menjamin hasil pencarian kerja penggunanya.
 
 ## Dari profil sampai persiapan wawancara
 
-Proyek buatan Mads Lorentzen ini bukan situs lowongan atau bot yang otomatis mengirim lamaran. Ia menyediakan rangkaian perintah yang membantu pengguna mengelola prosesnya sendiri di dalam workspace Claude Code. Proyeknya bersifat open source dan independen; README menegaskan bahwa AI Job Search tidak dibuat, didukung, atau dikelola oleh Anthropic.
+Mads Lorentzen membuatnya sebagai alat bantu di workspace Claude Code, bukan situs lowongan atau bot yang mengirim lamaran secara otomatis. Kodenya open source dan independen. README juga menegaskan bahwa AI Job Search tidak dibuat, didukung, atau dikelola oleh Anthropic.
 
-Perintah `/setup` membangun profil kandidat dari CV dan dokumen pendukung, teks yang diberikan pengguna, atau sesi tanya jawab. `/scrape` mencari lowongan di portal yang tersedia, menghapus hasil duplikat, lalu menyajikan posisi berdasarkan kecocokan. Jika hasil pencarian banyak, `/rank` bisa membantu membuat daftar prioritas.
+Alurnya dimulai dari `/setup`, yang menyusun profil kandidat dari CV, dokumen, atau jawaban pengguna. Lalu `/scrape` mencari lowongan di portal yang didukung, menghapus duplikat, dan menampilkan posisi yang paling cocok. Jika daftar hasilnya panjang, `/rank` membantu menentukan mana yang perlu dilihat lebih dulu.
 
-Untuk posisi yang dipilih, `/apply` menilai kecocokan kandidat dengan deskripsi pekerjaan, menyiapkan CV dan surat lamaran yang disesuaikan, lalu menjalankan proses drafter-reviewer: draf dikritik dan direvisi sebelum hasilnya diberikan kepada pengguna. Ada pula `/interview` untuk menyusun persiapan wawancara. Detail perintah dan hasilnya dijelaskan di [README AI Job Search](https://github.com/MadsLorentzen/ai-job-search/blob/master/README.md).
+Setelah memilih posisi, pengguna bisa menjalankan `/apply` untuk membandingkan profil dengan deskripsi pekerjaan dan menyiapkan CV serta surat lamaran yang disesuaikan. Drafnya melewati tahap review sebelum dikembalikan. Perintah `/interview` membantu menyiapkan sesi wawancara. Contoh dan detail tiap perintah ada di [README AI Job Search](https://github.com/MadsLorentzen/ai-job-search/blob/master/README.md).
 
 ![Diagram alur AI Job Search dari pengaturan profil hingga persiapan wawancara](/posts/ai-job-search-workflow.svg)
 
 ## Cerita pribadi di balik proyeknya
 
-Lorentzen menulis bahwa ia membuat framework ini setelah kehilangan pekerjaannya pada akhir 2025. Dalam [README proyek](https://github.com/MadsLorentzen/ai-job-search/blob/master/README.md), ia menceritakan telah mengirim 69 lamaran yang disesuaikan, mendapat 20 wawancara pertama, lalu menandatangani satu kontrak sebelum mulai bekerja sebagai AI engineer pada Juni 2026.
+Lorentzen mulai membuat alat ini setelah kehilangan pekerjaan pada akhir 2025. Dalam [README](https://github.com/MadsLorentzen/ai-job-search/blob/master/README.md), ia bercerita sudah mengirim 69 lamaran yang disesuaikan, mendapat 20 wawancara tahap awal, dan menandatangani satu kontrak sebelum mulai bekerja sebagai AI engineer pada Juni 2026.
 
-Itu adalah pengalaman pribadi maintainer, bukan studi yang membuktikan framework ini akan memberi hasil serupa bagi pengguna lain. Nilai yang lebih mudah dinilai dari repositorinya adalah struktur kerja yang terbuka: kriteria evaluasi, berkas profil, templat dokumen, dan langkah review dapat dibaca serta diubah sendiri.
+Angka tersebut adalah pengalaman pribadi maintainer, bukan hasil studi tentang peluang pengguna lain. Yang bisa dinilai langsung dari repo adalah cara kerjanya: kriteria evaluasi, berkas profil, templat dokumen, dan tahap review terbuka untuk dibaca maupun diubah.
 
-Proyeknya juga masih diperbarui. Rilis terbaru yang tercantum saat artikel ini ditulis adalah [v1.7.2, terbit 29 September 2026](https://github.com/MadsLorentzen/ai-job-search/releases/tag/v1.7.2). Catatan rilisnya mencakup pemeriksaan tata letak PDF yang lebih terukur, validasi input pada alat pencarian portal, dan perbaikan agar beberapa alat lebih tahan terhadap teks non-ASCII.
+Repo ini masih menerima pembaruan. Rilis terbaru saat artikel ini ditulis adalah [v1.7.2 pada 29 September 2026](https://github.com/MadsLorentzen/ai-job-search/releases/tag/v1.7.2). Isinya antara lain pemeriksaan tata letak PDF, validasi input pencarian portal, dan dukungan yang lebih baik untuk teks non-ASCII.
 
 ## Bisa dipakai untuk pencarian kerja di Indonesia?
 
-README menyebut alur inti seperti penyusunan profil, evaluasi kecocokan, dan penulisan dokumen dirancang agar tidak terikat pada satu bahasa atau negara. Namun, sejumlah portal bawaan berfokus pada pasar Denmark. Proyek ini juga menyertakan pencarian LinkedIn dan FreeHire yang lebih mudah digunakan lintas negara serta perintah `/add-portal` untuk menambahkan portal lain.
+Penyusunan profil, penilaian kecocokan, dan penulisan dokumennya dirancang agar bisa dipakai lintas bahasa dan negara. Namun, beberapa portal bawaan berfokus pada pasar Denmark. Ada juga pencarian LinkedIn dan FreeHire, serta perintah `/add-portal` untuk menambahkan sumber lowongan lain.
 
-Artinya, pengguna Indonesia mungkin perlu menyesuaikan pencarian dengan situs lowongan lokal dan mengecek sendiri apakah hasilnya relevan. Setup-nya juga lebih teknis daripada memakai layanan web siap pakai: repo mencantumkan Claude Code, Python, Bun, serta LaTeX sebagai prasyarat untuk alur lengkap. Rilis dan fitur yang tercantum dapat berubah, jadi periksa [panduan instalasi terbaru](https://github.com/MadsLorentzen/ai-job-search/blob/master/SETUP.md) sebelum mencoba.
+Pengguna di Indonesia mungkin perlu menambahkan portal lokal dan memeriksa relevansi hasilnya sendiri. Setup-nya juga perlu beberapa alat: Claude Code, Python, Bun, dan LaTeX untuk menjalankan alur lengkap. Cek [panduan instalasi](https://github.com/MadsLorentzen/ai-job-search/blob/master/SETUP.md) sebelum mencoba karena prasyarat dapat berubah.
 
 ## Jangan abaikan privasi dan batas keamanan
 
-Repositori ini memberi peringatan jelas: fork dari proyek publik akan tetap publik, sementara `/setup` dapat menulis nama, kontak, riwayat kerja, dan ekspektasi gaji ke berkas yang dilacak Git. Untuk pencarian pribadi, maintainer menyarankan memakai repo privat dengan proyek ini sebagai upstream, bukan menyimpan profil di fork publik. Lihat bagian terkait di [README](https://github.com/MadsLorentzen/ai-job-search/blob/master/README.md) dan [panduan setup](https://github.com/MadsLorentzen/ai-job-search/blob/master/SETUP.md).
+Ada satu hal yang perlu diperhatikan sebelum mengisi profil. Fork dari repo publik tetap publik, sedangkan `/setup` dapat menyimpan nama, kontak, riwayat kerja, dan ekspektasi gaji di berkas yang dilacak Git. Untuk penggunaan pribadi, maintainer menyarankan repo privat dengan proyek ini sebagai upstream. Detailnya ada di [README](https://github.com/MadsLorentzen/ai-job-search/blob/master/README.md) dan [panduan setup](https://github.com/MadsLorentzen/ai-job-search/blob/master/SETUP.md).
 
-Menurut [kebijakan keamanan proyek](https://github.com/MadsLorentzen/ai-job-search/blob/master/SECURITY.md), profil dan tracker yang sudah diisi dilindungi oleh aturan `gitignore`, sedangkan agent tetap membaca konten postingan kerja yang tidak tepercaya bersama data kandidat. Proyek memakai aturan instruksi untuk membatasi pengaruh teks di lowongan, tetapi maintainer menegaskan pertahanan itu bukan sandbox. Pengguna tetap perlu meninjau input dan hasil agent, terutama saat memproses posting dari situs yang tidak dikenal.
+Menurut [kebijakan keamanan](https://github.com/MadsLorentzen/ai-job-search/blob/master/SECURITY.md), aturan `gitignore` melindungi profil dan tracker yang sudah diisi. Namun, agent tetap membaca isi lowongan—yang bisa saja memuat instruksi tak tepercaya—bersama data kandidat. Aturan prompt membantu membatasi pengaruh teks tersebut, tetapi bukan sandbox. Tinjau lowongan dan hasil agent, terutama jika sumbernya tidak dikenal.
 
-AI Job Search menarik karena memperlakukan pencarian kerja sebagai workflow yang bisa diinspeksi dan disesuaikan, bukan sekadar meminta AI “buatkan CV”. Bagi developer Indonesia, repo ini layak dipelajari sebagai kerangka kerja. Tetapi portal lokal, klaim dalam dokumen lamaran, serta keamanan profil tetap perlu diperiksa manusia sebelum setiap aplikasi dikirim.
+AI Job Search menawarkan alur pencarian kerja yang bisa diperiksa dan disesuaikan, dari memilih posisi sampai menyiapkan dokumen. Developer Indonesia bisa mempelajari strukturnya atau menambahkan portal lokal. Sebelum mengirim lamaran, periksa kembali isi dokumen, lowongan, dan tempat profil disimpan.
