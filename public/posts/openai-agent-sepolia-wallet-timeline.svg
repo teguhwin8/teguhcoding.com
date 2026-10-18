@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="470" viewBox="0 0 1100 470" fill="none">
+  <defs>
+    <linearGradient id="panel" x1="0" y1="0" x2="1100" y2="470" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#111A2D"/>
+      <stop offset="1" stop-color="#1B2A41"/>
+    </linearGradient>
+  </defs>
+  <rect width="1100" height="470" rx="26" fill="url(#panel)"/>
+  <text x="58" y="62" fill="#EAF0F8" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="27" font-weight="700">Dari tugas coding sampai laporan publik</text>
+  <text x="60" y="94" fill="#A4B4CA" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="16">Kronologi berdasarkan laporan OpenAI; tanggal aktivitas dan tanggal pengungkapan berbeda.</text>
+  <path d="M114 244H977" stroke="#516580" stroke-width="4" stroke-linecap="round"/>
+  <path d="M977 244L961 234V254L977 244Z" fill="#516580"/>
+
+  <circle cx="142" cy="244" r="16" fill="#6CE0C0" stroke="#153B3A" stroke-width="7"/>
+  <circle cx="430" cy="244" r="16" fill="#F4C66A" stroke="#3A3323" stroke-width="7"/>
+  <circle cx="739" cy="244" r="16" fill="#F29B91" stroke="#3D292F" stroke-width="7"/>
+  <circle cx="971" cy="244" r="16" fill="#8FB7F5" stroke="#273852" stroke-width="7"/>
+
+  <rect x="61" y="130" width="203" height="73" rx="14" fill="#17253A" stroke="#466078"/>
+  <text x="80" y="160" fill="#81E2C5" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="16" font-weight="700">26 JUNI 2026</text>
+  <text x="80" y="185" fill="#EDF2FA" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="16">Tugas deploy di Sepolia</text>
+  <path d="M142 203V224" stroke="#6CE0C0" stroke-width="2"/>
+
+  <rect x="318" y="282" width="224" height="94" rx="14" fill="#242B35" stroke="#8A7143"/>
+  <text x="338" y="312" fill="#F4C66A" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="16" font-weight="700">362 ALAMAT DIPERIKSA</text>
+  <text x="338" y="339" fill="#EDF2FA" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="16">1 wallet uji dipakai</text>
+  <text x="338" y="361" fill="#B7C3D3" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="14">tanpa izin pemilik akun</text>
+  <path d="M430 261V282" stroke="#F4C66A" stroke-width="2"/>
+
+  <rect x="617" y="130" width="244" height="73" rx="14" fill="#2B202A" stroke="#80505A"/>
+  <text x="638" y="160" fill="#F29B91" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="16" font-weight="700">25 SEPTEMBER 2026</text>
+  <text x="638" y="185" fill="#EDF2FA" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="16">Ditemukan saat peninjauan</text>
+  <path d="M739 203V224" stroke="#F29B91" stroke-width="2"/>
+
+  <rect x="869" y="282" width="174" height="73" rx="14" fill="#202A3A" stroke="#526A8B"/>
+  <text x="890" y="312" fill="#9ABCF2" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="16" font-weight="700">15 OKTOBER</text>
+  <text x="890" y="338" fill="#EDF2FA" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="16">Laporan terbit</text>
+  <path d="M971 261V282" stroke="#8FB7F5" stroke-width="2"/>
+
+  <text x="61" y="425" fill="#A8B8CC" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="15">Sepolia adalah testnet: biaya dibayar dengan token uji, bukan ETH mainnet.</text>
+</svg>
