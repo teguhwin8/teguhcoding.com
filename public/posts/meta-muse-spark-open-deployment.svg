@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700" role="img" aria-labelledby="title desc">
+  <title id="title">Pilihan deployment Muse Spark Open dan kebutuhan perangkat</title>
+  <desc id="desc">Diagram konseptual: model menerima teks, gambar, audio, dan video; developer dapat mengaksesnya lewat API atau menjalankan bobot sendiri dengan kebutuhan memori tinggi.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f5f7fc"/><stop offset="1" stop-color="#eaf4f2"/></linearGradient>
+    <linearGradient id="model" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7771df"/><stop offset="1" stop-color="#36ad9c"/></linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%"><feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#243650" flood-opacity=".13"/></filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0 10 5 0 10Z" fill="#8093a8"/></marker>
+  </defs>
+  <rect width="1200" height="700" rx="28" fill="url(#bg)"/>
+  <g stroke="#d7e1ea" stroke-width="1" opacity=".65"><path d="M40 72h1120M40 118h1120M40 164h1120M40 210h1120M40 256h1120M40 302h1120M40 348h1120M40 394h1120M40 440h1120M40 486h1120M40 532h1120M40 578h1120M40 624h1120"/></g>
+  <text x="64" y="77" fill="#263b57" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="30" font-weight="740">Dari model ke lingkungan kerja</text>
+  <text x="64" y="110" fill="#61758c" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="16">Bobot Muse Spark Open tersedia lewat beberapa runtime dan layanan inference.</text>
+  <g filter="url(#shadow)">
+    <rect x="64" y="165" width="250" height="295" rx="24" fill="#fff" stroke="#d8e2eb"/>
+    <rect x="64" y="165" width="250" height="66" rx="24" fill="#263b57"/><path d="M64 210h250v21H64Z" fill="#263b57"/>
+    <text x="92" y="206" fill="#fff" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="18" font-weight="700">1. Masukan</text>
+    <text x="91" y="267" fill="#657a91" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="14">Muse Spark Open menerima</text>
+    <g font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="15" font-weight="650">
+      <rect x="91" y="289" width="88" height="42" rx="13" fill="#e8eaff" stroke="#d5d8f3"/><text x="135" y="316" text-anchor="middle" fill="#5a5d99">teks</text>
+      <rect x="194" y="289" width="88" height="42" rx="13" fill="#e1f4ef" stroke="#c5e5db"/><text x="238" y="316" text-anchor="middle" fill="#397a70">gambar</text>
+      <rect x="91" y="348" width="88" height="42" rx="13" fill="#fff1dd" stroke="#f0dfc2"/><text x="135" y="375" text-anchor="middle" fill="#936b32">audio</text>
+      <rect x="194" y="348" width="88" height="42" rx="13" fill="#e9f0f8" stroke="#d6e1ed"/><text x="238" y="375" text-anchor="middle" fill="#536f8c">video</text>
+    </g>
+    <text x="91" y="427" fill="#718398" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="13">Output model: teks</text>
+  </g>
+  <path d="M328 311h58" fill="none" stroke="#8093a8" stroke-width="3" marker-end="url(#arrow)"/>
+  <g filter="url(#shadow)">
+    <rect x="397" y="165" width="390" height="295" rx="24" fill="#fff" stroke="#d6dfea"/>
+    <rect x="397" y="165" width="390" height="66" rx="24" fill="url(#model)"/><path d="M397 210h390v21H397Z" fill="#5b87bf"/>
+    <text x="430" y="206" fill="#fff" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="18" font-weight="700">2. Muse Spark Open</text>
+    <circle cx="592" cy="318" r="74" fill="#eef0ff"/>
+    <circle cx="592" cy="318" r="53" fill="url(#model)"/>
+    <circle cx="592" cy="318" r="31" fill="#243951"/>
+    <text x="592" y="325" text-anchor="middle" fill="#fff" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="18" font-weight="800">MoE</text>
+    <g fill="#827be0"><circle cx="550" cy="286" r="5"/><circle cx="634" cy="286" r="5"/><circle cx="550" cy="350" r="5"/><circle cx="634" cy="350" r="5"/></g>
+    <text x="592" y="415" text-anchor="middle" fill="#53677f" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="15" font-weight="650">816B total · 42B aktif · konteks 1 juta</text>
+  </g>
+  <path d="M800 310h51v-67h43M851 310v108h43" fill="none" stroke="#8093a8" stroke-width="3" marker-end="url(#arrow)"/>
+  <g filter="url(#shadow)">
+    <rect x="904" y="165" width="232" height="130" rx="22" fill="#fff" stroke="#d7e2ea"/>
+    <rect x="904" y="165" width="232" height="52" rx="22" fill="#dff2ed"/><path d="M904 196h232v21H904Z" fill="#dff2ed"/>
+    <text x="930" y="199" fill="#36786f" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="16" font-weight="700">3A. Hosted API</text>
+    <text x="930" y="245" fill="#60758d" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="13">Baseten · Groq · Modal</text>
+    <text x="930" y="269" fill="#60758d" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="13">OpenRouter · lainnya</text>
+    <rect x="904" y="330" width="232" height="130" rx="22" fill="#fff" stroke="#d7e2ea"/>
+    <rect x="904" y="330" width="232" height="52" rx="22" fill="#e9e8fb"/><path d="M904 361h232v21H904Z" fill="#e9e8fb"/>
+    <text x="930" y="364" fill="#5f5b9d" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="16" font-weight="700">3B. Bobot sendiri</text>
+    <text x="930" y="409" fill="#60758d" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="13">vLLM · llama.cpp · MLX</text>
+    <text x="930" y="434" fill="#60758d" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="13">Memori kelas server</text>
+  </g>
+  <rect x="64" y="505" width="1072" height="103" rx="22" fill="#213751"/>
+  <text x="600" y="544" text-anchor="middle" fill="#eef4fb" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="17" font-weight="700">Perkiraan memori dari model card Meta untuk bobot resmi</text>
+  <text x="600" y="578" text-anchor="middle" fill="#bdd0e1" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="15">NVFP4: ≥700 GB VRAM   ·   BF16: sekitar 2 TB   ·   Apple silicon: MLX pada beberapa Mac</text>
+  <text x="64" y="650" fill="#778ba0" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="12">ILUSTRASI KONSEPTUAL TEGUHCODING  ·  BUKAN DIAGRAM ARSITEKTUR INTERNAL MODEL</text>
+</svg>

@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Muse Spark Open, model multimodal Meta dengan 816 miliar parameter</title>
+  <desc id="desc">Ilustrasi konseptual menampilkan Muse Spark Open sebagai model multimodal dengan 816 miliar parameter total, 42 miliar aktif per token, dan konteks satu juta token.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#111a33"/><stop offset="1" stop-color="#20334d"/></linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8a7cff"/><stop offset="1" stop-color="#46d6bf"/></linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%"><feDropShadow dx="0" dy="14" stdDeviation="18" flood-color="#050914" flood-opacity=".36"/></filter>
+  </defs>
+  <rect width="1200" height="630" rx="30" fill="url(#bg)"/>
+  <g opacity=".11" stroke="#b7c9dc" stroke-width="1">
+    <path d="M0 72h1200M0 120h1200M0 168h1200M0 216h1200M0 264h1200M0 312h1200M0 360h1200M0 408h1200M0 456h1200M0 504h1200M0 552h1200M0 600h1200"/>
+    <path d="M48 0v630M96 0v630M144 0v630M192 0v630M240 0v630M288 0v630M336 0v630M384 0v630M432 0v630M480 0v630M528 0v630M576 0v630M624 0v630M672 0v630M720 0v630M768 0v630M816 0v630M864 0v630M912 0v630M960 0v630M1008 0v630M1056 0v630M1104 0v630M1152 0v630"/>
+  </g>
+  <circle cx="1040" cy="125" r="220" fill="#7669ef" opacity=".10"/>
+  <circle cx="1100" cy="515" r="250" fill="#45d6bd" opacity=".08"/>
+  <text x="72" y="86" fill="#a9a0ff" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="17" font-weight="700" letter-spacing="2.4">META · OPEN-WEIGHT MULTIMODAL MODEL</text>
+  <text x="72" y="183" fill="#f5f7fc" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="64" font-weight="760">Muse Spark Open</text>
+  <text x="75" y="234" fill="#c4d1e2" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="23">Bobot model untuk coding dan pekerjaan agent</text>
+  <g transform="translate(75 282)">
+    <rect width="145" height="62" rx="16" fill="#243a59" stroke="#425b7b"/>
+    <text x="18" y="27" fill="#91a9c5" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="12" font-weight="700" letter-spacing="1.2">TOTAL</text>
+    <text x="18" y="49" fill="#f3f6fd" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="21" font-weight="750">816B</text>
+    <rect x="158" width="145" height="62" rx="16" fill="#243a59" stroke="#425b7b"/>
+    <text x="176" y="27" fill="#91a9c5" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="12" font-weight="700" letter-spacing="1.2">AKTIF / TOKEN</text>
+    <text x="176" y="49" fill="#f3f6fd" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="21" font-weight="750">42B</text>
+    <rect x="316" width="170" height="62" rx="16" fill="#243a59" stroke="#425b7b"/>
+    <text x="334" y="27" fill="#91a9c5" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="12" font-weight="700" letter-spacing="1.2">KONTEKS</text>
+    <text x="334" y="49" fill="#f3f6fd" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="21" font-weight="750">1 juta token</text>
+  </g>
+  <text x="76" y="417" fill="#9fc5d3" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17">teks  ·  gambar  ·  audio  ·  video</text>
+  <text x="76" y="452" fill="#8298b0" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="16">Bobot tersedia; deployment lokal perlu memori besar.</text>
+  <g filter="url(#shadow)">
+    <rect x="690" y="115" width="430" height="390" rx="30" fill="#f2f5fb"/>
+    <rect x="718" y="143" width="374" height="58" rx="16" fill="#1d2e49"/>
+    <circle cx="746" cy="172" r="6" fill="#8f83ff"/><circle cx="766" cy="172" r="6" fill="#61d7c1"/><circle cx="786" cy="172" r="6" fill="#f3c675"/>
+    <text x="815" y="178" fill="#dbe6f2" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="15" font-weight="700">MODEL MULTIMODAL</text>
+    <g transform="translate(755 239)">
+      <rect width="93" height="42" rx="13" fill="#e5e9ff" stroke="#c9cdf2"/><text x="46" y="27" text-anchor="middle" fill="#595a9a" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="14" font-weight="650">teks</text>
+      <rect x="106" width="93" height="42" rx="13" fill="#dff3ee" stroke="#b9dfd4"/><text x="152" y="27" text-anchor="middle" fill="#35796e" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="14" font-weight="650">gambar</text>
+      <rect x="212" width="93" height="42" rx="13" fill="#fff0da" stroke="#f0d8ad"/><text x="258" y="27" text-anchor="middle" fill="#936723" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="14" font-weight="650">audio</text>
+      <rect x="318" width="93" height="42" rx="13" fill="#e7eef8" stroke="#d0dce9"/><text x="364" y="27" text-anchor="middle" fill="#536e8c" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="14" font-weight="650">video</text>
+    </g>
+    <path d="M936 290v33" stroke="#8796ac" stroke-width="3"/>
+    <circle cx="936" cy="376" r="71" fill="#e5e8fb"/>
+    <circle cx="936" cy="376" r="50" fill="url(#accent)"/>
+    <circle cx="936" cy="376" r="30" fill="#1d2e49"/>
+    <text x="936" y="382" text-anchor="middle" fill="#fff" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="17" font-weight="800">M</text>
+    <g fill="#8275ed"><circle cx="895" cy="350" r="5"/><circle cx="976" cy="350" r="5"/><circle cx="895" cy="402" r="5"/><circle cx="976" cy="402" r="5"/></g>
+    <text x="936" y="470" text-anchor="middle" fill="#536781" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="14" font-weight="650">input beragam · output teks</text>
+  </g>
+  <rect x="75" y="550" width="1045" height="1" fill="#52677f" opacity=".72"/>
+  <text x="75" y="583" fill="#90a4bb" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="13">TEGUHCODING.COM  ·  ILUSTRASI KONSEPTUAL, BUKAN TANGKAPAN LAYAR META</text>
+</svg>
