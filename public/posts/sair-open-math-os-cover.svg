@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Ilustrasi Open Math OS dan riset matematika berbantuan AI</title>
+  <desc id="desc">Diagram editorial abstrak: peneliti dan agen AI terhubung ke ruang komputasi serta bukti matematika formal.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1530"/>
+      <stop offset="1" stop-color="#111f46"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1a2b59"/>
+      <stop offset="1" stop-color="#172447"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0" stop-color="#48d6cf"/>
+      <stop offset="1" stop-color="#a890ff"/>
+    </linearGradient>
+    <filter id="glow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="16" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="940" cy="305" r="205" fill="#5366ff" opacity=".12" filter="url(#glow)"/>
+  <path d="M0 502C209 433 330 591 525 514s315-86 675-18v134H0Z" fill="#102044" opacity=".9"/>
+  <g fill="none" stroke="#6c83bc" stroke-opacity=".22">
+    <path d="M60 104h355M60 124h250M60 144h310"/>
+    <circle cx="1070" cy="105" r="2"/><circle cx="1100" cy="105" r="2"/><circle cx="1130" cy="105" r="2"/>
+    <path d="M855 78v405M882 78v405M909 78v405M936 78v405M963 78v405M990 78v405M1017 78v405M1044 78v405M1071 78v405M1098 78v405M1125 78v405M1152 78v405"/>
+    <path d="M825 112h360M825 142h360M825 172h360M825 202h360M825 232h360M825 262h360M825 292h360M825 322h360M825 352h360M825 382h360M825 412h360M825 442h360"/>
+  </g>
+  <g transform="translate(92 188)">
+    <rect x="0" y="0" width="628" height="318" rx="26" fill="url(#panel)" stroke="#536b9e" stroke-width="2"/>
+    <rect x="0" y="0" width="628" height="50" rx="26" fill="#22345f"/>
+    <path d="M0 26a26 26 0 0 1 26-26h576a26 26 0 0 1 26 26v24H0Z" fill="#22345f"/>
+    <circle cx="30" cy="25" r="6" fill="#ff7d91"/><circle cx="53" cy="25" r="6" fill="#ffd36c"/><circle cx="76" cy="25" r="6" fill="#58dfc6"/>
+    <rect x="31" y="78" width="159" height="208" rx="14" fill="#121e3c" stroke="#314777"/>
+    <rect x="53" y="101" width="104" height="10" rx="5" fill="#6882bf" opacity=".8"/>
+    <rect x="53" y="128" width="119" height="8" rx="4" fill="#45608f"/>
+    <rect x="53" y="150" width="91" height="8" rx="4" fill="#45608f"/>
+    <rect x="53" y="188" width="116" height="8" rx="4" fill="#45608f"/>
+    <rect x="53" y="210" width="84" height="8" rx="4" fill="#45608f"/>
+    <rect x="53" y="248" width="96" height="21" rx="10" fill="#183c58" stroke="#3dccc4"/>
+    <circle cx="67" cy="258" r="4" fill="#54ded2"/>
+    <rect x="214" y="78" width="382" height="126" rx="16" fill="#152343" stroke="#38517f"/>
+    <text x="243" y="118" fill="#a8c1f2" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20">theorem proof_idea</text>
+    <text x="243" y="154" fill="#75e1d2" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18">  := by</text>
+    <text x="243" y="183" fill="#c3a8ff" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18">     exact h₁.trans h₂</text>
+    <rect x="214" y="222" width="178" height="64" rx="14" fill="#192c50" stroke="#3dccc4"/>
+    <circle cx="242" cy="254" r="10" fill="none" stroke="#65ded3" stroke-width="2"/>
+    <path d="M236 254h12M242 248v12" stroke="#65ded3" stroke-width="2"/>
+    <rect x="262" y="244" width="94" height="8" rx="4" fill="#8ca7d7"/>
+    <rect x="262" y="261" width="72" height="6" rx="3" fill="#526c9b"/>
+    <rect x="410" y="222" width="186" height="64" rx="14" fill="#201f4a" stroke="#9282f7"/>
+    <circle cx="438" cy="254" r="10" fill="none" stroke="#b2a2ff" stroke-width="2"/>
+    <path d="M433 254h10M438 249v10" stroke="#b2a2ff" stroke-width="2"/>
+    <rect x="458" y="244" width="105" height="8" rx="4" fill="#a79ee3"/>
+    <rect x="458" y="261" width="75" height="6" rx="3" fill="#665fa4"/>
+  </g>
+  <g fill="none" stroke="url(#accent)" stroke-width="3" stroke-linecap="round">
+    <path d="M720 347h71q22 0 22-22v-25q0-22 22-22h12"/>
+    <path d="M720 390h75q20 0 20 21v25q0 22 22 22h9"/>
+  </g>
+  <g transform="translate(863 246)">
+    <circle cx="68" cy="68" r="66" fill="#17294e" stroke="#5687c0" stroke-width="2"/>
+    <circle cx="68" cy="48" r="18" fill="none" stroke="#a7bbeb" stroke-width="3"/>
+    <path d="M34 112c3-22 16-34 34-34s31 12 34 34" fill="none" stroke="#a7bbeb" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="180" cy="68" r="51" fill="#211f50" stroke="#9d8df5" stroke-width="2"/>
+    <path d="M163 68h34M180 51v34M168 56l24 24M192 56l-24 24" stroke="#b4a8ff" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="122" cy="68" r="5" fill="#54ded2" filter="url(#glow)"/>
+  </g>
+  <g transform="translate(847 449)" fill="#94acd8" opacity=".86">
+    <rect x="0" y="0" width="255" height="8" rx="4"/>
+    <rect x="32" y="18" width="189" height="6" rx="3" opacity=".6"/>
+  </g>
+  <text x="94" y="567" fill="#e6edff" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="24" font-weight="600" letter-spacing=".4">Ruang kerja untuk matematika dan AI</text>
+  <text x="94" y="598" fill="#94a9d2" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="15" letter-spacing="2">ILUSTRASI EDITORIAL · OPEN MATH OS</text>
+</svg>

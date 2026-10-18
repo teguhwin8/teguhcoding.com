@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">Alur kerja riset matematika dengan Open Math OS</title>
+  <desc id="desc">Peneliti mengerjakan proyek cloud dengan model dan alat ilmiah; agent mengusulkan pendekatan, lalu peneliti memeriksa hasil menggunakan Lean dan Mathlib.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f4f7ff"/><stop offset="1" stop-color="#e8f4f7"/></linearGradient>
+    <linearGradient id="teal" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#10a9a0"/><stop offset="1" stop-color="#2879b6"/></linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%"><feDropShadow dx="0" dy="9" stdDeviation="12" flood-color="#263e66" flood-opacity=".12"/></filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0 10 5 0 10Z" fill="#788bab"/></marker>
+  </defs>
+  <rect width="1200" height="720" rx="28" fill="url(#bg)"/>
+  <g fill="none" stroke="#cdd8e9" stroke-width="2" opacity=".65">
+    <path d="M36 83h1128M36 127h1128M36 171h1128M36 215h1128M36 259h1128M36 303h1128M36 347h1128M36 391h1128M36 435h1128M36 479h1128M36 523h1128M36 567h1128M36 611h1128M36 655h1128"/>
+    <path d="M83 36v648M127 36v648M171 36v648M215 36v648M259 36v648M303 36v648M347 36v648M391 36v648M435 36v648M479 36v648M523 36v648M567 36v648M611 36v648M655 36v648M699 36v648M743 36v648M787 36v648M831 36v648M875 36v648M919 36v648M963 36v648M1007 36v648M1051 36v648M1095 36v648"/>
+  </g>
+  <text x="70" y="78" fill="#263955" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="29" font-weight="700">Alur kerja riset dalam satu proyek</text>
+  <text x="70" y="112" fill="#62728c" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="16">AI mengusulkan langkah; peneliti memeriksa dan menentukan hasil.</text>
+
+  <g filter="url(#shadow)">
+    <rect x="70" y="202" width="226" height="300" rx="24" fill="#fff" stroke="#d7e0ed"/>
+    <rect x="70" y="202" width="226" height="68" rx="24" fill="#172c52"/>
+    <path d="M70 246h226v24H70Z" fill="#172c52"/>
+    <circle cx="111" cy="236" r="16" fill="#7d9bc9"/>
+    <path d="M83 285c4-22 15-33 28-33s24 11 28 33" fill="#9bb1d5"/>
+    <text x="157" y="232" fill="#fff" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="17" font-weight="650">Peneliti</text>
+    <text x="157" y="255" fill="#c9d6ed" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="12">memilih pertanyaan</text>
+    <text x="96" y="330" fill="#334663" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="15" font-weight="600">Menyusun proyek</text>
+    <text x="96" y="360" fill="#66758b" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="13">• argumen dan literatur</text>
+    <text x="96" y="385" fill="#66758b" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="13">• contoh dan eksperimen</text>
+    <text x="96" y="410" fill="#66758b" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="13">• kode atau bukti formal</text>
+    <rect x="96" y="443" width="174" height="34" rx="17" fill="#edf3ff"/>
+    <text x="183" y="465" text-anchor="middle" fill="#42608e" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="12" font-weight="600">workspace tim</text>
+  </g>
+
+  <path d="M318 352h63" fill="none" stroke="#788bab" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <g filter="url(#shadow)">
+    <rect x="404" y="176" width="392" height="352" rx="28" fill="#fff" stroke="#b9cce4" stroke-width="2"/>
+    <rect x="404" y="176" width="392" height="74" rx="28" fill="url(#teal)"/>
+    <path d="M404 224h392v26H404Z" fill="url(#teal)"/>
+    <text x="600" y="221" text-anchor="middle" fill="#fff" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="20" font-weight="700">Proyek cloud Open Math OS</text>
+    <rect x="438" y="276" width="324" height="78" rx="18" fill="#f0f6ff" stroke="#d5e2f1"/>
+    <circle cx="476" cy="315" r="21" fill="#dce9ff"/>
+    <path d="M467 315h18M476 306v18M469 308l14 14M483 308l-14 14" stroke="#5376ba" stroke-width="2.5" stroke-linecap="round"/>
+    <text x="513" y="309" fill="#304563" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="15" font-weight="650">Model open-weight</text>
+    <text x="513" y="332" fill="#697b93" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="12">percakapan dan beberapa agent</text>
+    <rect x="438" y="372" width="324" height="78" rx="18" fill="#f0f8f6" stroke="#d2eae4"/>
+    <rect x="455" y="391" width="42" height="40" rx="9" fill="#daf2ed"/>
+    <path d="M465 403h22M465 411h22M465 419h14" stroke="#318c7c" stroke-width="2.5" stroke-linecap="round"/>
+    <text x="513" y="405" fill="#304563" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="15" font-weight="650">Alat komputasi ilmiah</text>
+    <text x="513" y="428" fill="#697b93" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="12">Lean · Mathlib · SageMath · SymPy</text>
+    <rect x="438" y="466" width="324" height="40" rx="13" fill="#f5f1ff"/>
+    <circle cx="461" cy="486" r="6" fill="#8b74dc"/><circle cx="481" cy="486" r="6" fill="#8b74dc" opacity=".7"/><circle cx="501" cy="486" r="6" fill="#8b74dc" opacity=".45"/>
+    <text x="523" y="491" fill="#5c5189" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="12" font-weight="600">agent mengusulkan pendekatan</text>
+  </g>
+
+  <path d="M817 352h63" fill="none" stroke="#788bab" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <g filter="url(#shadow)">
+    <rect x="903" y="202" width="226" height="300" rx="24" fill="#fff" stroke="#d7e0ed"/>
+    <rect x="903" y="202" width="226" height="68" rx="24" fill="#26395d"/>
+    <path d="M903 246h226v24H903Z" fill="#26395d"/>
+    <circle cx="944" cy="236" r="16" fill="#7d9bc9"/>
+    <path d="M916 285c4-22 15-33 28-33s24 11 28 33" fill="#9bb1d5"/>
+    <text x="990" y="232" fill="#fff" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="17" font-weight="650">Peneliti</text>
+    <text x="990" y="255" fill="#c9d6ed" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="12">meninjau hasil</text>
+    <circle cx="1016" cy="356" r="45" fill="#e6f6f1"/>
+    <path d="M994 357l15 15 30-34" fill="none" stroke="#268b71" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="1016" y="432" text-anchor="middle" fill="#334663" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="15" font-weight="600">Validasi dan keputusan</text>
+    <text x="1016" y="458" text-anchor="middle" fill="#66758b" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="12">tetap di tangan matematikawan</text>
+  </g>
+
+  <rect x="70" y="571" width="1059" height="78" rx="20" fill="#172c52"/>
+  <text x="600" y="603" text-anchor="middle" fill="#e8f0ff" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="15" font-weight="600">Alur konseptual berdasarkan fitur yang dijelaskan SAIR</text>
+  <text x="600" y="628" text-anchor="middle" fill="#aabada" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="12">Bukan gambaran antarmuka produk atau jaminan bahwa setiap usulan AI benar.</text>
+</svg>
