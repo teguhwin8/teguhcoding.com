@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Siapa yang melatih engineer junior di era AI?</title>
+  <desc id="desc">Ilustrasi konseptual menampilkan engineer junior, AI, dan mentor senior yang terhubung dalam program belajar PRAISE Microsoft dan Carnegie Mellon University.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#101a35"/><stop offset="1" stop-color="#182f50"/></linearGradient>
+    <linearGradient id="glow" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#68e0cc"/><stop offset="1" stop-color="#67a9ff"/></linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="170%"><feDropShadow dx="0" dy="16" stdDeviation="18" flood-color="#050b18" flood-opacity=".32"/></filter>
+  </defs>
+  <rect width="1200" height="630" rx="30" fill="url(#bg)"/>
+  <g opacity=".13" fill="none" stroke="#91b7dd" stroke-width="1">
+    <path d="M0 94h1200M0 142h1200M0 190h1200M0 238h1200M0 286h1200M0 334h1200M0 382h1200M0 430h1200M0 478h1200M0 526h1200M0 574h1200"/>
+    <path d="M48 0v630M96 0v630M144 0v630M192 0v630M240 0v630M288 0v630M336 0v630M384 0v630M432 0v630M480 0v630M528 0v630M576 0v630M624 0v630M672 0v630M720 0v630M768 0v630M816 0v630M864 0v630M912 0v630M960 0v630M1008 0v630M1056 0v630M1104 0v630M1152 0v630"/>
+  </g>
+  <circle cx="1010" cy="142" r="164" fill="#56cbbd" opacity=".08"/>
+  <circle cx="1062" cy="426" r="220" fill="#77aaff" opacity=".07"/>
+  <text x="76" y="94" fill="#9de8da" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="17" font-weight="700" letter-spacing="2.4">AI MENGUBAH CARA BELAJAR ENGINEERING</text>
+  <text x="76" y="178" fill="#f4f7fc" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="55" font-weight="760">Siapa yang melatih</text>
+  <text x="76" y="244" fill="#f4f7fc" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="55" font-weight="760">engineer junior?</text>
+  <text x="78" y="300" fill="#bccbdd" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="22">Microsoft dan CMU mencoba menjawabnya lewat PRAISE</text>
+  <g filter="url(#shadow)">
+    <rect x="720" y="101" width="408" height="382" rx="34" fill="#f5f8fc"/>
+    <rect x="750" y="128" width="348" height="216" rx="23" fill="#e8f2f4"/>
+    <path d="M773 164h135M773 184h207M773 204h167M773 224h219" stroke="#aec3d2" stroke-width="7" stroke-linecap="round"/>
+    <rect x="773" y="254" width="135" height="58" rx="14" fill="#182d4d"/>
+    <text x="840" y="279" text-anchor="middle" fill="#dcecff" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12">review(AI)</text>
+    <text x="840" y="298" text-anchor="middle" fill="#7ce0cf" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12">test → learn</text>
+    <g>
+      <circle cx="993" cy="284" r="34" fill="url(#glow)"/>
+      <path d="M993 265v38M974 284h38M979 270l28 28M1007 270l-28 28" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
+      <circle cx="993" cy="284" r="8" fill="#f6fbff"/>
+    </g>
+    <rect x="750" y="361" width="348" height="94" rx="22" fill="#fff" stroke="#dce4ed"/>
+    <circle cx="797" cy="400" r="21" fill="#c8d8ef"/>
+    <path d="M765 443c5-22 16-32 32-32s27 10 32 32" fill="#718caf"/>
+    <circle cx="1048" cy="400" r="21" fill="#c6eee5"/>
+    <path d="M1016 443c5-22 16-32 32-32s27 10 32 32" fill="#49a794"/>
+    <path d="M835 402h177" stroke="#7991ad" stroke-width="3" stroke-dasharray="7 9"/>
+    <rect x="846" y="379" width="137" height="42" rx="21" fill="#fff" stroke="#e1e7ee"/>
+    <text x="914" y="397" text-anchor="middle" fill="#405572" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="12" font-weight="650">mentor senior</text>
+    <text x="914" y="412" text-anchor="middle" fill="#76869a" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="10">bertanya · meninjau · membimbing</text>
+  </g>
+  <g transform="translate(78 389)">
+    <rect width="188" height="54" rx="27" fill="#203b5c" stroke="#3a5b79"/>
+    <circle cx="28" cy="27" r="7" fill="#64d8c6"/>
+    <text x="48" y="33" fill="#e6f5f4" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="16" font-weight="650">Program PRAISE</text>
+  </g>
+  <g transform="translate(78 477)">
+    <text x="0" y="0" fill="#dce7f4" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="15" font-weight="600">MICROSOFT × CARNEGIE MELLON UNIVERSITY</text>
+    <text x="0" y="33" fill="#8296ad" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="14">Program internal untuk engineer awal karier terpilih</text>
+  </g>
+  <rect x="78" y="562" width="1044" height="1" fill="#49617d" opacity=".7"/>
+  <text x="78" y="594" fill="#859bb3" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="13">TEGUHCODING.COM  ·  ILUSTRASI KONSEPTUAL</text>
+</svg>
