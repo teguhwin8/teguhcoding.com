@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="74" y1="31" x2="1100" y2="633" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#10122B"/>
+      <stop offset="1" stop-color="#382E76"/>
+    </linearGradient>
+    <linearGradient id="paper" x1="231" y1="209" x2="520" y2="454" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#DBD9FF"/>
+    </linearGradient>
+    <linearGradient id="glow" x1="658" y1="193" x2="1087" y2="471" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#9C8CFF"/>
+      <stop offset="1" stop-color="#60D9CB"/>
+    </linearGradient>
+    <filter id="shadow" x="175" y="167" width="433" height="365" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse">
+      <feGaussianBlur stdDeviation="21"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="630" rx="34" fill="url(#bg)"/>
+  <circle cx="1016" cy="111" r="189" fill="#7868DD" fill-opacity=".14"/>
+  <circle cx="1058" cy="522" r="210" fill="#45D6C1" fill-opacity=".09"/>
+  <path d="M0 515C198 446 289 550 480 510s284-179 445-113c117 48 187 27 275-21v254H0V515Z" fill="#08091B" fill-opacity=".27"/>
+  <g filter="url(#shadow)" opacity=".32">
+    <rect x="217" y="209" width="325" height="250" rx="20" fill="#9C8CFF"/>
+  </g>
+  <rect x="215" y="196" width="325" height="250" rx="20" fill="url(#paper)"/>
+  <path d="M247 230h261" stroke="#B7B4E7" stroke-width="2"/>
+  <circle cx="269" cy="269" r="10" fill="#6555C4"/>
+  <rect x="293" y="260" width="171" height="12" rx="6" fill="#B0ACD9"/>
+  <text x="247" y="342" fill="#24224F" font-family="Arial, sans-serif" font-size="53" font-weight="700">5%</text>
+  <text x="247" y="379" fill="#625F86" font-family="Arial, sans-serif" font-size="19" font-weight="700" letter-spacing="2">SAHAM</text>
+  <rect x="247" y="405" width="250" height="7" rx="3.5" fill="#CBC9E7"/>
+  <path d="M568 321h109" stroke="#C9C1FF" stroke-width="5" stroke-linecap="round"/>
+  <path d="m663 303 21 18-21 18" stroke="#C9C1FF" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="697" y="190" width="344" height="274" rx="24" fill="#FFFFFF" fill-opacity=".08" stroke="#FFFFFF" stroke-opacity=".2" stroke-width="2"/>
+  <rect x="732" y="226" width="274" height="204" rx="18" fill="#191A3F" stroke="#FFFFFF" stroke-opacity=".14" stroke-width="2"/>
+  <path d="M764 268h210" stroke="#77739F" stroke-width="3" stroke-linecap="round"/>
+  <path d="M768 357c45 0 56-62 104-62 32 0 40 30 69 30 16 0 25-10 39-24" stroke="url(#glow)" stroke-width="7" stroke-linecap="round"/>
+  <circle cx="941" cy="301" r="10" fill="#62DCCC"/>
+  <text x="764" y="399" fill="#F5F3FF" font-family="Arial, sans-serif" font-size="20" font-weight="700" letter-spacing="1.4">DANA PUBLIK</text>
+  <rect x="75" y="73" width="96" height="6" rx="3" fill="#65DCCD"/>
+  <text x="75" y="123" fill="#B8B4D7" font-family="Arial, sans-serif" font-size="18" font-weight="700" letter-spacing="2.2">ANTHROPIC · RENCANA PENDANAAN PUBLIK</text>
+  <text x="75" y="555" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="23" font-weight="600">Saham perusahaan diarahkan ke dana baru</text>
+  <text x="75" y="589" fill="#B9B6D9" font-family="Arial, sans-serif" font-size="17">Rincian tata kelola dan penerima manfaat menyusul</text>
+</svg>
