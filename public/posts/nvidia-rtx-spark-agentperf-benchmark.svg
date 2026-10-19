@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="620" viewBox="0 0 1000 620" role="img" aria-labelledby="title desc">
+  <title id="title">Uji agent AI lokal di RTX Spark</title>
+  <desc id="desc">Artificial Analysis mencatat waktu penyelesaian workload Qwen 3.8 27B di RTX Spark, DGX Spark, dan MacBook Pro.</desc>
+  <rect width="1000" height="620" rx="24" fill="#f5f7f8"/>
+  <text x="62" y="72" fill="#152633" font-family="Arial, sans-serif" font-size="29" font-weight="700">Berapa lama agent menyelesaikan workload?</text>
+  <text x="63" y="108" fill="#60727d" font-family="Arial, sans-serif" font-size="17">Qwen 3.8 27B · rekaman 168 giliran model · waktu lebih singkat lebih cepat</text>
+  <g font-family="Arial, sans-serif">
+    <text x="64" y="181" fill="#263a45" font-size="18" font-weight="700">NVIDIA DGX Spark</text>
+    <rect x="64" y="198" width="680" height="35" rx="17" fill="#e1e8eb"/>
+    <rect x="64" y="198" width="294" height="35" rx="17" fill="#88a2ac"/>
+    <text x="770" y="223" fill="#4e626c" font-size="19" font-weight="700">17,3 menit</text>
+    <text x="64" y="284" fill="#263a45" font-size="18" font-weight="700">Laptop RTX Spark</text>
+    <rect x="64" y="301" width="680" height="35" rx="17" fill="#e1e8eb"/>
+    <rect x="64" y="301" width="318" height="35" rx="17" fill="#159d7e"/>
+    <text x="770" y="326" fill="#08765f" font-size="19" font-weight="700">18,7 menit</text>
+    <text x="64" y="387" fill="#263a45" font-size="18" font-weight="700">MacBook Pro M5 Pro</text>
+    <rect x="64" y="404" width="680" height="35" rx="17" fill="#e1e8eb"/>
+    <rect x="64" y="404" width="639" height="35" rx="17" fill="#d6a540"/>
+    <text x="770" y="429" fill="#876117" font-size="19" font-weight="700">37,6 menit</text>
+  </g>
+  <path d="M64 473H936" stroke="#d6dfe3" stroke-width="2"/>
+  <text x="64" y="510" fill="#52656f" font-family="Arial, sans-serif" font-size="16">Uji Artificial Analysis memakai konfigurasi software yang berbeda untuk tiap sistem.</text>
+  <text x="64" y="538" fill="#52656f" font-family="Arial, sans-serif" font-size="16">Waktu menjalankan tool tidak dihitung; hasil ini bukan ukuran semua tugas coding.</text>
+  <text x="64" y="581" fill="#75858d" font-family="Arial, sans-serif" font-size="15">Sumber: Artificial Analysis, AgentPerf-Local (15 Oktober 2026). Bukan pengujian Teguhcoding.</text>
+</svg>
