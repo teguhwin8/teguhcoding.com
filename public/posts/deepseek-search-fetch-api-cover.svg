@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="73" y1="22" x2="1112" y2="635" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0D172A"/>
+      <stop offset="1" stop-color="#162B42"/>
+    </linearGradient>
+    <linearGradient id="card" x1="89" y1="213" x2="1109" y2="477" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1B2A42"/>
+      <stop offset="1" stop-color="#213A52"/>
+    </linearGradient>
+    <filter id="soft" x="0" y="0" width="1" height="1" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="0"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="630" rx="30" fill="url(#bg)"/>
+  <circle cx="1036" cy="99" r="176" fill="#4FD8C3" fill-opacity=".07"/>
+  <circle cx="110" cy="524" r="205" fill="#70A4FF" fill-opacity=".06"/>
+  <path d="M62 75H1138" stroke="#344660" stroke-width="2"/>
+  <text x="70" y="54" fill="#92A8C6" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="17" font-weight="700" letter-spacing="3">TEGUHCODING · DEVELOPER TOOLS</text>
+  <text x="70" y="151" fill="#F2F6FC" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="44" font-weight="750">Search → Fetch → Agent</text>
+  <text x="73" y="188" fill="#A9B8CD" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="20">API baru DeepSeek untuk mencari web dan membaca halaman sebagai Markdown</text>
+
+  <rect x="67" y="233" width="1066" height="254" rx="24" fill="url(#card)" stroke="#3E5875" stroke-width="2"/>
+
+  <rect x="91" y="274" width="193" height="169" rx="18" fill="#0F1A2B" stroke="#4C6785" stroke-width="2"/>
+  <text x="111" y="309" fill="#90A6C4" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="15" font-weight="700" letter-spacing="1.2">AGENT</text>
+  <path d="M111 331H254" stroke="#34465E" stroke-width="2"/>
+  <text x="111" y="366" fill="#F1F5FC" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="18" font-weight="600">Cari dokumentasi</text>
+  <text x="111" y="392" fill="#F1F5FC" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="18" font-weight="600">rilis terbaru</text>
+  <rect x="111" y="410" width="108" height="22" rx="11" fill="#1C3B48"/>
+  <text x="122" y="426" fill="#82E6CC" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="12" font-weight="600">API KEY</text>
+
+  <path d="M296 358H337" stroke="#7BE1C9" stroke-width="4" stroke-linecap="round"/>
+  <path d="M328 348L340 358L328 368" stroke="#7BE1C9" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <rect x="348" y="274" width="216" height="169" rx="18" fill="#132137" stroke="#40BFAF" stroke-width="2"/>
+  <circle cx="390" cy="319" r="15" stroke="#6FE0C7" stroke-width="3"/>
+  <path d="M401 330L412 341" stroke="#6FE0C7" stroke-width="4" stroke-linecap="round"/>
+  <text x="425" y="326" fill="#F3F7FC" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="22" font-weight="700">Search</text>
+  <text x="371" y="371" fill="#AABBD0" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="16">Kueri web</text>
+  <rect x="371" y="387" width="161" height="4" rx="2" fill="#526983"/>
+  <rect x="371" y="402" width="128" height="4" rx="2" fill="#526983"/>
+  <text x="371" y="430" fill="#77DEC7" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="13">hasil terstruktur</text>
+
+  <path d="M576 358H617" stroke="#7BE1C9" stroke-width="4" stroke-linecap="round"/>
+  <path d="M608 348L620 358L608 368" stroke="#7BE1C9" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <rect x="628" y="274" width="216" height="169" rx="18" fill="#132137" stroke="#638EE0" stroke-width="2"/>
+  <path d="M660 306H685L698 319V345H660V306Z" stroke="#9BB9F5" stroke-width="2.5" stroke-linejoin="round"/>
+  <path d="M685 306V320H698M668 329H690M668 337H690" stroke="#9BB9F5" stroke-width="2" stroke-linecap="round"/>
+  <text x="714" y="326" fill="#F3F7FC" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="22" font-weight="700">Fetch</text>
+  <text x="651" y="371" fill="#AABBD0" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="16">URL tertentu</text>
+  <rect x="651" y="387" width="160" height="32" rx="9" fill="#243653"/>
+  <text x="665" y="409" fill="#B9CDF1" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="16" font-weight="600">Markdown</text>
+
+  <path d="M856 358H897" stroke="#7BE1C9" stroke-width="4" stroke-linecap="round"/>
+  <path d="M888 348L900 358L888 368" stroke="#7BE1C9" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <rect x="908" y="274" width="201" height="169" rx="18" fill="#0F1A2B" stroke="#4C6785" stroke-width="2"/>
+  <text x="930" y="309" fill="#90A6C4" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="15" font-weight="700" letter-spacing="1.2">KONTEKS SEGAR</text>
+  <path d="M930 329H1086" stroke="#34465E" stroke-width="2"/>
+  <text x="930" y="365" fill="#E9F1FA" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="17">Halaman siap</text>
+  <text x="930" y="389" fill="#E9F1FA" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="17">dibaca model</text>
+  <circle cx="1073" cy="419" r="6" fill="#73DFBD"/>
+  <circle cx="1054" cy="419" r="6" fill="#73DFBD" fill-opacity=".65"/>
+  <circle cx="1035" cy="419" r="6" fill="#73DFBD" fill-opacity=".35"/>
+
+  <text x="70" y="552" fill="#F3F7FC" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="28" font-weight="700">Search menemukan. Fetch mengambil. Agent membaca.</text>
+  <text x="72" y="590" fill="#A8B8CC" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="17">Dua endpoint JSON • autentikasi API DeepSeek • akses web real-time menurut dokumentasi</text>
+</svg>

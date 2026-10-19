@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="470" viewBox="0 0 1100 470" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1100" y2="470" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#111A2D"/>
+      <stop offset="1" stop-color="#1A2B41"/>
+    </linearGradient>
+  </defs>
+  <rect width="1100" height="470" rx="26" fill="url(#bg)"/>
+  <text x="54" y="60" fill="#EDF3FB" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="27" font-weight="700">Dari pertanyaan ke konteks web</text>
+  <text x="56" y="91" fill="#A8B8CC" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="16">Keduanya memakai API key DeepSeek; hasil Fetch bergantung pada akses situs tujuan.</text>
+
+  <rect x="55" y="148" width="205" height="190" rx="18" fill="#19263A" stroke="#4A617E" stroke-width="2"/>
+  <text x="77" y="183" fill="#90A6C4" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="14" font-weight="700" letter-spacing="1">1 · PERTANYAAN</text>
+  <text x="77" y="226" fill="#F0F5FC" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="18" font-weight="600">Cari dokumentasi</text>
+  <text x="77" y="252" fill="#F0F5FC" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="18" font-weight="600">rilis baru</text>
+  <rect x="77" y="277" width="154" height="38" rx="10" fill="#203750"/>
+  <text x="91" y="301" fill="#8BE4CE" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="15">query + filter</text>
+
+  <path d="M272 242H309" stroke="#76DCC5" stroke-width="4" stroke-linecap="round"/>
+  <path d="M301 232L313 242L301 252" stroke="#76DCC5" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <rect x="322" y="148" width="211" height="190" rx="18" fill="#142438" stroke="#46BCAA" stroke-width="2"/>
+  <text x="344" y="183" fill="#6FE0C7" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="14" font-weight="700" letter-spacing="1">2 · SEARCH</text>
+  <text x="344" y="218" fill="#F0F5FC" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="16">POST /v1/tools/search</text>
+  <path d="M344 235H511" stroke="#354B65" stroke-width="2"/>
+  <text x="344" y="266" fill="#CFD9E7" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="16">Judul · URL · ringkasan</text>
+  <text x="344" y="291" fill="#CFD9E7" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="16">Hasil dapat difilter</text>
+  <text x="344" y="319" fill="#90A6C4" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="13">atau minta konten langsung</text>
+
+  <path d="M545 242H582" stroke="#76DCC5" stroke-width="4" stroke-linecap="round"/>
+  <path d="M574 232L586 242L574 252" stroke="#76DCC5" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <rect x="595" y="148" width="211" height="190" rx="18" fill="#18243A" stroke="#688FDC" stroke-width="2"/>
+  <text x="617" y="183" fill="#9CB9F0" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="14" font-weight="700" letter-spacing="1">3 · FETCH</text>
+  <text x="617" y="218" fill="#F0F5FC" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="16">POST /v1/tools/fetch</text>
+  <path d="M617 235H784" stroke="#354B65" stroke-width="2"/>
+  <text x="617" y="266" fill="#CFD9E7" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="16">URL terpilih</text>
+  <text x="617" y="291" fill="#CFD9E7" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="16">→ teks Markdown</text>
+  <text x="617" y="319" fill="#90A6C4" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="13">jika situs mengizinkan akses</text>
+
+  <path d="M818 242H855" stroke="#76DCC5" stroke-width="4" stroke-linecap="round"/>
+  <path d="M847 232L859 242L847 252" stroke="#76DCC5" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <rect x="868" y="148" width="177" height="190" rx="18" fill="#19263A" stroke="#4A617E" stroke-width="2"/>
+  <text x="890" y="183" fill="#90A6C4" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="14" font-weight="700" letter-spacing="1">4 · AGENT</text>
+  <path d="M890 205H1023" stroke="#354B65" stroke-width="2"/>
+  <text x="890" y="241" fill="#EAF1FA" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="17">Konteks</text>
+  <text x="890" y="266" fill="#EAF1FA" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="17">untuk jawaban</text>
+  <circle cx="897" cy="305" r="5" fill="#72DFC1"/>
+  <circle cx="914" cy="305" r="5" fill="#72DFC1" fill-opacity=".65"/>
+  <circle cx="931" cy="305" r="5" fill="#72DFC1" fill-opacity=".35"/>
+
+  <rect x="55" y="376" width="990" height="48" rx="12" fill="#19283C"/>
+  <text x="77" y="406" fill="#BDD0E5" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="16">Tarif: US$0,75 per 1.000 Search sukses dan US$0,75 per 1.000 Fetch sukses.</text>
+  <text x="56" y="451" fill="#8498B2" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="14">Sesuai panduan DeepSeek; kegagalan, timeout, dan hasil kosong tidak ditagih.</text>
+</svg>
