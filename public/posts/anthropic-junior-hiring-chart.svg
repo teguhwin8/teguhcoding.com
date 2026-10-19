@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="700" viewBox="0 0 1100 700" role="img" aria-labelledby="title desc">
+  <title id="title">Porsi junior dalam tim dan rekrutmen teknis Anthropic turun</title>
+  <desc id="desc">Porsi karyawan junior di departemen teknis turun dari 21 persen menjadi 14 persen. Porsi junior di antara rekrutan teknis baru turun dari 27 persen menjadi 9 persen.</desc>
+  <rect width="1100" height="700" rx="28" fill="#f5f7fb"/>
+  <text x="72" y="78" fill="#111827" font-family="Arial, sans-serif" font-size="34" font-weight="700">Porsi junior di tim teknis Anthropic menyusut</text>
+  <text x="72" y="118" fill="#4b5563" font-family="Arial, sans-serif" font-size="20">Komposisi karyawan dan rekrutan teknis • awal 2025 ke data terbaru laporan</text>
+
+  <g font-family="Arial, sans-serif">
+    <text x="72" y="188" fill="#172033" font-size="23" font-weight="700">Junior di antara karyawan teknis</text>
+    <text x="72" y="229" fill="#6b7280" font-size="16">Awal 2025</text>
+    <rect x="220" y="208" width="580" height="26" rx="13" fill="#e1e7ef"/>
+    <rect x="220" y="208" width="406" height="26" rx="13" fill="#94a3b8"/>
+    <text x="824" y="229" fill="#334155" font-size="20" font-weight="700">21%</text>
+    <text x="72" y="270" fill="#6b7280" font-size="16">Data terbaru</text>
+    <rect x="220" y="249" width="580" height="26" rx="13" fill="#e1e7ef"/>
+    <rect x="220" y="249" width="271" height="26" rx="13" fill="#4f46e5"/>
+    <text x="824" y="270" fill="#312e81" font-size="20" font-weight="700">14%</text>
+
+    <text x="72" y="361" fill="#172033" font-size="23" font-weight="700">Junior di antara rekrutan teknis</text>
+    <text x="72" y="402" fill="#6b7280" font-size="16">Awal 2025</text>
+    <rect x="220" y="381" width="580" height="26" rx="13" fill="#e1e7ef"/>
+    <rect x="220" y="381" width="522" height="26" rx="13" fill="#94a3b8"/>
+    <text x="824" y="402" fill="#334155" font-size="20" font-weight="700">27%</text>
+    <text x="72" y="443" fill="#6b7280" font-size="16">Data terbaru</text>
+    <rect x="220" y="422" width="580" height="26" rx="13" fill="#e1e7ef"/>
+    <rect x="220" y="422" width="174" height="26" rx="13" fill="#0f766e"/>
+    <text x="824" y="443" fill="#115e59" font-size="20" font-weight="700">9%</text>
+
+    <text x="220" y="489" fill="#6b7280" font-size="15">Panjang batang memakai skala yang sama: 0–30%</text>
+    <rect x="72" y="526" width="956" height="1" fill="#d8dee8"/>
+    <text x="72" y="572" fill="#4b5563" font-size="17">Persentase komposisi, bukan jumlah orang atau jumlah lowongan.</text>
+    <text x="72" y="612" fill="#6b7280" font-size="15">Sumber: laporan internal Anthropic, 16 Oktober 2026 • Visualisasi Teguhcoding</text>
+  </g>
+</svg>
