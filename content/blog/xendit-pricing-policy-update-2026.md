@@ -43,6 +43,8 @@ Jadi sekarang struktur biaya lo jadi:
 
 **Payment Method Fee + Xendit Processing Fee**
 
+Kalau lo mengelola checkout atau invoice, pastikan fee baru ini dihitung konsisten di semua tempat. Logika harga, billing, dan payment sering punya edge case sendiri—ada contoh masalahnya di artikel [kenapa sistem pricing dan pembayaran perlu dirancang dengan hati-hati](/blog/mengapa-label-full-stack-developer-mulai-terasa-kurang-relevan).
+
 Contoh kalau customer bayar pakai BCA Virtual Account:
 - Payment method fee: IDR 9,000
 - Xendit Processing Fee: IDR 4,000
@@ -492,6 +494,10 @@ QRIS tetap competitive (0.7% + IDR 4,000), tapi untuk transaksi kecil bisa keras
 Dan kalau lo mau compare atau consider switch ke payment gateway lain, sekarang waktu yang tepat buat evaluate.
 
 Xendit masih solid untuk cross-border payment dan developer experience, tapi sekarang lo bayar premium buat itu. 😈
+
+## Baca juga
+
+Kalau migrasi dari legacy API sekalian bikin lo merapikan struktur backend, [Dari Express ke NestJS: Struktur Backend Modern yang Lebih Siap untuk Tim dan Produksi](/blog/dari-express-ke-nestjs-struktur-backend-modern-yang-lebih-siap-untuk-tim-dan-produksi) membahas cara memisahkan module, controller, dan service supaya kode lebih mudah dirawat.
 
 ---
 
