@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 990" role="img" aria-labelledby="title desc">
+  <title id="title">Tiga alasan agen AI bisa mentok di situs web</title>
+  <desc id="desc">Lisensi dan integrasi resmi, keamanan akun, serta sistem anti-bot dapat membatasi akses agen AI dengan cara yang berbeda.</desc>
+  <rect width="800" height="990" rx="28" fill="#f5f7fb"/>
+  <text x="40" y="72" fill="#172033" font-family="Arial, sans-serif" font-size="38" font-weight="700">Kenapa agen AI bisa mentok?</text>
+  <text x="40" y="116" fill="#5b6475" font-family="Arial, sans-serif" font-size="23">Hambatan akses di web tidak selalu berarti hal yang sama</text>
+  <g font-family="Arial, sans-serif">
+    <rect x="40" y="160" width="720" height="190" rx="22" fill="#ffffff" stroke="#dce3ee" stroke-width="2"/>
+    <circle cx="105" cy="255" r="39" fill="#e7efff"/>
+    <text x="105" y="268" text-anchor="middle" fill="#2459c5" font-size="36" font-weight="700">1</text>
+    <text x="160" y="226" fill="#172033" font-size="30" font-weight="700">Lisensi dan integrasi resmi</text>
+    <text x="160" y="270" fill="#4e596b" font-size="25">Yelp meminta lisensi; Delta belum punya</text>
+    <text x="160" y="304" fill="#4e596b" font-size="25">integrasi pemesanan untuk agen.</text>
+
+    <rect x="40" y="380" width="720" height="190" rx="22" fill="#ffffff" stroke="#dce3ee" stroke-width="2"/>
+    <circle cx="105" cy="475" r="39" fill="#e8f5ef"/>
+    <text x="105" y="488" text-anchor="middle" fill="#19724a" font-size="36" font-weight="700">2</text>
+    <text x="160" y="446" fill="#172033" font-size="30" font-weight="700">Keamanan akun</text>
+    <text x="160" y="490" fill="#4e596b" font-size="25">Bank membatasi akses agen ke rekening</text>
+    <text x="160" y="524" fill="#4e596b" font-size="25">karena risiko dan tanggung jawab.</text>
+
+    <rect x="40" y="600" width="720" height="190" rx="22" fill="#ffffff" stroke="#dce3ee" stroke-width="2"/>
+    <circle cx="105" cy="695" r="39" fill="#fff2df"/>
+    <text x="105" y="708" text-anchor="middle" fill="#a65b09" font-size="36" font-weight="700">3</text>
+    <text x="160" y="666" fill="#172033" font-size="30" font-weight="700">Penyaring anti-bot</text>
+    <text x="160" y="710" fill="#4e596b" font-size="25">Verifikasi manusia dapat menolak agen,</text>
+    <text x="160" y="744" fill="#4e596b" font-size="25">bahkan di situs yang punya kemitraan.</text>
+
+    <rect x="40" y="830" width="720" height="100" rx="20" fill="#e9eef7"/>
+    <text x="70" y="872" fill="#34425a" font-size="24" font-weight="600">Satu gejala, penyebabnya bisa berbeda.</text>
+    <text x="70" y="905" fill="#5b6475" font-size="20">Sumber: laporan The Verge dan TechCrunch.</text>
+  </g>
+</svg>
