@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="830" viewBox="0 0 1200 830" role="img" aria-labelledby="title desc">
+  <title id="title">Alur intervensi pemerintah dalam draf AI Anthropic</title>
+  <desc id="desc">Draf yang dilaporkan hanya mengizinkan jalur penghentian model jika risiko berasal dari salah satu dari tiga skenario, dapat diperkirakan dan segera, serta melampaui ambang 50 orang tewas atau luka serius atau kerugian satu miliar dolar AS. Departemen Perdagangan meminta hakim federal untuk memutuskan.</desc>
+  <rect width="1200" height="830" rx="32" fill="#f5f4ef"/>
+  <text x="64" y="70" fill="#727d90" font-family="Arial, sans-serif" font-size="18" font-weight="700" letter-spacing="2">RINGKASAN DRAF YANG DILAPORKAN POLITICO</text>
+  <text x="64" y="122" fill="#111827" font-family="Arial, sans-serif" font-size="38" font-weight="700">Kapan pemerintah bisa meminta model dihentikan?</text>
+
+  <rect x="64" y="164" width="1072" height="190" rx="22" fill="#ffffff" stroke="#d9d8d2" stroke-width="2"/>
+  <circle cx="112" cy="214" r="25" fill="#1b365d"/>
+  <text x="112" y="222" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="22" font-weight="700">1</text>
+  <text x="156" y="220" fill="#111827" font-family="Arial, sans-serif" font-size="25" font-weight="700">Risiko berasal dari salah satu skenario ini</text>
+  <rect x="96" y="252" width="310" height="66" rx="14" fill="#edf2f8"/>
+  <rect x="445" y="252" width="310" height="66" rx="14" fill="#edf2f8"/>
+  <rect x="794" y="252" width="310" height="66" rx="14" fill="#edf2f8"/>
+  <text x="251" y="278" text-anchor="middle" fill="#263b59" font-family="Arial, sans-serif" font-size="16" font-weight="700">
+    <tspan x="251" dy="0">Pembuatan atau pelepasan</tspan><tspan x="251" dy="22">senjata biologis</tspan>
+  </text>
+  <text x="600" y="278" text-anchor="middle" fill="#263b59" font-family="Arial, sans-serif" font-size="16" font-weight="700">
+    <tspan x="600" dy="0">Model lolos dari kontrol</tspan><tspan x="600" dy="22">pengembangnya</tspan>
+  </text>
+  <text x="949" y="290" text-anchor="middle" fill="#263b59" font-family="Arial, sans-serif" font-size="16" font-weight="700">Serangan siber</text>
+
+  <path d="M600 354v36" stroke="#8a93a3" stroke-width="3" stroke-linecap="round"/>
+  <path d="m590 380 10 12 10-12" fill="none" stroke="#8a93a3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <rect x="64" y="402" width="1072" height="164" rx="22" fill="#ffffff" stroke="#d9d8d2" stroke-width="2"/>
+  <circle cx="112" cy="450" r="25" fill="#1b365d"/>
+  <text x="112" y="458" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="22" font-weight="700">2</text>
+  <text x="156" y="456" fill="#111827" font-family="Arial, sans-serif" font-size="25" font-weight="700">Ancaman harus dapat diperkirakan dan segera</text>
+  <text x="600" y="520" text-anchor="middle" fill="#626d7e" font-family="Arial, sans-serif" font-size="18">Lalu melewati salah satu ambang berikut:</text>
+
+  <rect x="64" y="594" width="490" height="112" rx="20" fill="#fff1e7" stroke="#edb58f" stroke-width="2"/>
+  <text x="309" y="635" text-anchor="middle" fill="#a64615" font-family="Arial, sans-serif" font-size="31" font-weight="700">Lebih dari 50 orang</text>
+  <text x="309" y="672" text-anchor="middle" fill="#70412d" font-family="Arial, sans-serif" font-size="18">tewas atau terluka serius</text>
+  <text x="600" y="660" text-anchor="middle" fill="#727d90" font-family="Arial, sans-serif" font-size="18" font-weight="700">ATAU</text>
+  <rect x="646" y="594" width="490" height="112" rx="20" fill="#fff1e7" stroke="#edb58f" stroke-width="2"/>
+  <text x="891" y="635" text-anchor="middle" fill="#a64615" font-family="Arial, sans-serif" font-size="31" font-weight="700">Lebih dari US$1 miliar</text>
+  <text x="891" y="672" text-anchor="middle" fill="#70412d" font-family="Arial, sans-serif" font-size="18">kerugian</text>
+
+  <path d="M600 706v32" stroke="#8a93a3" stroke-width="3" stroke-linecap="round"/>
+  <path d="m590 728 10 12 10-12" fill="none" stroke="#8a93a3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="64" y="748" width="1072" height="50" rx="15" fill="#1b365d"/>
+  <text x="600" y="780" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="18" font-weight="700">Departemen Perdagangan dapat meminta hakim federal memutuskan penghentian model</text>
+</svg>
