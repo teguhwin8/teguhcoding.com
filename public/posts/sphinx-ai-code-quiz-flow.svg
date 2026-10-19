@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="590" viewBox="0 0 1100 590" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="20" y1="0" x2="1080" y2="590" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#111A2D"/>
+      <stop offset="1" stop-color="#1A2C43"/>
+    </linearGradient>
+  </defs>
+  <rect width="1100" height="590" rx="26" fill="url(#bg)"/>
+  <text x="54" y="58" fill="#F0F5FC" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="27" font-weight="700">Apa yang terjadi saat menjalankan Git push?</text>
+  <text x="56" y="91" fill="#A8B8CC" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="16">Contoh: push ke main yang diperiksa oleh hook bawaan Sphinx.</text>
+
+  <rect x="52" y="139" width="210" height="235" rx="18" fill="#19263A" stroke="#4B627F" stroke-width="2"/>
+  <text x="74" y="175" fill="#91A6C3" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="13" font-weight="700" letter-spacing="1.2">1 · PUSH</text>
+  <text x="74" y="214" fill="#F0F5FC" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="16">git push origin</text>
+  <text x="74" y="239" fill="#F0F5FC" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="16">main</text>
+  <path d="M75 261H239" stroke="#354B65" stroke-width="2"/>
+  <text x="74" y="293" fill="#C5D2E2" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="16">Git menunggu</text>
+  <text x="74" y="319" fill="#C5D2E2" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="16">jawaban kuis.</text>
+  <rect x="74" y="339" width="107" height="22" rx="11" fill="#3A3034"/>
+  <text x="88" y="355" fill="#F1BE9C" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="11" font-weight="700">HOOK LOKAL</text>
+
+  <path d="M273 255H304" stroke="#75DCC4" stroke-width="4" stroke-linecap="round"/>
+  <path d="M296 245L308 255L296 265" stroke="#75DCC4" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <rect x="318" y="139" width="210" height="235" rx="18" fill="#142438" stroke="#49BBAA" stroke-width="2"/>
+  <text x="340" y="175" fill="#70DECA" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="13" font-weight="700" letter-spacing="1.2">2 · REVIEWER</text>
+  <text x="340" y="214" fill="#F0F5FC" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="17" font-weight="650">Baca commit</text>
+  <text x="340" y="241" fill="#C5D2E2" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="15">Kode + berkas</text>
+  <text x="340" y="264" fill="#C5D2E2" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="15">terkait, lewat Git.</text>
+  <path d="M340 283H504" stroke="#354B65" stroke-width="2"/>
+  <text x="340" y="313" fill="#A9BED4" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="14">Tidak membaca</text>
+  <text x="340" y="335" fill="#A9BED4" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="14">obrolan coding agent.</text>
+
+  <path d="M539 255H570" stroke="#75DCC4" stroke-width="4" stroke-linecap="round"/>
+  <path d="M562 245L574 255L562 265" stroke="#75DCC4" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <rect x="584" y="139" width="210" height="235" rx="18" fill="#18243A" stroke="#698FDC" stroke-width="2"/>
+  <text x="606" y="175" fill="#A0B9F0" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="13" font-weight="700" letter-spacing="1.2">3 · PERTANYAAN</text>
+  <text x="606" y="214" fill="#F0F5FC" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="17" font-weight="650">Prediksi perilaku</text>
+  <text x="606" y="241" fill="#C5D2E2" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="15">atau kemungkinan</text>
+  <text x="606" y="264" fill="#C5D2E2" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="15">gagal dari diff.</text>
+  <path d="M606 283H770" stroke="#354B65" stroke-width="2"/>
+  <text x="606" y="313" fill="#A9BED4" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="14">Boleh baca kode</text>
+  <text x="606" y="335" fill="#A9BED4" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="14">saat menjawab.</text>
+
+  <path d="M805 255H836" stroke="#75DCC4" stroke-width="4" stroke-linecap="round"/>
+  <path d="M828 245L840 255L828 265" stroke="#75DCC4" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <rect x="850" y="139" width="198" height="235" rx="18" fill="#19263A" stroke="#4B627F" stroke-width="2"/>
+  <text x="872" y="175" fill="#91A6C3" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="13" font-weight="700" letter-spacing="1.2">4 · HASIL</text>
+  <rect x="872" y="197" width="151" height="46" rx="12" fill="#1D413D"/>
+  <circle cx="893" cy="220" r="7" fill="#77DDC2"/>
+  <text x="910" y="226" fill="#96E8D2" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="16" font-weight="700">Lulus</text>
+  <text x="872" y="267" fill="#C5D2E2" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="15">push diteruskan</text>
+  <path d="M872 284H1026" stroke="#354B65" stroke-width="2"/>
+  <text x="872" y="313" fill="#C5D2E2" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="15">Keliru?</text>
+  <text x="872" y="335" fill="#C5D2E2" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="15">Belajar, jawab lagi.</text>
+
+  <rect x="54" y="414" width="994" height="114" rx="16" fill="#101B2D" stroke="#3C526D" stroke-width="2"/>
+  <circle cx="82" cy="450" r="6" fill="#F0BE91"/>
+  <text x="101" y="456" fill="#E9EEF6" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="16" font-weight="650">Privasi</text>
+  <text x="190" y="456" fill="#AFBED1" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="15">Kode dan berkas terkait dikirim ke provider model reviewer.</text>
+  <circle cx="82" cy="490" r="6" fill="#F0BE91"/>
+  <text x="101" y="496" fill="#E9EEF6" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="16" font-weight="650">Batas</text>
+  <text x="190" y="496" fill="#AFBED1" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="15">Hook lokal bisa dilewati; kuis ini bukan pemeriksaan keamanan.</text>
+
+  <text x="55" y="565" fill="#91A6C3" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="14">Skema berdasarkan README resmi Sphinx · alur dapat diatur per repositori</text>
+</svg>
