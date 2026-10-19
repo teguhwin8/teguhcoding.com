@@ -3,14 +3,14 @@ title: "Laptop RTX Spark Mulai Dijual dengan Memori Terpadu hingga 128 GB"
 source_url: "https://nvidianews.nvidia.com/news/nvidia-rtx-spark-pcs-available-today-a-new-beginning-for-windows-pcs"
 tags: ["AI", "Developer Tools", "Hardware"]
 date: "2026-10-19T07:40:25.000Z"
-cover_image: "/posts/nvidia-rtx-spark-ai-laptop-cover.svg"
+cover_image: "/posts/nvidia-rtx-spark-ai-laptop-cover.jpg"
 ---
 
 ASUS, Dell, HP, Lenovo, Microsoft, dan MSI mulai menjual laptop Windows berbasis NVIDIA RTX Spark pada 16 Oktober. [Konfigurasi tertingginya](https://nvidianews.nvidia.com/news/nvidia-rtx-spark-pcs-available-today-a-new-beginning-for-windows-pcs) menawarkan memori terpadu hingga 128 GB; NVIDIA menyebut komputasi AI-nya mencapai 1 petaflop pada presisi FP4. Ruang memori sebesar ini ditujukan bagi developer yang ingin memuat model lebih besar dan menguji agent di perangkat sendiri. Data tetap di laptop hanya jika model dan integrasinya memang berjalan lokal.
 
-![Ilustrasi laptop Windows berbasis NVIDIA RTX Spark untuk menjalankan AI secara lokal](/posts/nvidia-rtx-spark-ai-laptop-cover.svg)
+![Visual resmi ASUS yang menampilkan laptop ProArt dan PC ringkas untuk workflow kreator berbasis RTX Spark](/posts/nvidia-rtx-spark-asus-proart-workflow.jpg)
 
-*Ilustrasi editorial Teguhcoding; bukan foto perangkat RTX Spark.*
+*Visual skenario resmi dari [ASUS IFA 2026 Media Kit](https://press.asus.com/media/media-kit/ifa-2026-media-kit/).*
 
 ## Satu chip, memori bersama
 
@@ -48,3 +48,8 @@ Untuk coding harian yang sebagian besar berjalan di cloud, 128 GB memori lokal m
 - [Windows Central: Ulasan dan benchmark RTX Spark](https://www.windowscentral.com/hardware/nvidia/rtx-spark-review-benchmarks-2026)
 - [GitHub: Daftar komunitas untuk Linux, driver, dan benchmark RTX Spark](https://github.com/Th0rgal/awesome-rtx-spark)
 - [Diskusi r/LocalLLaMA soal laptop RTX Spark 128 GB](https://www.reddit.com/r/LocalLLaMA/comments/1x6trqq/128gb_rtx_spark_laptop_for_3832/)
+
+### Kredit gambar
+
+- Sampul: visual produk NVIDIA RTX Spark dari [NVIDIA Newsroom Media Assets](https://nvidianews.nvidia.com/file/nvidia-rtx-spark).
+- Gambar dalam artikel: visual skenario ProArt dari [ASUS IFA 2026 Media Kit](https://press.asus.com/media/media-kit/ifa-2026-media-kit/).
