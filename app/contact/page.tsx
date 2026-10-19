@@ -1,18 +1,18 @@
 import { Metadata } from "next";
-import ContactForm from "@/components/contact-form";
+import ContactChat from "@/components/contact-chat";
 
 export const metadata: Metadata = {
   title: "Kontak",
   description:
-    "Hubungi Teguh Widodo untuk kolaborasi proyek web development, konsultasi teknis, atau kesempatan kerja. Berbasis di Yogyakarta, Indonesia.",
+    "Ceritakan kebutuhan website atau aplikasi Anda. Asisten Teguh membantu merangkum detail sebelum diteruskan ke Teguh Widodo.",
   openGraph: {
     title: "Kontak — Teguh Widodo",
     description:
-      "Hubungi Teguh Widodo untuk kolaborasi proyek web development atau kesempatan kerja.",
+      "Ceritakan kebutuhan website atau aplikasi Anda kepada Asisten Teguh atau hubungi Teguh langsung lewat WhatsApp dan email.",
     type: "website",
   },
 };
 
 export default function ContactPage() {
-  return <ContactForm />;
+  return <ContactChat />;
 }

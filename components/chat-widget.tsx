@@ -92,7 +92,7 @@ export default function ChatWidget() {
 
   useEffect(() => () => abortRef.current?.abort(), []);
 
-  if (pathname?.startsWith("/bahlil")) return null;
+  if (pathname?.startsWith("/bahlil") || pathname === "/contact") return null;
 
   const send = async (text: string) => {
     const content = text.trim().slice(0, MAX_CHARS);
