@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">Dua evaluasi OpenAI untuk bahasa pemrograman yang jarang digunakan</title>
+  <desc id="desc">MultiLangBench mencatat rata-rata pass rate 26,8 persen untuk GPT-5.6 Sol dan 87,4 persen untuk GPT-6 Astra pada 20 bahasa. Dalam tes migrasi COBOL, GPT-5.6 Sol mendapat akurasi 5,4 persen dan GPT-6.1 Sol mendapat 86,6 persen pada reasoning rendah.</desc>
+  <rect width="1200" height="760" rx="28" fill="#0b1220"/>
+  <text x="64" y="76" fill="#f8fafc" font-family="Arial, sans-serif" font-size="34" font-weight="700">Apa yang diuji OpenAI?</text>
+  <text x="64" y="116" fill="#aab7ca" font-family="Arial, sans-serif" font-size="20">Dua evaluasi, dengan tugas dan ukuran berbeda</text>
+
+  <rect x="48" y="154" width="536" height="500" rx="20" fill="#121d30" stroke="#26354b"/>
+  <text x="80" y="205" fill="#f8fafc" font-family="Arial, sans-serif" font-size="25" font-weight="700">MultiLangBench</text>
+  <text x="80" y="239" fill="#aab7ca" font-family="Arial, sans-serif" font-size="17">Rata-rata tes lulus saat membangun mesin</text>
+  <text x="80" y="265" fill="#aab7ca" font-family="Arial, sans-serif" font-size="17">SQLite kompatibel dalam 20 bahasa</text>
+
+  <text x="80" y="328" fill="#dbe5f3" font-family="Arial, sans-serif" font-size="18">GPT-5.6 Sol</text>
+  <rect x="250" y="302" width="245" height="36" rx="8" fill="#344258"/>
+  <rect x="250" y="302" width="66" height="36" rx="8" fill="#8290a5"/>
+  <text x="510" y="328" fill="#f8fafc" font-family="Arial, sans-serif" font-size="18" font-weight="700">26,8%</text>
+
+  <text x="80" y="398" fill="#dbe5f3" font-family="Arial, sans-serif" font-size="18">GPT-6 Luna</text>
+  <rect x="250" y="372" width="245" height="36" rx="8" fill="#344258"/>
+  <rect x="250" y="372" width="99" height="36" rx="8" fill="#58a6ff"/>
+  <text x="510" y="398" fill="#f8fafc" font-family="Arial, sans-serif" font-size="18" font-weight="700">40,3%</text>
+
+  <text x="80" y="468" fill="#dbe5f3" font-family="Arial, sans-serif" font-size="18">GPT-6 Astra</text>
+  <rect x="250" y="442" width="245" height="36" rx="8" fill="#344258"/>
+  <rect x="250" y="442" width="214" height="36" rx="8" fill="#42d392"/>
+  <text x="510" y="468" fill="#f8fafc" font-family="Arial, sans-serif" font-size="18" font-weight="700">87,4%</text>
+
+  <text x="80" y="540" fill="#aab7ca" font-family="Arial, sans-serif" font-size="16">Semua skor pada reasoning maksimum.</text>
+  <text x="80" y="570" fill="#aab7ca" font-family="Arial, sans-serif" font-size="16">Skor ini bukan hasil tes migrasi COBOL.</text>
+
+  <rect x="616" y="154" width="536" height="500" rx="20" fill="#121d30" stroke="#26354b"/>
+  <text x="648" y="205" fill="#f8fafc" font-family="Arial, sans-serif" font-size="25" font-weight="700">Migrasi program COBOL</text>
+  <text x="648" y="239" fill="#aab7ca" font-family="Arial, sans-serif" font-size="17">Akurasi menjaga hasil program tetap sama</text>
+  <text x="648" y="265" fill="#aab7ca" font-family="Arial, sans-serif" font-size="17">pada reasoning rendah</text>
+
+  <text x="648" y="328" fill="#dbe5f3" font-family="Arial, sans-serif" font-size="18">GPT-5.6 Sol</text>
+  <rect x="818" y="302" width="245" height="36" rx="8" fill="#344258"/>
+  <rect x="818" y="302" width="13" height="36" rx="6" fill="#8290a5"/>
+  <text x="1078" y="328" fill="#f8fafc" font-family="Arial, sans-serif" font-size="18" font-weight="700">5,4%</text>
+
+  <text x="648" y="398" fill="#dbe5f3" font-family="Arial, sans-serif" font-size="18">GPT-6.1 Sol</text>
+  <rect x="818" y="372" width="245" height="36" rx="8" fill="#344258"/>
+  <rect x="818" y="372" width="212" height="36" rx="8" fill="#ffbd59"/>
+  <text x="1078" y="398" fill="#f8fafc" font-family="Arial, sans-serif" font-size="18" font-weight="700">86,6%</text>
+
+  <rect x="648" y="452" width="456" height="104" rx="14" fill="#1a2940"/>
+  <text x="672" y="492" fill="#aab7ca" font-family="Arial, sans-serif" font-size="17">GPT-6.1 Sol, reasoning tinggi</text>
+  <text x="672" y="532" fill="#f8fafc" font-family="Arial, sans-serif" font-size="28" font-weight="700">97,9% akurasi</text>
+
+  <text x="64" y="704" fill="#8d9bb0" font-family="Arial, sans-serif" font-size="16">Sumber: evaluasi OpenAI, 19 Oktober 2026. Hasil belum merupakan replikasi independen.</text>
+</svg>
