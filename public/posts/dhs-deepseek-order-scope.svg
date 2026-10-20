@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="74" y1="42" x2="1127" y2="650" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F6F4EF"/>
+      <stop offset="1" stop-color="#E9EEE9"/>
+    </linearGradient>
+    <filter id="shadow" x="71" y="177" width="1058" height="401" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="7"/>
+      <feGaussianBlur stdDeviation="9"/>
+      <feComposite in2="hardAlpha" operator="out"/>
+      <feColorMatrix values="0 0 0 0 0.08 0 0 0 0 0.12 0 0 0 0 0.1 0 0 0 0.1 0"/>
+      <feBlend in2="BackgroundImageFix" result="effect1_dropShadow"/>
+      <feBlend in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="675" rx="28" fill="url(#bg)"/>
+  <circle cx="1095" cy="76" r="147" fill="#DDE5DB" opacity=".55"/>
+  <circle cx="1095" cy="76" r="105" stroke="#AAB9AA" stroke-width="2" opacity=".4"/>
+  <text x="86" y="76" fill="#536A5D" font-family="Arial, sans-serif" font-size="17" font-weight="700" letter-spacing="2.5">RINGKASAN KEBIJAKAN</text>
+  <text x="84" y="132" fill="#1C2922" font-family="Arial, sans-serif" font-size="40" font-weight="700">Cakupan perintah DHS</text>
+  <text x="86" y="163" fill="#647068" font-family="Arial, sans-serif" font-size="19">DeepSeek dikeluarkan dari pengadaan dan sistem TI lembaga sipil federal AS</text>
+
+  <g filter="url(#shadow)">
+    <rect x="88" y="197" width="1024" height="98" rx="18" fill="#FFFFFF"/>
+    <rect x="88" y="313" width="1024" height="111" rx="18" fill="#FFFFFF"/>
+    <rect x="88" y="442" width="1024" height="98" rx="18" fill="#FFFFFF"/>
+  </g>
+
+  <circle cx="139" cy="246" r="25" fill="#E7EEE8"/>
+  <text x="139" y="252" text-anchor="middle" fill="#42634E" font-family="Arial, sans-serif" font-size="16" font-weight="700">01</text>
+  <text x="184" y="239" fill="#26372D" font-family="Arial, sans-serif" font-size="22" font-weight="700">Pengadaan federal sipil</text>
+  <text x="184" y="269" fill="#68736C" font-family="Arial, sans-serif" font-size="18">Produk dan layanan DeepSeek serta afiliasinya dikeluarkan dari pengadaan.</text>
+
+  <circle cx="139" cy="368" r="25" fill="#E7EEE8"/>
+  <text x="139" y="374" text-anchor="middle" fill="#42634E" font-family="Arial, sans-serif" font-size="16" font-weight="700">02</text>
+  <text x="184" y="356" fill="#26372D" font-family="Arial, sans-serif" font-size="22" font-weight="700">Sistem TI lembaga sipil</text>
+  <text x="184" y="386" fill="#68736C" font-family="Arial, sans-serif" font-size="18">DeepSeek, afiliasi, dan produk pihak ketiga yang dikembangkan memakai</text>
+  <text x="184" y="411" fill="#68736C" font-family="Arial, sans-serif" font-size="18">implementasi DeepSeek harus dikeluarkan dari sistem lembaga.</text>
+
+  <circle cx="139" cy="491" r="25" fill="#F6E9D9"/>
+  <text x="139" y="497" text-anchor="middle" fill="#926536" font-family="Arial, sans-serif" font-size="16" font-weight="700">03</text>
+  <text x="184" y="484" fill="#26372D" font-family="Arial, sans-serif" font-size="22" font-weight="700">Batas kebijakan</text>
+  <text x="184" y="514" fill="#68736C" font-family="Arial, sans-serif" font-size="18">Bukan larangan umum untuk bisnis swasta atau pengguna individu di AS.</text>
+
+  <text x="89" y="602" fill="#738078" font-family="Arial, sans-serif" font-size="15">Sumber: Federal Register 2026-21447 · Yonhap News Agency</text>
+  <text x="1110" y="602" text-anchor="end" fill="#738078" font-family="Arial, sans-serif" font-size="15">Teguhcoding · 20 Oktober 2026</text>
+</svg>
