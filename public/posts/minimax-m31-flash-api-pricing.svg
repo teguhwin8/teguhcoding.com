@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="390" viewBox="0 0 960 390" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="960" y2="390" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#08121F"/>
+      <stop offset="1" stop-color="#142239"/>
+    </linearGradient>
+    <linearGradient id="violet" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#A78BFA"/>
+      <stop offset="1" stop-color="#38BDF8"/>
+    </linearGradient>
+  </defs>
+  <rect width="960" height="390" rx="24" fill="url(#bg)"/>
+  <text x="44" y="52" fill="#F8FAFC" font-family="Arial, sans-serif" font-size="22" font-weight="700">Tarif API MiniMax M3.1 Flash</text>
+  <text x="44" y="77" fill="#94A3B8" font-family="Arial, sans-serif" font-size="14">Harga per 1 juta token, dalam dolar AS</text>
+
+  <rect x="42" y="105" width="280" height="122" rx="18" fill="#111D31" stroke="#334155" stroke-width="1.5"/>
+  <text x="64" y="141" fill="#94A3B8" font-family="Arial, sans-serif" font-size="14">Token input</text>
+  <text x="64" y="190" fill="#F8FAFC" font-family="Arial, sans-serif" font-size="37" font-weight="700">$0,15</text>
+  <rect x="64" y="204" width="135" height="5" rx="2.5" fill="url(#violet)"/>
+
+  <rect x="340" y="105" width="280" height="122" rx="18" fill="#111D31" stroke="#334155" stroke-width="1.5"/>
+  <text x="362" y="141" fill="#94A3B8" font-family="Arial, sans-serif" font-size="14">Token output</text>
+  <text x="362" y="190" fill="#F8FAFC" font-family="Arial, sans-serif" font-size="37" font-weight="700">$0,60</text>
+  <rect x="362" y="204" width="216" height="5" rx="2.5" fill="url(#violet)"/>
+
+  <rect x="638" y="105" width="280" height="122" rx="18" fill="#111D31" stroke="#334155" stroke-width="1.5"/>
+  <text x="660" y="141" fill="#94A3B8" font-family="Arial, sans-serif" font-size="14">Input dari cache</text>
+  <text x="660" y="190" fill="#F8FAFC" font-family="Arial, sans-serif" font-size="37" font-weight="700">$0,015</text>
+  <rect x="660" y="204" width="68" height="5" rx="2.5" fill="url(#violet)"/>
+
+  <rect x="42" y="250" width="876" height="94" rx="18" fill="#18233A" stroke="#51428A" stroke-width="1.5"/>
+  <rect x="62" y="270" width="114" height="52" rx="14" fill="#352B66"/>
+  <text x="119" y="305" text-anchor="middle" fill="#DDD6FE" font-family="Arial, sans-serif" font-size="25" font-weight="700">−70%</text>
+  <text x="198" y="289" fill="#F8FAFC" font-family="Arial, sans-serif" font-size="16" font-weight="700">Klaim biaya penggunaan tugas agent dari MiniMax</text>
+  <text x="198" y="316" fill="#A5B4CC" font-family="Arial, sans-serif" font-size="13">Perhitungan per tugas; bukan diskon 70% pada harga tiap token.</text>
+  <text x="44" y="372" fill="#64748B" font-family="Arial, sans-serif" font-size="12">Sumber: pengumuman MiniMax, 19 Oktober 2026.</text>
+</svg>
