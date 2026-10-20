@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="600" viewBox="0 0 1200 600" role="img" aria-labelledby="title desc">
+  <title id="title">Fokus pendanaan Tenstorrent</title>
+  <desc id="desc">Tiga fokus yang disebut Tenstorrent setelah memperoleh pendanaan 1,5 miliar dolar: memperbesar produksi server Galaxy, ekspansi komersial global, serta pengembangan dan lisensi IP AI dan CPU.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#101a30"/>
+      <stop offset="1" stop-color="#080d18"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#8b5cf6"/>
+      <stop offset="1" stop-color="#36bffa"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="600" rx="30" fill="url(#bg)"/>
+  <text x="58" y="72" fill="#f4f7ff" font-family="Arial, sans-serif" font-size="32" font-weight="700">Ke mana Tenstorrent mengarahkan pendanaan baru?</text>
+  <text x="60" y="111" fill="#aab7cf" font-family="Arial, sans-serif" font-size="18">Fokus yang disebut dalam pengumuman Seri E, 19 Oktober 2026</text>
+  <rect x="60" y="150" width="1080" height="4" rx="2" fill="url(#accent)"/>
+
+  <g font-family="Arial, sans-serif">
+    <rect x="60" y="190" width="340" height="286" rx="20" fill="#151f34" stroke="#34415a" stroke-width="2"/>
+    <circle cx="105" cy="240" r="23" fill="#29375b"/>
+    <text x="105" y="247" fill="#b7a3ff" text-anchor="middle" font-size="18" font-weight="700">01</text>
+    <text x="88" y="310" fill="#f4f7ff" font-size="25" font-weight="700">Server Galaxy</text>
+    <text x="88" y="353" fill="#c0cbdd" font-size="18">Perbesar produksi dan</text>
+    <text x="88" y="381" fill="#c0cbdd" font-size="18">pemasangan server AI.</text>
+
+    <rect x="430" y="190" width="340" height="286" rx="20" fill="#151f34" stroke="#34415a" stroke-width="2"/>
+    <circle cx="475" cy="240" r="23" fill="#193a51"/>
+    <text x="475" y="247" fill="#75d8ff" text-anchor="middle" font-size="18" font-weight="700">02</text>
+    <text x="458" y="310" fill="#f4f7ff" font-size="25" font-weight="700">Ekspansi global</text>
+    <text x="458" y="353" fill="#c0cbdd" font-size="18">Perluas jangkauan</text>
+    <text x="458" y="381" fill="#c0cbdd" font-size="18">komersial perusahaan.</text>
+
+    <rect x="800" y="190" width="340" height="286" rx="20" fill="#151f34" stroke="#34415a" stroke-width="2"/>
+    <circle cx="845" cy="240" r="23" fill="#29375b"/>
+    <text x="845" y="247" fill="#b7a3ff" text-anchor="middle" font-size="18" font-weight="700">03</text>
+    <text x="828" y="310" fill="#f4f7ff" font-size="25" font-weight="700">IP AI dan CPU</text>
+    <text x="828" y="353" fill="#c0cbdd" font-size="18">Kembangkan desain chip</text>
+    <text x="828" y="381" fill="#c0cbdd" font-size="18">untuk dilisensikan.</text>
+  </g>
+
+  <text x="60" y="536" fill="#91a0bb" font-family="Arial, sans-serif" font-size="16">Perusahaan belum mengumumkan nominal untuk tiap fokus.</text>
+  <text x="1140" y="536" fill="#71829e" text-anchor="end" font-family="Arial, sans-serif" font-size="15">Sumber: Tenstorrent</text>
+</svg>
