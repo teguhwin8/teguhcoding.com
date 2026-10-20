@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 660" role="img" aria-labelledby="title desc">
+  <title id="title">Ringkasan temuan instruksi tersembunyi di halaman bantuan WhatsApp</title>
+  <desc id="desc">Redact memeriksa 545 halaman bantuan, menemukan instruksi tersembunyi di 80 halaman, dan menghitung 102 blok instruksi.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#101b2b"/>
+      <stop offset="1" stop-color="#07110f"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#39d3a6"/>
+      <stop offset="1" stop-color="#6ce6c5"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="660" rx="28" fill="url(#bg)"/>
+  <circle cx="1090" cy="80" r="140" fill="#39d3a6" opacity=".06"/>
+  <text x="72" y="90" fill="#9ae9d2" font-family="Inter, Arial, sans-serif" font-size="19" font-weight="700" letter-spacing="2">TEMUAN REDACT · OKTOBER 2026</text>
+  <text x="72" y="148" fill="#f3f7fb" font-family="Inter, Arial, sans-serif" font-size="38" font-weight="750">Instruksi AI di halaman bantuan WhatsApp</text>
+  <g transform="translate(72 198)">
+    <rect width="330" height="220" rx="18" fill="#172638" stroke="#2a3d50"/>
+    <text x="28" y="55" fill="#aebdce" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="600">HALAMAN DIPERIKSA</text>
+    <text x="28" y="143" fill="#f5f8fc" font-family="Inter, Arial, sans-serif" font-size="72" font-weight="750">545</text>
+    <text x="28" y="184" fill="#aebdce" font-family="Inter, Arial, sans-serif" font-size="18">halaman pusat bantuan</text>
+  </g>
+  <g transform="translate(435 198)">
+    <rect width="330" height="220" rx="18" fill="#172638" stroke="#2a3d50"/>
+    <text x="28" y="55" fill="#aebdce" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="600">HALAMAN TERDAMPAK</text>
+    <text x="28" y="143" fill="url(#accent)" font-family="Inter, Arial, sans-serif" font-size="72" font-weight="750">80</text>
+    <text x="28" y="184" fill="#aebdce" font-family="Inter, Arial, sans-serif" font-size="18">memuat teks tersembunyi</text>
+  </g>
+  <g transform="translate(798 198)">
+    <rect width="330" height="220" rx="18" fill="#172638" stroke="#2a3d50"/>
+    <text x="28" y="55" fill="#aebdce" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="600">BLOK INSTRUKSI</text>
+    <text x="28" y="143" fill="#f5f8fc" font-family="Inter, Arial, sans-serif" font-size="72" font-weight="750">102</text>
+    <text x="28" y="184" fill="#aebdce" font-family="Inter, Arial, sans-serif" font-size="18">ditemukan Redact</text>
+  </g>
+  <rect x="72" y="456" width="1056" height="132" rx="18" fill="#1e2826" stroke="#395c51"/>
+  <circle cx="112" cy="505" r="15" fill="#f4c769"/>
+  <text x="144" y="504" fill="#fff2d0" font-family="Inter, Arial, sans-serif" font-size="21" font-weight="700">Catatan penting</text>
+  <text x="144" y="542" fill="#d1ddd9" font-family="Inter, Arial, sans-serif" font-size="19">Temuan ini tidak membuktikan chatbot mengikuti instruksi tersebut.</text>
+  <text x="72" y="625" fill="#91a2b3" font-family="Inter, Arial, sans-serif" font-size="15">Sumber: Redact · Grafis Teguhcoding</text>
+</svg>
