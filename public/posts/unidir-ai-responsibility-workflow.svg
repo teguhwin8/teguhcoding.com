@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="480" viewBox="0 0 1200 480" role="img" aria-labelledby="title desc">
+  <title id="title">Alur penyusunan panduan sukarela AI militer oleh UNIDIR</title>
+  <desc id="desc">Forum dibuka, para pemangku kepentingan berkonsultasi, lalu UNIDIR menyusun panduan industri yang sukarela.</desc>
+  <rect width="1200" height="480" rx="28" fill="#101827"/>
+  <text x="64" y="70" fill="#9fb4d0" font-family="Arial, sans-serif" font-size="20" font-weight="700" letter-spacing="2">AGENDA UNIDIR · OKTOBER 2026</text>
+  <g font-family="Arial, sans-serif">
+    <rect x="64" y="118" width="320" height="278" rx="18" fill="#17253a" stroke="#38516f" stroke-width="2"/>
+    <circle cx="104" cy="164" r="22" fill="#3567d4"/><text x="104" y="172" text-anchor="middle" fill="#fff" font-size="22" font-weight="700">1</text>
+    <text x="138" y="171" fill="#fff" font-size="25" font-weight="700">Forum dibuka</text>
+    <text x="92" y="224" fill="#d8e1ee" font-size="21"><tspan x="92" dy="0">UNIDIR bersama Swiss</tspan><tspan x="92" dy="31">dan Pakistan meluncurkan</tspan><tspan x="92" dy="31">forum pada 22 Oktober.</tspan></text>
+    <text x="92" y="356" fill="#9fb4d0" font-size="18">New York · agenda awal</text>
+
+    <path d="M402 257h34m-12-12 12 12-12 12" fill="none" stroke="#7894bb" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <rect x="448" y="118" width="320" height="278" rx="18" fill="#17253a" stroke="#38516f" stroke-width="2"/>
+    <circle cx="488" cy="164" r="22" fill="#3567d4"/><text x="488" y="172" text-anchor="middle" fill="#fff" font-size="22" font-weight="700">2</text>
+    <text x="522" y="171" fill="#fff" font-size="25" font-weight="700">Konsultasi</text>
+    <text x="476" y="224" fill="#d8e1ee" font-size="21"><tspan x="476" dy="0">Developer, industri,</tspan><tspan x="476" dy="31">pemerintah, akademisi,</tspan><tspan x="476" dy="31">dan masyarakat sipil.</tspan></text>
+    <text x="476" y="356" fill="#9fb4d0" font-size="18">Masukan lintas sektor</text>
+
+    <path d="M786 257h34m-12-12 12 12-12 12" fill="none" stroke="#7894bb" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <rect x="832" y="118" width="304" height="278" rx="18" fill="#17253a" stroke="#38516f" stroke-width="2"/>
+    <circle cx="872" cy="164" r="22" fill="#3567d4"/><text x="872" y="172" text-anchor="middle" fill="#fff" font-size="22" font-weight="700">3</text>
+    <text x="906" y="171" fill="#fff" font-size="25" font-weight="700">Panduan</text>
+    <text x="860" y="224" fill="#d8e1ee" font-size="21"><tspan x="860" dy="0">Arahan praktis untuk</tspan><tspan x="860" dy="31">industri; sifatnya</tspan><tspan x="860" dy="31">sukarela dan belum final.</tspan></text>
+    <text x="860" y="356" fill="#9fb4d0" font-size="18">Disusun oleh UNIDIR</text>
+  </g>
+</svg>
