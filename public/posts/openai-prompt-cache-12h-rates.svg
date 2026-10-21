@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="590" viewBox="0 0 1200 590" role="img" aria-labelledby="title desc">
+  <title id="title">Tarif prompt cache OpenAI: 30 menit dan 12 jam</title>
+  <desc id="desc">Cache 30 menit menulis pada tarif 1,25 kali input biasa. Cache 12 jam menulis pada tarif 2,5 kali. Pembacaan cache pada kedua opsi umumnya 0,1 kali tarif input.</desc>
+  <rect width="1200" height="590" rx="28" fill="#f5f8fc"/>
+  <text x="72" y="86" fill="#13243a" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="700">Harga cache prompt OpenAI</text>
+  <text x="72" y="128" fill="#53647a" font-family="Inter, Arial, sans-serif" font-size="20">Tarif relatif terhadap satu unit input biasa · GPT-5.6 dan lebih baru</text>
+
+  <rect x="72" y="174" width="500" height="296" rx="22" fill="#ffffff" stroke="#dce5ef" stroke-width="2"/>
+  <text x="108" y="222" fill="#13243a" font-family="Inter, Arial, sans-serif" font-size="26" font-weight="700">TTL 30 menit · bawaan</text>
+  <text x="108" y="276" fill="#53647a" font-family="Inter, Arial, sans-serif" font-size="18">Tulis prefix</text>
+  <rect x="108" y="292" width="165" height="48" rx="10" fill="#2f6fed"/>
+  <text x="293" y="324" fill="#13243a" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="700">1,25×</text>
+  <text x="108" y="382" fill="#53647a" font-family="Inter, Arial, sans-serif" font-size="18">Baca cache</text>
+  <rect x="108" y="398" width="13" height="38" rx="6" fill="#21a179"/>
+  <text x="140" y="426" fill="#13243a" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="700">0,1×</text>
+
+  <rect x="628" y="174" width="500" height="296" rx="22" fill="#ffffff" stroke="#dce5ef" stroke-width="2"/>
+  <text x="664" y="222" fill="#13243a" font-family="Inter, Arial, sans-serif" font-size="26" font-weight="700">TTL 12 jam</text>
+  <text x="664" y="276" fill="#53647a" font-family="Inter, Arial, sans-serif" font-size="18">Tulis prefix</text>
+  <rect x="664" y="292" width="330" height="48" rx="10" fill="#f29a38"/>
+  <text x="1014" y="324" fill="#13243a" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="700">2,5×</text>
+  <text x="664" y="382" fill="#53647a" font-family="Inter, Arial, sans-serif" font-size="18">Baca cache</text>
+  <rect x="664" y="398" width="13" height="38" rx="6" fill="#21a179"/>
+  <text x="696" y="426" fill="#13243a" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="700">0,1×</text>
+
+  <rect x="72" y="500" width="20" height="20" rx="5" fill="#2f6fed"/>
+  <text x="104" y="517" fill="#53647a" font-family="Inter, Arial, sans-serif" font-size="17">Tulis cache</text>
+  <rect x="256" y="500" width="20" height="20" rx="5" fill="#21a179"/>
+  <text x="288" y="517" fill="#53647a" font-family="Inter, Arial, sans-serif" font-size="17">Baca cache</text>
+  <text x="72" y="555" fill="#53647a" font-family="Inter, Arial, sans-serif" font-size="16">Pembacaan GPT-6.1 Sol: 0,05×. TTL 12 jam menaikkan biaya tulis, bukan biaya baca.</text>
+</svg>
