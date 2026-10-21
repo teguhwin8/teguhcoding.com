@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520" role="img" aria-labelledby="title description">
+  <title id="title">Ringkasan hasil desain pengikat toksin kalajengking</title>
+  <desc id="description">Anthropic melaporkan 318.484 desain komputasional, 211 desain diuji, dan 17 memenuhi kriteria pengikatan. Netralisasi racun dan efektivitas pada hewan belum diuji.</desc>
+  <rect width="1200" height="520" rx="28" fill="#101827"/>
+  <text x="64" y="72" fill="#f3f4f6" font-family="Arial, sans-serif" font-size="28" font-weight="700">Dari desain protein ke hasil lab</text>
+  <g font-family="Arial, sans-serif" text-anchor="middle">
+    <rect x="56" y="126" width="310" height="190" rx="20" fill="#182437" stroke="#33445c"/>
+    <text x="211" y="205" fill="#74c5ff" font-size="48" font-weight="700">318.484</text>
+    <text x="211" y="250" fill="#e5e7eb" font-size="22">desain komputasional</text>
+    <text x="211" y="282" fill="#9ca3af" font-size="16">dibuat selama kampanye 64 jam</text>
+
+    <path d="M384 220h56m-16-16 16 16-16 16" fill="none" stroke="#8292a8" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <rect x="445" y="126" width="310" height="190" rx="20" fill="#182437" stroke="#33445c"/>
+    <text x="600" y="205" fill="#74c5ff" font-size="48" font-weight="700">211</text>
+    <text x="600" y="250" fill="#e5e7eb" font-size="22">desain diuji untuk ikatan</text>
+    <text x="600" y="282" fill="#9ca3af" font-size="16">oleh mitra laboratorium</text>
+
+    <path d="M773 220h56m-16-16 16 16-16 16" fill="none" stroke="#8292a8" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <rect x="834" y="126" width="310" height="190" rx="20" fill="#182437" stroke="#33445c"/>
+    <text x="989" y="205" fill="#ffbd70" font-size="48" font-weight="700">17</text>
+    <text x="989" y="250" fill="#e5e7eb" font-size="22">memenuhi kriteria binder</text>
+    <text x="989" y="282" fill="#9ca3af" font-size="16">masing-masing untuk satu toksin</text>
+  </g>
+  <rect x="56" y="360" width="1088" height="96" rx="16" fill="#29251e" stroke="#74572e"/>
+  <circle cx="94" cy="408" r="12" fill="#ffbd70"/>
+  <text x="124" y="401" fill="#ffdaab" font-family="Arial, sans-serif" font-size="19" font-weight="700">Belum diuji sebagai penawar</text>
+  <text x="124" y="432" fill="#e5e7eb" font-family="Arial, sans-serif" font-size="17">Netralisasi racun di sel dan efektivitas pada hewan belum diperiksa.</text>
+</svg>
