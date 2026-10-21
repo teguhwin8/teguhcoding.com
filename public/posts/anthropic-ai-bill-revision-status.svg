@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 560" role="img" aria-labelledby="title description">
+  <title id="title">Status draf aturan AI Anthropic</title>
+  <desc id="description">Politico melaporkan isi draf pada 16 Oktober. Dua hari kemudian Anthony Cimino mengatakan Anthropic akan memperjelas aturan preemption dan meninjau ambang risiko. Per 21 Oktober belum ada naskah revisi dan belum ada RUU yang diperkenalkan.</desc>
+  <rect width="1200" height="560" rx="28" fill="#101827"/>
+  <text x="64" y="68" fill="#f3f4f6" font-family="Arial, sans-serif" font-size="29" font-weight="700">Drafnya dikritik, tetapi belum berubah jadi aturan</text>
+  <text x="64" y="104" fill="#9ca3af" font-family="Arial, sans-serif" font-size="17">Status proposal federal Anthropic per 21 Oktober 2026</text>
+
+  <g font-family="Arial, sans-serif">
+    <rect x="56" y="150" width="332" height="235" rx="20" fill="#182437" stroke="#33445c"/>
+    <rect x="80" y="174" width="116" height="30" rx="15" fill="#24334a"/>
+    <text x="138" y="195" fill="#74c5ff" font-size="15" font-weight="700" text-anchor="middle">16 OKT</text>
+    <text x="80" y="248" fill="#f3f4f6" font-size="24" font-weight="700">Draf diberitakan</text>
+    <text x="80" y="286" fill="#d1d5db" font-size="17">Politico memuat versi yang</text>
+    <text x="80" y="312" fill="#d1d5db" font-size="17">dibagikan ke sejumlah kecil</text>
+    <text x="80" y="338" fill="#d1d5db" font-size="17">kantor anggota Kongres.</text>
+
+    <path d="M398 266h28m-12-12 12 12-12 12" fill="none" stroke="#8292a8" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <rect x="434" y="150" width="332" height="235" rx="20" fill="#182437" stroke="#33445c"/>
+    <rect x="458" y="174" width="116" height="30" rx="15" fill="#24334a"/>
+    <text x="516" y="195" fill="#74c5ff" font-size="15" font-weight="700" text-anchor="middle">18 OKT</text>
+    <text x="458" y="248" fill="#f3f4f6" font-size="24" font-weight="700">Anthropic merespons</text>
+    <text x="458" y="286" fill="#d1d5db" font-size="17">Redaksi kewenangan negara</text>
+    <text x="458" y="312" fill="#d1d5db" font-size="17">bagian akan diperbarui; ambang</text>
+    <text x="458" y="338" fill="#d1d5db" font-size="17">risiko akan ditinjau lagi.</text>
+
+    <path d="M776 266h28m-12-12 12 12-12 12" fill="none" stroke="#8292a8" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <rect x="812" y="150" width="332" height="235" rx="20" fill="#182437" stroke="#33445c"/>
+    <rect x="836" y="174" width="116" height="30" rx="15" fill="#24334a"/>
+    <text x="894" y="195" fill="#74c5ff" font-size="15" font-weight="700" text-anchor="middle">21 OKT</text>
+    <text x="836" y="248" fill="#f3f4f6" font-size="24" font-weight="700">Belum ada aturan baru</text>
+    <text x="836" y="286" fill="#d1d5db" font-size="17">Teks revisi belum terbit dan</text>
+    <text x="836" y="312" fill="#d1d5db" font-size="17">draf belum diperkenalkan</text>
+    <text x="836" y="338" fill="#d1d5db" font-size="17">sebagai RUU.</text>
+  </g>
+
+  <rect x="56" y="420" width="1088" height="86" rx="16" fill="#29251e" stroke="#74572e"/>
+  <circle cx="94" cy="463" r="10" fill="#ffbd70"/>
+  <text x="120" y="456" fill="#ffdaab" font-family="Arial, sans-serif" font-size="18" font-weight="700">Draf yang diberitakan: risiko ke &gt;50 orang atau kerugian US$1 miliar</text>
+  <text x="120" y="483" fill="#e5e7eb" font-family="Arial, sans-serif" font-size="16">Angka itu belum berlaku sebagai hukum dan belum diumumkan berubah.</text>
+</svg>
