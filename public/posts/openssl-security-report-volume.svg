@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" fill="none">
+  <title>Laporan dan pertanyaan keamanan yang diterima OpenSSL meningkat</title>
+  <desc>Perbandingan rata-rata bulanan 9 pada Mei sampai Juli 2025, 71 pada Mei sampai Juli 2026, dan 108 pertanyaan pada Agustus 2026.</desc>
+  <rect width="1200" height="675" rx="28" fill="#F5F3EE"/>
+  <circle cx="1070" cy="86" r="150" fill="#E6EDE7"/>
+  <text x="72" y="74" fill="#607568" font-family="Arial, sans-serif" font-size="16" font-weight="700" letter-spacing="2">OPENSSL · LAPORAN KEAMANAN</text>
+  <text x="72" y="132" fill="#1E2D26" font-family="Arial, sans-serif" font-size="38" font-weight="700">Lebih banyak laporan, lebih banyak yang harus ditinjau</text>
+  <text x="74" y="169" fill="#68746D" font-family="Arial, sans-serif" font-size="19">Jumlah per bulan; angka Agustus adalah total pertanyaan untuk satu bulan</text>
+
+  <line x1="115" y1="510" x2="1085" y2="510" stroke="#C7D0C9" stroke-width="2"/>
+  <line x1="115" y1="430" x2="1085" y2="430" stroke="#DCE2DD" stroke-width="1"/>
+  <line x1="115" y1="350" x2="1085" y2="350" stroke="#DCE2DD" stroke-width="1"/>
+  <text x="88" y="516" text-anchor="end" fill="#89938C" font-family="Arial, sans-serif" font-size="14">0</text>
+  <line x1="115" y1="270" x2="1085" y2="270" stroke="#DCE2DD" stroke-width="1"/>
+  <text x="88" y="436" text-anchor="end" fill="#89938C" font-family="Arial, sans-serif" font-size="14">40</text>
+  <text x="88" y="356" text-anchor="end" fill="#89938C" font-family="Arial, sans-serif" font-size="14">80</text>
+  <text x="88" y="276" text-anchor="end" fill="#89938C" font-family="Arial, sans-serif" font-size="14">120</text>
+
+  <rect x="210" y="491" width="180" height="19" rx="8" fill="#9AA9A0"/>
+  <rect x="510" y="361" width="180" height="149" rx="8" fill="#557A67"/>
+  <rect x="810" y="283" width="180" height="227" rx="8" fill="#D58A46"/>
+
+  <text x="300" y="474" text-anchor="middle" fill="#34453A" font-family="Arial, sans-serif" font-size="30" font-weight="700">9</text>
+  <text x="600" y="342" text-anchor="middle" fill="#34453A" font-family="Arial, sans-serif" font-size="30" font-weight="700">71</text>
+  <text x="900" y="264" text-anchor="middle" fill="#34453A" font-family="Arial, sans-serif" font-size="30" font-weight="700">108</text>
+
+  <text x="300" y="548" text-anchor="middle" fill="#34453A" font-family="Arial, sans-serif" font-size="18" font-weight="700">Mei–Jul 2025</text>
+  <text x="300" y="576" text-anchor="middle" fill="#68746D" font-family="Arial, sans-serif" font-size="15">rata-rata per bulan</text>
+  <text x="600" y="548" text-anchor="middle" fill="#34453A" font-family="Arial, sans-serif" font-size="18" font-weight="700">Mei–Jul 2026</text>
+  <text x="600" y="576" text-anchor="middle" fill="#68746D" font-family="Arial, sans-serif" font-size="15">rata-rata per bulan</text>
+  <text x="900" y="548" text-anchor="middle" fill="#34453A" font-family="Arial, sans-serif" font-size="18" font-weight="700">Agustus 2026</text>
+  <text x="900" y="576" text-anchor="middle" fill="#68746D" font-family="Arial, sans-serif" font-size="15">jumlah pertanyaan</text>
+
+  <text x="72" y="632" fill="#77847B" font-family="Arial, sans-serif" font-size="15">Sumber: Matt Caswell, dikutip Axios pada 20 Oktober 2026.</text>
+</svg>
