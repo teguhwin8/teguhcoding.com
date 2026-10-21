@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="690" viewBox="0 0 1200 690" role="img" aria-labelledby="title desc">
+  <title id="title">Cara kerja Respan Gateway</title>
+  <desc id="desc">SDK mengirim permintaan ke inti gateway Rust. Plugin menerjemahkan format dan memilih penyedia model. Plugin kustom dikompilasi ke dalam aplikasi gateway.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1320"/>
+      <stop offset="1" stop-color="#131b2d"/>
+    </linearGradient>
+    <linearGradient id="gateway" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#192743"/>
+      <stop offset="1" stop-color="#211c3b"/>
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0 0 10 5 0 10Z" fill="#62c8f4"/>
+    </marker>
+    <style>
+      text { font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+      .muted { fill: #aab8ca; }
+      .bright { fill: #f4f7fb; }
+      .label { fill: #9eafff; font-size: 13px; font-weight: 700; letter-spacing: 1.4px; }
+      .small { fill: #c1cde0; font-size: 16px; }
+    </style>
+  </defs>
+
+  <rect width="1200" height="690" rx="28" fill="url(#bg)"/>
+  <circle cx="1050" cy="50" r="230" fill="#3e2870" opacity=".13"/>
+  <circle cx="100" cy="650" r="240" fill="#186078" opacity=".10"/>
+
+  <text x="64" y="58" class="label">DIAGRAM · RESPAN GATEWAY</text>
+  <text x="64" y="103" class="bright" font-size="30" font-weight="700">Satu endpoint, beberapa penyedia model</text>
+  <text x="64" y="132" class="muted" font-size="17">Gateway menerjemahkan format request, lalu meneruskannya melalui plugin.</text>
+
+  <rect x="58" y="183" width="238" height="236" rx="18" fill="#141f30" stroke="#324157" stroke-width="1.5"/>
+  <text x="84" y="222" class="label">CLIENT</text>
+  <text x="84" y="260" class="bright" font-size="23" font-weight="650">Aplikasi / SDK</text>
+  <rect x="84" y="282" width="185" height="36" rx="9" fill="#1e2b3e"/>
+  <text x="102" y="306" class="small">OpenAI API</text>
+  <rect x="84" y="328" width="185" height="36" rx="9" fill="#1e2b3e"/>
+  <text x="102" y="352" class="small">Anthropic API</text>
+  <rect x="84" y="374" width="185" height="30" rx="9" fill="#1e2b3e"/>
+  <text x="102" y="395" class="small">Gemini API</text>
+
+  <path d="M306 301H369" stroke="#62c8f4" stroke-width="3" marker-end="url(#arrow)"/>
+  <text x="311" y="282" class="muted" font-size="13">request</text>
+
+  <rect x="382" y="168" width="420" height="267" rx="21" fill="url(#gateway)" stroke="#7165ba" stroke-width="2"/>
+  <text x="414" y="207" class="label">SATU BINER RUST</text>
+  <text x="414" y="245" class="bright" font-size="26" font-weight="700">Respan Gateway</text>
+  <text x="414" y="272" class="muted" font-size="15">Inti menerima request dan mengatur alurnya</text>
+  <rect x="414" y="296" width="166" height="42" rx="10" fill="#2a3758" stroke="#536486"/>
+  <text x="431" y="323" class="small">Konversi format</text>
+  <rect x="592" y="296" width="178" height="42" rx="10" fill="#2a3758" stroke="#536486"/>
+  <text x="611" y="323" class="small">Routing / fallback</text>
+  <rect x="414" y="350" width="166" height="42" rx="10" fill="#2a3758" stroke="#536486"/>
+  <text x="431" y="377" class="small">MCP / tools</text>
+  <rect x="592" y="350" width="178" height="42" rx="10" fill="#2a3758" stroke="#536486"/>
+  <text x="611" y="377" class="small">Log / pricing</text>
+
+  <path d="M812 301H873" stroke="#62c8f4" stroke-width="3" marker-end="url(#arrow)"/>
+  <text x="816" y="282" class="muted" font-size="13">arahkan</text>
+
+  <rect x="886" y="183" width="257" height="236" rx="18" fill="#141f30" stroke="#324157" stroke-width="1.5"/>
+  <text x="912" y="222" class="label">PROVIDER</text>
+  <text x="912" y="260" class="bright" font-size="23" font-weight="650">Penyedia model</text>
+  <rect x="912" y="282" width="205" height="36" rx="9" fill="#1e2b3e"/>
+  <text x="930" y="306" class="small">OpenAI</text>
+  <rect x="912" y="328" width="205" height="36" rx="9" fill="#1e2b3e"/>
+  <text x="930" y="352" class="small">Anthropic</text>
+  <rect x="912" y="374" width="205" height="30" rx="9" fill="#1e2b3e"/>
+  <text x="930" y="395" class="small">Gemini · lainnya</text>
+
+  <path d="M592 447V477" stroke="#9c8bff" stroke-width="2.5" stroke-dasharray="6 6" marker-end="url(#arrow)"/>
+  <rect x="300" y="491" width="600" height="135" rx="18" fill="#111a2a" stroke="#6454ae" stroke-width="1.5"/>
+  <text x="332" y="527" class="label">BATAS EKSTENSI</text>
+  <text x="332" y="561" class="bright" font-size="21" font-weight="650">Plugin kustom ditulis sebagai crate Rust</text>
+  <text x="332" y="586" class="muted" font-size="16">Logika kustom ikut dikompilasi ke gateway;</text>
+  <text x="332" y="609" class="muted" font-size="16">bukan modul lepas yang dimuat saat runtime.</text>
+
+  <text x="64" y="659" class="muted" font-size="13">Ringkasan konseptual berdasarkan README dan keterangan pendiri Respan.</text>
+</svg>
