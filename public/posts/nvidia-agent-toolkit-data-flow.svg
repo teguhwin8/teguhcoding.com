@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" role="img" aria-labelledby="title desc">
+  <title id="title">Alur data NVIDIA Agent Toolkit</title>
+  <desc id="desc">Sumber data perusahaan dipetakan oleh Auto-Ontology dan CUDA-X, dicari dengan Nemotron Retriever atau dianalisis Kumo, lalu dipakai agen yang dibatasi runtime OpenShell.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#10192e"/>
+      <stop offset="1" stop-color="#090d18"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#84cc16"/>
+      <stop offset="1" stop-color="#38bdf8"/>
+    </linearGradient>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0 0L10 5L0 10Z" fill="#7183a8"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="700" rx="32" fill="url(#bg)"/>
+  <text x="56" y="66" fill="#94a3b8" font-family="Inter,Arial,sans-serif" font-size="18" font-weight="700" letter-spacing="3">ALUR KERJA AGENT TOOLKIT</text>
+  <text x="56" y="118" fill="#f8fafc" font-family="Inter,Arial,sans-serif" font-size="36" font-weight="750">Dari data perusahaan ke agen yang dibatasi</text>
+  <g font-family="Inter,Arial,sans-serif">
+    <rect x="48" y="176" width="220" height="286" rx="22" fill="#131e34" stroke="#33445f" stroke-width="2"/>
+    <text x="72" y="218" fill="#7dd3fc" font-size="16" font-weight="700" letter-spacing="1">SUMBER DATA</text>
+    <text x="72" y="278" fill="#f8fafc" font-size="23" font-weight="700">Dokumen</text>
+    <text x="72" y="316" fill="#cbd5e1" font-size="19">PDF, kebijakan</text>
+    <text x="72" y="370" fill="#f8fafc" font-size="23" font-weight="700">Tabel</text>
+    <text x="72" y="408" fill="#cbd5e1" font-size="19">Transaksi, waktu</text>
+
+    <path d="M274 320h42" stroke="#7183a8" stroke-width="3" marker-end="url(#arrow)"/>
+
+    <rect x="328" y="176" width="252" height="286" rx="22" fill="#17233a" stroke="#5270a5" stroke-width="2"/>
+    <text x="352" y="218" fill="#c4b5fd" font-size="16" font-weight="700" letter-spacing="1">LAPISAN DATA</text>
+    <text x="352" y="278" fill="#f8fafc" font-size="23" font-weight="700">Auto-Ontology</text>
+    <text x="352" y="315" fill="#cbd5e1" font-size="18">Makna &amp; relasi</text>
+    <text x="352" y="372" fill="#f8fafc" font-size="22" font-weight="700">CUDA-X</text>
+    <text x="352" y="408" fill="#cbd5e1" font-size="18">Pemrosesan data</text>
+
+    <path d="M586 320h42" stroke="#7183a8" stroke-width="3" marker-end="url(#arrow)"/>
+
+    <rect x="640" y="176" width="252" height="286" rx="22" fill="#142735" stroke="#377087" stroke-width="2"/>
+    <text x="664" y="218" fill="#86efac" font-size="16" font-weight="700" letter-spacing="1">MODEL</text>
+    <text x="664" y="278" fill="#f8fafc" font-size="23" font-weight="700">Nemotron</text>
+    <text x="664" y="315" fill="#cbd5e1" font-size="18">Pencarian dokumen</text>
+    <text x="664" y="372" fill="#f8fafc" font-size="23" font-weight="700">Kumo</text>
+    <text x="664" y="408" fill="#cbd5e1" font-size="18">Prediksi data bisnis</text>
+
+    <path d="M898 320h42" stroke="#7183a8" stroke-width="3" marker-end="url(#arrow)"/>
+
+    <rect x="952" y="176" width="200" height="286" rx="22" fill="#1c2936" stroke="#638241" stroke-width="2"/>
+    <text x="976" y="218" fill="#bef264" font-size="16" font-weight="700" letter-spacing="1">AGEN</text>
+    <text x="976" y="278" fill="#f8fafc" font-size="22" font-weight="700">Jawaban</text>
+    <text x="976" y="316" fill="#cbd5e1" font-size="18">Prediksi</text>
+    <text x="976" y="354" fill="#cbd5e1" font-size="18">Tindakan</text>
+
+    <rect x="48" y="500" width="1104" height="112" rx="20" fill="#111b2d" stroke="#3b4c62" stroke-width="2"/>
+    <circle cx="88" cy="556" r="13" fill="url(#accent)"/>
+    <text x="120" y="548" fill="#f8fafc" font-size="22" font-weight="700">OpenShell membatasi akses dan tindakan agen</text>
+    <text x="120" y="582" fill="#b7c4d9" font-size="18">NemoClaw menyediakan blueprint; batas izin tetap perlu disesuaikan dengan sistem yang dihubungkan.</text>
+  </g>
+</svg>
