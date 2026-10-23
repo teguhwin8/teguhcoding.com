@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 650" role="img" aria-labelledby="title desc">
+  <title id="title">Alur verifikasi formal yang dilaporkan Anthropic dan Theorem</title>
+  <desc id="desc">Target OSS-Fuzz dikompilasi menjadi program RISC-V untuk Linux. Claude menulis bukti formal di Rocq, lalu kernel Rocq memeriksa bukti terhadap spesifikasi. Hasil hanya berlaku pada entry point dan asumsi yang diuji.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f7f8fc"/>
+      <stop offset="1" stop-color="#edf3ff"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#132449" flood-opacity=".09"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="650" rx="30" fill="url(#bg)"/>
+  <text x="64" y="72" fill="#17233f" font-family="Inter,Arial,sans-serif" font-size="28" font-weight="700">Dari fuzz test ke bukti yang bisa diperiksa</text>
+  <text x="64" y="108" fill="#596780" font-family="Inter,Arial,sans-serif" font-size="17">Alur eksperimen Anthropic dan Theorem pada target OSS-Fuzz</text>
+
+  <g filter="url(#shadow)">
+    <rect x="55" y="166" width="238" height="216" rx="20" fill="#fff"/>
+    <rect x="333" y="166" width="238" height="216" rx="20" fill="#fff"/>
+    <rect x="611" y="166" width="238" height="216" rx="20" fill="#fff"/>
+    <rect x="889" y="166" width="256" height="216" rx="20" fill="#fff"/>
+  </g>
+
+  <g font-family="Inter,Arial,sans-serif" text-anchor="middle">
+    <circle cx="174" cy="218" r="27" fill="#e7edff"/>
+    <text x="174" y="226" fill="#3858b8" font-size="22" font-weight="700">1</text>
+    <text x="174" y="275" fill="#1c2945" font-size="20" font-weight="700">Target OSS-Fuzz</text>
+    <text x="174" y="311" fill="#56637b" font-size="15">Harness uji jadi</text>
+    <text x="174" y="335" fill="#56637b" font-size="15">spesifikasi perilaku</text>
+
+    <circle cx="452" cy="218" r="27" fill="#e7edff"/>
+    <text x="452" y="226" fill="#3858b8" font-size="22" font-weight="700">2</text>
+    <text x="452" y="275" fill="#1c2945" font-size="20" font-weight="700">Program dibangun</text>
+    <text x="452" y="311" fill="#56637b" font-size="15">Binary statis RISC-V</text>
+    <text x="452" y="335" fill="#56637b" font-size="15">di model Linux</text>
+
+    <circle cx="730" cy="218" r="27" fill="#eee8ff"/>
+    <text x="730" y="226" fill="#7046bb" font-size="22" font-weight="700">3</text>
+    <text x="730" y="275" fill="#1c2945" font-size="20" font-weight="700">Claude menulis</text>
+    <text x="730" y="311" fill="#56637b" font-size="15">Bukti formal</text>
+    <text x="730" y="335" fill="#56637b" font-size="15">dalam bahasa Rocq</text>
+
+    <circle cx="1017" cy="218" r="27" fill="#e3f5ed"/>
+    <text x="1017" y="226" fill="#21845e" font-size="22" font-weight="700">4</text>
+    <text x="1017" y="275" fill="#1c2945" font-size="20" font-weight="700">Kernel Rocq</text>
+    <text x="1017" y="311" fill="#56637b" font-size="15">Memeriksa bukti</text>
+    <text x="1017" y="335" fill="#56637b" font-size="15">terhadap spesifikasi</text>
+  </g>
+
+  <g stroke="#8797bd" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M300 273h23m-8-8 8 8-8 8"/>
+    <path d="M578 273h23m-8-8 8 8-8 8"/>
+    <path d="M856 273h23m-8-8 8 8-8 8"/>
+  </g>
+
+  <rect x="55" y="422" width="1090" height="90" rx="18" fill="#e5f5ee"/>
+  <text x="88" y="458" fill="#176546" font-family="Inter,Arial,sans-serif" font-size="17" font-weight="700">Klaim yang dibuktikan</text>
+  <text x="88" y="486" fill="#315d4d" font-family="Inter,Arial,sans-serif" font-size="16">Tidak ada error yang terdeteksi untuk input di bawah 64 MB, pada kondisi yang dimodelkan.</text>
+
+  <rect x="55" y="538" width="1090" height="66" rx="15" fill="#fff3dc"/>
+  <circle cx="87" cy="571" r="12" fill="#f0ad3d"/>
+  <text x="87" y="577" fill="#fff" font-family="Arial,sans-serif" font-size="16" font-weight="700" text-anchor="middle">!</text>
+  <text x="116" y="578" fill="#694b1c" font-family="Inter,Arial,sans-serif" font-size="15" font-weight="600">Batasnya: hanya entry point dan binary yang diuji; bukan jaminan seluruh library bebas bug.</text>
+</svg>
