@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1040" role="img" aria-labelledby="title desc">
+  <title id="title">Cara Carbon-X membaca DNA dan pertanyaan dalam satu percakapan</title>
+  <desc id="desc">Pertanyaan bahasa biasa dan urutan DNA dibaca bersama. Carbon-X mengelompokkan DNA menjadi potongan enam basa, lalu memberi prediksi dan penjelasan.</desc>
+  <defs>
+    <linearGradient id="panel" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#f6f8ff"/>
+      <stop offset="1" stop-color="#eef5ff"/>
+    </linearGradient>
+    <linearGradient id="model" x1="0" x2="1">
+      <stop offset="0" stop-color="#2563eb"/>
+      <stop offset="1" stop-color="#7c3aed"/>
+    </linearGradient>
+    <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="7" orient="auto">
+      <path d="M1 1 13 7 1 13" fill="none" stroke="#64748b" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"/>
+    </marker>
+  </defs>
+  <rect width="800" height="1120" rx="32" fill="#fff"/>
+  <text x="400" y="60" fill="#0f172a" font-family="Arial, sans-serif" font-size="32" font-weight="700" text-anchor="middle">DNA dan pertanyaan masuk dalam satu chat</text>
+
+  <rect x="48" y="112" width="704" height="294" rx="24" fill="url(#panel)" stroke="#dbe4f0" stroke-width="2"/>
+  <text x="82" y="159" fill="#475569" font-family="Arial, sans-serif" font-size="23" font-weight="700" letter-spacing="1">INPUT</text>
+  <text x="82" y="207" fill="#0f172a" font-family="Arial, sans-serif" font-size="28" font-weight="700">Pertanyaan</text>
+  <text x="82" y="245" fill="#334155" font-family="Arial, sans-serif" font-size="24">Apakah perubahan ini mungkin</text>
+  <text x="82" y="276" fill="#334155" font-family="Arial, sans-serif" font-size="24">memengaruhi fungsi gen?</text>
+  <line x1="82" y1="298" x2="718" y2="298" stroke="#d5deea" stroke-width="2"/>
+  <text x="82" y="339" fill="#0f172a" font-family="Arial, sans-serif" font-size="28" font-weight="700">Urutan DNA</text>
+  <g font-family="monospace" font-size="24" font-weight="700" text-anchor="middle">
+    <rect x="82" y="355" width="188" height="42" rx="10" fill="#dbeafe"/><text x="176" y="384" fill="#1d4ed8">ACGTAC</text>
+    <rect x="306" y="355" width="188" height="42" rx="10" fill="#dcfce7"/><text x="400" y="384" fill="#15803d">GATTCA</text>
+    <rect x="530" y="355" width="188" height="42" rx="10" fill="#fef3c7"/><text x="624" y="384" fill="#b45309">TACGGA</text>
+  </g>
+
+  <line x1="400" y1="425" x2="400" y2="466" stroke="#64748b" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <rect x="150" y="485" width="500" height="214" rx="34" fill="url(#model)"/>
+  <circle cx="400" cy="551" r="34" fill="#ffffff" fill-opacity=".16"/>
+  <path d="M385 551c20-31 31 31 0 0m30 0c-20 31-31-31 0 0" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="4"/>
+  <text x="400" y="625" fill="#fff" font-family="Arial, sans-serif" font-size="31" font-weight="700" text-anchor="middle">Carbon-X</text>
+  <text x="400" y="663" fill="#e0e7ff" font-family="Arial, sans-serif" font-size="23" text-anchor="middle">model bahasa + DNA · 14,8 miliar parameter</text>
+
+  <line x1="400" y1="718" x2="400" y2="759" stroke="#64748b" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <rect x="48" y="778" width="704" height="244" rx="24" fill="#f8fafc" stroke="#dbe4f0" stroke-width="2"/>
+  <text x="82" y="828" fill="#475569" font-family="Arial, sans-serif" font-size="23" font-weight="700" letter-spacing="1">OUTPUT</text>
+  <text x="82" y="879" fill="#0f172a" font-family="Arial, sans-serif" font-size="28" font-weight="700">Prediksi dan penjelasan</text>
+  <text x="82" y="916" fill="#334155" font-family="Arial, sans-serif" font-size="24">misalnya soal dampak varian atau fungsi urutan</text>
+  <rect x="82" y="947" width="312" height="46" rx="23" fill="#fff7ed"/>
+  <text x="238" y="977" fill="#9a3412" font-family="Arial, sans-serif" font-size="22" font-weight="700" text-anchor="middle">bukan diagnosis medis</text>
+</svg>
