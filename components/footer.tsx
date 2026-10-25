@@ -7,7 +7,7 @@ import { Logo } from "./logo";
 
 export function Footer() {
   const pathname = usePathname();
-  if (pathname.startsWith("/bahlil") || pathname.startsWith("/v2")) {
+  if (pathname.startsWith("/bahlil")) {
     return null;
   }
 

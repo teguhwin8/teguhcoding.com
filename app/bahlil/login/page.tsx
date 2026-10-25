@@ -28,7 +28,7 @@ export default function LoginPage() {
         const data = await res.json();
         setError(data.error || 'Login gagal');
       }
-    } catch (err) {
+    } catch {
       setError('Terjadi kesalahan jaringan');
     } finally {
       setLoading(false);

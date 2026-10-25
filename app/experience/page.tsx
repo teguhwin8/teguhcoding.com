@@ -1,17 +1,16 @@
 import { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import { experiences } from "@/lib/experience";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Work Experience — Software Engineer Career",
   description:
     "Pengalaman kerja Teguh Widodo sebagai Software Engineer: PHP Developer, Fullstack Developer, Frontend Engineer dengan keahlian di Next.js, React, NestJS.",
-  openGraph: {
-    title: "Work Experience — Teguh Widodo",
-    description:
-      "Pengalaman kerja Teguh Widodo sebagai Software Engineer di berbagai perusahaan teknologi.",
-    type: "website",
-  },
-};
+  path: "/experience",
+  ogTitle: "Work Experience — Teguh Widodo",
+  ogDescription:
+    "Pengalaman kerja Teguh Widodo sebagai Software Engineer di berbagai perusahaan teknologi.",
+});
 
 export default function Experience() {
   return (

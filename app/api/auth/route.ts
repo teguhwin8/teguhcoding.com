@@ -23,7 +23,7 @@ export async function POST(req: Request) {
     } else {
       return NextResponse.json({ error: 'Kata sandi salah' }, { status: 401 });
     }
-  } catch (error) {
+  } catch {
     return NextResponse.json({ error: 'Internal Server Error' }, { status: 500 });
   }
 }

@@ -10,6 +10,15 @@ import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import { getPostBySlug, getAllPostSlugs, getAllPosts } from "@/lib/markdown";
 import ArticleCard from "@/components/article-card";
 import TableOfContents from "@/components/table-of-contents";
+import { JsonLd } from "@/components/json-ld";
+import {
+  DEFAULT_OG_IMAGE,
+  PERSON,
+  SITE_URL,
+  absoluteUrl,
+  pageMetadata,
+  toDescription,
+} from "@/lib/seo";
 
 interface BlogPostPageProps {
   params: Promise<{ slug: string }>;
@@ -25,23 +34,16 @@ export async function generateMetadata({
     return { title: "Post Not Found" };
   }
 
-  return {
-    title: `${post.title} - Teguh Widodo`,
-    description: post.excerpt,
-    openGraph: {
-      title: post.title,
-      description: post.excerpt,
-      type: "article",
-      publishedTime: post.date,
-      images: post.cover_image ? [post.cover_image] : [],
-    },
-    twitter: {
-      card: "summary_large_image",
-      title: post.title,
-      description: post.excerpt,
-      images: post.cover_image ? [post.cover_image] : [],
-    },
-  };
+  const description = toDescription(post.excerpt);
+
+  return pageMetadata({
+    title: post.title,
+    description,
+    path: `/blog/${slug}`,
+    type: "article",
+    publishedTime: post.date,
+    image: post.cover_image || undefined,
+  });
 }
 
 export async function generateStaticParams() {
@@ -64,6 +66,36 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     month: "long",
     year: "numeric",
   });
+
+  const postUrl = absoluteUrl(`/blog/${slug}`);
+  const articleJsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BlogPosting",
+        "@id": `${postUrl}#article`,
+        headline: post.title,
+        description: toDescription(post.excerpt),
+        image: absoluteUrl(post.cover_image || DEFAULT_OG_IMAGE),
+        datePublished: post.date,
+        dateModified: post.date,
+        inLanguage: "id-ID",
+        keywords: post.tags?.join(", "),
+        mainEntityOfPage: postUrl,
+        url: postUrl,
+        author: { "@id": PERSON["@id"], "@type": "Person", name: PERSON.name, url: SITE_URL },
+        publisher: { "@id": PERSON["@id"], "@type": "Person", name: PERSON.name, url: SITE_URL },
+      },
+      {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
+          { "@type": "ListItem", position: 2, name: "Blog", item: absoluteUrl("/blog") },
+          { "@type": "ListItem", position: 3, name: post.title, item: postUrl },
+        ],
+      },
+    ],
+  };
 
   const allPosts = await getAllPosts();
   const relatedPosts = allPosts
@@ -111,6 +143,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           </Link>
 
           <article>
+            <JsonLd data={articleJsonLd} />
             {/* Cover image */}
             {post.cover_image && (
               <div className="relative aspect-[16/9] w-full rounded-xl overflow-hidden border border-[var(--border)] mb-8">

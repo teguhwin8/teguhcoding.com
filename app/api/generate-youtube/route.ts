@@ -1,7 +1,5 @@
 import { NextResponse } from 'next/server';
 import OpenAI from 'openai';
-import fs from 'fs';
-import path from 'path';
 
 const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
@@ -90,7 +88,7 @@ export async function POST(req: Request) {
 
     // 2. Fetch Title & Thumbnail from oEmbed
     let title = "Generated YouTube Post";
-    let coverImage = `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`;
+    const coverImage = `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`;
     
     try {
       const oembedRes = await fetch(`https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v=${videoId}&format=json`);
@@ -128,7 +126,7 @@ export async function POST(req: Request) {
     const date = new Date().toISOString();
 
     // Clean up if AI still wraps in markdown code block
-    let cleanExcerpt = result.excerpt.replace(/^```markdown\n?/i, '').replace(/\n?```$/i, '').trim();
+    const cleanExcerpt = result.excerpt.replace(/^```markdown\n?/i, '').replace(/\n?```$/i, '').trim();
 
     // 4. Prepare markdown content
     const markdownContent = `---
@@ -144,8 +142,8 @@ ${cleanExcerpt}
 
     return NextResponse.json({ success: true, markdownContent, slug });
 
-  } catch (error: any) {
+  } catch (error: unknown) {
     console.error('Error generating post:', error);
-    return NextResponse.json({ error: error.message || 'Internal Server Error' }, { status: 500 });
+    return NextResponse.json({ error: (error instanceof Error && error.message) || 'Internal Server Error' }, { status: 500 });
   }
 }

@@ -7,7 +7,7 @@ import { ComponentProps } from "react";
 // Mute the specific React 19 canary warning for next-themes script tag
 if (typeof window !== "undefined") {
   const originalError = console.error;
-  console.error = (...args: any[]) => {
+  console.error = (...args: unknown[]) => {
     if (typeof args[0] === "string" && args[0].includes("Encountered a script tag while rendering React component")) {
       return;
     }

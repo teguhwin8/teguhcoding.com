@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import { projects } from "@/lib/projects";
 import { ArrowLeft, ExternalLink } from "lucide-react";
 import Image from "next/image";
@@ -18,23 +19,19 @@ export async function generateMetadata({
     return { title: "Project Not Found" };
   }
 
-  return {
+  return pageMetadata({
     title: `${project.title} — Project Portfolio`,
     description: project.description,
-    openGraph: {
-      title: project.title,
-      description: project.description,
-      type: "article",
-      images: [
-        {
-          url: project.image,
-          width: 1200,
-          height: 630,
-          alt: `Screenshot proyek ${project.title}`,
-        },
-      ],
+    path: `/projects/${slug}`,
+    ogTitle: project.title,
+    type: "article",
+    image: {
+      url: project.image,
+      width: 1200,
+      height: 630,
+      alt: `Screenshot proyek ${project.title}`,
     },
-  };
+  });
 }
 
 export function generateStaticParams() {

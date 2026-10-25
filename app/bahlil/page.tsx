@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
-import { LogOut, Globe, Youtube, PenTool, CheckCircle2, XCircle, ChevronDown, ChevronUp, FileText, Trash2, Edit } from 'lucide-react';
+import { LogOut, Globe, Youtube, PenTool, CheckCircle2, XCircle, ChevronDown, ChevronUp, Trash2, Edit } from 'lucide-react';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 
@@ -76,7 +76,7 @@ export default function Dashboard() {
   const [result, setResult] = useState<{ type: 'success' | 'error', message: string, link?: string } | null>(null);
 
   // Articles state
-  const [articles, setArticles] = useState<any[]>([]);
+  const [articles, setArticles] = useState<{ slug: string; name: string; path?: string; sha?: string }[]>([]);
   const [loadingArticles, setLoadingArticles] = useState(false);
 
   const fetchArticles = async () => {
@@ -112,7 +112,7 @@ export default function Dashboard() {
 
     try {
       const endpoint = activeTab === 'web' ? '/api/generate-post' : '/api/generate-youtube';
-      const body: any = { url, model };
+      const body: { url: string; model: string; manualTranscript?: string; manualText?: string } = { url, model };
       
       if (activeTab === 'youtube' && transcript.trim()) {
         body.manualTranscript = transcript;
@@ -147,7 +147,7 @@ export default function Dashboard() {
           setShowManual(true);
         }
       }
-    } catch (err) {
+    } catch {
       setResult({ type: 'error', message: 'Koneksi gagal. Silakan coba lagi.' });
     } finally {
       setLoading(false);
@@ -189,7 +189,7 @@ export default function Dashboard() {
           message: data.error || 'Gagal menyimpan artikel.'
         });
       }
-    } catch (err) {
+    } catch {
       setResult({ type: 'error', message: 'Koneksi gagal.' });
     } finally {
       setLoading(false);

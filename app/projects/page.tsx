@@ -1,20 +1,19 @@
 import { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import Image from "next/image";
 import Link from "next/link";
 import { ExternalLink, ArrowRight } from "lucide-react";
 import { projects } from "@/lib/projects";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Projects — Portfolio Web Development",
   description:
     "Koleksi proyek web development oleh Teguh Widodo. Termasuk aplikasi travel booking, Al-Quran online, dan corporate website menggunakan Next.js, React, dan TypeScript.",
-  openGraph: {
-    title: "Projects — Portfolio Teguh Widodo",
-    description:
-      "Koleksi proyek web development oleh Teguh Widodo menggunakan Next.js, React, dan TypeScript.",
-    type: "website",
-  },
-};
+  path: "/projects",
+  ogTitle: "Projects — Portfolio Teguh Widodo",
+  ogDescription:
+    "Koleksi proyek web development oleh Teguh Widodo menggunakan Next.js, React, dan TypeScript.",
+});
 
 export default function Projects() {
   return (

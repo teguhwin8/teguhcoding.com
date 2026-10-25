@@ -1,8 +1,6 @@
 import { NextResponse } from 'next/server';
 import * as cheerio from 'cheerio';
 import OpenAI from 'openai';
-import fs from 'fs';
-import path from 'path';
 
 const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
@@ -94,7 +92,7 @@ export async function POST(req: Request) {
     const date = new Date().toISOString();
     
     // Clean up if AI still wraps in markdown code block
-    let cleanExcerpt = result.excerpt.replace(/^```markdown\n?/i, '').replace(/\n?```$/i, '').trim();
+    const cleanExcerpt = result.excerpt.replace(/^```markdown\n?/i, '').replace(/\n?```$/i, '').trim();
 
     // Prepare markdown content
     const markdownContent = `---
@@ -110,8 +108,8 @@ ${cleanExcerpt}
 
     return NextResponse.json({ success: true, markdownContent, slug });
 
-  } catch (error: any) {
+  } catch (error: unknown) {
     console.error('Error generating post:', error);
-    return NextResponse.json({ error: error.message || 'Internal Server Error' }, { status: 500 });
+    return NextResponse.json({ error: (error instanceof Error && error.message) || 'Internal Server Error' }, { status: 500 });
   }
 }

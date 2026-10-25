@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     type: "website",
     locale: "id_ID",
     url: "https://teguhcoding.com",
-    siteName: "Teguh Widodo — Portfolio",
+    siteName: "Teguh Widodo",
     title: "Teguh Widodo — Senior Software Engineer & Web Developer",
     description:
       "Portfolio Teguh Widodo — Senior Software Engineer dengan 6+ tahun pengalaman membangun aplikasi web scalable.",
@@ -89,7 +89,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${inter.variable} ${instrumentSerif.variable}`}>
+    <html lang="id" className={`${inter.variable} ${instrumentSerif.variable}`}>
       <body className={inter.className} suppressHydrationWarning>
         <a
           href="#main-content"

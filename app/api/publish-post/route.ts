@@ -72,7 +72,7 @@ export async function POST(req: Request) {
         }
       }
 
-      const bodyPayload: any = {
+      const bodyPayload: { message: string; content: string; sha?: string } = {
         message: `Publish blog post: ${slug}`,
         content: base64Content,
       };
@@ -118,8 +118,8 @@ export async function POST(req: Request) {
       return NextResponse.json({ success: true, slug, method: 'local_fs', filePath });
     }
 
-  } catch (error: any) {
+  } catch (error: unknown) {
     console.error('Error publishing post:', error);
-    return NextResponse.json({ error: error.message || 'Internal Server Error' }, { status: 500 });
+    return NextResponse.json({ error: (error instanceof Error && error.message) || 'Internal Server Error' }, { status: 500 });
   }
 }

@@ -1,16 +1,15 @@
 import { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Education & Certifications",
   description:
     "Latar belakang pendidikan dan sertifikasi profesional Teguh Widodo: RevoU Full Stack Engineering, Alibaba Cloud, IDCamp, Udemy, dan lainnya.",
-  openGraph: {
-    title: "Education & Certifications — Teguh Widodo",
-    description:
-      "Latar belakang pendidikan dan sertifikasi profesional Teguh Widodo di bidang Software Engineering.",
-    type: "website",
-  },
-};
+  path: "/education",
+  ogTitle: "Education & Certifications — Teguh Widodo",
+  ogDescription:
+    "Latar belakang pendidikan dan sertifikasi profesional Teguh Widodo di bidang Software Engineering.",
+});
 
 const education = [
   {

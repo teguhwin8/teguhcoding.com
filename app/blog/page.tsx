@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import { getAllPosts } from "@/lib/markdown";
 import ArticleCard from "@/components/article-card";
 import TagFilter from "@/components/tag-filter";
@@ -13,21 +14,14 @@ export async function generateMetadata({
   const { tag } = await searchParams;
   const currentTag = tag?.trim();
 
-  return {
-    title: currentTag
-      ? `Topik: ${currentTag} - Blog`
-      : "Developer Feed - Teguh Widodo",
+  const title = currentTag ? `Topik: ${currentTag} - Blog` : "Developer Feed";
+
+  return pageMetadata({
+    title,
     description:
       "Kumpulan artikel, tutorial, dan berita teknologi terbaru hasil kurasi.",
-    openGraph: {
-      title: currentTag
-        ? `Topik: ${currentTag} - Blog`
-        : "Developer Feed - Teguh Widodo",
-      description:
-        "Kumpulan artikel, tutorial, dan berita teknologi terbaru hasil kurasi.",
-      type: "website",
-    },
-  };
+    path: currentTag ? `/blog?tag=${encodeURIComponent(currentTag)}` : "/blog",
+  });
 }
 
 export const dynamic = "force-dynamic";

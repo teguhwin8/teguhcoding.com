@@ -12,7 +12,7 @@ export function Navigation() {
   const pathname = usePathname();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  if (pathname.startsWith("/bahlil") || pathname.startsWith("/v2")) {
+  if (pathname.startsWith("/bahlil")) {
     return null;
   }
 

@@ -74,8 +74,8 @@ export async function DELETE(req: Request) {
       fs.unlinkSync(filePath);
       return NextResponse.json({ success: true, message: `Deleted ${slug} locally` });
     }
-  } catch (error: any) {
+  } catch (error: unknown) {
     console.error('Error deleting post:', error);
-    return NextResponse.json({ error: error.message || 'Internal Server Error' }, { status: 500 });
+    return NextResponse.json({ error: (error instanceof Error && error.message) || 'Internal Server Error' }, { status: 500 });
   }
 }

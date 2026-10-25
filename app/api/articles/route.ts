@@ -57,10 +57,10 @@ export async function GET(req: Request) {
         return NextResponse.json({ error: 'Failed to fetch from GitHub' }, { status: 500 });
       }
 
-      const files = await response.json();
+      const files: { name: string; path: string; sha: string }[] = await response.json();
       const articles = files
-        .filter((file: any) => file.name.endsWith('.md'))
-        .map((file: any) => ({
+        .filter((file) => file.name.endsWith('.md'))
+        .map((file) => ({
           slug: file.name.replace('.md', ''),
           name: file.name,
           path: file.path,
@@ -82,8 +82,8 @@ export async function GET(req: Request) {
         }));
       return NextResponse.json({ articles });
     }
-  } catch (error: any) {
-    return NextResponse.json({ error: error.message }, { status: 500 });
+  } catch (error: unknown) {
+    return NextResponse.json({ error: (error instanceof Error && error.message) || 'Internal Server Error' }, { status: 500 });
   }
 }
 
@@ -137,7 +137,7 @@ export async function DELETE(req: Request) {
       }
       return NextResponse.json({ error: 'File not found' }, { status: 404 });
     }
-  } catch (error: any) {
-    return NextResponse.json({ error: error.message }, { status: 500 });
+  } catch (error: unknown) {
+    return NextResponse.json({ error: (error instanceof Error && error.message) || 'Internal Server Error' }, { status: 500 });
   }
 }

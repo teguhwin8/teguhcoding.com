@@ -13,8 +13,8 @@ export async function generateMetadata({
   const { q } = await searchParams;
   return {
     title: q
-      ? `Hasil pencarian "${q}" - Teguh Widodo`
-      : "Cari Artikel - Teguh Widodo",
+      ? `Hasil pencarian "${q}"`
+      : "Cari Artikel",
     description: "Cari artikel tentang web development, programming, dan teknologi.",
     robots: { index: false, follow: true },
   };
