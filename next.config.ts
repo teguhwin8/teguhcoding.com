@@ -14,6 +14,16 @@ const nextConfig: NextConfig = {
       },
     ];
   },
+  async redirects() {
+    return [
+      {
+        source: "/go/hostinger-ai",
+        destination:
+          "https://www.hostinger.com/cart?product=dockerhosting%3Astarter&period=24&referral_type=cart_link&REFERRALCODE=XNITEGUHWTKA&referral_id=01a17373-31b9-7396-bdeb-317be9f74a0c&vps_application_id=245",
+        permanent: false,
+      },
+    ];
+  },
   images: {
     remotePatterns: [
       {

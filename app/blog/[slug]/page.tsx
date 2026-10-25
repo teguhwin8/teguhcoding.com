@@ -11,6 +11,7 @@ import { getPostBySlug, getAllPostSlugs, getAllPosts } from "@/lib/markdown";
 import ArticleCard from "@/components/article-card";
 import TableOfContents from "@/components/table-of-contents";
 import { JsonLd } from "@/components/json-ld";
+import AiAutomationCta from "@/components/ai-automation-cta";
 import {
   DEFAULT_OG_IMAGE,
   PERSON,
@@ -147,6 +148,23 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
   const hasToc = /^#{2,3}\s+.+$/m.test(post.excerpt);
 
+  const showAiCta = Boolean(
+    post.tags &&
+      post.tags.some((tag) => {
+        const t = tag.toLowerCase();
+        return (
+          t.includes("ai") ||
+          t.includes("agent") ||
+          t.includes("tool") ||
+          t.includes("otomasi") ||
+          t.includes("docker") ||
+          t.includes("vps") ||
+          t.includes("bot") ||
+          t.includes("server")
+        );
+      })
+  );
+
   return (
     <div className="min-h-screen pt-24 pb-20 px-6">
       <div
@@ -239,6 +257,9 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                 {post.excerpt}
               </ReactMarkdown>
             </div>
+
+            {/* AI Automation Affiliate CTA */}
+            {showAiCta && <AiAutomationCta />}
 
             {/* CTA */}
             <div className="pt-8 border-t border-[var(--border)] text-center">
