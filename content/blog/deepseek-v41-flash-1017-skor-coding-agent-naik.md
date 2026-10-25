@@ -4,6 +4,7 @@ source_url: "https://api-docs.deepseek.com/updates/"
 tags: ["AI", "Developer Tools", "Open Source"]
 date: "2026-10-17T17:10:39.000Z"
 cover_image: "/posts/deepseek-v41-flash-1017-cover.svg"
+updated: "2026-10-18T05:54:41.000Z"
 ---
 
 DeepSeek memperbarui model **V4.1-Flash** pada 17 Oktober. Pada evaluasi internal perusahaan, skor Terminal-Bench 4.0 naik dari 31,2 menjadi 42,3 dibanding checkpoint sebelumnya. DeepSeek juga melaporkan kenaikan di beberapa tes coding dan agent lainnya. Hasil ini belum direplikasi secara independen.

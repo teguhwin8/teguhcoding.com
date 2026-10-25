@@ -4,6 +4,7 @@ source_url: "https://github.com/MadsLorentzen/ai-job-search"
 tags: ["AI", "GitHub", "Karier"]
 date: "2026-10-17T00:00:00.000Z"
 cover_image: "/posts/ai-job-search-claude-code-cover.svg"
+updated: "2026-10-18T05:54:41.000Z"
 ---
 
 **AI Job Search** adalah rangkaian perintah Claude Code untuk mencari lowongan, menilai kecocokan, menyiapkan CV dan surat lamaran, lalu berlatih wawancara. Saat diperiksa pada 17 Oktober 2026, repositorinya memiliki sekitar 49,3 ribu stars dan 16,8 ribu fork. Proyek ini jelas menarik perhatian komunitas, meski jumlah tersebut tak menjamin hasil pencarian kerja penggunanya.

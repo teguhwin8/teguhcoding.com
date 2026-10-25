@@ -5,7 +5,7 @@ import { LatestBlog } from "@/components/latest-blog";
 import { MarqueeBar } from "@/components/marquee-bar";
 import { getAllPosts } from "@/lib/markdown";
 import { JsonLd } from "@/components/json-ld";
-import { PERSON, SITE_NAME, SITE_URL, pageMetadata } from "@/lib/seo";
+import { ORGANIZATION, PERSON, SITE_NAME, SITE_URL, pageMetadata } from "@/lib/seo";
 
 const HOME_DESCRIPTION =
   "Portfolio Teguh Widodo — Senior Software Engineer dengan 6+ tahun pengalaman di Next.js, React, NestJS. Lihat project, pengalaman kerja, dan blog.";
@@ -29,6 +29,7 @@ const homeJsonLd = {
       description: HOME_DESCRIPTION,
       knowsAbout: ["Next.js", "React", "NestJS", "TypeScript", "Web Development"],
     },
+    ORGANIZATION,
     {
       "@type": "WebSite",
       "@id": `${SITE_URL}/#website`,

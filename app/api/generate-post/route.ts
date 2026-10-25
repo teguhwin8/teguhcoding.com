@@ -1,4 +1,5 @@
 import { NextResponse } from 'next/server';
+import { POST_STRUCTURE_GUIDELINES } from "@/lib/content-guidelines";
 import * as cheerio from 'cheerio';
 import OpenAI from 'openai';
 
@@ -72,7 +73,7 @@ export async function POST(req: Request) {
       messages: [
         {
           role: "system",
-          content: "You are a helpful assistant that generates a natural, engaging, and professional blog post based on the article text. Respond in JSON format with the following keys: 'title' (string), 'tags' (array of strings, max 3), 'excerpt' (string, a comprehensive blog post in Markdown format in Indonesian, using natural, conversational yet professional language like an experienced tech blogger. Avoid rigid AI-like language, cliches, or robotic transitions. Use paragraphs, lists, and headers naturally. IMPORTANT: DO NOT wrap the excerpt in ```markdown code blocks. Return the raw text directly). The response MUST be valid JSON."
+          content: `You are a helpful assistant that generates a natural, engaging, and professional blog post based on the article text. Respond in JSON format with the following keys: 'title' (string), 'tags' (array of strings, max 3), 'excerpt' (string, a comprehensive blog post in Markdown format in Indonesian, using natural, conversational yet professional language like an experienced tech blogger. Avoid rigid AI-like language, cliches, or robotic transitions. Use paragraphs, lists, and headers naturally. IMPORTANT: DO NOT wrap the excerpt in \`\`\`markdown code blocks. Return the raw text directly). The response MUST be valid JSON.\n\n${POST_STRUCTURE_GUIDELINES}`
         },
         {
           role: "user",

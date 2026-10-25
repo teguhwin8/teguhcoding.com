@@ -16,7 +16,9 @@ import {
   PERSON,
   SITE_URL,
   absoluteUrl,
+  extractFaq,
   pageMetadata,
+  sourceHost,
   toDescription,
 } from "@/lib/seo";
 
@@ -68,6 +70,8 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   });
 
   const postUrl = absoluteUrl(`/blog/${slug}`);
+  const sourceDomain = sourceHost(post.source_url);
+  const faq = extractFaq(post.excerpt);
   const articleJsonLd = {
     "@context": "https://schema.org",
     "@graph": [
@@ -78,10 +82,11 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         description: toDescription(post.excerpt),
         image: absoluteUrl(post.cover_image || DEFAULT_OG_IMAGE),
         datePublished: post.date,
-        dateModified: post.date,
+        dateModified: post.updated || post.date,
         inLanguage: "id-ID",
         keywords: post.tags?.join(", "),
         mainEntityOfPage: postUrl,
+        ...(sourceDomain ? { isBasedOn: post.source_url } : {}),
         url: postUrl,
         author: { "@id": PERSON["@id"], "@type": "Person", name: PERSON.name, url: SITE_URL },
         publisher: { "@id": PERSON["@id"], "@type": "Person", name: PERSON.name, url: SITE_URL },
@@ -94,8 +99,27 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           { "@type": "ListItem", position: 3, name: post.title, item: postUrl },
         ],
       },
+      ...(faq.length > 0
+        ? [
+            {
+              "@type": "FAQPage",
+              mainEntity: faq.map((item) => ({
+                "@type": "Question",
+                name: item.question,
+                acceptedAnswer: { "@type": "Answer", text: item.answer },
+              })),
+            },
+          ]
+        : []),
     ],
   };
+  const updatedStr = post.updated
+    ? new Date(post.updated).toLocaleDateString("id-ID", {
+        day: "numeric",
+        month: "long",
+        year: "numeric",
+      })
+    : null;
 
   const allPosts = await getAllPosts();
   const relatedPosts = allPosts
@@ -181,10 +205,29 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
               <div className="flex items-center gap-4 text-sm text-[var(--text-muted)]">
                 <span className="flex items-center gap-1.5">
                   <Calendar size={14} />
-                  {dateStr}
+                  <time dateTime={post.date}>{dateStr}</time>
                 </span>
+                {updatedStr && updatedStr !== dateStr && (
+                  <span>
+                    Diperbarui <time dateTime={post.updated}>{updatedStr}</time>
+                  </span>
+                )}
                 <span>{post.readingTime} menit baca</span>
               </div>
+              {sourceDomain && (
+                <p className="mt-3 text-sm text-[var(--text-muted)]">
+                  Sumber utama:{" "}
+                  <a
+                    href={finalSourceUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="underline underline-offset-2 hover:text-[var(--text)]"
+                  >
+                    {sourceDomain}
+                  </a>
+                  . Ditulis ulang dan dikurasi oleh Teguh Widodo.
+                </p>
+              )}
             </header>
 
             {/* Content */}

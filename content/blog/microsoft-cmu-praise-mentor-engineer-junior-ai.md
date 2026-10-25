@@ -4,6 +4,7 @@ source_url: "https://commandline.microsoft.com/praise-preceptor-ai-accelerated-s
 tags: ["AI", "Karier Developer", "Pendidikan Teknologi"]
 date: "2026-10-18T04:15:57.388Z"
 cover_image: "/posts/microsoft-cmu-praise-engineer-junior-cover.svg"
+updated: "2026-10-18T05:54:41.000Z"
 ---
 
 AI bisa menulis kode lebih cepat, tetapi engineer baru tetap perlu belajar mengambil keputusan teknis. Microsoft dan Carnegie Mellon University (CMU) mencoba menjawab tantangan itu lewat PRAISE, program yang menggabungkan kuliah, praktik kerja, dan bimbingan dari engineer senior.

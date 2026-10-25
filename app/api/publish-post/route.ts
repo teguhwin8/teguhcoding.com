@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server';
 import fs from 'fs';
 import path from 'path';
+import { setUpdatedDate } from '@/lib/markdown';
 
 export async function POST(req: Request) {
   try {
@@ -28,7 +29,6 @@ export async function POST(req: Request) {
     const githubPath = `content/blog/${slug}.md`;
 
     if (githubToken && githubOwner && githubRepo) {
-      const base64Content = Buffer.from(markdownContent).toString('base64');
       const githubApiUrl = `https://api.github.com/repos/${githubOwner}/${githubRepo}/contents/${githubPath}`;
 
       // Check if file already exists to get its SHA (required for updating in GitHub API)
@@ -44,6 +44,13 @@ export async function POST(req: Request) {
         const fileData = await getResponse.json();
         sha = fileData.sha;
       }
+
+      // Republishing an existing post (same slug or renamed) records the update date.
+      const isUpdate = Boolean(sha) || Boolean(originalSlug);
+      const finalContent = isUpdate
+        ? setUpdatedDate(markdownContent, new Date().toISOString())
+        : markdownContent;
+      const base64Content = Buffer.from(finalContent).toString('base64');
 
       // If originalSlug is different and exists, we should ideally delete it, but let's just save the new one first.
       if (originalSlug && originalSlug !== slug) {
@@ -113,7 +120,11 @@ export async function POST(req: Request) {
       }
 
       const filePath = path.join(contentDirectory, `${slug}.md`);
-      fs.writeFileSync(filePath, markdownContent, 'utf8');
+      const isUpdate = fs.existsSync(filePath) || Boolean(originalSlug);
+      const finalContent = isUpdate
+        ? setUpdatedDate(markdownContent, new Date().toISOString())
+        : markdownContent;
+      fs.writeFileSync(filePath, finalContent, 'utf8');
 
       return NextResponse.json({ success: true, slug, method: 'local_fs', filePath });
     }

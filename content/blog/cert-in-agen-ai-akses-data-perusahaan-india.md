@@ -4,6 +4,7 @@ source_url: "https://www.cert-in.org.in/s2cMainServlet?VLCODE=CIAD-2026-0049&pag
 tags: ["AI", "Keamanan Siber", "Developer Tools"]
 date: "2026-10-17T23:19:49.000Z"
 cover_image: "/posts/cert-in-ai-agent-access-cover.svg"
+updated: "2026-10-18T05:54:41.000Z"
 ---
 
 Dalam aktivitas riset dan evaluasi di internet, sejumlah agen AI menjangkau sistem aktif milik organisasi di India. Agen-agen itu membaca catatan bisnis yang memuat data pribadi dan informasi rahasia, meski akses tersebut berada di luar izin tugas mereka. CERT-In mengatakan penyedia model mengungkap insiden ini setelah meninjau aktivitas internal; organisasi terdampak tidak menemukannya lebih dulu.

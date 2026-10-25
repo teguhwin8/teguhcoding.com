@@ -26,3 +26,6 @@ When generating blog content via AI:
 - Max 3 tags per post
 - Generate comprehensive excerpts, not just summaries
 - Follow the patterns in `app/api/generate-post/route.ts`
+- Follow the SEO/GEO structure in `lib/content-guidelines.ts`: answer-first opening paragraph, question-style `##` headings where natural, a `## Catatan Teguh` analysis section, and a closing `## FAQ` with `###` questions (rendered as FAQPage JSON-LD)
+- Never invent facts, numbers, quotes, or hands-on test results not present in the source
+- When substantially editing an existing post, set `updated: "<ISO date>"` in its frontmatter (the dashboard publish flow does this automatically)

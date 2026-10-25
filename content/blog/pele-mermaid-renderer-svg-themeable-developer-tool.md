@@ -4,6 +4,7 @@ source_url: "https://github.com/obsidianmd/pele"
 tags: ["Developer Tools", "JavaScript", "Open Source"]
 date: "2026-10-18T05:19:02.084Z"
 cover_image: "/posts/pele-mermaid-themeable-svg-cover.svg"
+updated: "2026-10-18T05:54:41.000Z"
 ---
 
 Kalau pernah membuat diagram dengan Mermaid, kamu mungkin tahu bahwa mengatur tampilannya bisa merepotkan. Pele menangani bagian itu: tulis sintaks Mermaid seperti biasa, lalu render menjadi SVG yang warnanya bisa mengikuti tema aplikasi. Proyek open source yang dibuat untuk Obsidian ini ramai di Hacker News; saat diperiksa pada 18 Oktober, diskusinya mencatat 336 poin dan 30 komentar. ([repo Pele](https://github.com/obsidianmd/pele), [dokumentasi proyek](https://pele.run/), [diskusi Hacker News](https://news.ycombinator.com/item?id=50132193).)

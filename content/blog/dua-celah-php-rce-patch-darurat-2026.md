@@ -4,6 +4,7 @@ source_url: "https://www.tenable.com/blog/php2shell-cve-2026-109618-cve-2026-109
 tags: ["PHP", "Keamanan Siber", "Developer"]
 date: "2026-10-23T10:53:19.000Z"
 cover_image: "/posts/php2shell-server-rack.jpg"
+updated: "2026-10-23T10:54:30.000Z"
 ---
 
 **Pembaruan 23 Oktober 2026:** Amazon Threat Intelligence menemukan upaya eksploitasi PHP2Shell di jaringan honeypot MadPot pada 17 Oktober, empat hari sebelum dua celah PHP ini diumumkan. AWS menyarankan tim keamanan memeriksa aktivitas sejak tanggal itu. Temuan di honeypot bukan bukti bahwa situs produksi sudah berhasil ditembus, tetapi jadi alasan untuk tidak membatasi pemeriksaan pada log setelah patch dirilis.

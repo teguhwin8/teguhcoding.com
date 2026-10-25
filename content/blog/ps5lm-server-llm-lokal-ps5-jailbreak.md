@@ -4,6 +4,7 @@ source_url: "https://github.com/cobanov/PS5LM"
 tags: ["AI", "Open Source", "Developer Tools"]
 date: "2026-10-17T19:15:52.000Z"
 cover_image: "/posts/ps5lm-llm-local-server-cover.svg"
+updated: "2026-10-18T05:54:41.000Z"
 ---
 
 PS5LM memanfaatkan GPU PlayStation 5 untuk menjalankan model AI secara lokal. Proyek homebrew ini memasang `llama.cpp` di konsol yang sudah di-jailbreak, lalu membuka akses ke model melalui API yang kompatibel dengan OpenAI dan Anthropic. Laptop, ponsel, browser, dan coding tools di jaringan yang sama bisa menjadi kliennya. Proyek ini ramai dibahas di [Hacker News](https://news.ycombinator.com/item?id=50122431) dan diliput [Tom’s Hardware](https://www.tomshardware.com/video-games/playstation/jailbroken-ps5s-can-now-run-local-ai-models-at-over-100-tokens-per-second-fork-of-ps5lm-goes-native-and-accesses-gpu-and-more-ram).

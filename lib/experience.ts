@@ -3,36 +3,36 @@ export const experiences = [
     id: 1,
     title: "PHP Developer",
     company: "Capio Teknologi Indonesia",
-    period: "May 2025 – July 2025",
+    period: "Mei 2025 – Juli 2025",
     description:
-      "Developed backend services using PHP to support real-time trading and portfolio management. Integrated third-party financial APIs and optimized transaction data flow for better performance. Collaborated with frontend and mobile teams to deliver secure, seamless, and scalable system integration.",
+      "Mengembangkan layanan backend dengan PHP untuk mendukung trading real-time dan manajemen portofolio. Mengintegrasikan API keuangan pihak ketiga dan mengoptimalkan alur data transaksi agar performanya lebih baik. Berkolaborasi dengan tim frontend dan mobile untuk menghasilkan integrasi sistem yang aman, mulus, dan scalable.",
     technologies: ["PHP", "Backend Development", "API Integration"],
   },
   {
     id: 2,
     title: "Fullstack Developer",
     company: "PT Hijau Digital International",
-    period: "March 2019 – Present",
+    period: "Maret 2019 – Sekarang",
     description:
-      "Developed and maintained web applications using Laravel, Next.js, Vue.js and NestJS, improving client project delivery times by 20%. Rewrote existing HTML/CSS to align with SEO and accessibility standards, increasing organic traffic by 600%. Integrated AI-powered numerology engine for automated personality calculation.",
+      "Mengembangkan dan memelihara aplikasi web dengan Laravel, Next.js, Vue.js, dan NestJS, mempercepat waktu pengiriman proyek klien hingga 20%. Menulis ulang HTML/CSS agar sesuai standar SEO dan aksesibilitas, meningkatkan trafik organik hingga 600%. Mengintegrasikan mesin numerologi berbasis AI untuk perhitungan kepribadian otomatis.",
     technologies: ["Next.js", "Laravel", "Vue.js", "NestJS", "AI Integration"],
   },
   {
     id: 3,
     title: "Frontend Engineer",
     company: "PT Majoo Teknologi Indonesia",
-    period: "January 2022 – June 2023",
+    period: "Januari 2022 – Juni 2023",
     description:
-      "Participated in the rebuild of a 4-year-old SaaS platform from PHP CodeIgniter to a modern stack using Next.js, achieving a full redesign and feature migration within 6 months. Delivered 10,000s of lines of production code with a focus on performance and scalability, maintaining a near-zero production bug rate.",
+      "Ikut membangun ulang platform SaaS berumur 4 tahun dari PHP CodeIgniter ke stack modern dengan Next.js, termasuk redesain penuh dan migrasi fitur dalam 6 bulan. Menulis puluhan ribu baris kode produksi dengan fokus pada performa dan skalabilitas, dengan tingkat bug produksi mendekati nol.",
     technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
   },
   {
     id: 4,
     title: "Junior Web Developer",
     company: "Politeknik Dharma Patria",
-    period: "January 2018 – February 2019",
+    period: "Januari 2018 – Februari 2019",
     description:
-      "Worked with a team to build and maintain responsive websites using HTML, CSS, JavaScript, and PHP. Created learning materials on web programming for undergraduate students.",
+      "Bersama tim membangun dan memelihara website responsif dengan HTML, CSS, JavaScript, dan PHP. Menyusun materi pembelajaran pemrograman web untuk mahasiswa.",
     technologies: ["PHP", "JavaScript", "HTML", "CSS"],
   },
 ];

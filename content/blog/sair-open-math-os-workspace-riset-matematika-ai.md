@@ -4,6 +4,7 @@ source_url: "https://www.openmathmodel.org/about/"
 tags: ["AI", "Riset", "Developer Tools"]
 date: "2026-10-18T03:17:27.287Z"
 cover_image: "/posts/sair-open-math-os-cover.svg"
+updated: "2026-10-18T05:54:41.000Z"
 ---
 
 SAIR Foundation membuka akses awal **Open Math OS**, workspace cloud untuk meriset matematika dengan model open-weight dan beragam alat komputasi ilmiah. Matematikawan Terence Tao mengumumkan soft launch-nya pada 16 Oktober. Layanan ini belum menawarkan model baru; fokusnya adalah menyatukan model yang sudah ada, alat riset, dan ruang kerja kolaboratif. ([pengumuman Terence Tao](https://terrytao.wordpress.com/2026/10/16/sair-open-math-os-released/), [penjelasan resmi Open Math OS](https://www.openmathmodel.org/about/).)

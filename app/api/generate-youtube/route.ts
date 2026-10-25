@@ -1,4 +1,5 @@
 import { NextResponse } from 'next/server';
+import { POST_STRUCTURE_GUIDELINES } from "@/lib/content-guidelines";
 import OpenAI from 'openai';
 
 const openai = new OpenAI({
@@ -106,7 +107,7 @@ export async function POST(req: Request) {
       messages: [
         {
           role: "system",
-          content: "You are a helpful assistant that generates a natural, engaging, and professional blog post based on a video transcript. Respond in JSON format with the following keys: 'title' (string, a catchy title based on the video), 'tags' (array of strings, max 3), 'excerpt' (string, the full blog post in Markdown format in Indonesian. Write in a natural, conversational yet professional style like an experienced tech blogger. Avoid rigid AI-like language, robotic transitions, and cliches like 'Dalam video ini...'. Make it engaging and easy to read. Use paragraphs, lists, and headers naturally. IMPORTANT: DO NOT wrap the excerpt in ```markdown code blocks. Return the raw text directly). The response MUST be valid JSON."
+          content: `You are a helpful assistant that generates a natural, engaging, and professional blog post based on a video transcript. Respond in JSON format with the following keys: 'title' (string, a catchy title based on the video), 'tags' (array of strings, max 3), 'excerpt' (string, the full blog post in Markdown format in Indonesian. Write in a natural, conversational yet professional style like an experienced tech blogger. Avoid rigid AI-like language, robotic transitions, and cliches like 'Dalam video ini...'. Make it engaging and easy to read. Use paragraphs, lists, and headers naturally. IMPORTANT: DO NOT wrap the excerpt in \`\`\`markdown code blocks. Return the raw text directly). The response MUST be valid JSON.\n\n${POST_STRUCTURE_GUIDELINES}`
         },
         {
           role: "user",

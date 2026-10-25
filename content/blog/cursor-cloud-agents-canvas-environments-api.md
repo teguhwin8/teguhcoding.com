@@ -4,6 +4,7 @@ source_url: "https://cursor.com/changelog/cloud-agent-canvases-and-environments"
 tags: ["AI", "Developer Tools", "Cursor"]
 date: "2026-10-17T21:15:03.596Z"
 cover_image: "/posts/cursor-cloud-agents-canvas-cover.svg"
+updated: "2026-10-18T05:54:41.000Z"
 ---
 
 Pembaruan Cloud Agents dari Cursor pada 16 Oktober menghadirkan canvas yang bisa dibuat agen, Environments API dalam versi beta, serta dukungan hingga 300 repositori di lingkungan cloud. Cursor juga mengatakan lingkungan besar kini dimuat lima kali lebih cepat. Canvas sudah tersedia sebelumnya; perubahan kali ini memungkinkan cloud agent membuatnya sebagai bagian dari tugas.

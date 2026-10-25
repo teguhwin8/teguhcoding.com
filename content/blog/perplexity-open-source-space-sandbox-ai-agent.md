@@ -4,6 +4,7 @@ source_url: "https://www.perplexity.ai/en-GB/hub/blog/open-sourcing-space"
 tags: ["AI", "Developer Tools", "Security"]
 date: "2026-10-17T18:10:13.000Z"
 cover_image: "/posts/perplexity-space-agent-sandbox-cover.svg"
+updated: "2026-10-18T05:54:41.000Z"
 ---
 
 Perplexity merilis **SPACE**, sistem sandbox yang dipakainya untuk menjalankan tugas di produk Computer, sebagai proyek open source pada 15 Oktober. Setiap sandbox berjalan di Firecracker microVM tersendiri, terpisah dari host. Tim dapat mempelajari kodenya atau memakainya sebagai dasar untuk membangun infrastruktur eksekusi agent sendiri; lisensinya Apache 2.0.

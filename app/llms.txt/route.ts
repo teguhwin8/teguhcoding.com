@@ -15,6 +15,8 @@ export async function GET() {
     "## Halaman Utama",
     "",
     `- [Home](${SITE_URL}/): Profil dan ringkasan keahlian`,
+    `- [Tentang Teguh Widodo](${SITE_URL}/about): Profil lengkap, pengalaman, dan keahlian`,
+    `- [Jasa Pembuatan Website](${SITE_URL}/jasa-pembuatan-website): Layanan PT Kreasi Web Nusantara (website, aplikasi, keamanan, perawatan), proses kerja, dan FAQ`,
     `- [Projects](${SITE_URL}/projects): Portfolio proyek web development`,
     `- [Experience](${SITE_URL}/experience): Riwayat pengalaman kerja`,
     `- [Education](${SITE_URL}/education): Pendidikan dan sertifikasi`,

@@ -4,6 +4,7 @@ source_url: "https://www.mercor.com/research/labor-index/benchmark-map/"
 tags: ["AI", "Benchmark", "Developer Tools"]
 date: "2026-10-18T00:20:59.000Z"
 cover_image: "/posts/mercor-ai-benchmark-gap-cover.svg"
+updated: "2026-10-18T05:54:41.000Z"
 ---
 
 Benchmark AI sering dipakai untuk mengukur kemajuan model. Namun, seberapa banyak tugas kerja yang benar-benar tercakup dalam tes-tes itu? Mercor mencoba menjawabnya dengan memetakan 29 benchmark AI agentik ke katalog O*NET di Amerika Serikat. Dari 18.797 tugas yang ditinjau, 924 memenuhi ambang cakupan mereka. Berdasarkan peta itu, Mercor memperkirakan 90% jam kerja di AS berkaitan dengan tugas yang hanya sedikit atau belum terwakili dalam benchmark. Temuan ini ramai dibahas di [Hacker News](https://news.ycombinator.com/item?id=50121179).

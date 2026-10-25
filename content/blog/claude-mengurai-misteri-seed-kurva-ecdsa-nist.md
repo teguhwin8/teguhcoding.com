@@ -4,6 +4,7 @@ source_url: "https://www.anthropic.com/research/ecdsa-curve-origins"
 tags: ["AI", "Kriptografi", "Developer Tools"]
 date: "2026-10-17T16:07:03.176Z"
 cover_image: "/posts/claude-ecdsa-curve-seeds-cover.svg"
+updated: "2026-10-18T05:54:41.000Z"
 ---
 
 Selama puluhan tahun, asal-usul seed pada sejumlah kurva eliptik NIST belum jelas. Anthropic mengatakan model riset internal Claude menemukan petunjuk yang mengarah ke generator angka pseudorandom di pustaka C lama, dijalankan dengan timestamp Unix pada 1997–1998. Temuan ini memberi jawaban baru untuk teka-teki sejarah kriptografi; kunci pengguna dan ECDSA tidak dibobol.

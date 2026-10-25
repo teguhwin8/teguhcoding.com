@@ -39,7 +39,7 @@ export const services = [
   },
 ];
 
-const terms = [
+export const terms = [
   "Konsultasi awal gratis.",
   "Harga di atas adalah kisaran. Harga final ditentukan Teguh setelah kebutuhan jelas.",
   "Sudah termasuk: tampilan responsif (HP & desktop), SSL, SEO dasar, panduan singkat cara mengelola isi, dan garansi perbaikan bug 30 hari setelah serah terima.",

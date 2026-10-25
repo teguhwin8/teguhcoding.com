@@ -1,0 +1,50 @@
+name: IndexNow
+
+# Runs after Vercel reports a successful Production deployment and submits
+# the URLs changed since the previous successful Production deployment.
+on:
+  deployment_status:
+
+permissions:
+  contents: read
+  deployments: read
+
+jobs:
+  submit:
+    if: github.event.deployment_status.state == 'success' && github.event.deployment.environment == 'Production'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.deployment.sha }}
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Find previous successful Production deployment
+        id: prev
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+          CURRENT_SHA: ${{ github.event.deployment.sha }}
+        run: |
+          prev=""
+          for row in $(gh api "repos/$REPO/deployments?environment=Production&per_page=30" \
+              --jq '.[] | "\(.id):\(.sha)"'); do
+            id="${row%%:*}"; sha="${row#*:}"
+            [ "$sha" = "$CURRENT_SHA" ] && continue
+            state=$(gh api "repos/$REPO/deployments/$id/statuses?per_page=1" --jq '.[0].state // ""')
+            if [ "$state" = "success" ]; then prev="$sha"; break; fi
+          done
+          if [ -z "$prev" ] || ! git cat-file -e "$prev^{commit}" 2>/dev/null; then
+            prev="$CURRENT_SHA~1"
+          fi
+          echo "sha=$prev" >> "$GITHUB_OUTPUT"
+
+      - name: Submit changed URLs
+        env:
+          FROM_SHA: ${{ steps.prev.outputs.sha }}
+          TO_SHA: ${{ github.event.deployment.sha }}
+        run: node scripts/indexnow.mjs "$FROM_SHA" "$TO_SHA"

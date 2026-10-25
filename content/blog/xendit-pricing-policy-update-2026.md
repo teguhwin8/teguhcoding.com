@@ -4,6 +4,7 @@ source_url: "https://help.xendit.co/hc/en-us/articles/59516240127129-Xendit-Pric
 tags: ["xendit", "payment-gateway", "pricing", "fintech", "indonesia", "e-commerce"]
 date: "2026-07-29T09:18:00.000Z"
 cover_image: "/xendit-pricing-policy-2026.png"
+updated: "2026-10-19T10:24:58.000Z"
 ---
 
 Kalau lo pakai Xendit sebagai payment gateway bisnis online lo, ada update pricing policy yang perlu lo tahu ASAP.

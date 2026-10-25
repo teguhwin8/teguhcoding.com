@@ -4,6 +4,7 @@ source_url: "https://github.com/anthropics/claude-plugins-official"
 tags: ["Claude Code", "AI", "Developer Tools"]
 date: "2026-10-18T02:18:28.000Z"
 cover_image: "/posts/claude-code-plugins-trending-cover.svg"
+updated: "2026-10-18T05:54:41.000Z"
 ---
 
 Pada pagi 18 Oktober, [repositori plugin Claude Code milik Anthropic](https://github.com/anthropics/claude-plugins-official) berada di posisi pertama GitHub Trending harian. Saat diperiksa pukul 09.16 WIB, repo itu mendapat 4.467 bintang baru hari tersebut. Isinya beragam: plugin untuk menghubungkan layanan lain, menambahkan instruksi, dan mengatur pekerjaan coding. ([GitHub Trending harian](https://github.com/trending?since=daily).)

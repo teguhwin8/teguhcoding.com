@@ -10,6 +10,7 @@ export interface BlogPost {
   source_url: string;
   tags: string[];
   date: string;
+  updated?: string;
   cover_image?: string;
   excerpt: string;
   readingTime: number; // in minutes
@@ -44,7 +45,7 @@ export async function getAllPosts(): Promise<BlogPost[]> {
       // Use gray-matter to parse the post metadata section
       const matterResult = matter(fileContents);
       
-      const { title, source_url, tags, date, cover_image } = matterResult.data;
+      const { title, source_url, tags, date, updated, cover_image } = matterResult.data;
 
       // Extract excerpt (we can just use the content since it's meant to be short)
       const excerpt = matterResult.content.trim();
@@ -55,6 +56,7 @@ export async function getAllPosts(): Promise<BlogPost[]> {
         source_url: source_url || '#',
         tags: tags || [],
         date: date || new Date().toISOString(),
+        updated: updated ? String(updated) : undefined,
         cover_image: cover_image || null,
         excerpt,
         readingTime: calculateReadingTime(excerpt),
@@ -78,7 +80,7 @@ export async function getPostBySlug(slug: string): Promise<BlogPost | null> {
   const fileContents = fs.readFileSync(fullPath, 'utf8');
   const matterResult = matter(fileContents);
   
-  const { title, source_url, tags, date, cover_image } = matterResult.data;
+  const { title, source_url, tags, date, updated, cover_image } = matterResult.data;
   const excerpt = matterResult.content.trim();
 
   return {
@@ -87,6 +89,7 @@ export async function getPostBySlug(slug: string): Promise<BlogPost | null> {
     source_url: source_url || '#',
     tags: tags || [],
     date: date || new Date().toISOString(),
+    updated: updated ? String(updated) : undefined,
     cover_image: cover_image || null,
     excerpt,
     readingTime: calculateReadingTime(excerpt),
@@ -101,4 +104,16 @@ export async function getAllPostSlugs(): Promise<{ slug: string }[]> {
     .map((fileName) => ({
       slug: fileName.replace(/\.md$/, ''),
     }));
+}
+
+/**
+ * Sets (or replaces) the `updated` field in a markdown file's frontmatter.
+ * Used when an existing post is republished so dateModified stays accurate.
+ */
+export function setUpdatedDate(markdown: string, isoDate: string): string {
+  const match = markdown.match(/^---\r?\n([\s\S]*?)\r?\n---/);
+  if (!match) return markdown;
+  const lines = match[1].split("\n").filter((line) => !line.startsWith("updated:"));
+  lines.push(`updated: "${isoDate}"`);
+  return markdown.replace(match[0], `---\n${lines.join("\n")}\n---`);
 }

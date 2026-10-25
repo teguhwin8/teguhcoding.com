@@ -4,6 +4,7 @@ source_url: "https://reflection.ai/blog/beam-is-available"
 tags: ["AI", "Open Source", "Developer Tools"]
 date: "2026-10-17T22:17:03.667Z"
 cover_image: "/posts/reflection-beam-open-weights-cover.svg"
+updated: "2026-10-18T05:54:41.000Z"
 ---
 
 Pada 16 Oktober, Reflection AI membuka bobot Beam 1.0 dengan lisensi Apache 2.0. Model yang sebelumnya hanya bisa dicoba lewat pratinjau terbatas kini tersedia dalam format BF16, FP8, dan NVFP4. Dukungan Beam juga masuk ke `master` llama.cpp pada hari yang sama. Beam memakai arsitektur MoE dengan sekitar 23,4 miliar parameter aktif per token; checkpoint penuhnya berisi 501,3 miliar parameter.

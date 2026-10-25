@@ -4,6 +4,7 @@ source_url: "https://x.com/opencode/status/2111516673953935833"
 tags: ["AI", "Keamanan", "Developer Tools"]
 date: "2026-10-18T01:20:00.000Z"
 cover_image: "/posts/opencode-console-security-cover.svg"
+updated: "2026-10-18T05:54:41.000Z"
 ---
 
 OpenCode menyatakan insiden keamanan di Console berdampak pada 1,4% penggunanya. Menurut perusahaan, yang terdampak adalah sebagian pengguna yang menautkan provider eksternal; mereka sudah diberi tahu lewat email. OpenCode menyebut insiden itu terkait “serangan distilasi skala besar” dan mengatakan sedang menanganinya bersama Anthropic, OpenAI, serta Google. Pernyataan publiknya belum merinci bagaimana kunci API terlibat. ([Pernyataan OpenCode di X](https://x.com/opencode/status/2111516673953935833), disalin dalam [diskusi komunitas OpenCode](https://www.reddit.com/r/opencodeCLI/comments/1x8gp72/opencode_security_breach_rotate_your_keys/).)

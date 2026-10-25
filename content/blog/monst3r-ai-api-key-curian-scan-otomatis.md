@@ -4,6 +4,7 @@ source_url: "https://www.bitsight.com/blog/evolution-of-ai-cybercrime-undergroun
 tags: ["AI", "Cybersecurity", "Developer Tools"]
 date: "2026-10-17T20:21:11.000Z"
 cover_image: "/posts/monst3r-ai-stolen-api-keys-cover.svg"
+updated: "2026-10-18T05:54:41.000Z"
 ---
 
 Satu API key AI yang bocor bisa dipakai orang lain untuk menjalankan pemindaian otomatis—dan tagihannya tetap masuk ke pemilik akun. Itulah cara kerja yang ditemukan Bitsight pada **MONST3R-AI**, layanan pentest yang dipasarkan di forum kriminal tertutup. Laporannya terbit 15 Oktober dan kembali ramai dibahas dalam [ringkasan AI Weekly](https://aiweekly.co/alerts/bitsight-monst3r-ai-runs-on-stolen-openai-anthropic-google-keys) dua hari kemudian.

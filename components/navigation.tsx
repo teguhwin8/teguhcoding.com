@@ -17,6 +17,8 @@ export function Navigation() {
   }
 
   const navItems = [
+    { href: "/about", label: "About" },
+    { href: "/jasa-pembuatan-website", label: "Services" },
     { href: "/experience", label: "Experience" },
     { href: "/projects", label: "Projects" },
     { href: "/education", label: "Education" },
