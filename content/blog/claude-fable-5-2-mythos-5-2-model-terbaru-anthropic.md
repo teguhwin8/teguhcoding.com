@@ -3,7 +3,7 @@ title: "Claude Fable 5.2 dan Mythos 5.2: Model Terbaru Anthropic yang Lebih Cepa
 source_url: "https://thenextweb.com/news/claude-fable-5-2-mythos-5-2-anthropic-launch-price"
 tags: ["AI", "Developer Tools", "Anthropic"]
 date: "2026-11-14T10:00:00.000Z"
-cover_image: "/posts/claude-fable-mythos-5-2-cover.webp"
+cover_image: "/posts/claude-fable-mythos-5-2-cover.png"
 ---
 
 Anthropic merilis Claude Fable 5.2 dan Claude Mythos 5.2 pada 9 November 2026. Keduanya merupakan model yang sama secara arsitektur, tapi berbeda di level safeguard: Fable 5.2 tersedia untuk semua pengguna berbayar, sementara Mythos 5.2 hanya bisa diakses oleh organisasi terverifikasi di bidang keamanan siber dan life sciences. Fable 5.2 hadir 30% lebih cepat dari versi 5.1, dengan harga 20% lebih murah di $8/$40 per juta token input/output. ([Anthropic](https://thenextweb.com/news/claude-fable-5-2-mythos-5-2-anthropic-launch-price), [WriteHuman](https://writehuman.ai/blog/claude-fable-5-2), [MarkTechPost](https://www.marktechpost.com/2026/11/10/anthropic-claude-fable-5-2-mythos-5-2-release).)
@@ -38,7 +38,7 @@ Anthropic melaporkan hasil benchmark berikut (catatan: ini dari pengujian intern
 | Humanity's Last Exam (w/ tools) | **74,2%** | 67,7% | 57,2% | — |
 | OSWorld 2.1 (computer use) | **89,3%** | 87,2% | 79,5% | 81,5% |
 
-![Perbandingan benchmark Claude Fable 5.2 dengan model AI lainnya](/posts/claude-fable-benchmark-chart.webp)
+![Perbandingan benchmark Claude Fable 5.2 dengan model AI lainnya](/posts/claude-fable-benchmark-chart.png)
 
 Fable 5.2 unggul di hampir semua kategori. Skor coding 49,1% di FrontierCode 2.0 melampaui Opus 5.5 (45,5%) dan GPT-6 Astra (42,8%). Di RoboDojo Sim, Fable 5.2 lebih dari dua kali lipat skor GPT-6 Astra (64,9% vs 29,8%). Tapi Gemini 4 Carbon masih unggul di AutomationBench (53,9% vs 51,4%).
 
