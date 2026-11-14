@@ -29,3 +29,9 @@ When generating blog content via AI:
 - Follow the SEO/GEO structure in `lib/content-guidelines.ts`: answer-first opening paragraph, question-style `##` headings where natural, a `## Catatan Teguh` analysis section, and a closing `## FAQ` with `###` questions (rendered as FAQPage JSON-LD)
 - Never invent facts, numbers, quotes, or hands-on test results not present in the source
 - When substantially editing an existing post, set `updated: "<ISO date>"` in its frontmatter (the dashboard publish flow does this automatically)
+- Every post MUST have a `cover_image` and at least one image inside the article body
+- Before committing, verify every referenced image file exists in `public/` with the exact same extension (image generators may save a different format than requested, e.g. `.png` instead of `.webp`)
+- AI-generated or decorative images must not pretend to be real data, screenshots, or official diagrams: use honest alt text and add an italic caption below, e.g. `*Ilustrasi konseptual buatan Teguhcoding; bukan ...*`
+- Verify claims against primary sources (official announcements, filings, original reporting) before publishing, and set `source_url` to the specific article, not a homepage
+- There is no draft feature: every file in `content/blog/` goes live on push
+- Stage only the specific files you changed (`git add <file>`), never whole folders like `public/posts/`, so unrelated user files are not committed
