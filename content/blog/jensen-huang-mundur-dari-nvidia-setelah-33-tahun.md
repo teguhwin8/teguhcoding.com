@@ -3,7 +3,7 @@ title: "Jensen Huang Mundur dari NVIDIA Setelah 33 Tahun: Apa yang Terjadi?"
 source_url: "https://apnews.com"
 tags: ["AI", "GPU", "Industri Teknologi"]
 date: "2026-11-14T08:00:00.000Z"
-cover_image: ""
+cover_image: "/posts/jensen-huang-mundur-cover.webp"
 ---
 
 Jensen Huang resmi mengundurkan diri sebagai CEO NVIDIA pada 12 November 2026, efektif segera. Pengunduran diri ini terjadi setelah serangkaian skandal yang melibatkan dua hubungan di luar nikah — salah satunya dengan eksekutif bisnis Tiongkok yang diduga direkrut oleh intelijen Tiongkok untuk memata-matai Huang dan NVIDIA. CFO Colette Kress ditunjuk sebagai CEO interim sementara dewan mencari pengganti permanen. Saham NVIDIA anjlok sekitar 17-25% sejak skandal pertama kali terungkap awal November.
@@ -33,6 +33,8 @@ Pengunduran diri ini dipicu oleh terungkapnya dua hubungan di luar nikah:
 Dewan telah memulai pencarian CEO permanen dengan mempertimbangkan kandidat internal dan eksternal, dibantu firma pencarian eksekutif. Beberapa nama yang beredar di media termasuk Madison Huang (putri Jensen), Nikesh Arora (CEO Palo Alto Networks), serta eksekutif dari Arm.
 
 Jensen sendiri pernah berkata di sebuah podcast Januari 2026: *"There will never be one like me, and the reason for that is because I was raised by the company."* Ia juga dikenal tidak percaya pada perencanaan suksesi.
+
+![Ilustrasi dampak pengunduran diri Jensen Huang terhadap saham NVIDIA](/posts/nvidia-saham-dampak.webp)
 
 ## Bagaimana Dampaknya ke Pasar Saham?
 
