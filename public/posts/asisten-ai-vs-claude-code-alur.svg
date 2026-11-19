@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="360" viewBox="0 0 1100 360">
+  <rect width="1100" height="360" fill="#f8fafc"/>
+  <g font-family="Arial, Helvetica, sans-serif" font-size="22" fill="#0f172a" text-anchor="middle">
+    <rect x="30" y="120" width="170" height="110" rx="14" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+    <text x="115" y="165" font-weight="bold">1. Chat</text>
+    <text x="115" y="200" font-size="18">Instruksi singkat</text>
+    <rect x="250" y="120" width="170" height="110" rx="14" fill="#e0e7ff" stroke="#4f46e5" stroke-width="2"/>
+    <text x="335" y="165" font-weight="bold">2. Asisten AI</text>
+    <text x="335" y="200" font-size="18">Baca aturan repo</text>
+    <rect x="470" y="120" width="170" height="110" rx="14" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+    <text x="555" y="165" font-weight="bold">3. Mac via SSH</text>
+    <text x="555" y="200" font-size="18">Tulis .md + gambar</text>
+    <rect x="690" y="120" width="170" height="110" rx="14" fill="#fef9c3" stroke="#ca8a04" stroke-width="2"/>
+    <text x="775" y="165" font-weight="bold">4. Git Push</text>
+    <text x="775" y="200" font-size="18">Commit ke main</text>
+    <rect x="910" y="120" width="160" height="110" rx="14" fill="#ffe4e6" stroke="#e11d48" stroke-width="2"/>
+    <text x="990" y="165" font-weight="bold">5. Live</text>
+    <text x="990" y="200" font-size="18">Deploy Vercel</text>
+  </g>
+  <g stroke="#334155" stroke-width="3" fill="#334155">
+    <line x1="200" y1="175" x2="240" y2="175"/><polygon points="240,168 255,175 240,182"/>
+    <line x1="420" y1="175" x2="460" y2="175"/><polygon points="460,168 475,175 460,182"/>
+    <line x1="640" y1="175" x2="680" y2="175"/><polygon points="680,168 695,175 680,182"/>
+    <line x1="860" y1="175" x2="900" y2="175"/><polygon points="900,168 915,175 900,182"/>
+  </g>
+  <text x="550" y="60" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="bold" fill="#0f172a" text-anchor="middle">Alur penerbitan artikel ini</text>
+  <text x="550" y="310" font-family="Arial, Helvetica, sans-serif" font-size="18" fill="#475569" text-anchor="middle">Tidak ada dashboard CMS — file Markdown di content/blog/ langsung live saat di-push.</text>
+</svg>
